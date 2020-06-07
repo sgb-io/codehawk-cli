@@ -1,0 +1,91 @@
+{
+    "results": [
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component/expected.json",
+            "path": "/samples/react-component",
+            "filename": "expected.json",
+            "shouldAnalyze": false,
+            "complexityReport": null,
+            "timesDependedOn": 0
+        },
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component/PopoutMenu.css",
+            "path": "/samples/react-component",
+            "filename": "PopoutMenu.css",
+            "shouldAnalyze": false,
+            "complexityReport": null,
+            "timesDependedOn": 0
+        },
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component/PopoutMenu.jsx",
+            "path": "/samples/react-component",
+            "filename": "PopoutMenu.jsx",
+            "shouldAnalyze": true,
+            "complexityReport": {
+                "aggregate": {
+                    "cyclomatic": 36,
+                    "cyclomaticDensity": 26.471,
+                    "halstead": {
+                        "bugs": 1.33,
+                        "difficulty": 38.157,
+                        "effort": 152196.466,
+                        "length": 568,
+                        "time": 8455.359,
+                        "vocabulary": 130,
+                        "volume": 3988.705,
+                        "operands": {
+                            "distinct": 102,
+                            "total": 278
+                        },
+                        "operators": {
+                            "distinct": 28,
+                            "total": 290
+                        }
+                    },
+                    "paramCount": 12,
+                    "sloc": {
+                        "logical": 136,
+                        "physical": 170
+                    }
+                },
+                "dependencies": [
+                    {
+                        "line": 1,
+                        "path": "./PopoutMenu.css",
+                        "type": "esm"
+                    },
+                    {
+                        "line": 2,
+                        "path": "react",
+                        "type": "esm"
+                    },
+                    {
+                        "line": 3,
+                        "path": "prop-types",
+                        "type": "esm"
+                    },
+                    {
+                        "line": 4,
+                        "path": "../../../utils/classcaded",
+                        "type": "esm"
+                    },
+                    {
+                        "line": 5,
+                        "path": "../Icon/Icon",
+                        "type": "esm"
+                    }
+                ],
+                "errors": [],
+                "lineEnd": 170,
+                "lineStart": 1,
+                "maintainability": 111.675,
+                "codehawkScore": 43.79279497729058,
+                "coverage": 0
+            },
+            "timesDependedOn": 0
+        }
+    ]
+}

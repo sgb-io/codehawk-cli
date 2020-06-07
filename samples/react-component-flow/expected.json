@@ -1,0 +1,86 @@
+{
+	"results": [
+		{
+			"type": "file",
+			"fullPath": "/samples/react-component-flow/Button.css",
+			"path": "/samples/react-component-flow",
+			"filename": "Button.css",
+			"shouldAnalyze": false,
+			"complexityReport": null,
+			"timesDependedOn": 0
+		},
+		{
+			"type": "file",
+			"fullPath": "/samples/react-component-flow/Button.jsx",
+			"path": "/samples/react-component-flow",
+			"filename": "Button.jsx",
+			"shouldAnalyze": true,
+			"complexityReport": {
+				"aggregate": {
+					"cyclomatic": 12,
+					"cyclomaticDensity": 29.268,
+					"halstead": {
+						"bugs": 0.331,
+						"difficulty": 14.957,
+						"effort": 14872.029,
+						"length": 167,
+						"time": 826.224,
+						"vocabulary": 62,
+						"volume": 994.351,
+						"operands": {
+							"distinct": 46,
+							"total": 86
+						},
+						"operators": {
+							"distinct": 16,
+							"total": 81
+						}
+					},
+					"paramCount": 5,
+					"sloc": {
+						"logical": 41,
+						"physical": 74
+					}
+				},
+				"dependencies": [
+					{
+						"line": 3,
+						"path": "react",
+						"type": "esm"
+					},
+					{
+						"line": 4,
+						"path": "lodash/pick",
+						"type": "esm"
+					},
+					{
+						"line": 5,
+						"path": "../../../utils/classcaded",
+						"type": "esm"
+					},
+					{
+						"line": 6,
+						"path": "./Button.css",
+						"type": "esm"
+					}
+				],
+				"errors": [],
+				"lineEnd": 74,
+				"lineStart": 1,
+				"maintainability": 120.805,
+				"codehawkScore": 53.68354105285161,
+				"coverage": 0
+			},
+			"timesDependedOn": 0
+		},
+		{
+			"type": "file",
+			"fullPath": "/samples/react-component-flow/expected.json",
+			"path": "/samples/react-component-flow",
+			"filename": "expected.json",
+			"shouldAnalyze": false,
+			"complexityReport": null,
+			"timesDependedOn": 0
+		}
+	]
+}
