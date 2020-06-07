@@ -30,6 +30,8 @@ const output = codehawk.analyzeProject('/path/to/project')
 // Do stuff with output!
 ```
 
+Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-example).
+
 ## Options
 
 To customise your analysis, use the following options, placed in a `codehawk.json` file in the root directory.
