@@ -32,18 +32,18 @@ const output = codehawk.analyzeProject('/path/to/project')
 
 ## Options
 
-To customise your analysis, use the following options, placed in a `code` file in the root directory.
+To customise your analysis, use the following options, placed in a `codehawk.json` file in the root directory.
 
 | Option               | Description                                                                                                                                                                                                                              | Default                                         |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
 | `extensions`         | File extensions that should be analyzed. The default is always used, but you can add more extensions. Use the `exclude` option to skip any of the default extensions.                                                                    | `['.js', '.jsx', '.ts', '.tsx']`                |
 | `excludeFilenames`   | Filename matches that should be excluded from analysis. The default is always used, but you can add more matches to be excluded. Note that the matching is exact. The exclude list is taken into consideration after the extension list. | `['.d.ts', '.min.js', '.bundle.js']`            |
-| `excludeDirectories` | Directory matches that should be excluded from analysis (but will still show on Codehawk). Relative to the root. E.g. `['/fixtures', '/test']`                                                                                           | `['/dist', '/bin', '/build']`                   |
-| `skipDirectories`    | Directories that should be excluded completely (never sent to Codehawk). The defaults will always be skipped.                                                                                                                            | `['/node_modules', '/flow-typed', '/coverage']` |
+| `excludeDirectories` | Directory matches that should be excluded from analysis. Relative to the root. E.g. `['/fixtures', '/test']`                                                                                                                             | `['/dist', '/bin', '/build']`                   |
+| `skipDirectories`    | Directories that should be excluded completely. The defaults will always be skipped.                                                                                                                                                     | `['/node_modules', '/flow-typed', '/coverage']` |
 
 ## Complexity Metrics
 
-Codehawk gathers various complexity metrics:
+Codehawk gathers various complexity metrics, including:
 
 - *Lines of code*: Both physical (the number of lines in a module or function) and logical (a count of the imperative statements). A crude measure.
 - *Number of parameters*: Analysed statically from the function signature, so no accounting is made for functions that rely on the arguments object. Lower is better.
@@ -51,10 +51,6 @@ Codehawk gathers various complexity metrics:
 - *Cyclomatic complexity density*: Proposed as a modification to cyclomatic complexity by Geoffrey K. Gill and Chris F. Kemerer in 1991, this metric simply re-expresses it as a percentage of the logical lines of code. Lower is better.
 - *Halstead metrics*: Defined by Maurice Halstead in 1977, these metrics are calculated from the numbers of operators and operands in each function. Lower is better.
 - *Maintainability index*: Defined by Paul Oman & Jack Hagemeister in 1991, this is a logarithmic scale from negative infinity to 171, calculated from the logical lines of code, the cyclomatix complexity and the Halstead effort. Higher is better.
-- *Dependencies*: A count of the calls to CommonJS and AMD require. Analysed statically from the function signature, so no accounting is made for dynamic calls where a variable or function is obscuring the nature of the dependency. Lower is better.
-- *First-order density*: The percentage of all possible internal dependencies that are actually realised in the project. Lower is better.
-- *Change cost*: The percentage of modules affected, on average, when one module in the project is changed. Lower is better.
-- *Core size*: The percentage of modules that are both widely depended on and themselves depend on other modules. Lower is better.
 
 ## Caveats
 
