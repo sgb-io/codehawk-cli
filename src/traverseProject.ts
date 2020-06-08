@@ -16,7 +16,6 @@ export const walkSync = (dir: string, options: AssembledOptions): Array<ParsedEn
         const fullPath = path.join(dir, item)
         const entity = getFsEntity(fullPath)
         const baseParsedEntity = {
-            path: slash(dir),
             fullPath: slash(fullPath),
             filename: item,
             shouldAnalyze: shouldAnalyzeEntity(dir, item, options)
@@ -31,6 +30,7 @@ export const walkSync = (dir: string, options: AssembledOptions): Array<ParsedEn
         } else {
             fileList.push({
                 ...baseParsedEntity,
+                path: slash(dir),
                 type: 'file',
             } as ParsedFile)
         }

@@ -1,6 +1,6 @@
 const { assert } = require('chai')
 const fs = require('fs')
-const analyzeProject = require('../build/codehawk.js')
+const analyzeProject = require('../build/codehawk').default
 
 describe('codehawk.analyzeProject', () => {
     const cwd = process.cwd()

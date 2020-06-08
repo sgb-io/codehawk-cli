@@ -83,7 +83,7 @@ const analyzeProject = (rawPath: string) => {
             return {
                 ...entity,
                 files: addComplexityToEntities(entity.files),
-                // fullPath: entity.fullPath.replace(cwd, ''), // Think this was patching a bug that I've now solved properly
+                fullPath: entity.fullPath.replace(cwd, ''),
             } as AnalyzedDirectory
         }
 
