@@ -26,6 +26,7 @@
     "typhonjs-escomplex": "^0.1.0"
   },
   "devDependencies": {
+    "@types/babel__core": "^7.1.8",
     "@types/is-dotdir": "^1.0.0",
     "@types/is-dotfile": "^2.0.0",
     "@types/node": "^14.0.11",

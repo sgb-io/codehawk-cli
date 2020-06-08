@@ -4,7 +4,7 @@ const {
     NODE_ENV,
 } = process.env
 
-const analyzeFile = (dirPath, file, projectCoverage) => {
+const analyzeFile = (dirPath: string, file, projectCoverage) => {
     let report = null
     const relativeFilePath = `${file.path}/${file.filename}`.replace(dirPath, '')
     const coverageData = projectCoverage.find(c => c.path === relativeFilePath)

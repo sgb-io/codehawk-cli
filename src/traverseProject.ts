@@ -4,45 +4,41 @@ import slash from "slash"
 import babel from "@babel/core"
 import flowRemoveTypes from "flow-remove-types"
 import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from "./util"
-import { AssembledOptions } from "./types"
+import { AssembledOptions, ParsedEntity, ParsedDirectory, ParsedFile } from "./types"
 
-export const walkSync = (dir: string, filelist = [], options: AssembledOptions) => {
+// dir can be string or dir
+export const walkSync = (dir: string, options: AssembledOptions): Array<ParsedEntity> => {
+    const fileList: Array<ParsedEntity> = []
     const items = fs.readdirSync(dir)
     const visibleEntities = items.filter(i => shouldSeeEntity(dir, i, options))
 
     visibleEntities.forEach((item) => {
         const fullPath = path.join(dir, item)
         const entity = getFsEntity(fullPath)
-
-        let outputItem
-        if (entity.isDirectory()) {
-            outputItem = {
-                type: 'dir',
-                fullPath: slash(fullPath),
-                filename: item,
-                files: walkSync(fullPath, dir.files, options),
-                shouldAnalyze: shouldAnalyzeEntity(dir, item, options)
-            }
-        } else {
-            outputItem = {
-                type: 'file',
-                fullPath: slash(fullPath),
-                path: slash(dir),
-                filename: item,
-                shouldAnalyze: shouldAnalyzeEntity(dir, item, options)
-            }
+        const baseParsedEntity = {
+            path: slash(dir),
+            fullPath: slash(fullPath),
+            filename: item,
+            shouldAnalyze: shouldAnalyzeEntity(dir, item, options)
         }
 
-        if (outputItem.type === 'file') {
-            filelist.push(outputItem)
+        if (entity.isDirectory()) {
+            fileList.push({
+                ...baseParsedEntity,
+                type: 'dir',
+                files: walkSync(fullPath, options),
+            } as ParsedDirectory)
         } else {
-            filelist.push(outputItem)
+            fileList.push({
+                ...baseParsedEntity,
+                type: 'file',
+            } as ParsedFile)
         }
     })
 
     // Sort by directories first, then alphabetically
     // Required for windows consistency, helps for display
-    const sorted = filelist.sort((a, b) => {
+    const sorted = fileList.sort((a, b) => {
         if (a.type === b.type) {
             return a.filename.toLowerCase() > b.filename.toLowerCase() ? 1 : -1
         }
@@ -53,7 +49,7 @@ export const walkSync = (dir: string, filelist = [], options: AssembledOptions) 
     return sorted
 }
 
-export const getFileContents = (fullPath: string) => {
+export const getFileContents = (fullPath: string): string => {
     // https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
     const filename = path.basename(fullPath)
     const extension = path.extname(filename)

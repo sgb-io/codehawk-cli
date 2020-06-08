@@ -16,3 +16,77 @@ export type CodehawkOptions = {
 export type AssembledOptions = {
     [key in SupportedOptionKeys]?: Array<string>
 }
+
+interface CoverageMeasurement {
+    total: number
+    covered: number
+    skipped: number
+    pct: number
+}
+
+type SupportedCoverageMeasurements =
+    | 'lines'
+    | 'functions'
+    | 'statements'
+    | 'branches'
+
+type CoverageMetrics = {
+    [key in SupportedCoverageMeasurements]: CoverageMeasurement
+}
+
+export interface CoverageSummary {
+    [key: string]: CoverageMetrics
+}
+
+export interface CoverageMapping {
+    path: string
+    coverage: CoverageMetrics
+}
+
+interface BaseEntity {
+    fullPath: string
+    path: string
+    filename: string
+    shouldAnalyze: boolean
+}
+
+// Parsed entities 
+
+export interface ParsedFile extends BaseEntity {
+    type: 'file'
+}
+
+export interface ParsedDirectory extends BaseEntity {
+    type: 'dir'
+    files: Array<ParsedFile>
+}
+
+export type ParsedEntity = ParsedFile | ParsedDirectory
+
+
+// Parsed entities plus complexityReports
+
+export interface AnalyzedFile extends ParsedFile {
+    complexityReport?: any // TODO!
+}
+
+export interface AnalyzedDirectory extends BaseEntity {
+    type: 'dir',
+    files: Array<AnalyzedFile>
+}
+
+export type AnalyzedEntity = AnalyzedFile | AnalyzedDirectory
+
+
+// Parsed entities plus complexityReports and timesDependedOn
+
+export interface FullyAnalyzedFile extends AnalyzedFile {
+    timesDependedOn: number
+}
+
+export interface FullyAnalyzedDirectory extends BaseEntity {
+    type: 'dir',
+    files: Array<FullyAnalyzedFile>
+}
+
+export type FullyAnalyzedEntity = FullyAnalyzedFile | FullyAnalyzedDirectory

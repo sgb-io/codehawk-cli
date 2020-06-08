@@ -1,11 +1,12 @@
 import fs from "fs"
+import { CoverageMapping, CoverageSummary } from "./types"
 
-export const getCoverage = (dirPath) => {
-    let coverage = []
+export const getCoverage = (dirPath: string): Array<CoverageMapping> => {
+    let coverage: Array<CoverageMapping> = []
 
     try {
         const contents = fs.readFileSync(`${dirPath}/coverage/coverage-summary.json`, 'utf8')
-        const coveredFiles = JSON.parse(contents)
+        const coveredFiles: CoverageSummary = JSON.parse(contents)
         coverage = Object.keys(coveredFiles).map((file) => ({
             path: file.replace(dirPath, ''),
             coverage: coveredFiles[file]

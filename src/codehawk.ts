@@ -5,7 +5,17 @@ import { getCoverage } from './coverage'
 import analyzeFile from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
-import { CodehawkOptions } from './types'
+import {
+    CodehawkOptions,
+    ParsedEntity,
+    ParsedFile,
+    AnalyzedFile,
+    AnalyzedDirectory,
+    AnalyzedEntity,
+    FullyAnalyzedEntity,
+    FullyAnalyzedFile,
+    FullyAnalyzedDirectory
+} from './types'
 import { buildOptions } from './options'
 
 const cwd = slash(process.cwd())
@@ -45,7 +55,7 @@ const analyzeProject = (rawPath: string) => {
     const dirPath = path.resolve(`${rawPath}/`)
     const projectCoverage = getCoverage(dirPath)
 
-    const addComplexityToFile = (file) => {
+    const addComplexityToFile = (file: ParsedFile): AnalyzedFile => {
         const complexityReport = !file.shouldAnalyze
             ? null
             : analyzeFile(
@@ -66,37 +76,45 @@ const analyzeProject = (rawPath: string) => {
         }
     }
 
-    const addComplexityToProject = (files) => files.map((file) => {
-        if (file.type === 'dir') {
+    const addComplexityToEntities = (
+        entities: Array<ParsedEntity>
+    ): Array<AnalyzedEntity> => entities.map((entity) => {
+        if (entity.type === 'dir') {
             return {
-                ...file,
-                files: addComplexityToProject(file.files),
-                fullPath: file.fullPath.replace(cwd, ''),
-            }
+                ...entity,
+                files: addComplexityToEntities(entity.files),
+                // fullPath: entity.fullPath.replace(cwd, ''), // Think this was patching a bug that I've now solved properly
+            } as AnalyzedDirectory
         }
 
-        return addComplexityToFile(file)
+        return addComplexityToFile(entity)
     })
 
-    const addDependencyCountToFile = (projectDeps, file) => ({
+    const addDependencyCountToFile = (
+        projectDeps: Array<string>,
+        file: AnalyzedFile
+    ): FullyAnalyzedFile => ({
         ...file,
         timesDependedOn: getTimesDependedOn(projectDeps, file.fullPath)
     })
 
-    const addDependencyCounts = (projectDeps: Array<string>, files) => files.map((file) => {
-        if (file.type === 'dir') {
+    const addDependencyCounts = (
+        projectDeps: Array<string>,
+        entities: Array<AnalyzedEntity>
+    ): Array<FullyAnalyzedEntity> => entities.map((entity) => {
+        if (entity.type === 'dir') {
             return {
-                ...file,
-                files: addDependencyCounts(projectDeps, file.files),
-            }
+                ...entity,
+                files: addDependencyCounts(projectDeps, entity.files),
+            } as FullyAnalyzedDirectory
         }
 
-        return addDependencyCountToFile(projectDeps, file)
+        return addDependencyCountToFile(projectDeps, entity)
     })
 
-    const files = walkSync(dirPath, [], options)
+    const entities = walkSync(dirPath, options)
     // First run of all files: generate complexity & coverage metrics
-    const firstRunResults = addComplexityToProject(files)
+    const firstRunResults = addComplexityToEntities(entities)
     // Second run: generate timesDependedOn (can only be calculated after first run)
     const projectDeps = getProjectDeps(firstRunResults)
     const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
