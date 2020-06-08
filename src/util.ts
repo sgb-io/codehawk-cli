@@ -3,7 +3,7 @@ import * as path from "path"
 import slash from "slash"
 import isDotfile from 'is-dotfile'
 import isDotdir from 'is-dotdir'
-import { AssembledOptions } from "./types"
+import { AssembledOptions, AnalyzedEntity, AnalyzedFile } from "./types"
 
 const shouldSkip = (relativeDir: string, skipDirectories: Array<string>) => {
     for (let i = 0; i < skipDirectories.length; i += 1) {
@@ -51,13 +51,13 @@ export const getFsEntity = (fullPath: string) => {
     return dirent
 }
 
-export const flattenEntireTree = (items) => {
-    let flattened = []
+export const flattenEntireTree = (items: Array<AnalyzedEntity>): Array<AnalyzedFile> => {
+    let flattened = [] as Array<AnalyzedFile>
     items.forEach((item) => {
-        flattened.push(item)
-
         if (item.type === 'dir') {
             flattened = flattened.concat(flattenEntireTree(item.files))
+        } else {
+            flattened.push(item)
         }
     })
 

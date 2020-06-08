@@ -1,10 +1,15 @@
 import escomplexReporter from "./reporters/escomplex"
+import { CoverageMapping, FileWithContents, CompleteCodehawkComplexityResult } from "./types"
 
 const {
     NODE_ENV,
 } = process.env
 
-const analyzeFile = (dirPath: string, file, projectCoverage) => {
+const analyzeFile = (
+    dirPath: string,
+    file: FileWithContents,
+    projectCoverage: Array<CoverageMapping>
+): CompleteCodehawkComplexityResult => {
     let report = null
     const relativeFilePath = `${file.path}/${file.filename}`.replace(dirPath, '')
     const coverageData = projectCoverage.find(c => c.path === relativeFilePath)
@@ -27,15 +32,10 @@ const analyzeFile = (dirPath: string, file, projectCoverage) => {
         ) / 4).toFixed(2)
     }
 
-    let trimmed
-    try {
-        trimmed = file.rawSource.toString().trim()
-    } catch (e) {
-        console.error(`Unable to read source of "${file.path}/${file.filename}", skipping`)
-    }
+    const trimmed = file.rawSource.trim()
 
     try {
-        const complexityReport = escomplexReporter(trimmed, file.options)
+        const complexityReport = escomplexReporter(trimmed)
         if (complexityReport) {
             report = {
                 ...complexityReport,

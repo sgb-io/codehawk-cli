@@ -61,12 +61,14 @@ export const getFileContents = (fullPath: string): string => {
         // TypeScript support
         const isTypescript = extension === '.ts' || extension === '.tsx'
         if (isTypescript) {
-            const transformed = babel.transform(contents, {
+            const transformed = babel.transformSync(contents, {
                 plugins: [
                     '@babel/plugin-transform-typescript'
                 ]
             })
-            contents = transformed.code
+            if (transformed.code) {
+                contents = transformed.code
+            }
         } else {
             // Assume no other static type systems exist
             // Stripping flow types should be safe, even if it's not strictly flow

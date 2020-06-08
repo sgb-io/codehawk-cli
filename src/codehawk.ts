@@ -124,8 +124,4 @@ const analyzeProject = (rawPath: string) => {
     }
 }
 
-const codehawk = {
-    analyzeProject,
-}
-
-module.exports = codehawk
+export default analyzeProject

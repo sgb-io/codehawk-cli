@@ -50,6 +50,12 @@ interface BaseEntity {
     shouldAnalyze: boolean
 }
 
+export interface FileWithContents {
+    path: string
+    filename: string
+    rawSource: string
+}
+
 // Parsed entities 
 
 export interface ParsedFile extends BaseEntity {
@@ -67,7 +73,7 @@ export type ParsedEntity = ParsedFile | ParsedDirectory
 // Parsed entities plus complexityReports
 
 export interface AnalyzedFile extends ParsedFile {
-    complexityReport?: any // TODO!
+    complexityReport?: CompleteCodehawkComplexityResult
 }
 
 export interface AnalyzedDirectory extends BaseEntity {
@@ -90,3 +96,13 @@ export interface FullyAnalyzedDirectory extends BaseEntity {
 }
 
 export type FullyAnalyzedEntity = FullyAnalyzedFile | FullyAnalyzedDirectory
+
+// Before coverage mapping
+export interface CodehawkComplexityResult extends ComplexityResult {
+    codehawkScore: number
+}
+
+// After coverage mapping
+export interface CompleteCodehawkComplexityResult extends CodehawkComplexityResult {
+    coverage: string
+}
