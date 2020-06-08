@@ -1,6 +1,9 @@
 import { CodehawkOptions, SupportedOptionKeys, AssembledOptions } from "./types"
 
-export const buildOptions = (baseOptions: CodehawkOptions, projectOptions: AssembledOptions): AssembledOptions => {
+export const buildOptions = (
+    baseOptions: CodehawkOptions,
+    projectOptions: AssembledOptions
+): AssembledOptions => {
     const options: AssembledOptions = {}
     Object.keys(baseOptions).forEach((optionKey: SupportedOptionKeys) => {
         const option = baseOptions[optionKey]

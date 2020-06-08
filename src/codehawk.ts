@@ -18,6 +18,10 @@ import {
 } from './types'
 import { buildOptions } from './options'
 
+interface Results {
+    results: Array<FullyAnalyzedEntity>
+}
+
 const cwd = slash(process.cwd())
 
 const baseOptions: CodehawkOptions = {
@@ -39,7 +43,7 @@ const baseOptions: CodehawkOptions = {
     }
 }
 
-const analyzeProject = (rawPath: string) => {
+const analyzeProject = (rawPath: string): Results => {
     const optionsPath = path.resolve(`${rawPath}/codehawk.json`)
 
     let projectOptionsFile = null

@@ -5,7 +5,10 @@ import isDotfile from 'is-dotfile'
 import isDotdir from 'is-dotdir'
 import { AssembledOptions, AnalyzedEntity, AnalyzedFile } from "./types"
 
-const shouldSkip = (relativeDir: string, skipDirectories: Array<string>) => {
+const shouldSkip = (
+    relativeDir: string,
+    skipDirectories: Array<string>
+): boolean => {
     for (let i = 0; i < skipDirectories.length; i += 1) {
         if (relativeDir.startsWith(skipDirectories[i])) {
             return true
@@ -15,7 +18,11 @@ const shouldSkip = (relativeDir: string, skipDirectories: Array<string>) => {
     return false
 }
 
-const isBlacklisted = (relativeDir: string, filename: string, options: AssembledOptions) => {
+const isBlacklisted = (
+    relativeDir: string,
+    filename: string,
+    options: AssembledOptions
+): boolean => {
     const {
         excludeDirectories,
         excludeFilenames,
@@ -38,7 +45,7 @@ const isBlacklisted = (relativeDir: string, filename: string, options: Assembled
     return false
 }
 
-export const getFsEntity = (fullPath: string) => {
+export const getFsEntity = (fullPath: string): fs.Stats | null => {
     let dirent = null
 
     try {
@@ -65,7 +72,11 @@ export const flattenEntireTree = (items: Array<AnalyzedEntity>): Array<AnalyzedF
 }
 
 // Should the dir/file show at all in results?
-export const shouldSeeEntity = (dir: string, item: string, options: AssembledOptions) => {
+export const shouldSeeEntity = (
+    dir: string,
+    item: string,
+    options: AssembledOptions
+): boolean => {
     const fullPath = path.join(dir, item)
     const entity = getFsEntity(fullPath)
     const relativeDir = slash(dir).replace(slash(process.cwd()), '')
@@ -107,7 +118,11 @@ export const shouldSeeEntity = (dir: string, item: string, options: AssembledOpt
 }
 
 // Should the dir/file have complexity analysis run?
-export const shouldAnalyzeEntity = (dir: string, item: string, options: AssembledOptions) => {
+export const shouldAnalyzeEntity = (
+    dir: string,
+    item: string,
+    options: AssembledOptions
+): boolean => {
     const fullPath = path.join(dir, item)
     const entity = getFsEntity(fullPath)
     const filename = path.basename(fullPath)
