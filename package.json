@@ -7,7 +7,7 @@
     "test": "npx mocha test --recursive --timeout 30000",
     "test:coverage:codehawk": "nyc --reporter=json-summary mocha test --timeout 90000",
     "lint": "eslint src --ext .js",
-    "build": "pkg package.json --out-path bin"
+    "build": "tsc"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
   "license": "MPL-2.0",
@@ -22,10 +22,13 @@
     "is-dotfile": "^2.0.0",
     "mocha": "^5.2.0",
     "opn": "^5.4.0",
-    "slash": "^2.0.0",
+    "slash": "^3.0.0",
     "typhonjs-escomplex": "^0.1.0"
   },
   "devDependencies": {
+    "@types/is-dotdir": "^1.0.0",
+    "@types/is-dotfile": "^2.0.0",
+    "@types/node": "^14.0.11",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.0.0",
@@ -35,7 +38,8 @@
     "eslint-plugin-jest": "^21.25.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "typescript": "^3.9.5"
   },
   "bin": "index.js"
 }

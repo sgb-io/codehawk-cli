@@ -1,9 +1,9 @@
-const escomplex = require('typhonjs-escomplex')
+import escomplex from "typhonjs-escomplex"
 
 // The following hack is taken from Plato
 // ref. https://github.com/es-analysis/plato/blob/master/lib/reporters/complexity/index.js @ ad8a294
 
-module.exports = (source, options) => {
+const escomplexReporter = (source, options) => {
     const report = escomplex.analyzeModule(source, options)
 
     // For cases where parsing the javascript has failed
@@ -19,7 +19,7 @@ module.exports = (source, options) => {
 
     const trimmed = Object.assign({}, report)
 
-    // Remove un-wnated dependencies
+    // Remove un-wanted noise
     delete trimmed.settings
     delete trimmed.classes
     delete trimmed.methodAverage
@@ -50,3 +50,5 @@ module.exports = (source, options) => {
 
     return trimmed
 }
+
+export default escomplexReporter

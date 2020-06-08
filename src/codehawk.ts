@@ -1,11 +1,16 @@
-const fs = require('fs')
-const path = require('path')
-const slash = require('slash')
-const helpers = require('./codehawk.helpers')
+import * as fs from 'fs'
+import * as path from 'path'
+import slash from 'slash'
+import { getCoverage } from './coverage'
+import analyzeFile from './analyze'
+import { getFileContents, walkSync } from './traverseProject'
+import { getTimesDependedOn, getProjectDeps } from './dependencies'
+import { CodehawkOptions } from './types'
+import { buildOptions } from './options'
 
 const cwd = slash(process.cwd())
 
-const baseOptions = {
+const baseOptions: CodehawkOptions = {
     extensions: {
         default: ['.js', '.jsx', '.ts', '.tsx'],
         override: false,
@@ -24,7 +29,7 @@ const baseOptions = {
     }
 }
 
-const analyzeProject = (rawPath) => {
+const analyzeProject = (rawPath: string) => {
     const optionsPath = path.resolve(`${rawPath}/codehawk.json`)
 
     let projectOptionsFile = null
@@ -36,19 +41,19 @@ const analyzeProject = (rawPath) => {
     }
 
     const projectOptions = JSON.parse(projectOptionsFile)
-    const options = helpers.buildOptions(baseOptions, projectOptions)
+    const options = buildOptions(baseOptions, projectOptions)
     const dirPath = path.resolve(`${rawPath}/`)
-    const projectCoverage = helpers.getCoverage(dirPath)
+    const projectCoverage = getCoverage(dirPath)
 
     const addComplexityToFile = (file) => {
         const complexityReport = !file.shouldAnalyze
             ? null
-            : helpers.analyzeFile(
+            : analyzeFile(
                 dirPath,
                 {
                     path: file.path,
                     filename: file.filename,
-                    rawSource: helpers.getFileContents(file.fullPath),
+                    rawSource: getFileContents(file.fullPath),
                 },
                 projectCoverage
             )
@@ -75,10 +80,10 @@ const analyzeProject = (rawPath) => {
 
     const addDependencyCountToFile = (projectDeps, file) => ({
         ...file,
-        timesDependedOn: helpers.getTimesDependedOn(projectDeps, file.fullPath)
+        timesDependedOn: getTimesDependedOn(projectDeps, file.fullPath)
     })
 
-    const addDependencyCounts = (projectDeps, files) => files.map((file) => {
+    const addDependencyCounts = (projectDeps: Array<string>, files) => files.map((file) => {
         if (file.type === 'dir') {
             return {
                 ...file,
@@ -89,11 +94,11 @@ const analyzeProject = (rawPath) => {
         return addDependencyCountToFile(projectDeps, file)
     })
 
-    const files = helpers.walkSync(dirPath, [], options)
+    const files = walkSync(dirPath, [], options)
     // First run of all files: generate complexity & coverage metrics
     const firstRunResults = addComplexityToProject(files)
     // Second run: generate timesDependedOn (can only be calculated after first run)
-    const projectDeps = helpers.getProjectDeps(firstRunResults)
+    const projectDeps = getProjectDeps(firstRunResults)
     const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
 
     return {
