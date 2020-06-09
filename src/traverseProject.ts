@@ -49,7 +49,7 @@ export const walkSync = (dir: string, options: AssembledOptions): Array<ParsedEn
     return sorted
 }
 
-export const getFileContents = (fullPath: string): string => {
+export const getFileContents = (fullPath: string, enableFlow: boolean): string => {
     // see https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
     const filename = path.basename(fullPath)
     const extension = path.extname(filename)
@@ -73,7 +73,9 @@ export const getFileContents = (fullPath: string): string => {
     } else {
         // Assume no other static type systems exist
         // Stripping flow types should be safe, even if it's not strictly flow
-        contents = flowRemoveTypes(contents, { pretty: true }).toString()
+        contents = (enableFlow)
+            ? flowRemoveTypes(contents, { pretty: true }).toString()
+            : contents
     }
 
     return contents

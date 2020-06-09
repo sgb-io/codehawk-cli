@@ -25,21 +25,30 @@ interface Results {
 const cwd = slash(process.cwd())
 
 const baseOptions: CodehawkOptions = {
+    enableFlow: {
+        type: 'boolean',
+        default: true,
+        replaceDefault: false,
+    },
     extensions: {
+        type: 'stringArray',
         default: ['.js', '.jsx', '.ts', '.tsx'],
-        override: false,
+        replaceDefault: false,
     },
     excludeDirectories: {
+        type: 'stringArray',
         default: ['/dist', '/bin', '/build'],
-        override: true,
+        replaceDefault: true,
     },
     excludeFilenames: {
+        type: 'stringArray',
         default: ['.d.ts', '.min.js', '.bundle.js'],
-        override: false,
+        replaceDefault: false,
     },
     skipDirectories: {
+        type: 'stringArray',
         default: ['/node_modules', '/flow-typed', '/coverage'],
-        override: false,
+        replaceDefault: false,
     }
 }
 
@@ -67,7 +76,7 @@ const analyzeProject = (rawPath: string): Results => {
                 {
                     path: file.path,
                     filename: file.filename,
-                    rawSource: getFileContents(file.fullPath),
+                    rawSource: getFileContents(file.fullPath, options.enableFlow),
                 },
                 projectCoverage
             )
