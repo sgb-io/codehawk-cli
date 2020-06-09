@@ -45,6 +45,16 @@ describe('codehawk.analyzeProject', () => {
         assert.deepEqual(output.results, expected.results)
     })
 
+    it('react-component-typescript', () => {
+        const output = codehawk.analyzeProject(`${cwd}/samples/react-component-typescript`)
+        assert.ok(output)
+
+        const expectedRaw = fs.readFileSync(`${cwd}/samples/react-component-typescript/expected.json`)
+        const expected = JSON.parse(expectedRaw)
+
+        assert.deepEqual(output.results, expected.results)
+    })
+
     it('sweetalert', () => {
         const output = codehawk.analyzeProject(`${cwd}/samples/sweetalert`)
         assert.ok(output)

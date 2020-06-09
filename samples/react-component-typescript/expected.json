@@ -1,0 +1,116 @@
+{
+    "results": [
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component-typescript/App.tsx",
+            "path": "/samples/react-component-typescript",
+            "filename": "App.tsx",
+            "shouldAnalyze": true,
+            "complexityReport": {
+                "aggregate": {
+                    "cyclomatic": 2,
+                    "cyclomaticDensity": 66.667,
+                    "halstead": {
+                        "bugs": 0.005,
+                        "difficulty": 4,
+                        "effort": 55.726,
+                        "length": 6,
+                        "time": 3.096,
+                        "vocabulary": 5,
+                        "volume": 13.932,
+                        "operands": {
+                            "distinct": 1,
+                            "total": 2
+                        },
+                        "operators": {
+                            "distinct": 4,
+                            "total": 4
+                        }
+                    },
+                    "paramCount": 0,
+                    "sloc": {
+                        "logical": 3,
+                        "physical": 13
+                    }
+                },
+                "dependencies": [
+                    {
+                        "line": 1,
+                        "path": "react",
+                        "type": "esm"
+                    },
+                    {
+                        "line": 2,
+                        "path": "./Modal",
+                        "type": "esm"
+                    }
+                ],
+                "errors": [],
+                "lineEnd": 13,
+                "lineStart": 1,
+                "maintainability": 153.052,
+                "codehawkScore": 94.83679699142846,
+                "coverage": 0
+            },
+            "timesDependedOn": 0
+        },
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component-typescript/expected.json",
+            "path": "/samples/react-component-typescript",
+            "filename": "expected.json",
+            "shouldAnalyze": false,
+            "complexityReport": null,
+            "timesDependedOn": 0
+        },
+        {
+            "type": "file",
+            "fullPath": "/samples/react-component-typescript/Modal.tsx",
+            "path": "/samples/react-component-typescript",
+            "filename": "Modal.tsx",
+            "shouldAnalyze": true,
+            "complexityReport": {
+                "aggregate": {
+                    "cyclomatic": 6,
+                    "cyclomaticDensity": 30,
+                    "halstead": {
+                        "bugs": 0.132,
+                        "difficulty": 13.977,
+                        "effort": 5533.86,
+                        "length": 76,
+                        "time": 307.437,
+                        "vocabulary": 37,
+                        "volume": 395.918,
+                        "operands": {
+                            "distinct": 22,
+                            "total": 41
+                        },
+                        "operators": {
+                            "distinct": 15,
+                            "total": 35
+                        }
+                    },
+                    "paramCount": 2,
+                    "sloc": {
+                        "logical": 20,
+                        "physical": 44
+                    }
+                },
+                "dependencies": [
+                    {
+                        "line": 1,
+                        "path": "react",
+                        "type": "esm"
+                    }
+                ],
+                "errors": [],
+                "lineEnd": 44,
+                "lineStart": 1,
+                "maintainability": 124.388,
+                "codehawkScore": 57.88723023008965,
+                "coverage": 0
+            },
+            "timesDependedOn": 1
+        }
+    ]
+}
