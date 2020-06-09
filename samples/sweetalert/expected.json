@@ -1,275 +1,289 @@
 {
   "results": [
     {
+      "fullPath": "/samples/sweetalert/assets",
       "filename": "assets",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
-          "complexityReport": null,
-          "filename": "logotype.png",
           "fullPath": "/samples/sweetalert/assets/logotype.png",
-          "path": "/samples/sweetalert/assets",
+          "filename": "logotype.png",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/assets",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "swal.gif",
           "fullPath": "/samples/sweetalert/assets/swal.gif",
-          "path": "/samples/sweetalert/assets",
+          "filename": "swal.gif",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/assets",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         }
-      ],
-      "fullPath": "/samples/sweetalert/assets",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
+      "fullPath": "/samples/sweetalert/docs",
       "filename": "docs",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
+          "fullPath": "/samples/sweetalert/docs/assets",
           "filename": "assets",
+          "shouldAnalyze": true,
+          "type": "dir",
           "files": [
             {
-              "filename": "css",
-              "files": [
-                {
-                  "complexityReport": null,
-                  "filename": "app.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/app.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "guide.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/guide.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "header.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/header.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "highlight.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/highlight.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "index.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/index.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "normalize.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/normalize.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "table.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/table.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "variables.css",
-                  "fullPath": "/samples/sweetalert/docs/assets/css/variables.css",
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                }
-              ],
               "fullPath": "/samples/sweetalert/docs/assets/css",
+              "filename": "css",
               "shouldAnalyze": true,
-              "type": "dir"
-            },
-            {
-              "filename": "images",
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
-                  "filename": "github.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/github.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/app.css",
+                  "filename": "app.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "heart-icon.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/heart-icon.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/guide.css",
+                  "filename": "guide.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "logo-small.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/logo-small.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/header.css",
+                  "filename": "header.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "logo.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/logo.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/highlight.css",
+                  "filename": "highlight.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-examples.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/index.css",
+                  "filename": "index.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-examples@2x.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples@2x.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/normalize.css",
+                  "filename": "normalize.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-fb-example@2x.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-fb-example@2x.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/table.css",
+                  "filename": "table.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "mood-happy.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-happy.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
+                  "fullPath": "/samples/sweetalert/docs/assets/css/variables.css",
+                  "filename": "variables.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
+                  "path": "/samples/sweetalert/docs/assets/css",
+                  "type": "file",
                   "complexityReport": null,
-                  "filename": "mood-neutral.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-neutral.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "mood-sad.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-sad.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "pattern.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "pattern@2x.png",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern@2x.png",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "transition-top.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/transition-top.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "vs.svg",
-                  "fullPath": "/samples/sweetalert/docs/assets/images/vs.svg",
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/docs/assets/images",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
-              "filename": "js",
+              "fullPath": "/samples/sweetalert/docs/assets/images",
+              "filename": "images",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/github.svg",
+                  "filename": "github.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/heart-icon.svg",
+                  "filename": "heart-icon.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/logo-small.svg",
+                  "filename": "logo-small.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/logo.svg",
+                  "filename": "logo.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples.png",
+                  "filename": "modal-examples.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples@2x.png",
+                  "filename": "modal-examples@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-fb-example@2x.png",
+                  "filename": "modal-fb-example@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-happy.png",
+                  "filename": "mood-happy.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-neutral.png",
+                  "filename": "mood-neutral.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-sad.png",
+                  "filename": "mood-sad.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern.png",
+                  "filename": "pattern.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern@2x.png",
+                  "filename": "pattern@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/transition-top.svg",
+                  "filename": "transition-top.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/images/vs.svg",
+                  "filename": "vs.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                }
+              ]
+            },
+            {
+              "fullPath": "/samples/sweetalert/docs/assets/js",
+              "filename": "js",
+              "shouldAnalyze": true,
+              "type": "dir",
+              "files": [
+                {
+                  "fullPath": "/samples/sweetalert/docs/assets/js/add-preview-buttons.js",
+                  "filename": "add-preview-buttons.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 13705,
                       "cyclomaticDensity": 26.567,
                       "halstead": {
-                        "bugs": 991.84,
-                        "difficulty": 371.254,
-                        "effort": 1104673985.564,
+                        "bugs": 991.85,
+                        "difficulty": 371.219,
+                        "effort": 1104581424.464,
                         "length": 222239,
+                        "time": 61365634.692,
+                        "vocabulary": 10727,
+                        "volume": 2975548.867,
                         "operands": {
-                          "distinct": 10656,
+                          "distinct": 10657,
                           "total": 113031
                         },
                         "operators": {
                           "distinct": 70,
                           "total": 109208
-                        },
-                        "time": 61370776.976,
-                        "vocabulary": 10726,
-                        "volume": 2975518.977
+                        }
                       },
                       "paramCount": 6075,
                       "sloc": {
@@ -277,42 +291,42 @@
                         "physical": 61774
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 0,
                     "lineEnd": 61774,
                     "lineStart": 1,
-                    "maintainability": 85.713
+                    "maintainability": 85.713,
+                    "codehawkScore": 0,
+                    "coverage": "0"
                   },
-                  "filename": "add-preview-buttons.js",
-                  "fullPath": "/samples/sweetalert/docs/assets/js/add-preview-buttons.js",
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 },
                 {
+                  "fullPath": "/samples/sweetalert/docs/assets/js/index.js",
+                  "filename": "index.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 18944,
                       "cyclomaticDensity": 27.105,
                       "halstead": {
-                        "bugs": 1386.367,
-                        "difficulty": 391.132,
-                        "effort": 1626757673.846,
+                        "bugs": 1386.377,
+                        "difficulty": 391.106,
+                        "effort": 1626660155.833,
                         "length": 299741,
+                        "time": 90370008.657,
+                        "vocabulary": 15032,
+                        "volume": 4159130.986,
                         "operands": {
-                          "distinct": 14955,
+                          "distinct": 14956,
                           "total": 153931
                         },
                         "operators": {
                           "distinct": 76,
                           "total": 145810
-                        },
-                        "time": 90375426.325,
-                        "vocabulary": 15031,
-                        "volume": 4159102.218
+                        }
                       },
                       "paramCount": 8999,
                       "sloc": {
@@ -320,22 +334,22 @@
                         "physical": 85317
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 0,
                     "lineEnd": 85317,
                     "lineStart": 1,
-                    "maintainability": 86.406
+                    "maintainability": 86.406,
+                    "codehawkScore": 0,
+                    "coverage": "0"
                   },
-                  "filename": "index.js",
-                  "fullPath": "/samples/sweetalert/docs/assets/js/index.js",
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 },
                 {
+                  "fullPath": "/samples/sweetalert/docs/assets/js/landing-text-rotater.js",
+                  "filename": "landing-text-rotater.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 27,
@@ -345,6 +359,9 @@
                         "difficulty": 32.056,
                         "effort": 92596.665,
                         "length": 432,
+                        "time": 5144.259,
+                        "vocabulary": 103,
+                        "volume": 2888.568,
                         "operands": {
                           "distinct": 80,
                           "total": 223
@@ -352,10 +369,7 @@
                         "operators": {
                           "distinct": 23,
                           "total": 209
-                        },
-                        "time": 5144.259,
-                        "vocabulary": 103,
-                        "volume": 2888.568
+                        }
                       },
                       "paramCount": 16,
                       "sloc": {
@@ -363,338 +377,338 @@
                         "physical": 93
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 50.63297740113278,
                     "lineEnd": 93,
                     "lineStart": 1,
-                    "maintainability": 107.041
+                    "maintainability": 107.041,
+                    "codehawkScore": 50.63297740113278,
+                    "coverage": "0"
                   },
-                  "filename": "landing-text-rotater.js",
-                  "fullPath": "/samples/sweetalert/docs/assets/js/landing-text-rotater.js",
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/docs/assets/js",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
+              "fullPath": "/samples/sweetalert/docs/assets/sweetalert",
               "filename": "sweetalert",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
-                  "filename": "sweetalert.js.map",
                   "fullPath": "/samples/sweetalert/docs/assets/sweetalert/sweetalert.js.map",
-                  "path": "/samples/sweetalert/docs/assets/sweetalert",
+                  "filename": "sweetalert.js.map",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/sweetalert",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "sweetalert.min.js",
                   "fullPath": "/samples/sweetalert/docs/assets/sweetalert/sweetalert.min.js",
-                  "path": "/samples/sweetalert/docs/assets/sweetalert",
+                  "filename": "sweetalert.min.js",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs/assets/sweetalert",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/docs/assets/sweetalert",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             }
-          ],
-          "fullPath": "/samples/sweetalert/docs/assets",
-          "shouldAnalyze": true,
-          "type": "dir"
+          ]
         },
         {
-          "filename": "docs",
-          "files": [
-            {
-              "complexityReport": null,
-              "filename": "index.html",
-              "fullPath": "/samples/sweetalert/docs/docs/index.html",
-              "path": "/samples/sweetalert/docs/docs",
-              "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
-            }
-          ],
           "fullPath": "/samples/sweetalert/docs/docs",
+          "filename": "docs",
           "shouldAnalyze": true,
-          "type": "dir"
-        },
-        {
-          "filename": "guides",
+          "type": "dir",
           "files": [
             {
-              "complexityReport": null,
+              "fullPath": "/samples/sweetalert/docs/docs/index.html",
               "filename": "index.html",
-              "fullPath": "/samples/sweetalert/docs/guides/index.html",
-              "path": "/samples/sweetalert/docs/guides",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/docs/docs",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             }
-          ],
+          ]
+        },
+        {
           "fullPath": "/samples/sweetalert/docs/guides",
+          "filename": "guides",
           "shouldAnalyze": true,
-          "type": "dir"
+          "type": "dir",
+          "files": [
+            {
+              "fullPath": "/samples/sweetalert/docs/guides/index.html",
+              "filename": "index.html",
+              "shouldAnalyze": false,
+              "path": "/samples/sweetalert/docs/guides",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
+            }
+          ]
         },
         {
-          "complexityReport": null,
-          "filename": "CNAME",
           "fullPath": "/samples/sweetalert/docs/CNAME",
-          "path": "/samples/sweetalert/docs",
+          "filename": "CNAME",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "index.html",
           "fullPath": "/samples/sweetalert/docs/index.html",
-          "path": "/samples/sweetalert/docs",
+          "filename": "index.html",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         }
-      ],
-      "fullPath": "/samples/sweetalert/docs",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
+      "fullPath": "/samples/sweetalert/docs-src",
       "filename": "docs-src",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
+          "fullPath": "/samples/sweetalert/docs-src/assets",
           "filename": "assets",
+          "shouldAnalyze": true,
+          "type": "dir",
           "files": [
             {
-              "filename": "css",
-              "files": [
-                {
-                  "complexityReport": null,
-                  "filename": "app.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/app.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "guide.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/guide.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "header.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/header.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "highlight.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/highlight.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "index.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/index.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "normalize.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/normalize.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "table.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/table.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "variables.styl",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/variables.styl",
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                }
-              ],
               "fullPath": "/samples/sweetalert/docs-src/assets/css",
+              "filename": "css",
               "shouldAnalyze": true,
-              "type": "dir"
-            },
-            {
-              "filename": "images",
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
-                  "filename": "github.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/github.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/app.styl",
+                  "filename": "app.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "heart-icon.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/heart-icon.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/guide.styl",
+                  "filename": "guide.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "logo-small.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo-small.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/header.styl",
+                  "filename": "header.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "logo.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/highlight.styl",
+                  "filename": "highlight.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-examples.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/index.styl",
+                  "filename": "index.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-examples@2x.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples@2x.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/normalize.styl",
+                  "filename": "normalize.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "modal-fb-example@2x.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-fb-example@2x.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/table.styl",
+                  "filename": "table.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "mood-happy.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-happy.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "fullPath": "/samples/sweetalert/docs-src/assets/css/variables.styl",
+                  "filename": "variables.styl",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
+                  "path": "/samples/sweetalert/docs-src/assets/css",
+                  "type": "file",
                   "complexityReport": null,
-                  "filename": "mood-neutral.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-neutral.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "mood-sad.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-sad.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "pattern.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "pattern@2x.png",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern@2x.png",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "transition-top.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/transition-top.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "vs.svg",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/vs.svg",
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/docs-src/assets/images",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
-              "filename": "js",
+              "fullPath": "/samples/sweetalert/docs-src/assets/images",
+              "filename": "images",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/github.svg",
+                  "filename": "github.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/heart-icon.svg",
+                  "filename": "heart-icon.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo-small.svg",
+                  "filename": "logo-small.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo.svg",
+                  "filename": "logo.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples.png",
+                  "filename": "modal-examples.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples@2x.png",
+                  "filename": "modal-examples@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-fb-example@2x.png",
+                  "filename": "modal-fb-example@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-happy.png",
+                  "filename": "mood-happy.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-neutral.png",
+                  "filename": "mood-neutral.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-sad.png",
+                  "filename": "mood-sad.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern.png",
+                  "filename": "pattern.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern@2x.png",
+                  "filename": "pattern@2x.png",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/transition-top.svg",
+                  "filename": "transition-top.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/images/vs.svg",
+                  "filename": "vs.svg",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/docs-src/assets/images",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                }
+              ]
+            },
+            {
+              "fullPath": "/samples/sweetalert/docs-src/assets/js",
+              "filename": "js",
+              "shouldAnalyze": true,
+              "type": "dir",
+              "files": [
+                {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/js/add-preview-buttons.js",
+                  "filename": "add-preview-buttons.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs-src/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 11,
@@ -704,6 +718,9 @@
                         "difficulty": 12.812,
                         "effort": 21665.8,
                         "length": 266,
+                        "time": 1203.656,
+                        "vocabulary": 82,
+                        "volume": 1691.109,
                         "operands": {
                           "distinct": 69,
                           "total": 136
@@ -711,10 +728,7 @@
                         "operators": {
                           "distinct": 13,
                           "total": 130
-                        },
-                        "time": 1203.656,
-                        "vocabulary": 82,
-                        "volume": 1691.109
+                        }
                       },
                       "paramCount": 6,
                       "sloc": {
@@ -722,22 +736,22 @@
                         "physical": 80
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 51.89158411454548,
                     "lineEnd": 80,
                     "lineStart": 1,
-                    "maintainability": 110.71
+                    "maintainability": 110.71,
+                    "codehawkScore": 51.89158411454548,
+                    "coverage": "0"
                   },
-                  "filename": "add-preview-buttons.js",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/add-preview-buttons.js",
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 1,
-                  "type": "file"
+                  "timesDependedOn": 1
                 },
                 {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/js/index.js",
+                  "filename": "index.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs-src/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 11,
@@ -747,6 +761,9 @@
                         "difficulty": 12.9,
                         "effort": 13129.364,
                         "length": 169,
+                        "time": 729.409,
+                        "vocabulary": 65,
+                        "volume": 1017.78,
                         "operands": {
                           "distinct": 50,
                           "total": 86
@@ -754,10 +771,7 @@
                         "operators": {
                           "distinct": 15,
                           "total": 83
-                        },
-                        "time": 729.409,
-                        "vocabulary": 65,
-                        "volume": 1017.78
+                        }
                       },
                       "paramCount": 6,
                       "sloc": {
@@ -765,7 +779,6 @@
                         "physical": 120
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 2,
@@ -804,19 +817,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 48.7568423197879,
                     "lineEnd": 120,
                     "lineStart": 1,
-                    "maintainability": 122.903
+                    "maintainability": 122.903,
+                    "codehawkScore": 48.7568423197879,
+                    "coverage": "0"
                   },
-                  "filename": "index.js",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/index.js",
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 },
                 {
+                  "fullPath": "/samples/sweetalert/docs-src/assets/js/landing-text-rotater.js",
+                  "filename": "landing-text-rotater.js",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/docs-src/assets/js",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 14,
@@ -826,6 +840,9 @@
                         "difficulty": 20.76,
                         "effort": 31829.465,
                         "length": 251,
+                        "time": 1768.304,
+                        "vocabulary": 69,
+                        "volume": 1533.24,
                         "operands": {
                           "distinct": 52,
                           "total": 127
@@ -833,10 +850,7 @@
                         "operators": {
                           "distinct": 17,
                           "total": 124
-                        },
-                        "time": 1768.304,
-                        "vocabulary": 69,
-                        "volume": 1533.24
+                        }
                       },
                       "paramCount": 7,
                       "sloc": {
@@ -844,222 +858,222 @@
                         "physical": 91
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 51.70032457731847,
                     "lineEnd": 91,
                     "lineStart": 1,
-                    "maintainability": 109.853
+                    "maintainability": 109.853,
+                    "codehawkScore": 51.70032457731847,
+                    "coverage": "0"
                   },
-                  "filename": "landing-text-rotater.js",
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/landing-text-rotater.js",
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 1,
-                  "type": "file"
+                  "timesDependedOn": 1
                 }
-              ],
-              "fullPath": "/samples/sweetalert/docs-src/assets/js",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
-              "complexityReport": null,
-              "filename": "sweetalert",
               "fullPath": "/samples/sweetalert/docs-src/assets/sweetalert",
+              "filename": "sweetalert",
+              "shouldAnalyze": false,
               "path": "/samples/sweetalert/docs-src/assets",
-              "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             }
-          ],
-          "fullPath": "/samples/sweetalert/docs-src/assets",
-          "shouldAnalyze": true,
-          "type": "dir"
+          ]
         },
         {
-          "filename": "docs",
-          "files": [
-            {
-              "complexityReport": null,
-              "filename": "index.md",
-              "fullPath": "/samples/sweetalert/docs-src/docs/index.md",
-              "path": "/samples/sweetalert/docs-src/docs",
-              "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
-            }
-          ],
           "fullPath": "/samples/sweetalert/docs-src/docs",
+          "filename": "docs",
           "shouldAnalyze": true,
-          "type": "dir"
-        },
-        {
-          "filename": "guides",
+          "type": "dir",
           "files": [
             {
-              "complexityReport": null,
+              "fullPath": "/samples/sweetalert/docs-src/docs/index.md",
               "filename": "index.md",
-              "fullPath": "/samples/sweetalert/docs-src/guides/index.md",
-              "path": "/samples/sweetalert/docs-src/guides",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/docs-src/docs",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             }
-          ],
+          ]
+        },
+        {
           "fullPath": "/samples/sweetalert/docs-src/guides",
+          "filename": "guides",
           "shouldAnalyze": true,
-          "type": "dir"
+          "type": "dir",
+          "files": [
+            {
+              "fullPath": "/samples/sweetalert/docs-src/guides/index.md",
+              "filename": "index.md",
+              "shouldAnalyze": false,
+              "path": "/samples/sweetalert/docs-src/guides",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
+            }
+          ]
         },
         {
-          "complexityReport": null,
-          "filename": "index.hbs",
           "fullPath": "/samples/sweetalert/docs-src/index.hbs",
-          "path": "/samples/sweetalert/docs-src",
+          "filename": "index.hbs",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs-src",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "layout-docs.hbs",
           "fullPath": "/samples/sweetalert/docs-src/layout-docs.hbs",
-          "path": "/samples/sweetalert/docs-src",
+          "filename": "layout-docs.hbs",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs-src",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "layout-guides.hbs",
           "fullPath": "/samples/sweetalert/docs-src/layout-guides.hbs",
-          "path": "/samples/sweetalert/docs-src",
+          "filename": "layout-guides.hbs",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs-src",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "layout.hbs",
           "fullPath": "/samples/sweetalert/docs-src/layout.hbs",
-          "path": "/samples/sweetalert/docs-src",
+          "filename": "layout.hbs",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/docs-src",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         }
-      ],
-      "fullPath": "/samples/sweetalert/docs-src",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
+      "fullPath": "/samples/sweetalert/src",
       "filename": "src",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
+          "fullPath": "/samples/sweetalert/src/css",
           "filename": "css",
+          "shouldAnalyze": true,
+          "type": "dir",
           "files": [
             {
+              "fullPath": "/samples/sweetalert/src/css/icons",
               "filename": "icons",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
-                  "filename": "error.css",
                   "fullPath": "/samples/sweetalert/src/css/icons/error.css",
-                  "path": "/samples/sweetalert/src/css/icons",
+                  "filename": "error.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/src/css/icons",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "info.css",
                   "fullPath": "/samples/sweetalert/src/css/icons/info.css",
-                  "path": "/samples/sweetalert/src/css/icons",
+                  "filename": "info.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/src/css/icons",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "success.css",
                   "fullPath": "/samples/sweetalert/src/css/icons/success.css",
-                  "path": "/samples/sweetalert/src/css/icons",
+                  "filename": "success.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/src/css/icons",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "warning.css",
                   "fullPath": "/samples/sweetalert/src/css/icons/warning.css",
-                  "path": "/samples/sweetalert/src/css/icons",
+                  "filename": "warning.css",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/src/css/icons",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/src/css/icons",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
-              "complexityReport": null,
-              "filename": "button-loader.css",
               "fullPath": "/samples/sweetalert/src/css/button-loader.css",
-              "path": "/samples/sweetalert/src/css",
+              "filename": "button-loader.css",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/src/css",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "buttons.css",
               "fullPath": "/samples/sweetalert/src/css/buttons.css",
-              "path": "/samples/sweetalert/src/css",
+              "filename": "buttons.css",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/src/css",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "content.css",
               "fullPath": "/samples/sweetalert/src/css/content.css",
-              "path": "/samples/sweetalert/src/css",
+              "filename": "content.css",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/src/css",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "icons.css",
               "fullPath": "/samples/sweetalert/src/css/icons.css",
-              "path": "/samples/sweetalert/src/css",
+              "filename": "icons.css",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/src/css",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "text.css",
               "fullPath": "/samples/sweetalert/src/css/text.css",
-              "path": "/samples/sweetalert/src/css",
+              "filename": "text.css",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/src/css",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             }
-          ],
-          "fullPath": "/samples/sweetalert/src/css",
-          "shouldAnalyze": true,
-          "type": "dir"
+          ]
         },
         {
+          "fullPath": "/samples/sweetalert/src/modules",
           "filename": "modules",
+          "shouldAnalyze": true,
+          "type": "dir",
           "files": [
             {
+              "fullPath": "/samples/sweetalert/src/modules/class-list",
               "filename": "class-list",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/class-list/index.ts",
+                  "filename": "index.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/class-list",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1069,6 +1083,9 @@
                         "difficulty": 4.273,
                         "effort": 1919.562,
                         "length": 85,
+                        "time": 106.642,
+                        "vocabulary": 39,
+                        "volume": 449.259,
                         "operands": {
                           "distinct": 33,
                           "total": 47
@@ -1076,10 +1093,7 @@
                         "operators": {
                           "distinct": 6,
                           "total": 38
-                        },
-                        "time": 106.642,
-                        "vocabulary": 39,
-                        "volume": 449.259
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1087,30 +1101,30 @@
                         "physical": 28
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 88.72484177785137,
                     "lineEnd": 28,
                     "lineStart": 1,
-                    "maintainability": 96.614
+                    "maintainability": 96.614,
+                    "codehawkScore": 88.72484177785137,
+                    "coverage": "0"
                   },
-                  "filename": "index.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/class-list/index.ts",
-                  "path": "/samples/sweetalert/src/modules/class-list",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 13,
-                  "type": "file"
+                  "timesDependedOn": 13
                 }
-              ],
-              "fullPath": "/samples/sweetalert/src/modules/class-list",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/init",
               "filename": "init",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/buttons.ts",
+                  "filename": "buttons.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 12,
@@ -1120,6 +1134,9 @@
                         "difficulty": 17.867,
                         "effort": 20735.479,
                         "length": 192,
+                        "time": 1151.971,
+                        "vocabulary": 66,
+                        "volume": 1160.524,
                         "operands": {
                           "distinct": 49,
                           "total": 103
@@ -1127,10 +1144,7 @@
                         "operators": {
                           "distinct": 17,
                           "total": 89
-                        },
-                        "time": 1151.971,
-                        "vocabulary": 66,
-                        "volume": 1160.524
+                        }
                       },
                       "paramCount": 10,
                       "sloc": {
@@ -1138,7 +1152,6 @@
                         "physical": 81
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1177,19 +1190,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 52.63715061303356,
                     "lineEnd": 81,
                     "lineStart": 1,
-                    "maintainability": 109.444
+                    "maintainability": 109.444,
+                    "codehawkScore": 52.63715061303356,
+                    "coverage": "0"
                   },
-                  "filename": "buttons.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/buttons.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/content.ts",
+                  "filename": "content.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 11,
@@ -1199,6 +1213,9 @@
                         "difficulty": 18.308,
                         "effort": 16904.763,
                         "length": 159,
+                        "time": 939.154,
+                        "vocabulary": 56,
+                        "volume": 923.369,
                         "operands": {
                           "distinct": 39,
                           "total": 84
@@ -1206,10 +1223,7 @@
                         "operators": {
                           "distinct": 17,
                           "total": 75
-                        },
-                        "time": 939.154,
-                        "vocabulary": 56,
-                        "volume": 923.369
+                        }
                       },
                       "paramCount": 7,
                       "sloc": {
@@ -1217,7 +1231,6 @@
                         "physical": 72
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1251,19 +1264,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 54.049450575135026,
                     "lineEnd": 72,
                     "lineStart": 1,
-                    "maintainability": 114.5
+                    "maintainability": 114.5,
+                    "codehawkScore": 54.049450575135026,
+                    "coverage": "0"
                   },
-                  "filename": "content.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/content.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/icon.ts",
+                  "filename": "icon.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 7,
@@ -1273,6 +1287,9 @@
                         "difficulty": 14.703,
                         "effort": 11116.5,
                         "length": 132,
+                        "time": 617.583,
+                        "vocabulary": 53,
+                        "volume": 756.086,
                         "operands": {
                           "distinct": 37,
                           "total": 68
@@ -1280,10 +1297,7 @@
                         "operators": {
                           "distinct": 16,
                           "total": 64
-                        },
-                        "time": 617.583,
-                        "vocabulary": 53,
-                        "volume": 756.086
+                        }
                       },
                       "paramCount": 5,
                       "sloc": {
@@ -1291,7 +1305,6 @@
                         "physical": 47
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 2,
@@ -1310,19 +1323,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 56.81690867438252,
                     "lineEnd": 47,
                     "lineStart": 1,
-                    "maintainability": 107.725
+                    "maintainability": 107.725,
+                    "codehawkScore": 56.81690867438252,
+                    "coverage": "0"
                   },
-                  "filename": "icon.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/icon.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/index.ts",
+                  "filename": "index.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 4,
@@ -1332,6 +1346,9 @@
                         "difficulty": 5.714,
                         "effort": 993.816,
                         "length": 39,
+                        "time": 55.212,
+                        "vocabulary": 22,
+                        "volume": 173.918,
                         "operands": {
                           "distinct": 14,
                           "total": 20
@@ -1339,10 +1356,7 @@
                         "operators": {
                           "distinct": 8,
                           "total": 19
-                        },
-                        "time": 55.212,
-                        "vocabulary": 22,
-                        "volume": 173.918
+                        }
                       },
                       "paramCount": 1,
                       "sloc": {
@@ -1350,7 +1364,6 @@
                         "physical": 30
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1384,19 +1397,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 60.934886942256135,
                     "lineEnd": 30,
                     "lineStart": 1,
-                    "maintainability": 118.751
+                    "maintainability": 118.751,
+                    "codehawkScore": 60.934886942256135,
+                    "coverage": "0"
                   },
-                  "filename": "index.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/index.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 1,
-                  "type": "file"
+                  "timesDependedOn": 1
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/modal.ts",
+                  "filename": "modal.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 7,
@@ -1406,6 +1420,9 @@
                         "difficulty": 8.97,
                         "effort": 6535.564,
                         "length": 136,
+                        "time": 363.087,
+                        "vocabulary": 41,
+                        "volume": 728.627,
                         "operands": {
                           "distinct": 33,
                           "total": 74
@@ -1413,10 +1430,7 @@
                         "operators": {
                           "distinct": 8,
                           "total": 62
-                        },
-                        "time": 363.087,
-                        "vocabulary": 41,
-                        "volume": 728.627
+                        }
                       },
                       "paramCount": 5,
                       "sloc": {
@@ -1424,7 +1438,6 @@
                         "physical": 65
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1463,19 +1476,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 54.52583298958849,
                     "lineEnd": 65,
                     "lineStart": 1,
-                    "maintainability": 116.606
+                    "maintainability": 116.606,
+                    "codehawkScore": 54.52583298958849,
+                    "coverage": "0"
                   },
-                  "filename": "modal.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/modal.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/overlay.ts",
+                  "filename": "overlay.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 2,
@@ -1485,6 +1499,9 @@
                         "difficulty": 3.214,
                         "effort": 207.416,
                         "length": 18,
+                        "time": 11.523,
+                        "vocabulary": 12,
+                        "volume": 64.529,
                         "operands": {
                           "distinct": 7,
                           "total": 9
@@ -1492,10 +1509,7 @@
                         "operators": {
                           "distinct": 5,
                           "total": 9
-                        },
-                        "time": 11.523,
-                        "vocabulary": 12,
-                        "volume": 64.529
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1503,7 +1517,6 @@
                         "physical": 9
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1517,19 +1530,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 92.17455287783764,
                     "lineEnd": 9,
                     "lineStart": 1,
-                    "maintainability": 140.282
+                    "maintainability": 140.282,
+                    "codehawkScore": 92.17455287783764,
+                    "coverage": "0"
                   },
-                  "filename": "overlay.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/overlay.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/init/text.ts",
+                  "filename": "text.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/init",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 9,
@@ -1539,6 +1553,9 @@
                         "difficulty": 7.75,
                         "effort": 4979.738,
                         "length": 117,
+                        "time": 276.652,
+                        "vocabulary": 45,
+                        "volume": 642.547,
                         "operands": {
                           "distinct": 36,
                           "total": 62
@@ -1546,10 +1563,7 @@
                         "operators": {
                           "distinct": 9,
                           "total": 55
-                        },
-                        "time": 276.652,
-                        "vocabulary": 45,
-                        "volume": 642.547
+                        }
                       },
                       "paramCount": 6,
                       "sloc": {
@@ -1557,7 +1571,6 @@
                         "physical": 38
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1571,27 +1584,28 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 60.20995227958394,
                     "lineEnd": 38,
                     "lineStart": 1,
-                    "maintainability": 117.244
+                    "maintainability": 117.244,
+                    "codehawkScore": 60.20995227958394,
+                    "coverage": "0"
                   },
-                  "filename": "text.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/init/text.ts",
-                  "path": "/samples/sweetalert/src/modules/init",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 }
-              ],
-              "fullPath": "/samples/sweetalert/src/modules/init",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/markup",
               "filename": "markup",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/buttons.ts",
+                  "filename": "buttons.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1601,6 +1615,9 @@
                         "difficulty": 4.167,
                         "effort": 380.735,
                         "length": 24,
+                        "time": 21.152,
+                        "vocabulary": 14,
+                        "volume": 91.377,
                         "operands": {
                           "distinct": 9,
                           "total": 15
@@ -1608,10 +1625,7 @@
                         "operators": {
                           "distinct": 5,
                           "total": 9
-                        },
-                        "time": 21.152,
-                        "vocabulary": 14,
-                        "volume": 91.377
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1619,7 +1633,6 @@
                         "physical": 21
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1628,19 +1641,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 91.84029350058518,
                     "lineEnd": 21,
                     "lineStart": 1,
-                    "maintainability": 124.605
+                    "maintainability": 124.605,
+                    "codehawkScore": 91.84029350058518,
+                    "coverage": "0"
                   },
-                  "filename": "buttons.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/buttons.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/content.ts",
+                  "filename": "content.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1650,6 +1664,9 @@
                         "difficulty": 3.5,
                         "effort": 162.774,
                         "length": 14,
+                        "time": 9.043,
+                        "vocabulary": 10,
+                        "volume": 46.507,
                         "operands": {
                           "distinct": 5,
                           "total": 7
@@ -1657,10 +1674,7 @@
                         "operators": {
                           "distinct": 5,
                           "total": 7
-                        },
-                        "time": 9.043,
-                        "vocabulary": 10,
-                        "volume": 46.507
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1668,7 +1682,6 @@
                         "physical": 9
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1677,19 +1690,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 92.8634839277374,
                     "lineEnd": 9,
                     "lineStart": 1,
-                    "maintainability": 135.787
+                    "maintainability": 135.787,
+                    "codehawkScore": 92.8634839277374,
+                    "coverage": "0"
                   },
-                  "filename": "content.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/content.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/icons.ts",
+                  "filename": "icons.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 4,
@@ -1699,6 +1713,9 @@
                         "difficulty": 6.86,
                         "effort": 3361.4,
                         "length": 98,
+                        "time": 186.744,
+                        "vocabulary": 32,
+                        "volume": 490,
                         "operands": {
                           "distinct": 25,
                           "total": 49
@@ -1706,10 +1723,7 @@
                         "operators": {
                           "distinct": 7,
                           "total": 49
-                        },
-                        "time": 186.744,
-                        "vocabulary": 32,
-                        "volume": 490
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1717,7 +1731,6 @@
                         "physical": 33
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1726,19 +1739,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 58.89252972007756,
                     "lineEnd": 33,
                     "lineStart": 1,
-                    "maintainability": 125.512
+                    "maintainability": 125.512,
+                    "codehawkScore": 58.89252972007756,
+                    "coverage": "0"
                   },
-                  "filename": "icons.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/icons.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/index.ts",
+                  "filename": "index.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1748,6 +1762,9 @@
                         "difficulty": 5.208,
                         "effort": 936.71,
                         "length": 44,
+                        "time": 52.039,
+                        "vocabulary": 17,
+                        "volume": 179.848,
                         "operands": {
                           "distinct": 12,
                           "total": 25
@@ -1755,10 +1772,7 @@
                         "operators": {
                           "distinct": 5,
                           "total": 19
-                        },
-                        "time": 52.039,
-                        "vocabulary": 17,
-                        "volume": 179.848
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1766,7 +1780,6 @@
                         "physical": 22
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 6,
@@ -1775,19 +1788,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 91.24987755023842,
                     "lineEnd": 22,
                     "lineStart": 1,
-                    "maintainability": 112.004
+                    "maintainability": 112.004,
+                    "codehawkScore": 91.24987755023842,
+                    "coverage": "0"
                   },
-                  "filename": "index.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/index.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/modal.ts",
+                  "filename": "modal.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1797,6 +1811,9 @@
                         "difficulty": 4.5,
                         "effort": 290.382,
                         "length": 18,
+                        "time": 16.132,
+                        "vocabulary": 12,
+                        "volume": 64.529,
                         "operands": {
                           "distinct": 6,
                           "total": 9
@@ -1804,10 +1821,7 @@
                         "operators": {
                           "distinct": 6,
                           "total": 9
-                        },
-                        "time": 16.132,
-                        "vocabulary": 12,
-                        "volume": 64.529
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1815,7 +1829,6 @@
                         "physical": 12
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1824,19 +1837,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 92.30905580181427,
                     "lineEnd": 12,
                     "lineStart": 1,
-                    "maintainability": 133.807
+                    "maintainability": 133.807,
+                    "codehawkScore": 92.30905580181427,
+                    "coverage": "0"
                   },
-                  "filename": "modal.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/modal.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/markup/overlay.ts",
+                  "filename": "overlay.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/markup",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 1,
@@ -1846,6 +1860,9 @@
                         "difficulty": 4,
                         "effort": 199.316,
                         "length": 15,
+                        "time": 11.073,
+                        "vocabulary": 10,
+                        "volume": 49.829,
                         "operands": {
                           "distinct": 5,
                           "total": 8
@@ -1853,10 +1870,7 @@
                         "operators": {
                           "distinct": 5,
                           "total": 7
-                        },
-                        "time": 11.073,
-                        "vocabulary": 10,
-                        "volume": 49.829
+                        }
                       },
                       "paramCount": 0,
                       "sloc": {
@@ -1864,7 +1878,6 @@
                         "physical": 9
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1873,27 +1886,28 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 92.8634839277374,
                     "lineEnd": 9,
                     "lineStart": 1,
-                    "maintainability": 135.094
+                    "maintainability": 135.094,
+                    "codehawkScore": 92.8634839277374,
+                    "coverage": "0"
                   },
-                  "filename": "overlay.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/markup/overlay.ts",
-                  "path": "/samples/sweetalert/src/modules/markup",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 6,
-                  "type": "file"
+                  "timesDependedOn": 6
                 }
-              ],
-              "fullPath": "/samples/sweetalert/src/modules/markup",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/options",
               "filename": "options",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/options/buttons.ts",
+                  "filename": "buttons.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/options",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 20,
@@ -1903,6 +1917,9 @@
                         "difficulty": 43.615,
                         "effort": 103824.695,
                         "length": 381,
+                        "time": 5768.039,
+                        "vocabulary": 76,
+                        "volume": 2380.46,
                         "operands": {
                           "distinct": 52,
                           "total": 189
@@ -1910,10 +1927,7 @@
                         "operators": {
                           "distinct": 24,
                           "total": 192
-                        },
-                        "time": 5768.039,
-                        "vocabulary": 76,
-                        "volume": 2380.46
+                        }
                       },
                       "paramCount": 6,
                       "sloc": {
@@ -1921,7 +1935,6 @@
                         "physical": 150
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1930,19 +1943,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 47.06570281407246,
                     "lineEnd": 150,
                     "lineStart": 1,
-                    "maintainability": 88.721
+                    "maintainability": 88.721,
+                    "codehawkScore": 47.06570281407246,
+                    "coverage": "0"
                   },
-                  "filename": "buttons.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/options/buttons.ts",
-                  "path": "/samples/sweetalert/src/modules/options",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 8,
-                  "type": "file"
+                  "timesDependedOn": 8
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/options/content.ts",
+                  "filename": "content.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/options",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 5,
@@ -1952,6 +1966,9 @@
                         "difficulty": 9.857,
                         "effort": 2316.645,
                         "length": 50,
+                        "time": 128.703,
+                        "vocabulary": 26,
+                        "volume": 235.022,
                         "operands": {
                           "distinct": 14,
                           "total": 23
@@ -1959,10 +1976,7 @@
                         "operators": {
                           "distinct": 12,
                           "total": 27
-                        },
-                        "time": 128.703,
-                        "vocabulary": 26,
-                        "volume": 235.022
+                        }
                       },
                       "paramCount": 1,
                       "sloc": {
@@ -1970,7 +1984,6 @@
                         "physical": 27
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -1979,19 +1992,20 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 62.70448988147212,
                     "lineEnd": 27,
                     "lineStart": 1,
-                    "maintainability": 111.287
+                    "maintainability": 111.287,
+                    "codehawkScore": 62.70448988147212,
+                    "coverage": "0"
                   },
-                  "filename": "content.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/options/content.ts",
-                  "path": "/samples/sweetalert/src/modules/options",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/options/deprecations.ts",
+                  "filename": "deprecations.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/options",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 6,
@@ -2001,6 +2015,9 @@
                         "difficulty": 17.024,
                         "effort": 27820.387,
                         "length": 260,
+                        "time": 1545.577,
+                        "vocabulary": 78,
+                        "volume": 1634.205,
                         "operands": {
                           "distinct": 63,
                           "total": 143
@@ -2008,10 +2025,7 @@
                         "operators": {
                           "distinct": 15,
                           "total": 117
-                        },
-                        "time": 1545.577,
-                        "vocabulary": 78,
-                        "volume": 1634.205
+                        }
                       },
                       "paramCount": 1,
                       "sloc": {
@@ -2019,22 +2033,22 @@
                         "physical": 105
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [],
                     "errors": [],
-                    "codehawkScore": 47.379394934117734,
                     "lineEnd": 105,
                     "lineStart": 1,
-                    "maintainability": 78.559
+                    "maintainability": 78.559,
+                    "codehawkScore": 47.379394934117734,
+                    "coverage": "0"
                   },
-                  "filename": "deprecations.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/options/deprecations.ts",
-                  "path": "/samples/sweetalert/src/modules/options",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 2,
-                  "type": "file"
+                  "timesDependedOn": 2
                 },
                 {
+                  "fullPath": "/samples/sweetalert/src/modules/options/index.ts",
+                  "filename": "index.ts",
+                  "shouldAnalyze": true,
+                  "path": "/samples/sweetalert/src/modules/options",
+                  "type": "file",
                   "complexityReport": {
                     "aggregate": {
                       "cyclomatic": 27,
@@ -2044,6 +2058,9 @@
                         "difficulty": 35.015,
                         "effort": 89106.207,
                         "length": 392,
+                        "time": 4950.345,
+                        "vocabulary": 90,
+                        "volume": 2544.806,
                         "operands": {
                           "distinct": 67,
                           "total": 204
@@ -2051,10 +2068,7 @@
                         "operators": {
                           "distinct": 23,
                           "total": 188
-                        },
-                        "time": 4950.345,
-                        "vocabulary": 90,
-                        "volume": 2544.806
+                        }
                       },
                       "paramCount": 17,
                       "sloc": {
@@ -2062,7 +2076,6 @@
                         "physical": 150
                       }
                     },
-                    "coverage": "0",
                     "dependencies": [
                       {
                         "line": 1,
@@ -2086,24 +2099,22 @@
                       }
                     ],
                     "errors": [],
-                    "codehawkScore": 46.51449814838432,
                     "lineEnd": 150,
                     "lineStart": 1,
-                    "maintainability": 102.469
+                    "maintainability": 102.469,
+                    "codehawkScore": 46.51449814838432,
+                    "coverage": "0"
                   },
-                  "filename": "index.ts",
-                  "fullPath": "/samples/sweetalert/src/modules/options/index.ts",
-                  "path": "/samples/sweetalert/src/modules/options",
-                  "shouldAnalyze": true,
-                  "timesDependedOn": 1,
-                  "type": "file"
+                  "timesDependedOn": 1
                 }
-              ],
-              "fullPath": "/samples/sweetalert/src/modules/options",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/actions.ts",
+              "filename": "actions.ts",
+              "shouldAnalyze": true,
+              "path": "/samples/sweetalert/src/modules",
+              "type": "file",
               "complexityReport": {
                 "aggregate": {
                   "cyclomatic": 8,
@@ -2113,6 +2124,9 @@
                     "difficulty": 19.8,
                     "effort": 20181.916,
                     "length": 174,
+                    "time": 1121.218,
+                    "vocabulary": 58,
+                    "volume": 1019.289,
                     "operands": {
                       "distinct": 40,
                       "total": 88
@@ -2120,10 +2134,7 @@
                     "operators": {
                       "distinct": 18,
                       "total": 86
-                    },
-                    "time": 1121.218,
-                    "vocabulary": 58,
-                    "volume": 1019.289
+                    }
                   },
                   "paramCount": 1,
                   "sloc": {
@@ -2131,7 +2142,6 @@
                     "physical": 67
                   }
                 },
-                "coverage": "0",
                 "dependencies": [
                   {
                     "line": 1,
@@ -2155,19 +2165,20 @@
                   }
                 ],
                 "errors": [],
-                "codehawkScore": 53.67817875674,
                 "lineEnd": 67,
                 "lineStart": 1,
-                "maintainability": 110.662
+                "maintainability": 110.662,
+                "codehawkScore": 53.67817875674,
+                "coverage": "0"
               },
-              "filename": "actions.ts",
-              "fullPath": "/samples/sweetalert/src/modules/actions.ts",
-              "path": "/samples/sweetalert/src/modules",
-              "shouldAnalyze": true,
-              "timesDependedOn": 4,
-              "type": "file"
+              "timesDependedOn": 4
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/event-listeners.ts",
+              "filename": "event-listeners.ts",
+              "shouldAnalyze": true,
+              "path": "/samples/sweetalert/src/modules",
+              "type": "file",
               "complexityReport": {
                 "aggregate": {
                   "cyclomatic": 32,
@@ -2177,6 +2188,9 @@
                     "difficulty": 27.708,
                     "effort": 62356.211,
                     "length": 357,
+                    "time": 3464.234,
+                    "vocabulary": 79,
+                    "volume": 2250.45,
                     "operands": {
                       "distinct": 60,
                       "total": 175
@@ -2184,10 +2198,7 @@
                     "operators": {
                       "distinct": 19,
                       "total": 182
-                    },
-                    "time": 3464.234,
-                    "vocabulary": 79,
-                    "volume": 2250.45
+                    }
                   },
                   "paramCount": 11,
                   "sloc": {
@@ -2195,7 +2206,6 @@
                     "physical": 141
                   }
                 },
-                "coverage": "0",
                 "dependencies": [
                   {
                     "line": 1,
@@ -2224,19 +2234,20 @@
                   }
                 ],
                 "errors": [],
-                "codehawkScore": 47.300787024008535,
                 "lineEnd": 141,
                 "lineStart": 1,
-                "maintainability": 110.946
+                "maintainability": 110.946,
+                "codehawkScore": 47.300787024008535,
+                "coverage": "0"
               },
-              "filename": "event-listeners.ts",
-              "fullPath": "/samples/sweetalert/src/modules/event-listeners.ts",
-              "path": "/samples/sweetalert/src/modules",
-              "shouldAnalyze": true,
-              "timesDependedOn": 1,
-              "type": "file"
+              "timesDependedOn": 1
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/state.ts",
+              "filename": "state.ts",
+              "shouldAnalyze": true,
+              "path": "/samples/sweetalert/src/modules",
+              "type": "file",
               "complexityReport": {
                 "aggregate": {
                   "cyclomatic": 7,
@@ -2246,6 +2257,9 @@
                     "difficulty": 19.773,
                     "effort": 12154.602,
                     "length": 118,
+                    "time": 675.256,
+                    "vocabulary": 37,
+                    "volume": 614.715,
                     "operands": {
                       "distinct": 22,
                       "total": 58
@@ -2253,10 +2267,7 @@
                     "operators": {
                       "distinct": 15,
                       "total": 60
-                    },
-                    "time": 675.256,
-                    "vocabulary": 37,
-                    "volume": 614.715
+                    }
                   },
                   "paramCount": 6,
                   "sloc": {
@@ -2264,7 +2275,6 @@
                     "physical": 51
                   }
                 },
-                "coverage": "0",
                 "dependencies": [
                   {
                     "line": 1,
@@ -2273,19 +2283,20 @@
                   }
                 ],
                 "errors": [],
-                "codehawkScore": 57.1359500207509,
                 "lineEnd": 51,
                 "lineStart": 1,
-                "maintainability": 116.092
+                "maintainability": 116.092,
+                "codehawkScore": 57.1359500207509,
+                "coverage": "0"
               },
-              "filename": "state.ts",
-              "fullPath": "/samples/sweetalert/src/modules/state.ts",
-              "path": "/samples/sweetalert/src/modules",
-              "shouldAnalyze": true,
-              "timesDependedOn": 5,
-              "type": "file"
+              "timesDependedOn": 5
             },
             {
+              "fullPath": "/samples/sweetalert/src/modules/utils.ts",
+              "filename": "utils.ts",
+              "shouldAnalyze": true,
+              "path": "/samples/sweetalert/src/modules",
+              "type": "file",
               "complexityReport": {
                 "aggregate": {
                   "cyclomatic": 16,
@@ -2295,6 +2306,9 @@
                     "difficulty": 15.316,
                     "effort": 19270.654,
                     "length": 202,
+                    "time": 1070.592,
+                    "vocabulary": 75,
+                    "volume": 1258.221,
                     "operands": {
                       "distinct": 57,
                       "total": 97
@@ -2302,10 +2316,7 @@
                     "operators": {
                       "distinct": 18,
                       "total": 105
-                    },
-                    "time": 1070.592,
-                    "vocabulary": 75,
-                    "volume": 1258.221
+                    }
                   },
                   "paramCount": 8,
                   "sloc": {
@@ -2313,27 +2324,24 @@
                     "physical": 61
                   }
                 },
-                "coverage": "0",
                 "dependencies": [],
                 "errors": [],
-                "codehawkScore": 55.43471610919461,
                 "lineEnd": 61,
                 "lineStart": 1,
-                "maintainability": 114.99
+                "maintainability": 114.99,
+                "codehawkScore": 55.43471610919461,
+                "coverage": "0"
               },
-              "filename": "utils.ts",
-              "fullPath": "/samples/sweetalert/src/modules/utils.ts",
-              "path": "/samples/sweetalert/src/modules",
-              "shouldAnalyze": true,
-              "timesDependedOn": 10,
-              "type": "file"
+              "timesDependedOn": 10
             }
-          ],
-          "fullPath": "/samples/sweetalert/src/modules",
-          "shouldAnalyze": true,
-          "type": "dir"
+          ]
         },
         {
+          "fullPath": "/samples/sweetalert/src/core.ts",
+          "filename": "core.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/src",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 5,
@@ -2343,6 +2351,9 @@
                 "difficulty": 11.7,
                 "effort": 4013.32,
                 "length": 68,
+                "time": 222.962,
+                "vocabulary": 33,
+                "volume": 343.019,
                 "operands": {
                   "distinct": 20,
                   "total": 36
@@ -2350,10 +2361,7 @@
                 "operators": {
                   "distinct": 13,
                   "total": 32
-                },
-                "time": 222.962,
-                "vocabulary": 33,
-                "volume": 343.019
+                }
               },
               "paramCount": 3,
               "sloc": {
@@ -2361,7 +2369,6 @@
                 "physical": 34
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 6,
@@ -2385,19 +2392,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 59.79558895081384,
             "lineEnd": 34,
             "lineStart": 1,
-            "maintainability": 121.068
+            "maintainability": 121.068,
+            "codehawkScore": 59.79558895081384,
+            "coverage": "0"
           },
-          "filename": "core.ts",
-          "fullPath": "/samples/sweetalert/src/core.ts",
-          "path": "/samples/sweetalert/src",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/src/polyfills.js",
+          "filename": "polyfills.js",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/src",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 24,
@@ -2407,6 +2415,9 @@
                 "difficulty": 37.278,
                 "effort": 60044.654,
                 "length": 250,
+                "time": 3335.814,
+                "vocabulary": 87,
+                "volume": 1610.736,
                 "operands": {
                   "distinct": 54,
                   "total": 122
@@ -2414,10 +2425,7 @@
                 "operators": {
                   "distinct": 33,
                   "total": 128
-                },
-                "time": 3335.814,
-                "vocabulary": 87,
-                "volume": 1610.736
+                }
               },
               "paramCount": 8,
               "sloc": {
@@ -2425,40 +2433,40 @@
                 "physical": 110
               }
             },
-            "coverage": "0",
             "dependencies": [],
             "errors": [],
-            "codehawkScore": 49.61465132219012,
             "lineEnd": 110,
             "lineStart": 1,
-            "maintainability": 105.106
+            "maintainability": 105.106,
+            "codehawkScore": 49.61465132219012,
+            "coverage": "0"
           },
-          "filename": "polyfills.js",
-          "fullPath": "/samples/sweetalert/src/polyfills.js",
-          "path": "/samples/sweetalert/src",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "sweetalert.css",
           "fullPath": "/samples/sweetalert/src/sweetalert.css",
-          "path": "/samples/sweetalert/src",
+          "filename": "sweetalert.css",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
-        },
-        {
+          "path": "/samples/sweetalert/src",
+          "type": "file",
           "complexityReport": null,
-          "filename": "sweetalert.d.ts",
-          "fullPath": "/samples/sweetalert/src/sweetalert.d.ts",
-          "path": "/samples/sweetalert/src",
-          "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/src/sweetalert.d.ts",
+          "filename": "sweetalert.d.ts",
+          "shouldAnalyze": false,
+          "path": "/samples/sweetalert/src",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
+        },
+        {
+          "fullPath": "/samples/sweetalert/src/sweetalert.js",
+          "filename": "sweetalert.js",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/src",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 2,
@@ -2468,6 +2476,9 @@
                 "difficulty": 4.55,
                 "effort": 446.351,
                 "length": 24,
+                "time": 24.797,
+                "vocabulary": 17,
+                "volume": 98.099,
                 "operands": {
                   "distinct": 10,
                   "total": 13
@@ -2475,10 +2486,7 @@
                 "operators": {
                   "distinct": 7,
                   "total": 11
-                },
-                "time": 24.797,
-                "vocabulary": 17,
-                "volume": 98.099
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2486,30 +2494,30 @@
                 "physical": 15
               }
             },
-            "coverage": "0",
             "dependencies": [],
             "errors": [],
-            "codehawkScore": 91.1153746262618,
             "lineEnd": 15,
             "lineStart": 1,
-            "maintainability": 120.415
+            "maintainability": 120.415,
+            "codehawkScore": 91.1153746262618,
+            "coverage": "0"
           },
-          "filename": "sweetalert.js",
-          "fullPath": "/samples/sweetalert/src/sweetalert.js",
-          "path": "/samples/sweetalert/src",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         }
-      ],
-      "fullPath": "/samples/sweetalert/src",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
+      "fullPath": "/samples/sweetalert/test",
       "filename": "test",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
+          "fullPath": "/samples/sweetalert/test/actions.test.ts",
+          "filename": "actions.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 9,
@@ -2519,6 +2527,9 @@
                 "difficulty": 7.942,
                 "effort": 4567.311,
                 "length": 114,
+                "time": 253.739,
+                "vocabulary": 33,
+                "volume": 575.061,
                 "operands": {
                   "distinct": 26,
                   "total": 59
@@ -2526,10 +2537,7 @@
                 "operators": {
                   "distinct": 7,
                   "total": 55
-                },
-                "time": 253.739,
-                "vocabulary": 33,
-                "volume": 575.061
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2537,7 +2545,6 @@
                 "physical": 41
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2546,19 +2553,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 60.43324697791003,
             "lineEnd": 41,
             "lineStart": 1,
-            "maintainability": 123.986
+            "maintainability": 123.986,
+            "codehawkScore": 60.43324697791003,
+            "coverage": "0"
           },
-          "filename": "actions.test.ts",
-          "fullPath": "/samples/sweetalert/test/actions.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/button-options.test.ts",
+          "filename": "button-options.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 7,
@@ -2568,6 +2576,9 @@
                 "difficulty": 18.321,
                 "effort": 20520.595,
                 "length": 215,
+                "time": 1140.033,
+                "vocabulary": 37,
+                "volume": 1120.032,
                 "operands": {
                   "distinct": 28,
                   "total": 114
@@ -2575,10 +2586,7 @@
                 "operators": {
                   "distinct": 9,
                   "total": 101
-                },
-                "time": 1140.033,
-                "vocabulary": 37,
-                "volume": 1120.032
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2586,7 +2594,6 @@
                 "physical": 78
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2595,19 +2602,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 53.11074081476417,
             "lineEnd": 78,
             "lineStart": 1,
-            "maintainability": 105.939
+            "maintainability": 105.939,
+            "codehawkScore": 53.11074081476417,
+            "coverage": "0"
           },
-          "filename": "button-options.test.ts",
-          "fullPath": "/samples/sweetalert/test/button-options.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/buttons.test.ts",
+          "filename": "buttons.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 26,
@@ -2617,6 +2625,9 @@
                 "difficulty": 24.444,
                 "effort": 113220.042,
                 "length": 710,
+                "time": 6290.002,
+                "vocabulary": 92,
+                "volume": 4631.729,
                 "operands": {
                   "distinct": 81,
                   "total": 360
@@ -2624,10 +2635,7 @@
                 "operators": {
                   "distinct": 11,
                   "total": 350
-                },
-                "time": 6290.002,
-                "vocabulary": 92,
-                "volume": 4631.729
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2635,7 +2643,6 @@
                 "physical": 172
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2644,19 +2651,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 45.176495763789625,
             "lineEnd": 172,
             "lineStart": 1,
-            "maintainability": 106.958
+            "maintainability": 106.958,
+            "codehawkScore": 45.176495763789625,
+            "coverage": "0"
           },
-          "filename": "buttons.test.ts",
-          "fullPath": "/samples/sweetalert/test/buttons.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/content.test.ts",
+          "filename": "content.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 10,
@@ -2666,6 +2674,9 @@
                 "difficulty": 13.818,
                 "effort": 24133.27,
                 "length": 290,
+                "time": 1340.737,
+                "vocabulary": 65,
+                "volume": 1746.487,
                 "operands": {
                   "distinct": 55,
                   "total": 152
@@ -2673,10 +2684,7 @@
                 "operators": {
                   "distinct": 10,
                   "total": 138
-                },
-                "time": 1340.737,
-                "vocabulary": 65,
-                "volume": 1746.487
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2684,7 +2692,6 @@
                 "physical": 58
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2693,19 +2700,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 55.39493277117401,
             "lineEnd": 58,
             "lineStart": 1,
-            "maintainability": 108.948
+            "maintainability": 108.948,
+            "codehawkScore": 55.39493277117401,
+            "coverage": "0"
           },
-          "filename": "content.test.ts",
-          "fullPath": "/samples/sweetalert/test/content.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/icons.test.ts",
+          "filename": "icons.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 6,
@@ -2715,6 +2723,9 @@
                 "difficulty": 9.167,
                 "effort": 5070.835,
                 "length": 107,
+                "time": 281.713,
+                "vocabulary": 36,
+                "volume": 553.182,
                 "operands": {
                   "distinct": 27,
                   "total": 55
@@ -2722,10 +2733,7 @@
                 "operators": {
                   "distinct": 9,
                   "total": 52
-                },
-                "time": 281.713,
-                "vocabulary": 36,
-                "volume": 553.182
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2733,7 +2741,6 @@
                 "physical": 25
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2742,19 +2749,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 63.32615325487864,
             "lineEnd": 25,
             "lineStart": 1,
-            "maintainability": 118.924
+            "maintainability": 118.924,
+            "codehawkScore": 63.32615325487864,
+            "coverage": "0"
           },
-          "filename": "icons.test.ts",
-          "fullPath": "/samples/sweetalert/test/icons.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/index.test.ts",
+          "filename": "index.test.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 8,
@@ -2764,6 +2772,9 @@
                 "difficulty": 14.769,
                 "effort": 22396.102,
                 "length": 273,
+                "time": 1244.228,
+                "vocabulary": 47,
+                "volume": 1516.403,
                 "operands": {
                   "distinct": 39,
                   "total": 144
@@ -2771,10 +2782,7 @@
                 "operators": {
                   "distinct": 8,
                   "total": 129
-                },
-                "time": 1244.228,
-                "vocabulary": 47,
-                "volume": 1516.403
+                }
               },
               "paramCount": 0,
               "sloc": {
@@ -2782,7 +2790,6 @@
                 "physical": 43
               }
             },
-            "coverage": "0",
             "dependencies": [
               {
                 "line": 1,
@@ -2791,19 +2798,20 @@
               }
             ],
             "errors": [],
-            "codehawkScore": 58.519181497001405,
             "lineEnd": 43,
             "lineStart": 1,
-            "maintainability": 103.769
+            "maintainability": 103.769,
+            "codehawkScore": 58.519181497001405,
+            "coverage": "0"
           },
-          "filename": "index.test.ts",
-          "fullPath": "/samples/sweetalert/test/index.test.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 0,
-          "type": "file"
+          "timesDependedOn": 0
         },
         {
+          "fullPath": "/samples/sweetalert/test/utils.ts",
+          "filename": "utils.ts",
+          "shouldAnalyze": true,
+          "path": "/samples/sweetalert/test",
+          "type": "file",
           "complexityReport": {
             "aggregate": {
               "cyclomatic": 5,
@@ -2813,6 +2821,9 @@
                 "difficulty": 6.188,
                 "effort": 1350.491,
                 "length": 47,
+                "time": 75.027,
+                "vocabulary": 25,
+                "volume": 218.261,
                 "operands": {
                   "distinct": 16,
                   "total": 22
@@ -2820,10 +2831,7 @@
                 "operators": {
                   "distinct": 9,
                   "total": 25
-                },
-                "time": 75.027,
-                "vocabulary": 25,
-                "volume": 218.261
+                }
               },
               "paramCount": 3,
               "sloc": {
@@ -2831,309 +2839,306 @@
                 "physical": 8
               }
             },
-            "coverage": "0",
             "dependencies": [],
             "errors": [],
-            "codehawkScore": 74.34750272501239,
             "lineEnd": 8,
             "lineStart": 1,
-            "maintainability": 130.225
+            "maintainability": 130.225,
+            "codehawkScore": 74.34750272501239,
+            "coverage": "0"
           },
-          "filename": "utils.ts",
-          "fullPath": "/samples/sweetalert/test/utils.ts",
-          "path": "/samples/sweetalert/test",
-          "shouldAnalyze": true,
-          "timesDependedOn": 5,
-          "type": "file"
+          "timesDependedOn": 5
         }
-      ],
-      "fullPath": "/samples/sweetalert/test",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
+      "fullPath": "/samples/sweetalert/typings",
       "filename": "typings",
+      "shouldAnalyze": true,
+      "type": "dir",
       "files": [
         {
+          "fullPath": "/samples/sweetalert/typings/modules",
           "filename": "modules",
+          "shouldAnalyze": true,
+          "type": "dir",
           "files": [
             {
-              "filename": "class-list",
-              "files": [
-                {
-                  "complexityReport": null,
-                  "filename": "index.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/class-list/index.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/class-list",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                }
-              ],
               "fullPath": "/samples/sweetalert/typings/modules/class-list",
+              "filename": "class-list",
               "shouldAnalyze": true,
-              "type": "dir"
-            },
-            {
-              "filename": "init",
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
-                  "filename": "buttons.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/buttons.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "content.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/content.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "icon.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/icon.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/class-list/index.d.ts",
                   "filename": "index.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/index.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
+                  "path": "/samples/sweetalert/typings/modules/class-list",
+                  "type": "file",
                   "complexityReport": null,
-                  "filename": "modal.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/modal.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "overlay.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/overlay.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
-                },
-                {
-                  "complexityReport": null,
-                  "filename": "text.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/init/text.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "timesDependedOn": 0
                 }
-              ],
+              ]
+            },
+            {
               "fullPath": "/samples/sweetalert/typings/modules/init",
+              "filename": "init",
               "shouldAnalyze": true,
-              "type": "dir"
-            },
-            {
-              "filename": "markup",
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/init/buttons.d.ts",
                   "filename": "buttons.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/buttons.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/init/content.d.ts",
                   "filename": "content.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/content.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "icons.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/icons.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "fullPath": "/samples/sweetalert/typings/modules/init/icon.d.ts",
+                  "filename": "icon.d.ts",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/init/index.d.ts",
                   "filename": "index.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/index.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/init/modal.d.ts",
                   "filename": "modal.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/modal.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/init/overlay.d.ts",
                   "filename": "overlay.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/overlay.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/markup",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/init/text.d.ts",
+                  "filename": "text.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/init",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 }
-              ],
-              "fullPath": "/samples/sweetalert/typings/modules/markup",
-              "shouldAnalyze": true,
-              "type": "dir"
+              ]
             },
             {
-              "filename": "options",
+              "fullPath": "/samples/sweetalert/typings/modules/markup",
+              "filename": "markup",
+              "shouldAnalyze": true,
+              "type": "dir",
               "files": [
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/buttons.d.ts",
                   "filename": "buttons.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/options/buttons.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/options",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/content.d.ts",
                   "filename": "content.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/options/content.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/options",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
-                  "filename": "deprecations.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/options/deprecations.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/options",
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/icons.d.ts",
+                  "filename": "icons.d.ts",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 },
                 {
-                  "complexityReport": null,
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/index.d.ts",
                   "filename": "index.d.ts",
-                  "fullPath": "/samples/sweetalert/typings/modules/options/index.d.ts",
-                  "path": "/samples/sweetalert/typings/modules/options",
                   "shouldAnalyze": false,
-                  "timesDependedOn": 0,
-                  "type": "file"
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/modal.d.ts",
+                  "filename": "modal.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/markup/overlay.d.ts",
+                  "filename": "overlay.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/markup",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
                 }
-              ],
+              ]
+            },
+            {
               "fullPath": "/samples/sweetalert/typings/modules/options",
+              "filename": "options",
               "shouldAnalyze": true,
-              "type": "dir"
+              "type": "dir",
+              "files": [
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/options/buttons.d.ts",
+                  "filename": "buttons.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/options",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/options/content.d.ts",
+                  "filename": "content.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/options",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/options/deprecations.d.ts",
+                  "filename": "deprecations.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/options",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                },
+                {
+                  "fullPath": "/samples/sweetalert/typings/modules/options/index.d.ts",
+                  "filename": "index.d.ts",
+                  "shouldAnalyze": false,
+                  "path": "/samples/sweetalert/typings/modules/options",
+                  "type": "file",
+                  "complexityReport": null,
+                  "timesDependedOn": 0
+                }
+              ]
             },
             {
-              "complexityReport": null,
-              "filename": "actions.d.ts",
               "fullPath": "/samples/sweetalert/typings/modules/actions.d.ts",
-              "path": "/samples/sweetalert/typings/modules",
+              "filename": "actions.d.ts",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/typings/modules",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "event-listeners.d.ts",
               "fullPath": "/samples/sweetalert/typings/modules/event-listeners.d.ts",
-              "path": "/samples/sweetalert/typings/modules",
+              "filename": "event-listeners.d.ts",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/typings/modules",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "state.d.ts",
               "fullPath": "/samples/sweetalert/typings/modules/state.d.ts",
-              "path": "/samples/sweetalert/typings/modules",
+              "filename": "state.d.ts",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/typings/modules",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             },
             {
-              "complexityReport": null,
-              "filename": "utils.d.ts",
               "fullPath": "/samples/sweetalert/typings/modules/utils.d.ts",
-              "path": "/samples/sweetalert/typings/modules",
+              "filename": "utils.d.ts",
               "shouldAnalyze": false,
-              "timesDependedOn": 0,
-              "type": "file"
+              "path": "/samples/sweetalert/typings/modules",
+              "type": "file",
+              "complexityReport": null,
+              "timesDependedOn": 0
             }
-          ],
-          "fullPath": "/samples/sweetalert/typings/modules",
-          "shouldAnalyze": true,
-          "type": "dir"
+          ]
         },
         {
-          "complexityReport": null,
-          "filename": "core.d.ts",
           "fullPath": "/samples/sweetalert/typings/core.d.ts",
-          "path": "/samples/sweetalert/typings",
+          "filename": "core.d.ts",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/typings",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         },
         {
-          "complexityReport": null,
-          "filename": "sweetalert.d.ts",
           "fullPath": "/samples/sweetalert/typings/sweetalert.d.ts",
-          "path": "/samples/sweetalert/typings",
+          "filename": "sweetalert.d.ts",
           "shouldAnalyze": false,
-          "timesDependedOn": 0,
-          "type": "file"
+          "path": "/samples/sweetalert/typings",
+          "type": "file",
+          "complexityReport": null,
+          "timesDependedOn": 0
         }
-      ],
-      "fullPath": "/samples/sweetalert/typings",
-      "shouldAnalyze": true,
-      "type": "dir"
+      ]
     },
     {
-      "complexityReport": null,
-      "filename": "expected.json",
       "fullPath": "/samples/sweetalert/expected.json",
-      "path": "/samples/sweetalert",
+      "filename": "expected.json",
       "shouldAnalyze": false,
-      "timesDependedOn": 0,
-      "type": "file"
-    },
-    {
+      "path": "/samples/sweetalert",
+      "type": "file",
       "complexityReport": null,
-      "filename": "LICENSE.md",
-      "fullPath": "/samples/sweetalert/LICENSE.md",
-      "path": "/samples/sweetalert",
-      "shouldAnalyze": false,
-      "timesDependedOn": 0,
-      "type": "file"
+      "timesDependedOn": 0
     },
     {
+      "fullPath": "/samples/sweetalert/LICENSE.md",
+      "filename": "LICENSE.md",
+      "shouldAnalyze": false,
+      "path": "/samples/sweetalert",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/postcss.config.js",
+      "filename": "postcss.config.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert",
+      "type": "file",
       "complexityReport": {
         "aggregate": {
           "cyclomatic": 1,
@@ -3143,6 +3148,9 @@
             "difficulty": 4.773,
             "effort": 597.057,
             "length": 30,
+            "time": 33.17,
+            "vocabulary": 18,
+            "volume": 125.098,
             "operands": {
               "distinct": 11,
               "total": 15
@@ -3150,10 +3158,7 @@
             "operators": {
               "distinct": 7,
               "total": 15
-            },
-            "time": 33.17,
-            "vocabulary": 18,
-            "volume": 125.098
+            }
           },
           "paramCount": 0,
           "sloc": {
@@ -3161,49 +3166,49 @@
             "physical": 10
           }
         },
-        "coverage": "0",
         "dependencies": [],
         "errors": [],
-        "codehawkScore": 91.07606249060817,
         "lineEnd": 10,
         "lineStart": 1,
-        "maintainability": 115.452
+        "maintainability": 115.452,
+        "codehawkScore": 91.07606249060817,
+        "coverage": "0"
       },
-      "filename": "postcss.config.js",
-      "fullPath": "/samples/sweetalert/postcss.config.js",
-      "path": "/samples/sweetalert",
-      "shouldAnalyze": true,
-      "timesDependedOn": 0,
-      "type": "file"
+      "timesDependedOn": 0
     },
     {
-      "complexityReport": null,
-      "filename": "README.md",
       "fullPath": "/samples/sweetalert/README.md",
-      "path": "/samples/sweetalert",
+      "filename": "README.md",
       "shouldAnalyze": false,
-      "timesDependedOn": 0,
-      "type": "file"
+      "path": "/samples/sweetalert",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
     },
     {
-      "complexityReport": null,
-      "filename": "tsconfig.json",
       "fullPath": "/samples/sweetalert/tsconfig.json",
-      "path": "/samples/sweetalert",
+      "filename": "tsconfig.json",
       "shouldAnalyze": false,
-      "timesDependedOn": 0,
-      "type": "file"
-    },
-    {
+      "path": "/samples/sweetalert",
+      "type": "file",
       "complexityReport": null,
-      "filename": "tslint.json",
-      "fullPath": "/samples/sweetalert/tslint.json",
-      "path": "/samples/sweetalert",
-      "shouldAnalyze": false,
-      "timesDependedOn": 0,
-      "type": "file"
+      "timesDependedOn": 0
     },
     {
+      "fullPath": "/samples/sweetalert/tslint.json",
+      "filename": "tslint.json",
+      "shouldAnalyze": false,
+      "path": "/samples/sweetalert",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/webpack.config.js",
+      "filename": "webpack.config.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert",
+      "type": "file",
       "complexityReport": {
         "aggregate": {
           "cyclomatic": 4,
@@ -3213,6 +3218,9 @@
             "difficulty": 10.092,
             "effort": 14966.016,
             "length": 229,
+            "time": 831.445,
+            "vocabulary": 89,
+            "volume": 1482.943,
             "operands": {
               "distinct": 76,
               "total": 118
@@ -3220,10 +3228,7 @@
             "operators": {
               "distinct": 13,
               "total": 111
-            },
-            "time": 831.445,
-            "vocabulary": 89,
-            "volume": 1482.943
+            }
           },
           "paramCount": 2,
           "sloc": {
@@ -3231,20 +3236,15 @@
             "physical": 104
           }
         },
-        "coverage": "0",
         "dependencies": [],
         "errors": [],
-        "codehawkScore": 44.90727094909405,
         "lineEnd": 104,
         "lineStart": 1,
-        "maintainability": 84.169
+        "maintainability": 84.169,
+        "codehawkScore": 44.90727094909405,
+        "coverage": "0"
       },
-      "filename": "webpack.config.js",
-      "fullPath": "/samples/sweetalert/webpack.config.js",
-      "path": "/samples/sweetalert",
-      "shouldAnalyze": true,
-      "timesDependedOn": 0,
-      "type": "file"
+      "timesDependedOn": 0
     }
   ]
 }
