@@ -44,15 +44,15 @@ const analyzeFile = (
         }
     } catch (e) {
         console.error(`Unable to parse "${file.path}/${file.filename}", skipping`)
-        if (NODE_ENV !== 'production') {
-            // Print out  what is attempting to be evaluated
-            // Exposes bugs such as flow-remove-types not working correctly
-            // Note: if you see flow types in here, they have not been stripped correctly
-            console.error(e)
-            console.log('\n\n')
-            console.error(trimmed)
-            console.log('\n\n')
-        }
+        // if (NODE_ENV !== 'production') {
+        //     // Print out  what is attempting to be evaluated
+        //     // Exposes bugs such as flow-remove-types not working correctly
+        //     // Note: if you see flow types in here, they have not been stripped correctly
+        //     console.error(e)
+        //     console.log('\n\n')
+        //     console.error(trimmed)
+        //     console.log('\n\n')
+        // }
         // No clear API for capturing a SyntaxError, also we don't know if it'll always be that.
     }
 

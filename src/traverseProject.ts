@@ -1,7 +1,7 @@
 import * as fs from "fs"
 import * as path from "path"
 import slash from "slash"
-import babel from "@babel/core"
+import { transformSync } from "@babel/core"
 import flowRemoveTypes from "flow-remove-types"
 import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from "./util"
 import { AssembledOptions, ParsedEntity, ParsedDirectory, ParsedFile } from "./types"
@@ -50,33 +50,30 @@ export const walkSync = (dir: string, options: AssembledOptions): Array<ParsedEn
 }
 
 export const getFileContents = (fullPath: string): string => {
-    // https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
+    // see https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
     const filename = path.basename(fullPath)
     const extension = path.extname(filename)
 
-    let contents = ''
-    try {
-        contents = fs.readFileSync(fullPath, 'utf8')
+    let contents = fs.readFileSync(fullPath, 'utf8')
 
-        // TypeScript support
-        const isTypescript = extension === '.ts' || extension === '.tsx'
-        if (isTypescript) {
-            const transformed = babel.transformSync(contents, {
-                plugins: [
-                    '@babel/plugin-transform-typescript'
+    // TypeScript support
+    const isTypescript = extension === '.ts' || extension === '.tsx'
+    if (isTypescript) {
+        const transformed = transformSync(contents, {
+            plugins: [
+                [
+                    '@babel/plugin-transform-typescript',
+                    {
+                        isTSX: extension === '.tsx'
+                    }
                 ]
-            })
-            if (transformed.code) {
-                contents = transformed.code
-            }
-        } else {
-            // Assume no other static type systems exist
-            // Stripping flow types should be safe, even if it's not strictly flow
-            contents = flowRemoveTypes(contents, { pretty: true }).toString()
-        }
-    } catch (e) {
-        // Note that this is also caught in a wrapping `catch`, so error handling should be done there
-        return contents
+            ],
+        })
+        contents = transformed.code || ''
+    } else {
+        // Assume no other static type systems exist
+        // Stripping flow types should be safe, even if it's not strictly flow
+        contents = flowRemoveTypes(contents, { pretty: true }).toString()
     }
 
     return contents
