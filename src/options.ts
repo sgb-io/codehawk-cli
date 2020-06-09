@@ -1,7 +1,34 @@
 import { CodehawkOptions, AllOptionKeys, AssembledOptions } from "./types"
 
+const baseOptions: CodehawkOptions = {
+    enableFlow: {
+        type: 'boolean',
+        default: false,
+        replaceDefault: true,
+    },
+    extensions: {
+        type: 'stringArray',
+        default: ['.js', '.jsx', '.ts', '.tsx'],
+        replaceDefault: false,
+    },
+    excludeDirectories: {
+        type: 'stringArray',
+        default: ['/dist', '/bin', '/build'],
+        replaceDefault: true,
+    },
+    excludeFilenames: {
+        type: 'stringArray',
+        default: ['.d.ts', '.min.js', '.bundle.js'],
+        replaceDefault: false,
+    },
+    skipDirectories: {
+        type: 'stringArray',
+        default: ['/node_modules', '/flow-typed', '/coverage'],
+        replaceDefault: false,
+    }
+}
+
 export const buildOptions = (
-    baseOptions: CodehawkOptions,
     projectOptions: AssembledOptions
 ): AssembledOptions => {
     const assembledOptions = {} as AssembledOptions

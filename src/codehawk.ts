@@ -24,34 +24,6 @@ interface Results {
 
 const cwd = slash(process.cwd())
 
-const baseOptions: CodehawkOptions = {
-    enableFlow: {
-        type: 'boolean',
-        default: true,
-        replaceDefault: false,
-    },
-    extensions: {
-        type: 'stringArray',
-        default: ['.js', '.jsx', '.ts', '.tsx'],
-        replaceDefault: false,
-    },
-    excludeDirectories: {
-        type: 'stringArray',
-        default: ['/dist', '/bin', '/build'],
-        replaceDefault: true,
-    },
-    excludeFilenames: {
-        type: 'stringArray',
-        default: ['.d.ts', '.min.js', '.bundle.js'],
-        replaceDefault: false,
-    },
-    skipDirectories: {
-        type: 'stringArray',
-        default: ['/node_modules', '/flow-typed', '/coverage'],
-        replaceDefault: false,
-    }
-}
-
 const analyzeProject = (rawPath: string): Results => {
     const optionsPath = path.resolve(`${rawPath}/codehawk.json`)
 
@@ -64,7 +36,7 @@ const analyzeProject = (rawPath: string): Results => {
     }
 
     const projectOptions = JSON.parse(projectOptionsFile)
-    const options = buildOptions(baseOptions, projectOptions)
+    const options = buildOptions(projectOptions)
     const dirPath = path.resolve(`${rawPath}/`)
     const projectCoverage = getCoverage(dirPath)
 
