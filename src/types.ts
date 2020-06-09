@@ -1,21 +1,36 @@
-export type SupportedOptionKeys =
+export type SupportedStringArrayKeys =
     | 'extensions'
     | 'excludeDirectories'
     | 'excludeFilenames'
     | 'skipDirectories'
 
-interface OptionConfig {
+export type SupportedBooleanOptions = 'enableFlow'
+
+export type AllOptionKeys = SupportedStringArrayKeys | SupportedBooleanOptions
+
+interface StringArrayOption {
+    type: 'stringArray'
     default: Array<string>
-    override: boolean
+    replaceDefault: boolean
+}
+
+interface BooleanOption {
+    type: 'boolean'
+    default: boolean
+    replaceDefault: boolean
 }
 
 export type CodehawkOptions = {
-    [key in SupportedOptionKeys]?: OptionConfig
-}
+    [key in SupportedStringArrayKeys]?: StringArrayOption;
+} & {
+        [key in SupportedBooleanOptions]?: BooleanOption;
+    }
 
 export type AssembledOptions = {
-    [key in SupportedOptionKeys]?: Array<string>
-}
+    [key in SupportedStringArrayKeys]?: Array<string>
+} & {
+        [key in SupportedBooleanOptions]?: boolean
+    }
 
 interface CoverageMeasurement {
     total: number
