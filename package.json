@@ -7,7 +7,7 @@
     "test": "npx mocha test --recursive --timeout 30000",
     "test:coverage:codehawk": "nyc --reporter=json-summary mocha test --timeout 90000",
     "lint": "eslint src --ext .js",
-    "build": "pkg package.json --out-path bin"
+    "build": "echo 'no build yet'"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
   "license": "MPL-2.0",
