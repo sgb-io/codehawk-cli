@@ -69,7 +69,7 @@
 				"lineStart": 1,
 				"maintainability": 120.805,
 				"codehawkScore": 53.68354105285161,
-				"coverage": 0
+				"coverage": "0"
 			},
 			"timesDependedOn": 0
 		},

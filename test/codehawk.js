@@ -1,67 +1,41 @@
 const { assert } = require('chai')
 const fs = require('fs')
-const codehawk = require('../src/codehawk')
+const analyzeProject = require('../build/codehawk').default
 
 describe('codehawk.analyzeProject', () => {
     const cwd = process.cwd()
 
-    it('react-component', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/react-component`)
+    const outputMatchesResult = (projectPath) => {
+        const output = analyzeProject(`${cwd}/${projectPath}`)
         assert.ok(output)
 
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/react-component/expected.json`)
+        const expectedRaw = fs.readFileSync(`${cwd}/${projectPath}/expected.json`)
         const expected = JSON.parse(expectedRaw)
 
         assert.deepEqual(output.results, expected.results)
+    }
+
+    it('react-component', () => {
+        outputMatchesResult('samples/react-component')
     })
 
     it('react-component-flow', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/react-component-flow`)
-        assert.ok(output)
-
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/react-component-flow/expected.json`)
-        const expected = JSON.parse(expectedRaw)
-
-        assert.deepEqual(output.results, expected.results)
+        outputMatchesResult('samples/react-component-flow')
     })
 
     it('simple-class', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/simple-class`)
-        assert.ok(output)
-
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/simple-class/expected.json`)
-        const expected = JSON.parse(expectedRaw)
-
-        assert.deepEqual(output.results, expected.results)
+        outputMatchesResult('samples/simple-class')
     })
 
     it('simple-es6-imports', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/simple-es6-imports`)
-        assert.ok(output)
-
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/simple-es6-imports/expected.json`)
-        const expected = JSON.parse(expectedRaw)
-
-        assert.deepEqual(output.results, expected.results)
+        outputMatchesResult('samples/simple-es6-imports')
     })
 
     it('react-component-typescript', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/react-component-typescript`)
-        assert.ok(output)
-
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/react-component-typescript/expected.json`)
-        const expected = JSON.parse(expectedRaw)
-
-        assert.deepEqual(output.results, expected.results)
+        outputMatchesResult('samples/react-component-typescript')
     })
 
     it('sweetalert', () => {
-        const output = codehawk.analyzeProject(`${cwd}/samples/sweetalert`)
-        assert.ok(output)
-
-        const expectedRaw = fs.readFileSync(`${cwd}/samples/sweetalert/expected.json`)
-        const expected = JSON.parse(expectedRaw)
-
-        assert.deepEqual(output.results, expected.results)
+        outputMatchesResult('samples/sweetalert')
     })
 })

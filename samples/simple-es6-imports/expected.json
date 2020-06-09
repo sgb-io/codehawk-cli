@@ -44,7 +44,7 @@
                         "lineStart": 1,
                         "maintainability": 116.274,
                         "codehawkScore": 65.52769191836538,
-                        "coverage": 0
+                        "coverage": "0"
                     },
                     "timesDependedOn": 1
                 }
@@ -99,7 +99,7 @@
                 "lineStart": 1,
                 "maintainability": 134.954,
                 "codehawkScore": 92.8634839277374,
-                "coverage": 0
+                "coverage": "0"
             },
             "timesDependedOn": 1
         },
@@ -153,7 +153,7 @@
                 "lineStart": 1,
                 "maintainability": 119.758,
                 "codehawkScore": 66.5583293243497,
-                "coverage": 0
+                "coverage": "0"
             },
             "timesDependedOn": 0
         }
