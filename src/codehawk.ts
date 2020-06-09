@@ -116,9 +116,10 @@ const analyzeProject = (rawPath: string): Results => {
         return addDependencyCountToFile(projectDeps, entity)
     })
 
-    const entities = walkSync(dirPath, options)
     // First run of all files: generate complexity & coverage metrics
+    const entities = walkSync(dirPath, options)
     const firstRunResults = addComplexityToEntities(entities)
+
     // Second run: generate timesDependedOn (can only be calculated after first run)
     const projectDeps = getProjectDeps(firstRunResults)
     const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
