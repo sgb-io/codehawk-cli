@@ -4,7 +4,7 @@
   "description": "Static analysis tool for JavaScript projects",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha test --recursive --timeout 45000",
+    "test": "npx mocha test --recursive --timeout 60000",
     "test:coverage:codehawk": "nyc --reporter=json-summary mocha test --timeout 90000",
     "lint": "eslint src --ext .js",
     "build": "echo 'no build yet'"
