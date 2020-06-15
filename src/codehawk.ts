@@ -6,7 +6,6 @@ import analyzeFile from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
 import {
-  CodehawkOptions,
   ParsedEntity,
   ParsedFile,
   AnalyzedFile,

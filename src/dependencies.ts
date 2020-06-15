@@ -27,6 +27,7 @@ export const getTimesDependedOn = (projectDeps: string[], filePath: string): num
   const timesDependedOn = projectDeps.filter((d) => {
     const fileNameWithoutExtension = path.basename(filePath).split('.').slice(0, -1).join('.')
     // Windows compatibility (unix-style slashes, plus remove the root drive)
+    // eslint-disable-next-line no-useless-escape
     const cleanD = slash(d).replace(/\w\:/, '')
 
     // Match exactly, or fall back to index (index is a reserved case in nodejs)
