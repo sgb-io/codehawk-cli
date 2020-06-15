@@ -1,4 +1,3 @@
-const { assert } = require('chai')
 const fs = require('fs')
 const analyzeProject = require('../build/codehawk').default
 
@@ -7,12 +6,12 @@ describe('codehawk.analyzeProject', () => {
 
     const outputMatchesResult = (projectPath) => {
         const output = analyzeProject(`${cwd}/${projectPath}`)
-        assert.ok(output)
+        expect(output).toBeTruthy()
 
         const expectedRaw = fs.readFileSync(`${cwd}/${projectPath}/expected.json`)
         const expected = JSON.parse(expectedRaw)
 
-        assert.deepEqual(output.results, expected.results)
+        expect(output.results).toEqual(expected.results)
     }
 
     it('react-component', () => {

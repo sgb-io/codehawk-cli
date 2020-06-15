@@ -9,34 +9,34 @@ export type SupportedBooleanOptions = 'enableFlow'
 export type AllOptionKeys = SupportedStringArrayKeys | SupportedBooleanOptions
 
 interface StringArrayOption {
-    type: 'stringArray'
-    default: Array<string>
-    replaceDefault: boolean
+  type: 'stringArray'
+  default: string[]
+  replaceDefault: boolean
 }
 
 interface BooleanOption {
-    type: 'boolean'
-    default: boolean
-    replaceDefault: boolean
+  type: 'boolean'
+  default: boolean
+  replaceDefault: boolean
 }
 
 export type CodehawkOptions = {
-    [key in SupportedStringArrayKeys]?: StringArrayOption;
+  [key in SupportedStringArrayKeys]?: StringArrayOption;
 } & {
-        [key in SupportedBooleanOptions]?: BooleanOption;
-    }
+  [key in SupportedBooleanOptions]?: BooleanOption;
+}
 
 export type AssembledOptions = {
-    [key in SupportedStringArrayKeys]?: Array<string>
+  [key in SupportedStringArrayKeys]?: string[]
 } & {
-        [key in SupportedBooleanOptions]?: boolean
-    }
+  [key in SupportedBooleanOptions]?: boolean
+}
 
 interface CoverageMeasurement {
-    total: number
-    covered: number
-    skipped: number
-    pct: number
+  total: number
+  covered: number
+  skipped: number
+  pct: number
 }
 
 type SupportedCoverageMeasurements =
@@ -46,40 +46,40 @@ type SupportedCoverageMeasurements =
     | 'branches'
 
 type CoverageMetrics = {
-    [key in SupportedCoverageMeasurements]: CoverageMeasurement
+  [key in SupportedCoverageMeasurements]: CoverageMeasurement
 }
 
 export interface CoverageSummary {
-    [key: string]: CoverageMetrics
+  [key: string]: CoverageMetrics
 }
 
 export interface CoverageMapping {
-    path: string
-    coverage: CoverageMetrics
+  path: string
+  coverage: CoverageMetrics
 }
 
 interface BaseEntity {
-    fullPath: string
-    path: string
-    filename: string
-    shouldAnalyze: boolean
+  fullPath: string
+  path: string
+  filename: string
+  shouldAnalyze: boolean
 }
 
 export interface FileWithContents {
-    path: string
-    filename: string
-    rawSource: string
+  path: string
+  filename: string
+  rawSource: string
 }
 
 // Parsed entities 
 
 export interface ParsedFile extends BaseEntity {
-    type: 'file'
+  type: 'file'
 }
 
 export interface ParsedDirectory extends BaseEntity {
-    type: 'dir'
-    files: Array<ParsedFile>
+  type: 'dir'
+  files: ParsedFile[]
 }
 
 export type ParsedEntity = ParsedFile | ParsedDirectory
@@ -88,12 +88,12 @@ export type ParsedEntity = ParsedFile | ParsedDirectory
 // Parsed entities plus complexityReports
 
 export interface AnalyzedFile extends ParsedFile {
-    complexityReport?: CompleteCodehawkComplexityResult
+  complexityReport?: CompleteCodehawkComplexityResult
 }
 
 export interface AnalyzedDirectory extends BaseEntity {
-    type: 'dir',
-    files: Array<AnalyzedFile>
+  type: 'dir'
+  files: AnalyzedFile[]
 }
 
 export type AnalyzedEntity = AnalyzedFile | AnalyzedDirectory
@@ -102,22 +102,22 @@ export type AnalyzedEntity = AnalyzedFile | AnalyzedDirectory
 // Parsed entities plus complexityReports and timesDependedOn
 
 export interface FullyAnalyzedFile extends AnalyzedFile {
-    timesDependedOn: number
+  timesDependedOn: number
 }
 
 export interface FullyAnalyzedDirectory extends BaseEntity {
-    type: 'dir',
-    files: Array<FullyAnalyzedFile>
+  type: 'dir'
+  files: FullyAnalyzedFile[]
 }
 
 export type FullyAnalyzedEntity = FullyAnalyzedFile | FullyAnalyzedDirectory
 
 // Before coverage mapping
 export interface CodehawkComplexityResult extends ComplexityResult {
-    codehawkScore: number
+  codehawkScore: number
 }
 
 // After coverage mapping
 export interface CompleteCodehawkComplexityResult extends CodehawkComplexityResult {
-    coverage: string
+  coverage: string
 }
