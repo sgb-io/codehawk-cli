@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --testTimeout 15000",
-    "test:coverage:codehawk": "nyc --reporter=json-summary jest --testTimeout 25000",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src/*.**",
     "lint:fix": "eslint --fix src/*.**",
     "build": "tsc"
@@ -37,7 +37,6 @@
     "eslint-plugin-promise": "4",
     "eslint-plugin-standard": "4",
     "jest": "^26.0.1",
-    "nyc": "^14.1.1",
     "prettier": "^2.0.5",
     "typescript": "^3.9.5"
   }
