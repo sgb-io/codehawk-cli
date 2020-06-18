@@ -1,8 +1,7 @@
 {
   "name": "codehawk-cli",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Static analysis tool for JavaScript projects",
-  "main": "index.js",
   "scripts": {
     "test": "jest --testTimeout 15000",
     "test:coverage": "jest --coverage",
@@ -42,5 +41,6 @@
     "typescript": "^3.9.5"
   },
   "bin": "build/codehawk.js",
+  "main": "build/codehawk.js",
   "types": "build/codehawk.d.ts"
 }
