@@ -5,7 +5,7 @@ import {
   CompleteCodehawkComplexityResult
 } from './types'
 
-export const addComplexity = (sourceCode: string) => {
+export const calculateComplexity = (sourceCode: string) => {
   return escomplexReporter(sourceCode)
 }
 
@@ -39,7 +39,7 @@ export const analyzeFile = (
   const trimmed = file.rawSource.trim()
 
   try {
-    const complexityReport = addComplexity(trimmed)
+    const complexityReport = calculateComplexity(trimmed)
     if (complexityReport) {
       report = {
         ...complexityReport,

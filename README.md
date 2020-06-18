@@ -26,7 +26,7 @@ Flow is supported via `flow-remove-types` and typescript is supported via `@babe
 Analyze a single piece of code:
 
 ```javascript
-const { addComplexity } = require('codehawk-cli')
+const { calculateComplexity } = require('codehawk-cli')
 
 const STATIC_SAMPLE = `
     import lodash from 'lodash';
@@ -38,7 +38,7 @@ const STATIC_SAMPLE = `
     export default chunkIntoFives;
 `
 
-const metrics = addComplexity(STATIC_SAMPLE)
+const metrics = calculateComplexity(STATIC_SAMPLE)
 
 // Example output:
 

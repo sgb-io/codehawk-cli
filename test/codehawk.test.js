@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { analyzeProject, addComplexity } = require('../build/codehawk')
+const { analyzeProject, calculateComplexity } = require('../build/codehawk')
 
 const cwd = process.cwd()
 const outputMatchesResult = (projectPath) => {
@@ -23,9 +23,9 @@ const STATIC_SAMPLE = `
 `
 
 describe('codehawk-cli', () => {
-    describe('addComplexity', () => {
+    describe('calculateComplexity', () => {
         it('generates metrics from a sample', () => {
-            const metrics = addComplexity(STATIC_SAMPLE)
+            const metrics = calculateComplexity(STATIC_SAMPLE)
             const expectedMetrics = {
                 aggregate: {
                     cyclomatic: 2,
