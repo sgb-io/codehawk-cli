@@ -1,7 +1,15 @@
 import escomplexReporter from './reporters/escomplex'
-import { CoverageMapping, FileWithContents, CompleteCodehawkComplexityResult } from './types'
+import {
+  CoverageMapping,
+  FileWithContents,
+  CompleteCodehawkComplexityResult
+} from './types'
 
-const analyzeFile = (
+export const addComplexity = (sourceCode: string) => {
+  return escomplexReporter(sourceCode)
+}
+
+export const analyzeFile = (
   dirPath: string,
   file: FileWithContents,
   projectCoverage: CoverageMapping[]
@@ -31,7 +39,7 @@ const analyzeFile = (
   const trimmed = file.rawSource.trim()
 
   try {
-    const complexityReport = escomplexReporter(trimmed)
+    const complexityReport = addComplexity(trimmed)
     if (complexityReport) {
       report = {
         ...complexityReport,
@@ -54,5 +62,3 @@ const analyzeFile = (
 
   return report
 }
-
-export default analyzeFile

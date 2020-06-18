@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
 import { getCoverage } from './coverage'
-import analyzeFile from './analyze'
+import { analyzeFile, addComplexity } from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
 import {
@@ -23,7 +23,9 @@ interface Results {
 
 const cwd = slash(process.cwd())
 
-const analyzeProject = (rawPath: string): Results => {
+export { addComplexity }
+
+export const analyzeProject = (rawPath: string): Results => {
   const optionsPath = path.resolve(`${rawPath}/codehawk.json`)
 
   let projectOptionsFile = null
@@ -108,5 +110,3 @@ const analyzeProject = (rawPath: string): Results => {
     results: secondRunResults
   }
 }
-
-export default analyzeProject
