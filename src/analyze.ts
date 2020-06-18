@@ -1,12 +1,58 @@
+import { transformSync } from '@babel/core'
+import flowRemoveTypes from 'flow-remove-types'
 import escomplexReporter from './reporters/escomplex'
 import {
   CoverageMapping,
   FileWithContents,
-  CompleteCodehawkComplexityResult
+  CompleteCodehawkComplexityResult,
+  CodehawkComplexityResult
 } from './types'
 
-export const calculateComplexity = (sourceCode: string) => {
-  return escomplexReporter(sourceCode)
+export const transpileFileSource = (
+  sourceCode: string,
+  fileExtension: string,
+  isTypescript: boolean,
+  enableFlow: boolean
+): string => {
+  let contents = sourceCode
+
+  if (isTypescript) {
+    const transformed = transformSync(contents, {
+      plugins: [
+        [
+          '@babel/plugin-transform-typescript',
+          {
+            isTSX: fileExtension === '.tsx'
+          }
+        ]
+      ],
+    })
+    contents = transformed.code || ''
+  } else {
+    // Assume no other static type systems exist
+    // Stripping flow types should be safe, even if it's not strictly flow
+    contents = (enableFlow)
+      ? flowRemoveTypes(contents, { pretty: true }).toString()
+      : contents
+  }
+
+  return contents
+}
+
+export const calculateComplexity = (
+  sourceCode: string,
+  fileExtension: string,
+  isTypescript: boolean,
+  enableFlow: boolean
+): CodehawkComplexityResult => {
+  return escomplexReporter(
+    transpileFileSource(
+      sourceCode,
+      fileExtension,
+      isTypescript,
+      enableFlow
+    )
+  )
 }
 
 export const analyzeFile = (
@@ -39,7 +85,7 @@ export const analyzeFile = (
   const trimmed = file.rawSource.trim()
 
   try {
-    const complexityReport = calculateComplexity(trimmed)
+    const complexityReport = escomplexReporter(trimmed)
     if (complexityReport) {
       report = {
         ...complexityReport,

@@ -15,7 +15,7 @@ const outputMatchesResult = (projectPath) => {
 const STATIC_SAMPLE = `
     import lodash from 'lodash';
 
-    const chunkIntoFives = (myArr) => {
+    const chunkIntoFives: SomeFakeTypeThatWillGetRemoved = (myArr: Array<any>) => {
         return _.chunk(myArr, 5);
     }
 
@@ -24,8 +24,13 @@ const STATIC_SAMPLE = `
 
 describe('codehawk-cli', () => {
     describe('calculateComplexity', () => {
-        it('generates metrics from a sample', () => {
-            const metrics = calculateComplexity(STATIC_SAMPLE)
+        it('generates metrics from a static typescript sample', () => {
+            const metrics = calculateComplexity(
+                STATIC_SAMPLE,
+                '.ts',
+                true,
+                false
+            )
             const expectedMetrics = {
                 aggregate: {
                     cyclomatic: 2,
@@ -51,14 +56,12 @@ describe('codehawk-cli', () => {
                     paramCount: 1,
                     sloc: {
                         logical: 4,
-                        physical: 9,
+                        physical: 5,
                     },
                 },
-                dependencies: [
-                    { line: 2, path: 'lodash', type: 'esm' }
-                ],
+                dependencies: [], // TS removes the lodash dep because it's fake i.e. it resolves to undefined
                 errors: [],
-                lineEnd: 9,
+                lineEnd: 5,
                 lineStart: 1,
                 maintainability: 144.217,
                 codehawkScore: 92.43914887804003

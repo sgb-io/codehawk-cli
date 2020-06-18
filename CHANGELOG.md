@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.0
+
+- Updated `calculateComplexity` signature, file extension and typescript/flow flags added
+
 ### 4.0.1
 
 - Updated ts and npm config to properly expose types

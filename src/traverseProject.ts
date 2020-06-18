@@ -1,10 +1,9 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
-import { transformSync } from '@babel/core'
-import flowRemoveTypes from 'flow-remove-types'
 import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from './util'
 import { AssembledOptions, ParsedEntity, ParsedDirectory, ParsedFile } from './types'
+import { transpileFileSource } from './analyze'
 
 // dir can be string or dir
 export const walkSync = (dir: string, options: AssembledOptions): ParsedEntity[] => {
@@ -54,30 +53,11 @@ export const getFileContents = (fullPath: string, enableFlow: boolean): string =
   const filename = path.basename(fullPath)
   const extension = path.extname(filename)
 
-  let contents = fs.readFileSync(fullPath, 'utf8')
+  const contents = fs.readFileSync(fullPath, 'utf8')
 
   // TypeScript support
   const isTypescript = extension === '.ts' || extension === '.tsx'
-  if (isTypescript) {
-    const transformed = transformSync(contents, {
-      plugins: [
-        [
-          '@babel/plugin-transform-typescript',
-          {
-            isTSX: extension === '.tsx'
-          }
-        ]
-      ],
-    })
-    contents = transformed.code || ''
-  } else {
-    // Assume no other static type systems exist
-    // Stripping flow types should be safe, even if it's not strictly flow
-    contents = (enableFlow)
-      ? flowRemoveTypes(contents, { pretty: true }).toString()
-      : contents
-  }
 
-  return contents
+  return transpileFileSource(contents, extension, isTypescript, enableFlow)
 }
 
