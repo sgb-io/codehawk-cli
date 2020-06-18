@@ -23,12 +23,78 @@ Flow is supported via `flow-remove-types` and typescript is supported via `@babe
 
 ## Usage
 
-```javascript
-const codehawk = require('codehawk-cli')
+Analyze a single piece of code:
 
-const output = codehawk.analyzeProject('/path/to/project')
-// Do stuff with output!
+```javascript
+const { addComplexity } = require('codehawk-cli')
+
+const STATIC_SAMPLE = `
+    import lodash from 'lodash';
+
+    const chunkIntoFives = (myArr) => {
+        return _.chunk(myArr, 5);
+    }
+
+    export default chunkIntoFives;
+`
+
+const metrics = addComplexity(STATIC_SAMPLE)
+
+// Example output:
+
+{
+    aggregate: {
+        cyclomatic: 2,
+        cyclomaticDensity: 50,
+        halstead: {
+            bugs: 0.015,
+            difficulty: 4.2,
+            effort: 188.885,
+            length: 13,
+            time: 10.494,
+            vocabulary: 11,
+            volume: 44.973,
+            operands: {
+                distinct: 5,
+                total: 7
+            },
+            operators: {
+                distinct: 6,
+                total: 6
+            },
+            time: 10.494
+        },
+        paramCount: 1,
+        sloc: {
+            logical: 4,
+            physical: 9,
+        },
+    },
+    dependencies: [
+        { line: 2, path: 'lodash', type: 'esm' }
+    ],
+    errors: [],
+    lineEnd: 9,
+    lineStart: 1,
+    maintainability: 144.217,
+    codehawkScore: 92.43914887804003
+}
+
 ```
+
+Analyze an entire directory:
+
+```javascript
+const { analyzeProject } = require('codehawk-cli')
+
+const output = analyzeProject('/path/to/project') // FullyAnalyzedEntity[]
+
+// Output contains a tree structure of your directory,
+// with all supported files containing a 'complexityReport'
+// (see above for example)
+```
+
+When analyzing a project via `analyzeProject`, 2 extra data points are available: `timesDependedOn` and `coverage`.
 
 Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-example).
 
@@ -57,7 +123,7 @@ Codehawk gathers various complexity metrics, including:
 
 ## Caveats
 
-- Not optimized for production. The project should be considered experimental and slow.
+- Not intended for production. The project should be considered slow and experimental, but is designed to read your production code!
     - Will not run quickly on large projects, so use caution and common sense when applying it to a workflow or pipeline.
     - Recursively traverses directory trees, so if one activates the process inside a node_modules or C drive directory (unintended usage), you are likely to experience problems.
 - Opinionated: the formula for calculating overall file "scores" is arbitrary and based on original, unpublished research. Users are free to interpret the numbers differently and generate their own scorings.
