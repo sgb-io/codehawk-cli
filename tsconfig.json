@@ -4,7 +4,8 @@
         "module": "CommonJS",
         "noImplicitAny": true,
         "outDir": "build",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "declaration": true
     },
     "include": [
         "src/**/*"

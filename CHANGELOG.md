@@ -1,5 +1,9 @@
 # Changelog
 
+### 4.0.1
+
+- Updated ts and npm config to properly expose types
+
 ### 4.0.0
 
 - Added and exposed `calculateComplexity`
