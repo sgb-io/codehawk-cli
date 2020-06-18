@@ -1,6 +1,6 @@
 {
   "name": "codehawk-cli",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Static analysis tool for JavaScript projects",
   "main": "index.js",
   "scripts": {
