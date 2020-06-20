@@ -1,3 +1,5 @@
+import { ComplexityResult } from './types/typhonjs-escomplex'
+
 export type SupportedStringArrayKeys =
     | 'extensions'
     | 'excludeDirectories'

@@ -38,7 +38,7 @@ interface Aggregate {
     }
 }
 
-interface ComplexityResult {
+export interface ComplexityResult {
     aggregate: Aggregate
     aggregateAverage: UnusedMetric
     classes: UnusedMetric
@@ -53,7 +53,7 @@ interface ComplexityResult {
     settings: UnusedMetric
     srcPath: UnusedMetric
     srcPathAlias: UnusedMetric
-}
+  }
 
 declare module "typhonjs-escomplex" {
     export function analyzeModule(source: string): ComplexityResult;
