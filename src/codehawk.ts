@@ -23,6 +23,8 @@ interface Results {
 
 const cwd = slash(process.cwd())
 
+export * from "./types"
+
 export { calculateComplexity }
 
 export const analyzeProject = (rawPath: string): Results => {
