@@ -29,8 +29,10 @@ export * from "./types"
 
 export { calculateComplexity }
 
-export const analyzeProject = (rawPath: string): Results => {
-  const optionsPath = path.resolve(`${rawPath}/codehawk.json`)
+export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
+  // When using CLI, execute from the cwd rather than a relative path
+  const actualRoot = (isCliContext) ? cwd : rawPath;
+  const optionsPath = path.resolve(`${actualRoot}/codehawk.json`)
 
   let projectOptionsFile = null
   try {
@@ -42,7 +44,7 @@ export const analyzeProject = (rawPath: string): Results => {
 
   const projectOptions = JSON.parse(projectOptionsFile)
   const options = buildOptions(projectOptions)
-  const dirPath = path.resolve(`${rawPath}/`)
+  const dirPath = path.resolve(`${actualRoot}/`)
   const projectCoverage = getCoverage(dirPath)
 
   const addComplexityToFile = (file: ParsedFile): AnalyzedFile => {
