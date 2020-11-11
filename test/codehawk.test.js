@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { analyzeProject, calculateComplexity } = require('../build/codehawk')
+const { analyzeProject, calculateComplexity, resultsAsTable } = require('../build/codehawk')
 
 const cwd = process.cwd()
 const outputMatchesResult = (projectPath) => {
@@ -10,6 +10,9 @@ const outputMatchesResult = (projectPath) => {
     const expected = JSON.parse(expectedRaw)
 
     expect(output.results).toEqual(expected.results)
+
+    const asTable = resultsAsTable(output.results);
+    console.log(asTable);
 }
 
 const STATIC_SAMPLE = `

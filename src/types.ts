@@ -98,12 +98,15 @@ export interface AnalyzedDirectory extends BaseEntity {
 
 export type AnalyzedEntity = AnalyzedFile | AnalyzedDirectory
 
-
 // Parsed entities plus complexityReports and timesDependedOn
 
 export interface FullyAnalyzedFile extends AnalyzedFile {
   timesDependedOn: number
 }
+
+// Some operations are against analyzed files, but we don't care if they're fully analyzed
+
+export type AnyAnalyzedFile = AnalyzedFile | FullyAnalyzedFile
 
 export interface FullyAnalyzedDirectory extends BaseEntity {
   type: 'dir'
