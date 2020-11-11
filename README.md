@@ -27,6 +27,20 @@ The simplest way to use codehawk-cli is to use it against a directory in your pr
 
 Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-example).
 
+#### Example output
+
+```markdown
+Codehawk Static Analysis Results
+Top 4 files
+
+| File                           | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
+| ------------------------------ | ---------- | ---------------------- | ---------------------------------- |
+| complex-utils.js               | 99         | 1                      | 50.76 (Could be better)            |
+| typescript-sample.ts           | 11         | 1                      | 70.73 OK                           |
+| index.js                       | 209        | 1                      | 89.94 OK                           |
+| hello.js                       | 6          | 1                      | 91.93 OK                           |
+```
+
 ## Advanced usage
 
 Analyze a single piece of code:
