@@ -19,6 +19,24 @@ Flow is supported via `flow-remove-types` and typescript is supported via `@babe
 
 ## Usage
 
+The simplest way to use codehawk-cli is to use it against a directory in your project:
+
+1. `npm install --save-dev codehawk-cli` or `yarn add --dev codehawk-cli`
+
+2. Add a `codehawk.json` to the root of your project, for example:
+
+```json
+{
+    "skipDirectories": ["/node_modules", "coverage"]
+}
+```
+
+3. Add a new script to `package.json`, for example: `"codehawk": "codehawk src"`
+
+4. Run `npm run codehawk` and get output to stdout
+
+## Advanced usage
+
 Analyze a single piece of code:
 
 ```javascript
