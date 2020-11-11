@@ -4,18 +4,7 @@ Codehawk is a static analysis tool for JavaScript projects. It is intended as a 
 
 JavaScript, TypeScript and Flow projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code). It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
 
-Each analyzed file in your project ends up with:
-
-- `codehawkScore` - A Codehawk score which represents it's estimated level of maintainability (0-100, higher is better)
-- `dependencies` - a map of this file's dependecies
-- `timesDependedOn` - number of times this file is imported by other files
-- `complexityReport` - various detailed complexity metrics such as halstead metrics and cyclomatic complexity
-
 The CLI runs as a Node.js process. Node.js >=12 is recommended, but >=10 should also work. <10 is unsupported.
-
-Codehawk depends on `typhonjs-escomplex` for low level complexity metrics.
-
-Flow is supported via `flow-remove-types` and typescript is supported via `@babel/plugin-transform-typescript`. In other words, it transforms any flow or TypeScript code into JavaScript code before static analysis is carried out.
 
 ## Usage
 
@@ -34,6 +23,9 @@ The simplest way to use codehawk-cli is to use it against a directory in your pr
 3. Add a new script to `package.json`, for example: `"codehawk": "codehawk src"`
 
 4. Run `npm run codehawk` and get output to stdout
+
+
+Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-example).
 
 ## Advanced usage
 
@@ -54,45 +46,7 @@ const STATIC_SAMPLE = `
 
 const metrics = calculateComplexity(STATIC_SAMPLE)
 
-// Example output:
-
-{
-    aggregate: {
-        cyclomatic: 2,
-        cyclomaticDensity: 50,
-        halstead: {
-            bugs: 0.015,
-            difficulty: 4.2,
-            effort: 188.885,
-            length: 13,
-            time: 10.494,
-            vocabulary: 11,
-            volume: 44.973,
-            operands: {
-                distinct: 5,
-                total: 7
-            },
-            operators: {
-                distinct: 6,
-                total: 6
-            },
-            time: 10.494
-        },
-        paramCount: 1,
-        sloc: {
-            logical: 4,
-            physical: 9,
-        },
-    },
-    dependencies: [
-        { line: 2, path: 'lodash', type: 'esm' }
-    ],
-    errors: [],
-    lineEnd: 9,
-    lineStart: 1,
-    maintainability: 144.217,
-    codehawkScore: 92.43914887804003
-}
+console.log(metrics) // Inspect the full metrics
 
 ```
 
@@ -108,9 +62,18 @@ const output = analyzeProject('/path/to/project') // FullyAnalyzedEntity[]
 // (see above for example)
 ```
 
-When analyzing a project via `analyzeProject`, 2 extra data points are available: `timesDependedOn` and `coverage`.
+## More information
 
-Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-example).
+Codehawk depends on `typhonjs-escomplex` for low level complexity metrics.
+
+Flow is supported via `flow-remove-types` and typescript is supported via `@babel/plugin-transform-typescript`. In other words, it transforms any flow or TypeScript code into JavaScript code before static analysis is carried out.
+
+Each analyzed file in your project ends up with:
+
+- `codehawkScore` - A Codehawk score which represents it's estimated level of maintainability (0-100, higher is better)
+- `dependencies` - a map of this file's dependecies
+- `timesDependedOn` - number of times this file is imported by other files
+- `complexityReport` - various detailed complexity metrics such as halstead metrics and cyclomatic complexity
 
 ## Options
 
