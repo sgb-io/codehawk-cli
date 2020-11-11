@@ -40,7 +40,9 @@
     "prettier": "^2.0.5",
     "typescript": "^3.9.5"
   },
-  "bin": "build/codehawk.js",
+  "bin": {
+    "codehawk": "build/index.js"
+  },
   "main": "build/codehawk.js",
   "types": "build/codehawk.d.ts"
 }
