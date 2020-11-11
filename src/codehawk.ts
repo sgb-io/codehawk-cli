@@ -16,6 +16,8 @@ import {
   FullyAnalyzedDirectory
 } from './types'
 import { buildOptions } from './options'
+import { formatResultsAsTable } from './cli-util'
+import { flattenEntireTree } from './util'
 
 interface Results {
   results: FullyAnalyzedEntity[]
@@ -111,4 +113,21 @@ export const analyzeProject = (rawPath: string): Results => {
   return {
     results: secondRunResults
   }
+}
+
+export const resultsAsTable = (analyzedEntities: FullyAnalyzedEntity[]) => {
+  const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<FullyAnalyzedFile>(analyzedEntities)
+    .filter(
+      (entity) => {
+        return entity.type === "file" && !!entity.complexityReport
+      }
+    )
+    .sort(
+      (entityA, entityB) => {
+        return entityA.complexityReport.codehawkScore - entityB.complexityReport.codehawkScore
+      }
+    )
+    .slice(0, 20)
+
+  return formatResultsAsTable(flatFileResults)
 }

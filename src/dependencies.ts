@@ -1,12 +1,12 @@
 import path from 'path'
 import slash from 'slash'
 import { flattenEntireTree } from './util'
-import { AnalyzedEntity } from './types'
+import { AnalyzedEntity, AnalyzedFile } from './types'
 
 // Gathers all the dependencies as a flat array of strings across all analyzed files
 // Note: duplicates are not removed (intentional)
 export const getProjectDeps = (firstRunResults: AnalyzedEntity[]): string[] => {
-  const flatItems = flattenEntireTree(firstRunResults)
+  const flatItems = flattenEntireTree<AnalyzedFile>(firstRunResults)
   const allAbsoluteDeps = []
   for (let i = 0; i < flatItems.length; i += 1) {
     const item = flatItems[i]
