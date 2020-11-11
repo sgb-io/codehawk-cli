@@ -23,3 +23,6 @@ yarn-error.log*
 
 */credentials.json
 .nyc_output
+
+# Ignore npm lockfile (we're using yarn)
+package-lock.json
