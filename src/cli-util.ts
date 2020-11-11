@@ -1,7 +1,5 @@
 import { FullyAnalyzedFile } from "./types"
 
-// | File                           | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
-// | ------------------------------ | ---------- | ---------------------- | ---------------------------------- |
 const colLengths = {
   filename: 30,
   lines: 10,
@@ -56,7 +54,6 @@ const generateTableLines = (flatFileResults: FullyAnalyzedFile[]): string => {
     )
   }).join('\n    ') // Newline + 4 spaces
 }
-
 
 export const formatResultsAsTable = (flatFileResults: FullyAnalyzedFile[]): string => {
   return `
