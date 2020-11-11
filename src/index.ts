@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { analyzeProject, resultsAsTable } from './codehawk'
 
 // Sample CLI usage: `codehawk src`
