@@ -11,6 +11,14 @@
     "build:watch": "tsc --watch"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sgb-io/codehawk-cli.git"
+  },
+  "homepage": "https://github.com/sgb-io/codehawk-cli",
+  "bugs": {
+    "url": "https://github.com/sgb-io/codehawk-cli/issues"
+  },
   "license": "MPL-2.0",
   "dependencies": {
     "@babel/core": "^7.7.2",
@@ -41,7 +49,8 @@
     "typescript": "^3.9.5"
   },
   "bin": {
-    "codehawk": "build/index.js"
+    "codehawk": "build/index.js",
+    "codehawk-cli": "build/index.js"
   },
   "main": "build/codehawk.js",
   "types": "build/codehawk.d.ts"
