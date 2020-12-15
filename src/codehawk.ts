@@ -1,4 +1,3 @@
-import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
 import { getCoverage } from './coverage'
@@ -15,7 +14,7 @@ import {
   FullyAnalyzedFile,
   FullyAnalyzedDirectory
 } from './types'
-import { buildOptions } from './options'
+import { buildOptions, getConfiguration } from './options'
 import { formatResultsAsTable } from './cli-util'
 import { flattenEntireTree } from './util'
 
@@ -32,17 +31,7 @@ export { calculateComplexity }
 export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // When using CLI, execute from the cwd rather than a relative path
   const actualRoot = (isCliContext) ? cwd : rawPath;
-  const optionsPath = path.resolve(`${actualRoot}/codehawk.json`)
-
-  let projectOptionsFile = null
-  try {
-    projectOptionsFile = fs.readFileSync(optionsPath, 'utf8')
-  } catch (e) {
-    console.log(e)
-    throw new Error('Please ensure you have a codehawk.json file in your project root.')
-  }
-
-  const projectOptions = JSON.parse(projectOptionsFile)
+  const projectOptions = getConfiguration(actualRoot)
   const options = buildOptions(projectOptions)
   const dirPath = path.resolve(`${actualRoot}/`)
   const projectCoverage = getCoverage(dirPath)

@@ -1,3 +1,10 @@
+import {
+  existsSync,
+  readFileSync,
+} from 'fs'
+import { resolve as pathResolve } from 'path'
+
+import { NO_CONFIGURATION_FOUND } from './consts/errors'
 import { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
 
 const baseOptions: CodehawkOptions = {
@@ -57,3 +64,27 @@ export const buildOptions = (
 
   return assembledOptions
 }
+
+export const getConfiguration = (rootDirectory: string): AssembledOptions => {
+  try {
+    if (existsSync(pathResolve(`${rootDirectory}/codehawk.json`))) {
+      const configContents = readFileSync(
+        pathResolve(`${rootDirectory}/codehawk.json`),
+        "utf8",
+      );
+      return JSON.parse(configContents);
+    }
+    const packageConfig = readFileSync(
+      pathResolve(`${rootDirectory}/package.json`),
+      "utf-8",
+    );
+    const parsedPackageConfig = JSON.parse(packageConfig);
+    if ("codehawk" in parsedPackageConfig) {
+      return parsedPackageConfig.codehawk;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  throw new Error(NO_CONFIGURATION_FOUND);
+};
