@@ -12,7 +12,7 @@ import {
   AnalyzedEntity,
   FullyAnalyzedEntity,
   FullyAnalyzedFile,
-  FullyAnalyzedDirectory
+  FullyAnalyzedDirectory,
 } from './types'
 import { buildOptions, getConfiguration } from './options'
 import { formatResultsAsTable } from './cli-util'
@@ -24,13 +24,16 @@ interface Results {
 
 const cwd = slash(process.cwd())
 
-export * from "./types"
+export * from './types'
 
 export { calculateComplexity }
 
-export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
+export const analyzeProject = (
+  rawPath: string,
+  isCliContext?: boolean
+): Results => {
   // When using CLI, execute from the cwd rather than a relative path
-  const actualRoot = (isCliContext) ? cwd : rawPath;
+  const actualRoot = isCliContext ? cwd : rawPath
   const projectOptions = getConfiguration(actualRoot)
   const options = buildOptions(projectOptions)
   const dirPath = path.resolve(`${actualRoot}/`)
@@ -40,14 +43,14 @@ export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results
     const complexityReport = !file.shouldAnalyze
       ? null
       : analyzeFile(
-        dirPath,
-        {
-          path: file.path,
-          filename: file.filename,
-          rawSource: getFileContents(file.fullPath, options.enableFlow),
-        },
-        projectCoverage
-      )
+          dirPath,
+          {
+            path: file.path,
+            filename: file.filename,
+            rawSource: getFileContents(file.fullPath, options.enableFlow),
+          },
+          projectCoverage
+        )
 
     return {
       ...file,
@@ -59,39 +62,41 @@ export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results
 
   const addComplexityToEntities = (
     entities: ParsedEntity[]
-  ): AnalyzedEntity[] => entities.map((entity) => {
-    if (entity.type === 'dir') {
-      return {
-        ...entity,
-        files: addComplexityToEntities(entity.files),
-        fullPath: entity.fullPath.replace(cwd, ''),
-      } as AnalyzedDirectory
-    }
+  ): AnalyzedEntity[] =>
+    entities.map((entity) => {
+      if (entity.type === 'dir') {
+        return {
+          ...entity,
+          files: addComplexityToEntities(entity.files),
+          fullPath: entity.fullPath.replace(cwd, ''),
+        } as AnalyzedDirectory
+      }
 
-    return addComplexityToFile(entity)
-  })
+      return addComplexityToFile(entity)
+    })
 
   const addDependencyCountToFile = (
     projectDeps: string[],
     file: AnalyzedFile
   ): FullyAnalyzedFile => ({
     ...file,
-    timesDependedOn: getTimesDependedOn(projectDeps, file.fullPath)
+    timesDependedOn: getTimesDependedOn(projectDeps, file.fullPath),
   })
 
   const addDependencyCounts = (
     projectDeps: string[],
     entities: AnalyzedEntity[]
-  ): FullyAnalyzedEntity[] => entities.map((entity) => {
-    if (entity.type === 'dir') {
-      return {
-        ...entity,
-        files: addDependencyCounts(projectDeps, entity.files),
-      } as FullyAnalyzedDirectory
-    }
+  ): FullyAnalyzedEntity[] =>
+    entities.map((entity) => {
+      if (entity.type === 'dir') {
+        return {
+          ...entity,
+          files: addDependencyCounts(projectDeps, entity.files),
+        } as FullyAnalyzedDirectory
+      }
 
-    return addDependencyCountToFile(projectDeps, entity)
-  })
+      return addDependencyCountToFile(projectDeps, entity)
+    })
 
   // First run of all files: generate complexity & coverage metrics
   const entities = walkSync(dirPath, options)
@@ -102,22 +107,25 @@ export const analyzeProject = (rawPath: string, isCliContext?: boolean): Results
   const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
 
   return {
-    results: secondRunResults
+    results: secondRunResults,
   }
 }
 
-export const resultsAsTable = (analyzedEntities: FullyAnalyzedEntity[]) => {
-  const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<FullyAnalyzedFile>(analyzedEntities)
-    .filter(
-      (entity) => {
-        return entity.type === "file" && !!entity.complexityReport
-      }
-    )
-    .sort(
-      (entityA, entityB) => {
-        return entityA.complexityReport.codehawkScore - entityB.complexityReport.codehawkScore
-      }
-    )
+export const resultsAsTable = (
+  analyzedEntities: FullyAnalyzedEntity[]
+): string => {
+  const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<
+    FullyAnalyzedFile
+  >(analyzedEntities)
+    .filter((entity) => {
+      return entity.type === 'file' && !!entity.complexityReport
+    })
+    .sort((entityA, entityB) => {
+      return (
+        entityA.complexityReport.codehawkScore -
+        entityB.complexityReport.codehawkScore
+      )
+    })
     .slice(0, 20)
 
   return formatResultsAsTable(flatFileResults)

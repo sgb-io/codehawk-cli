@@ -5,7 +5,7 @@ import {
   CoverageMapping,
   FileWithContents,
   CompleteCodehawkComplexityResult,
-  CodehawkComplexityResult
+  CodehawkComplexityResult,
 } from './types'
 
 export const transpileFileSource = (
@@ -22,16 +22,16 @@ export const transpileFileSource = (
         [
           '@babel/plugin-transform-typescript',
           {
-            isTSX: fileExtension === '.tsx'
-          }
-        ]
+            isTSX: fileExtension === '.tsx',
+          },
+        ],
       ],
     })
     contents = transformed.code || ''
   } else {
     // Assume no other static type systems exist
     // Stripping flow types should be safe, even if it's not strictly flow
-    contents = (enableFlow)
+    contents = enableFlow
       ? flowRemoveTypes(contents, { pretty: true }).toString()
       : contents
   }
@@ -46,12 +46,7 @@ export const calculateComplexity = (
   enableFlow: boolean
 ): CodehawkComplexityResult => {
   return escomplexReporter(
-    transpileFileSource(
-      sourceCode,
-      fileExtension,
-      isTypescript,
-      enableFlow
-    )
+    transpileFileSource(sourceCode, fileExtension, isTypescript, enableFlow)
   )
 }
 
@@ -62,24 +57,31 @@ export const analyzeFile = (
 ): CompleteCodehawkComplexityResult => {
   let report = null
   const relativeFilePath = `${file.path}/${file.filename}`.replace(dirPath, '')
-  const coverageData = projectCoverage.find(c => c.path === relativeFilePath)
+  const coverageData = projectCoverage.find((c) => c.path === relativeFilePath)
 
   let fileCoverage = '0'
 
   if (coverageData) {
     // Coverage can have a bug where 0 things have 100% coverage
-    const linesPct = coverageData.coverage.lines.total === 0 ? 0 : coverageData.coverage.lines.pct
-    const fnPct = coverageData.coverage.functions.total === 0 ? 0 : coverageData.coverage.functions.pct
-    const stmntPct = coverageData.coverage.statements.total === 0 ? 0 : coverageData.coverage.statements.pct
-    const branchPct = coverageData.coverage.branches.total === 0 ? 0 : coverageData.coverage.branches.pct
+    const linesPct =
+      coverageData.coverage.lines.total === 0
+        ? 0
+        : coverageData.coverage.lines.pct
+    const fnPct =
+      coverageData.coverage.functions.total === 0
+        ? 0
+        : coverageData.coverage.functions.pct
+    const stmntPct =
+      coverageData.coverage.statements.total === 0
+        ? 0
+        : coverageData.coverage.statements.pct
+    const branchPct =
+      coverageData.coverage.branches.total === 0
+        ? 0
+        : coverageData.coverage.branches.pct
 
     // Average the four coverage types.
-    fileCoverage = ((
-      linesPct +
-      fnPct +
-      stmntPct +
-      branchPct
-    ) / 4).toFixed(2)
+    fileCoverage = ((linesPct + fnPct + stmntPct + branchPct) / 4).toFixed(2)
   }
 
   const trimmed = file.rawSource.trim()

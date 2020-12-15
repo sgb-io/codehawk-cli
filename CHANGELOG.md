@@ -1,5 +1,7 @@
 # Changelog
 
+This changelog is currently manually maintained. Please see commits, PRs and Issue discussions on GitHub for the latest and most correction information.
+
 ### 5.0.0
 
 - Updated `calculateComplexity` signature, file extension and typescript/flow flags added
