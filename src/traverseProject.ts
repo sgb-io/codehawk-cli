@@ -2,14 +2,22 @@ import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
 import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from './util'
-import { AssembledOptions, ParsedEntity, ParsedDirectory, ParsedFile } from './types'
+import {
+  AssembledOptions,
+  ParsedEntity,
+  ParsedDirectory,
+  ParsedFile,
+} from './types'
 import { transpileFileSource } from './analyze'
 
 // dir can be string or dir
-export const walkSync = (dir: string, options: AssembledOptions): ParsedEntity[] => {
+export const walkSync = (
+  dir: string,
+  options: AssembledOptions
+): ParsedEntity[] => {
   const fileList: ParsedEntity[] = []
   const items = fs.readdirSync(dir)
-  const visibleEntities = items.filter(i => shouldSeeEntity(dir, i, options))
+  const visibleEntities = items.filter((i) => shouldSeeEntity(dir, i, options))
 
   visibleEntities.forEach((item) => {
     const fullPath = path.join(dir, item)
@@ -17,7 +25,7 @@ export const walkSync = (dir: string, options: AssembledOptions): ParsedEntity[]
     const baseParsedEntity = {
       fullPath: slash(fullPath),
       filename: item,
-      shouldAnalyze: shouldAnalyzeEntity(dir, item, options)
+      shouldAnalyze: shouldAnalyzeEntity(dir, item, options),
     }
 
     if (entity.isDirectory()) {
@@ -48,7 +56,10 @@ export const walkSync = (dir: string, options: AssembledOptions): ParsedEntity[]
   return sorted
 }
 
-export const getFileContents = (fullPath: string, enableFlow: boolean): string => {
+export const getFileContents = (
+  fullPath: string,
+  enableFlow: boolean
+): string => {
   // see https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
   const filename = path.basename(fullPath)
   const extension = path.extname(filename)
@@ -60,4 +71,3 @@ export const getFileContents = (fullPath: string, enableFlow: boolean): string =
 
   return transpileFileSource(contents, extension, isTypescript, enableFlow)
 }
-

@@ -1,7 +1,4 @@
-import {
-  existsSync,
-  readFileSync,
-} from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { resolve as pathResolve } from 'path'
 
 import { NO_CONFIGURATION_FOUND } from './consts/errors'
@@ -32,7 +29,7 @@ const baseOptions: CodehawkOptions = {
     type: 'stringArray',
     default: ['/node_modules', '/flow-typed', '/coverage'],
     replaceDefault: false,
-  }
+  },
 }
 
 export const buildOptions = (
@@ -51,9 +48,10 @@ export const buildOptions = (
         val = projectOptions[optionKey]
       } else {
         // Mutate options by mixing in project options to defaults
-        val = (option.type === 'stringArray' && Array.isArray(val))
-          ? val.concat(projectOptions[optionKey] as string[])
-          : val = projectOptions[optionKey] as boolean
+        val =
+          option.type === 'stringArray' && Array.isArray(val)
+            ? val.concat(projectOptions[optionKey] as string[])
+            : (val = projectOptions[optionKey] as boolean)
       }
     }
 
@@ -70,21 +68,21 @@ export const getConfiguration = (rootDirectory: string): AssembledOptions => {
     if (existsSync(pathResolve(`${rootDirectory}/codehawk.json`))) {
       const configContents = readFileSync(
         pathResolve(`${rootDirectory}/codehawk.json`),
-        "utf8",
-      );
-      return JSON.parse(configContents);
+        'utf8'
+      )
+      return JSON.parse(configContents)
     }
     const packageConfig = readFileSync(
       pathResolve(`${rootDirectory}/package.json`),
-      "utf-8",
-    );
-    const parsedPackageConfig = JSON.parse(packageConfig);
-    if ("codehawk" in parsedPackageConfig) {
-      return parsedPackageConfig.codehawk;
+      'utf-8'
+    )
+    const parsedPackageConfig = JSON.parse(packageConfig)
+    if ('codehawk' in parsedPackageConfig) {
+      return parsedPackageConfig.codehawk
     }
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 
-  throw new Error(NO_CONFIGURATION_FOUND);
-};
+  throw new Error(NO_CONFIGURATION_FOUND)
+}

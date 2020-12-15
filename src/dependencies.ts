@@ -23,19 +23,31 @@ export const getProjectDeps = (firstRunResults: AnalyzedEntity[]): string[] => {
 }
 
 // Matches a full list of dependencies against a file to count how many times it is depended on
-export const getTimesDependedOn = (projectDeps: string[], filePath: string): number => {
+export const getTimesDependedOn = (
+  projectDeps: string[],
+  filePath: string
+): number => {
   const timesDependedOn = projectDeps.filter((d) => {
-    const fileNameWithoutExtension = path.basename(filePath).split('.').slice(0, -1).join('.')
+    const fileNameWithoutExtension = path
+      .basename(filePath)
+      .split('.')
+      .slice(0, -1)
+      .join('.')
     // Windows compatibility (unix-style slashes, plus remove the root drive)
     // eslint-disable-next-line no-useless-escape
     const cleanD = slash(d).replace(/\w\:/, '')
 
     // Match exactly, or fall back to index (index is a reserved case in nodejs)
     // Note: by design, only javascript dependencies are counted (e.g. svg imports will not count as a TDO)
-    const fullMatch = cleanD === `${path.dirname(filePath)}/${fileNameWithoutExtension}`
-    const defaultImportMatch = new RegExp(`${cleanD}/index.(js|ts|tsx|jsx)`, 'i')
+    const fullMatch =
+      cleanD === `${path.dirname(filePath)}/${fileNameWithoutExtension}`
+    const defaultImportMatch = new RegExp(
+      `${cleanD}/index.(js|ts|tsx|jsx)`,
+      'i'
+    )
     const namedImportMatch = new RegExp(`${cleanD}/`, 'i')
-    const indexMatch = filePath.match(defaultImportMatch) || filePath.match(namedImportMatch)
+    const indexMatch =
+      filePath.match(defaultImportMatch) || filePath.match(namedImportMatch)
 
     return fullMatch || indexMatch
   })

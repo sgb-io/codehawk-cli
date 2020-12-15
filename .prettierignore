@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+.nyc_output
+bin
+
+# Types
+src/types/
+src/types.ts

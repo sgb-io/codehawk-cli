@@ -5,11 +5,14 @@ export const getCoverage = (dirPath: string): CoverageMapping[] => {
   let coverage: CoverageMapping[] = []
 
   try {
-    const contents = fs.readFileSync(`${dirPath}/coverage/coverage-summary.json`, 'utf8')
+    const contents = fs.readFileSync(
+      `${dirPath}/coverage/coverage-summary.json`,
+      'utf8'
+    )
     const coveredFiles: CoverageSummary = JSON.parse(contents)
     coverage = Object.keys(coveredFiles).map((file) => ({
       path: file.replace(dirPath, ''),
-      coverage: coveredFiles[file]
+      coverage: coveredFiles[file],
     }))
   } catch (e) {
     console.error(`
