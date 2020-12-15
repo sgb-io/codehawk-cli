@@ -26,3 +26,4 @@ yarn-error.log*
 
 # Ignore npm lockfile (we're using yarn)
 package-lock.json
+.vscode/settings.json
