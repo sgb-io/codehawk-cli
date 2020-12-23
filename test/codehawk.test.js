@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { analyzeProject, calculateComplexity, resultsAsTable } = require('../build/codehawk')
+const { analyzeProject, calculateComplexity, generateBadge } = require('../build/codehawk')
 
 const cwd = process.cwd()
 const outputMatchesResult = (projectPath) => {
@@ -9,10 +9,10 @@ const outputMatchesResult = (projectPath) => {
     const expectedRaw = fs.readFileSync(`${cwd}/${projectPath}/expected.json`)
     const expected = JSON.parse(expectedRaw)
 
-    expect(output.results).toEqual(expected.results)
+    expect(output.fullResultsTree).toEqual(expected.fullResultsTree)
 
-    const asTable = resultsAsTable(output.results);
-    console.log(asTable);
+    generateBadge(output.summary)
+    expect('generateBadge did not throw').toBeTruthy()
 }
 
 const STATIC_SAMPLE = `

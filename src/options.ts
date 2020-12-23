@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'fs'
 import { resolve as pathResolve } from 'path'
 
 import { NO_CONFIGURATION_FOUND } from './consts/errors'
-import { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
+import type { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
 
 const baseOptions: CodehawkOptions = {
   enableFlow: {
@@ -35,7 +35,7 @@ const baseOptions: CodehawkOptions = {
 export const buildOptions = (
   projectOptions: AssembledOptions
 ): AssembledOptions => {
-  const assembledOptions = {} as AssembledOptions
+  const assembledOptions: AssembledOptions = {}
 
   Object.keys(baseOptions).forEach((optionKey: AllOptionKeys) => {
     const option = baseOptions[optionKey]

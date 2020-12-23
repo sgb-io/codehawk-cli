@@ -3,7 +3,7 @@ import * as path from 'path'
 import slash from 'slash'
 import isDotfile from 'is-dotfile'
 import isDotdir from 'is-dotdir'
-import { AssembledOptions, AnalyzedEntity, AnyAnalyzedFile } from './types'
+import type { AssembledOptions, AnalyzedEntity, AnyAnalyzedFile } from './types'
 
 const shouldSkip = (
   relativeDir: string,
@@ -18,7 +18,7 @@ const shouldSkip = (
   return false
 }
 
-const isBlacklisted = (
+const isBlocklisted = (
   relativeDir: string,
   filename: string,
   options: AssembledOptions
@@ -155,7 +155,7 @@ export const shouldAnalyzeEntity = (
     return false
   }
 
-  const blacklisted = isBlacklisted(relativeDir, filename, options)
+  const blacklisted = isBlocklisted(relativeDir, filename, options)
   if (blacklisted) {
     return false
   }

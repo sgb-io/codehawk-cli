@@ -43,6 +43,21 @@ Top 4 files
 
 ## Advanced usage
 
+Analyze an entire directory:
+
+```javascript
+const { analyzeProject } = require('codehawk-cli')
+
+const output = analyzeProject('/path/to/project') // returns a Results object
+
+// Get summary maintainability scores
+const {
+    average,
+    median,
+    worst,
+} = output.summary
+```
+
 Analyze a single piece of code:
 
 ```javascript
@@ -62,18 +77,6 @@ const metrics = calculateComplexity(STATIC_SAMPLE)
 
 console.log(metrics) // Inspect the full metrics
 
-```
-
-Analyze an entire directory:
-
-```javascript
-const { analyzeProject } = require('codehawk-cli')
-
-const output = analyzeProject('/path/to/project') // FullyAnalyzedEntity[]
-
-// Output contains a tree structure of your directory,
-// with all supported files containing a 'complexityReport'
-// (see above for example)
 ```
 
 ## More information

@@ -1,116 +1,162 @@
 {
-    "results": [
-        {
-            "fullPath": "/samples/react-component-typescript/App.tsx",
-            "filename": "App.tsx",
-            "shouldAnalyze": true,
-            "path": "/samples/react-component-typescript",
-            "type": "file",
-            "complexityReport": {
-                "aggregate": {
-                    "cyclomatic": 2,
-                    "cyclomaticDensity": 66.667,
-                    "halstead": {
-                        "bugs": 0.006,
-                        "difficulty": 3,
-                        "effort": 54.284,
-                        "length": 7,
-                        "time": 3.016,
-                        "vocabulary": 6,
-                        "volume": 18.095,
-                        "operands": {
-                            "distinct": 2,
-                            "total": 3
-                        },
-                        "operators": {
-                            "distinct": 4,
-                            "total": 4
-                        }
-                    },
-                    "paramCount": 0,
-                    "sloc": {
-                        "logical": 3,
-                        "physical": 11
-                    }
-                },
-                "dependencies": [
-                    {
-                        "line": 1,
-                        "path": "react",
-                        "type": "esm"
-                    },
-                    {
-                        "line": 2,
-                        "path": "./Modal",
-                        "type": "esm"
-                    }
-                ],
-                "errors": [],
-                "lineEnd": 11,
-                "lineStart": 1,
-                "maintainability": 153.142,
-                "codehawkScore": 94.28236886550532,
-                "coverage": "0"
-            },
-            "timesDependedOn": 0
+  "summary": {
+    "average": 77.48005258780282,
+    "median": 77.48005258780282,
+    "worst": 60.67773631010033
+  },
+  "resultsList": [
+    {
+      "fullPath": "/samples/react-component-typescript/Modal.tsx",
+      "filename": "Modal.tsx",
+      "shouldAnalyze": true,
+      "path": "/samples/react-component-typescript",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 6,
+          "cyclomaticDensity": 30,
+          "halstead": {
+            "bugs": 0.111,
+            "difficulty": 12.917,
+            "effort": 4300.346,
+            "length": 66,
+            "time": 238.908,
+            "vocabulary": 33,
+            "volume": 332.93,
+            "operands": { "distinct": 18, "total": 31 },
+            "operators": { "distinct": 15, "total": 35 }
+          },
+          "paramCount": 2,
+          "sloc": { "logical": 20, "physical": 34 }
         },
-        {
-            "fullPath": "/samples/react-component-typescript/expected.json",
-            "filename": "expected.json",
-            "shouldAnalyze": false,
-            "path": "/samples/react-component-typescript",
-            "type": "file",
-            "complexityReport": null,
-            "timesDependedOn": 0
+        "dependencies": [{ "line": 1, "path": "react", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 34,
+        "lineStart": 1,
+        "maintainability": 125.251,
+        "codehawkScore": 60.67773631010033,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/react-component-typescript/App.tsx",
+      "filename": "App.tsx",
+      "shouldAnalyze": true,
+      "path": "/samples/react-component-typescript",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 2,
+          "cyclomaticDensity": 66.667,
+          "halstead": {
+            "bugs": 0.006,
+            "difficulty": 3,
+            "effort": 54.284,
+            "length": 7,
+            "time": 3.016,
+            "vocabulary": 6,
+            "volume": 18.095,
+            "operands": { "distinct": 2, "total": 3 },
+            "operators": { "distinct": 4, "total": 4 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 3, "physical": 11 }
         },
-        {
-            "fullPath": "/samples/react-component-typescript/Modal.tsx",
-            "filename": "Modal.tsx",
-            "shouldAnalyze": true,
-            "path": "/samples/react-component-typescript",
-            "type": "file",
-            "complexityReport": {
-                "aggregate": {
-                    "cyclomatic": 6,
-                    "cyclomaticDensity": 30,
-                    "halstead": {
-                        "bugs": 0.111,
-                        "difficulty": 12.917,
-                        "effort": 4300.346,
-                        "length": 66,
-                        "time": 238.908,
-                        "vocabulary": 33,
-                        "volume": 332.93,
-                        "operands": {
-                            "distinct": 18,
-                            "total": 31
-                        },
-                        "operators": {
-                            "distinct": 15,
-                            "total": 35
-                        }
-                    },
-                    "paramCount": 2,
-                    "sloc": {
-                        "logical": 20,
-                        "physical": 34
-                    }
-                },
-                "dependencies": [
-                    {
-                        "line": 1,
-                        "path": "react",
-                        "type": "esm"
-                    }
-                ],
-                "errors": [],
-                "lineEnd": 34,
-                "lineStart": 1,
-                "maintainability": 125.251,
-                "codehawkScore": 60.67773631010033,
-                "coverage": "0"
-            },
-            "timesDependedOn": 1
-        }
-    ]
+        "dependencies": [
+          { "line": 1, "path": "react", "type": "esm" },
+          { "line": 2, "path": "./Modal", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 11,
+        "lineStart": 1,
+        "maintainability": 153.142,
+        "codehawkScore": 94.28236886550532,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ],
+  "fullResultsTree": [
+    {
+      "fullPath": "/samples/react-component-typescript/App.tsx",
+      "filename": "App.tsx",
+      "shouldAnalyze": true,
+      "path": "/samples/react-component-typescript",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 2,
+          "cyclomaticDensity": 66.667,
+          "halstead": {
+            "bugs": 0.006,
+            "difficulty": 3,
+            "effort": 54.284,
+            "length": 7,
+            "time": 3.016,
+            "vocabulary": 6,
+            "volume": 18.095,
+            "operands": { "distinct": 2, "total": 3 },
+            "operators": { "distinct": 4, "total": 4 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 3, "physical": 11 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "react", "type": "esm" },
+          { "line": 2, "path": "./Modal", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 11,
+        "lineStart": 1,
+        "maintainability": 153.142,
+        "codehawkScore": 94.28236886550532,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/react-component-typescript/expected.json",
+      "filename": "expected.json",
+      "shouldAnalyze": false,
+      "path": "/samples/react-component-typescript",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/react-component-typescript/Modal.tsx",
+      "filename": "Modal.tsx",
+      "shouldAnalyze": true,
+      "path": "/samples/react-component-typescript",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 6,
+          "cyclomaticDensity": 30,
+          "halstead": {
+            "bugs": 0.111,
+            "difficulty": 12.917,
+            "effort": 4300.346,
+            "length": 66,
+            "time": 238.908,
+            "vocabulary": 33,
+            "volume": 332.93,
+            "operands": { "distinct": 18, "total": 31 },
+            "operators": { "distinct": 15, "total": 35 }
+          },
+          "paramCount": 2,
+          "sloc": { "logical": 20, "physical": 34 }
+        },
+        "dependencies": [{ "line": 1, "path": "react", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 34,
+        "lineStart": 1,
+        "maintainability": 125.251,
+        "codehawkScore": 60.67773631010033,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    }
+  ]
 }

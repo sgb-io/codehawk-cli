@@ -4,7 +4,7 @@ import { getCoverage } from './coverage'
 import { analyzeFile, calculateComplexity } from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
-import {
+import type {
   ParsedEntity,
   ParsedFile,
   AnalyzedFile,
@@ -15,23 +15,24 @@ import {
   FullyAnalyzedDirectory,
 } from './types'
 import { buildOptions, getConfiguration } from './options'
-import { formatResultsAsTable } from './cli-util'
 import { flattenEntireTree } from './util'
+import { generateBadge } from './badge'
 
-interface Results {
-  results: FullyAnalyzedEntity[]
+export interface ResultsSummary {
+  average: number
+  median: number
+  worst: number
+}
+
+export interface Results {
+  resultsList: FullyAnalyzedFile[]
+  fullResultsTree: FullyAnalyzedEntity[]
+  summary: ResultsSummary
 }
 
 const cwd = slash(process.cwd())
 
-export * from './types'
-
-export { calculateComplexity }
-
-export const analyzeProject = (
-  rawPath: string,
-  isCliContext?: boolean
-): Results => {
+const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // When using CLI, execute from the cwd rather than a relative path
   const actualRoot = isCliContext ? cwd : rawPath
   const projectOptions = getConfiguration(actualRoot)
@@ -106,27 +107,75 @@ export const analyzeProject = (
   const projectDeps = getProjectDeps(firstRunResults)
   const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
 
+  const resultsAsList = getResultsAsList(secondRunResults)
+
   return {
-    results: secondRunResults,
+    summary: getResultsSummary(resultsAsList),
+    resultsList: resultsAsList,
+    fullResultsTree: secondRunResults,
   }
 }
 
-export const resultsAsTable = (
-  analyzedEntities: FullyAnalyzedEntity[]
-): string => {
+export const getResultsAsList = (
+  analyzedEntities: FullyAnalyzedEntity[],
+  limit?: number
+): FullyAnalyzedFile[] => {
   const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<
     FullyAnalyzedFile
   >(analyzedEntities)
     .filter((entity) => {
       return entity.type === 'file' && !!entity.complexityReport
     })
+    // Sort by codehawk score, ascending (most complex files are first in the list)
     .sort((entityA, entityB) => {
       return (
         entityA.complexityReport.codehawkScore -
         entityB.complexityReport.codehawkScore
       )
     })
-    .slice(0, 20)
 
-  return formatResultsAsTable(flatFileResults)
+  return limit ? flatFileResults.slice(0, limit) : flatFileResults
 }
+
+const getMedian = (numbers: number[]): number => {
+  const sorted = numbers.slice().sort((a, b) => a - b)
+  const middle = Math.floor(sorted.length / 2)
+
+  if (sorted.length % 2 === 0) {
+    return (sorted[middle - 1] + sorted[middle]) / 2
+  }
+
+  return sorted[middle]
+}
+
+const getResultsSummary = (
+  resultsAsList: FullyAnalyzedFile[]
+): ResultsSummary => {
+  const allScores: number[] = resultsAsList.reduce((arr: number[], current) => {
+    if (current.complexityReport) {
+      arr.push(current.complexityReport.codehawkScore)
+    }
+    return arr
+  }, [])
+  const total = allScores.reduce((total: number, score) => {
+    return total + score
+  }, 0)
+  const worst = allScores.reduce((worst: number, score) => {
+    if (score < worst) {
+      return score
+    }
+    return worst
+  }, 100) // Start with max maintainability, work downwards
+
+  const average = total / allScores.length
+  const median = getMedian(allScores)
+
+  return {
+    average,
+    median,
+    worst,
+  }
+}
+
+// Public APIs
+export { calculateComplexity, analyzeProject, generateBadge }

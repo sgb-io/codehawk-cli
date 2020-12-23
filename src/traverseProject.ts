@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
 import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from './util'
-import {
+import type {
   AssembledOptions,
   ParsedEntity,
   ParsedDirectory,

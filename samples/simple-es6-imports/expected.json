@@ -1,161 +1,238 @@
 {
-    "results": [
-        {
-            "type": "dir",
-            "fullPath": "/samples/simple-es6-imports/utils",
-            "filename": "utils",
-            "files": [
-                {
-                    "type": "file",
-                    "fullPath": "/samples/simple-es6-imports/utils/utils.js",
-                    "path": "/samples/simple-es6-imports/utils",
-                    "filename": "utils.js",
-                    "shouldAnalyze": true,
-                    "complexityReport": {
-                        "aggregate": {
-                            "cyclomatic": 7,
-                            "cyclomaticDensity": 36.842,
-                            "halstead": {
-                                "bugs": 0.091,
-                                "difficulty": 12.133,
-                                "effort": 3324.767,
-                                "length": 57,
-                                "time": 184.709,
-                                "vocabulary": 28,
-                                "volume": 274.019,
-                                "operands": {
-                                    "distinct": 15,
-                                    "total": 28
-                                },
-                                "operators": {
-                                    "distinct": 13,
-                                    "total": 29
-                                }
-                            },
-                            "paramCount": 3,
-                            "sloc": {
-                                "logical": 19,
-                                "physical": 23
-                            }
-                        },
-                        "dependencies": [],
-                        "errors": [],
-                        "lineEnd": 23,
-                        "lineStart": 1,
-                        "maintainability": 116.274,
-                        "codehawkScore": 65.52769191836538,
-                        "coverage": "0"
-                    },
-                    "timesDependedOn": 1
-                }
-            ],
-            "shouldAnalyze": true
+  "summary": {
+    "average": 74.98316839015082,
+    "median": 66.5583293243497,
+    "worst": 65.52769191836538
+  },
+  "resultsList": [
+    {
+      "fullPath": "/samples/simple-es6-imports/utils/utils.js",
+      "filename": "utils.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-es6-imports/utils",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 7,
+          "cyclomaticDensity": 36.842,
+          "halstead": {
+            "bugs": 0.091,
+            "difficulty": 12.133,
+            "effort": 3324.767,
+            "length": 57,
+            "time": 184.709,
+            "vocabulary": 28,
+            "volume": 274.019,
+            "operands": { "distinct": 15, "total": 28 },
+            "operators": { "distinct": 13, "total": 29 }
+          },
+          "paramCount": 3,
+          "sloc": { "logical": 19, "physical": 23 }
         },
-        {
-            "type": "file",
-            "fullPath": "/samples/simple-es6-imports/expected.json",
-            "path": "/samples/simple-es6-imports",
-            "filename": "expected.json",
-            "shouldAnalyze": false,
-            "complexityReport": null,
-            "timesDependedOn": 0
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 23,
+        "lineStart": 1,
+        "maintainability": 116.274,
+        "codehawkScore": 65.52769191836538,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/simple-es6-imports/simple-es6-imports.js",
+      "filename": "simple-es6-imports.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-es6-imports",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 4,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.049,
+            "difficulty": 7.35,
+            "effort": 1081.543,
+            "length": 36,
+            "time": 60.086,
+            "vocabulary": 17,
+            "volume": 147.149,
+            "operands": { "distinct": 10, "total": 21 },
+            "operators": { "distinct": 7, "total": 15 }
+          },
+          "paramCount": 2,
+          "sloc": { "logical": 12, "physical": 18 }
         },
+        "dependencies": [
+          { "line": 1, "path": "./sample-es6-constants", "type": "esm" },
+          { "line": 2, "path": "./utils", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 18,
+        "lineStart": 1,
+        "maintainability": 119.758,
+        "codehawkScore": 66.5583293243497,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/simple-es6-imports/sample-es6-constants.js",
+      "filename": "sample-es6-constants.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-es6-imports",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 25,
+          "halstead": {
+            "bugs": 0.018,
+            "difficulty": 1,
+            "effort": 53.151,
+            "length": 16,
+            "time": 2.953,
+            "vocabulary": 10,
+            "volume": 53.151,
+            "operands": { "distinct": 8, "total": 8 },
+            "operators": { "distinct": 2, "total": 8 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 4, "physical": 5 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 5,
+        "lineStart": 1,
+        "maintainability": 134.954,
+        "codehawkScore": 92.8634839277374,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    }
+  ],
+  "fullResultsTree": [
+    {
+      "fullPath": "/samples/simple-es6-imports/utils",
+      "filename": "utils",
+      "shouldAnalyze": true,
+      "type": "dir",
+      "files": [
         {
-            "type": "file",
-            "fullPath": "/samples/simple-es6-imports/sample-es6-constants.js",
-            "path": "/samples/simple-es6-imports",
-            "filename": "sample-es6-constants.js",
-            "shouldAnalyze": true,
-            "complexityReport": {
-                "aggregate": {
-                    "cyclomatic": 1,
-                    "cyclomaticDensity": 25,
-                    "halstead": {
-                        "bugs": 0.018,
-                        "difficulty": 1,
-                        "effort": 53.151,
-                        "length": 16,
-                        "time": 2.953,
-                        "vocabulary": 10,
-                        "volume": 53.151,
-                        "operands": {
-                            "distinct": 8,
-                            "total": 8
-                        },
-                        "operators": {
-                            "distinct": 2,
-                            "total": 8
-                        }
-                    },
-                    "paramCount": 0,
-                    "sloc": {
-                        "logical": 4,
-                        "physical": 5
-                    }
-                },
-                "dependencies": [],
-                "errors": [],
-                "lineEnd": 5,
-                "lineStart": 1,
-                "maintainability": 134.954,
-                "codehawkScore": 92.8634839277374,
-                "coverage": "0"
+          "fullPath": "/samples/simple-es6-imports/utils/utils.js",
+          "filename": "utils.js",
+          "shouldAnalyze": true,
+          "path": "/samples/simple-es6-imports/utils",
+          "type": "file",
+          "complexityReport": {
+            "aggregate": {
+              "cyclomatic": 7,
+              "cyclomaticDensity": 36.842,
+              "halstead": {
+                "bugs": 0.091,
+                "difficulty": 12.133,
+                "effort": 3324.767,
+                "length": 57,
+                "time": 184.709,
+                "vocabulary": 28,
+                "volume": 274.019,
+                "operands": { "distinct": 15, "total": 28 },
+                "operators": { "distinct": 13, "total": 29 }
+              },
+              "paramCount": 3,
+              "sloc": { "logical": 19, "physical": 23 }
             },
-            "timesDependedOn": 1
-        },
-        {
-            "type": "file",
-            "fullPath": "/samples/simple-es6-imports/simple-es6-imports.js",
-            "path": "/samples/simple-es6-imports",
-            "filename": "simple-es6-imports.js",
-            "shouldAnalyze": true,
-            "complexityReport": {
-                "aggregate": {
-                    "cyclomatic": 4,
-                    "cyclomaticDensity": 33.333,
-                    "halstead": {
-                        "bugs": 0.049,
-                        "difficulty": 7.35,
-                        "effort": 1081.543,
-                        "length": 36,
-                        "time": 60.086,
-                        "vocabulary": 17,
-                        "volume": 147.149,
-                        "operands": {
-                            "distinct": 10,
-                            "total": 21
-                        },
-                        "operators": {
-                            "distinct": 7,
-                            "total": 15
-                        }
-                    },
-                    "paramCount": 2,
-                    "sloc": {
-                        "logical": 12,
-                        "physical": 18
-                    }
-                },
-                "dependencies": [
-                    {
-                        "line": 1,
-                        "path": "./sample-es6-constants",
-                        "type": "esm"
-                    },
-                    {
-                        "line": 2,
-                        "path": "./utils",
-                        "type": "esm"
-                    }
-                ],
-                "errors": [],
-                "lineEnd": 18,
-                "lineStart": 1,
-                "maintainability": 119.758,
-                "codehawkScore": 66.5583293243497,
-                "coverage": "0"
-            },
-            "timesDependedOn": 0
+            "dependencies": [],
+            "errors": [],
+            "lineEnd": 23,
+            "lineStart": 1,
+            "maintainability": 116.274,
+            "codehawkScore": 65.52769191836538,
+            "coverage": "0"
+          },
+          "timesDependedOn": 1
         }
-    ]
+      ]
+    },
+    {
+      "fullPath": "/samples/simple-es6-imports/expected.json",
+      "filename": "expected.json",
+      "shouldAnalyze": false,
+      "path": "/samples/simple-es6-imports",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/simple-es6-imports/sample-es6-constants.js",
+      "filename": "sample-es6-constants.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-es6-imports",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 25,
+          "halstead": {
+            "bugs": 0.018,
+            "difficulty": 1,
+            "effort": 53.151,
+            "length": 16,
+            "time": 2.953,
+            "vocabulary": 10,
+            "volume": 53.151,
+            "operands": { "distinct": 8, "total": 8 },
+            "operators": { "distinct": 2, "total": 8 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 4, "physical": 5 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 5,
+        "lineStart": 1,
+        "maintainability": 134.954,
+        "codehawkScore": 92.8634839277374,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/simple-es6-imports/simple-es6-imports.js",
+      "filename": "simple-es6-imports.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-es6-imports",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 4,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.049,
+            "difficulty": 7.35,
+            "effort": 1081.543,
+            "length": 36,
+            "time": 60.086,
+            "vocabulary": 17,
+            "volume": 147.149,
+            "operands": { "distinct": 10, "total": 21 },
+            "operators": { "distinct": 7, "total": 15 }
+          },
+          "paramCount": 2,
+          "sloc": { "logical": 12, "physical": 18 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "./sample-es6-constants", "type": "esm" },
+          { "line": 2, "path": "./utils", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 18,
+        "lineStart": 1,
+        "maintainability": 119.758,
+        "codehawkScore": 66.5583293243497,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ]
 }

@@ -5,5 +5,4 @@ coverage
 bin
 
 # Types
-src/types/
-src/types.ts
+src/types/*

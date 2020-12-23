@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { CoverageMapping, CoverageSummary } from './types'
+import type { CoverageMapping, CoverageSummary } from './types'
 
 export const getCoverage = (dirPath: string): CoverageMapping[] => {
   let coverage: CoverageMapping[] = []

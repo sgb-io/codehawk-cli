@@ -1,1 +1,3 @@
-{}
+{
+    "skipDirectories": ["/samples/sweetalert/docs", "/samples/sweetalert/docs-src", "/samples/sweetalert/typings"]
+}
