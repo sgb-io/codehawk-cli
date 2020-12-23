@@ -3,7 +3,7 @@ import * as path from 'path'
 import slash from 'slash'
 import isDotfile from 'is-dotfile'
 import isDotdir from 'is-dotdir'
-import { AssembledOptions, AnalyzedEntity, AnalyzedFile, AnyAnalyzedFile, AnalyzedDirectory } from './types'
+import { AssembledOptions, AnalyzedEntity, AnyAnalyzedFile } from './types'
 
 const shouldSkip = (
   relativeDir: string,
