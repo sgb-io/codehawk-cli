@@ -16,8 +16,9 @@ import type {
 } from './types'
 import { buildOptions, getConfiguration } from './options'
 import { flattenEntireTree } from './util'
+import { generateBadge } from './badge'
 
-interface ResultsSummary {
+export interface ResultsSummary {
   average: number
   median: number
   worst: number
@@ -176,9 +177,5 @@ const getResultsSummary = (
   }
 }
 
-// const generateCodehawkBadge = () => {
-//   return 'TODO'
-// }
-
 // Public APIs
-export { calculateComplexity, analyzeProject }
+export { calculateComplexity, analyzeProject, generateBadge }

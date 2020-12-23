@@ -9,9 +9,9 @@ const outputMatchesResult = (projectPath) => {
     const expectedRaw = fs.readFileSync(`${cwd}/${projectPath}/expected.json`)
     const expected = JSON.parse(expectedRaw)
 
-    expect(output.results).toEqual(expected.results)
+    expect(output.fullResultsTree).toEqual(expected.results)
 
-    const asTable = resultsAsTable(output.results);
+    const asTable = resultsAsTable(output.fullResultsTree);
     console.log(asTable);
 }
 

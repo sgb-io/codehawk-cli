@@ -25,6 +25,7 @@
   "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-transform-typescript": "^7.7.2",
+    "badgen": "^3.2.2",
     "flow-remove-types": "^2.111.3",
     "is-dotdir": "^1.0.1",
     "is-dotfile": "^2.0.0",
