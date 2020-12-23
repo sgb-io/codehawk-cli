@@ -4,6 +4,7 @@
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
     "test": "jest --testTimeout 15000",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/*.**",
     "lint:fix": "eslint --fix src/*.**",
