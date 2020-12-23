@@ -35,7 +35,7 @@ const baseOptions: CodehawkOptions = {
 export const buildOptions = (
   projectOptions: AssembledOptions
 ): AssembledOptions => {
-  const assembledOptions = {} as AssembledOptions
+  const assembledOptions: AssembledOptions = {}
 
   Object.keys(baseOptions).forEach((optionKey: AllOptionKeys) => {
     const option = baseOptions[optionKey]
