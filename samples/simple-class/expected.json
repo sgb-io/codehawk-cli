@@ -1,56 +1,88 @@
 {
-	"results": [
-		{
-			"type": "file",
-			"fullPath": "/samples/simple-class/expected.json",
-			"path": "/samples/simple-class",
-			"filename": "expected.json",
-			"shouldAnalyze": false,
-			"complexityReport": null,
-			"timesDependedOn": 0
-		},
-		{
-			"type": "file",
-			"fullPath": "/samples/simple-class/simple-class.js",
-			"path": "/samples/simple-class",
-			"filename": "simple-class.js",
-			"shouldAnalyze": true,
-			"complexityReport": {
-				"aggregate": {
-					"cyclomatic": 19,
-					"cyclomaticDensity": 45.238,
-					"halstead": {
-						"bugs": 0.318,
-						"difficulty": 21.25,
-						"effort": 20300.366,
-						"length": 166,
-						"time": 1127.798,
-						"vocabulary": 54,
-						"volume": 955.311,
-						"operands": {
-							"distinct": 36,
-							"total": 85
-						},
-						"operators": {
-							"distinct": 18,
-							"total": 81
-						}
-					},
-					"paramCount": 5,
-					"sloc": {
-						"logical": 42,
-						"physical": 65
-					}
-				},
-				"dependencies": [],
-				"errors": [],
-				"lineEnd": 65,
-				"lineStart": 1,
-				"maintainability": 106.771,
-				"codehawkScore": 55.998178735563855,
-				"coverage": "0"
-			},
-			"timesDependedOn": 0
-		}
-	]
+  "summary": {
+    "average": 55.998178735563855,
+    "median": 55.998178735563855,
+    "worst": 55.998178735563855
+  },
+  "resultsList": [
+    {
+      "fullPath": "/samples/simple-class/simple-class.js",
+      "filename": "simple-class.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-class",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 19,
+          "cyclomaticDensity": 45.238,
+          "halstead": {
+            "bugs": 0.318,
+            "difficulty": 21.25,
+            "effort": 20300.366,
+            "length": 166,
+            "time": 1127.798,
+            "vocabulary": 54,
+            "volume": 955.311,
+            "operands": { "distinct": 36, "total": 85 },
+            "operators": { "distinct": 18, "total": 81 }
+          },
+          "paramCount": 5,
+          "sloc": { "logical": 42, "physical": 65 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 65,
+        "lineStart": 1,
+        "maintainability": 106.771,
+        "codehawkScore": 55.998178735563855,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ],
+  "fullResultsTree": [
+    {
+      "fullPath": "/samples/simple-class/expected.json",
+      "filename": "expected.json",
+      "shouldAnalyze": false,
+      "path": "/samples/simple-class",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/simple-class/simple-class.js",
+      "filename": "simple-class.js",
+      "shouldAnalyze": true,
+      "path": "/samples/simple-class",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 19,
+          "cyclomaticDensity": 45.238,
+          "halstead": {
+            "bugs": 0.318,
+            "difficulty": 21.25,
+            "effort": 20300.366,
+            "length": 166,
+            "time": 1127.798,
+            "vocabulary": 54,
+            "volume": 955.311,
+            "operands": { "distinct": 36, "total": 85 },
+            "operators": { "distinct": 18, "total": 81 }
+          },
+          "paramCount": 5,
+          "sloc": { "logical": 42, "physical": 65 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 65,
+        "lineStart": 1,
+        "maintainability": 106.771,
+        "codehawkScore": 55.998178735563855,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ]
 }

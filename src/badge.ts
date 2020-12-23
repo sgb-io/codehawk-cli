@@ -20,8 +20,8 @@ export const generateBadge = (resultsSummary: ResultsSummary): void => {
     fs.writeFileSync(
       'generated/avg-maintainability.svg',
       badgen({
-        label: 'maintainability',
-        status: `${average}`,
+        label: 'maintainability (avg)',
+        status: `${average.toFixed(2)}`,
         color: getBadgeColor(average),
       }),
       'utf8'
@@ -34,8 +34,8 @@ export const generateBadge = (resultsSummary: ResultsSummary): void => {
     fs.writeFileSync(
       'generated/worst-maintainability.svg',
       badgen({
-        label: 'maintainability',
-        status: `${worst}`,
+        label: 'maintainability (worst)',
+        status: `${worst.toFixed(2)}`,
         color: getBadgeColor(worst),
       }),
       'utf8'

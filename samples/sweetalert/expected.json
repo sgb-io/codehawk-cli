@@ -1,5 +1,993 @@
 {
-  "results": [
+  "summary": {
+    "average": 66.43759137724325,
+    "median": 58.89252972007756,
+    "worst": 44.90727094909405
+  },
+  "resultsList": [
+    {
+      "fullPath": "/samples/sweetalert/webpack.config.js",
+      "filename": "webpack.config.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 4,
+          "cyclomaticDensity": 6.452,
+          "halstead": {
+            "bugs": 0.494,
+            "difficulty": 10.092,
+            "effort": 14966.016,
+            "length": 229,
+            "time": 831.445,
+            "vocabulary": 89,
+            "volume": 1482.943,
+            "operands": { "distinct": 76, "total": 118 },
+            "operators": { "distinct": 13, "total": 111 }
+          },
+          "paramCount": 2,
+          "sloc": { "logical": 62, "physical": 104 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 104,
+        "lineStart": 1,
+        "maintainability": 84.169,
+        "codehawkScore": 44.90727094909405,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/options/index.ts",
+      "filename": "index.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/options",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 27,
+          "cyclomaticDensity": 25.234,
+          "halstead": {
+            "bugs": 0.848,
+            "difficulty": 35.015,
+            "effort": 89106.207,
+            "length": 392,
+            "time": 4950.345,
+            "vocabulary": 90,
+            "volume": 2544.806,
+            "operands": { "distinct": 67, "total": 204 },
+            "operators": { "distinct": 23, "total": 188 }
+          },
+          "paramCount": 17,
+          "sloc": { "logical": 107, "physical": 150 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../utils", "type": "esm" },
+          { "line": 2, "path": "./buttons", "type": "esm" },
+          { "line": 3, "path": "./content", "type": "esm" },
+          { "line": 4, "path": "./deprecations", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 150,
+        "lineStart": 1,
+        "maintainability": 102.469,
+        "codehawkScore": 46.51449814838432,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/options/buttons.ts",
+      "filename": "buttons.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/options",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 20,
+          "cyclomaticDensity": 17.544,
+          "halstead": {
+            "bugs": 0.793,
+            "difficulty": 43.615,
+            "effort": 103824.695,
+            "length": 381,
+            "time": 5768.039,
+            "vocabulary": 76,
+            "volume": 2380.46,
+            "operands": { "distinct": 52, "total": 189 },
+            "operators": { "distinct": 24, "total": 192 }
+          },
+          "paramCount": 6,
+          "sloc": { "logical": 114, "physical": 150 }
+        },
+        "dependencies": [{ "line": 1, "path": "../utils", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 150,
+        "lineStart": 1,
+        "maintainability": 88.721,
+        "codehawkScore": 47.06570281407246,
+        "coverage": "0"
+      },
+      "timesDependedOn": 7
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/event-listeners.ts",
+      "filename": "event-listeners.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 32,
+          "cyclomaticDensity": 29.358,
+          "halstead": {
+            "bugs": 0.75,
+            "difficulty": 27.708,
+            "effort": 62356.211,
+            "length": 357,
+            "time": 3464.234,
+            "vocabulary": 79,
+            "volume": 2250.45,
+            "operands": { "distinct": 60, "total": 175 },
+            "operators": { "distinct": 19, "total": 182 }
+          },
+          "paramCount": 11,
+          "sloc": { "logical": 109, "physical": 141 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "./state", "type": "esm" },
+          { "line": 2, "path": "./actions", "type": "esm" },
+          { "line": 3, "path": "./utils", "type": "esm" },
+          { "line": 4, "path": "./options/buttons", "type": "esm" },
+          { "line": 5, "path": "./class-list", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 141,
+        "lineStart": 1,
+        "maintainability": 110.946,
+        "codehawkScore": 47.300787024008535,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/options/deprecations.ts",
+      "filename": "deprecations.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/options",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 6,
+          "cyclomaticDensity": 8,
+          "halstead": {
+            "bugs": 0.545,
+            "difficulty": 17.024,
+            "effort": 27820.387,
+            "length": 260,
+            "time": 1545.577,
+            "vocabulary": 78,
+            "volume": 1634.205,
+            "operands": { "distinct": 63, "total": 143 },
+            "operators": { "distinct": 15, "total": 117 }
+          },
+          "paramCount": 1,
+          "sloc": { "logical": 75, "physical": 105 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 105,
+        "lineStart": 1,
+        "maintainability": 78.559,
+        "codehawkScore": 47.379394934117734,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/polyfills.js",
+      "filename": "polyfills.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 24,
+          "cyclomaticDensity": 42.857,
+          "halstead": {
+            "bugs": 0.537,
+            "difficulty": 37.278,
+            "effort": 60044.654,
+            "length": 250,
+            "time": 3335.814,
+            "vocabulary": 87,
+            "volume": 1610.736,
+            "operands": { "distinct": 54, "total": 122 },
+            "operators": { "distinct": 33, "total": 128 }
+          },
+          "paramCount": 8,
+          "sloc": { "logical": 56, "physical": 110 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 110,
+        "lineStart": 1,
+        "maintainability": 105.106,
+        "codehawkScore": 49.61465132219012,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/buttons.ts",
+      "filename": "buttons.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 12,
+          "cyclomaticDensity": 26.087,
+          "halstead": {
+            "bugs": 0.387,
+            "difficulty": 17.867,
+            "effort": 20735.479,
+            "length": 192,
+            "time": 1151.971,
+            "vocabulary": 66,
+            "volume": 1160.524,
+            "operands": { "distinct": 49, "total": 103 },
+            "operators": { "distinct": 17, "total": 89 }
+          },
+          "paramCount": 10,
+          "sloc": { "logical": 46, "physical": 81 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../utils", "type": "esm" },
+          { "line": 2, "path": "./modal", "type": "esm" },
+          { "line": 3, "path": "../class-list", "type": "esm" },
+          { "line": 8, "path": "../options/buttons", "type": "esm" },
+          { "line": 9, "path": "../markup", "type": "esm" },
+          { "line": 10, "path": "../actions", "type": "esm" },
+          { "line": 11, "path": "../state", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 81,
+        "lineStart": 1,
+        "maintainability": 109.444,
+        "codehawkScore": 52.63715061303356,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/actions.ts",
+      "filename": "actions.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 8,
+          "cyclomaticDensity": 18.182,
+          "halstead": {
+            "bugs": 0.34,
+            "difficulty": 19.8,
+            "effort": 20181.916,
+            "length": 174,
+            "time": 1121.218,
+            "vocabulary": 58,
+            "volume": 1019.289,
+            "operands": { "distinct": 40, "total": 88 },
+            "operators": { "distinct": 18, "total": 86 }
+          },
+          "paramCount": 1,
+          "sloc": { "logical": 44, "physical": 67 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "./utils", "type": "esm" },
+          { "line": 2, "path": "./options/buttons", "type": "esm" },
+          { "line": 3, "path": "./class-list", "type": "esm" },
+          { "line": 10, "path": "./state", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 67,
+        "lineStart": 1,
+        "maintainability": 110.662,
+        "codehawkScore": 53.67817875674,
+        "coverage": "0"
+      },
+      "timesDependedOn": 4
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/content.ts",
+      "filename": "content.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 11,
+          "cyclomaticDensity": 25.581,
+          "halstead": {
+            "bugs": 0.308,
+            "difficulty": 18.308,
+            "effort": 16904.763,
+            "length": 159,
+            "time": 939.154,
+            "vocabulary": 56,
+            "volume": 923.369,
+            "operands": { "distinct": 39, "total": 84 },
+            "operators": { "distinct": 17, "total": 75 }
+          },
+          "paramCount": 7,
+          "sloc": { "logical": 43, "physical": 72 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../options/buttons", "type": "esm" },
+          { "line": 2, "path": "./modal", "type": "esm" },
+          { "line": 3, "path": "../markup", "type": "esm" },
+          { "line": 4, "path": "../state", "type": "esm" },
+          { "line": 5, "path": "../actions", "type": "esm" },
+          { "line": 6, "path": "../class-list", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 72,
+        "lineStart": 1,
+        "maintainability": 114.5,
+        "codehawkScore": 54.049450575135026,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/modal.ts",
+      "filename": "modal.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 7,
+          "cyclomaticDensity": 17.949,
+          "halstead": {
+            "bugs": 0.243,
+            "difficulty": 8.97,
+            "effort": 6535.564,
+            "length": 136,
+            "time": 363.087,
+            "vocabulary": 41,
+            "volume": 728.627,
+            "operands": { "distinct": 33, "total": 74 },
+            "operators": { "distinct": 8, "total": 62 }
+          },
+          "paramCount": 5,
+          "sloc": { "logical": 39, "physical": 65 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../utils", "type": "esm" },
+          { "line": 2, "path": "../markup", "type": "esm" },
+          { "line": 3, "path": "../class-list", "type": "esm" },
+          { "line": 8, "path": "./icon", "type": "esm" },
+          { "line": 9, "path": "./text", "type": "esm" },
+          { "line": 10, "path": "./buttons", "type": "esm" },
+          { "line": 11, "path": "./content", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 65,
+        "lineStart": 1,
+        "maintainability": 116.606,
+        "codehawkScore": 54.52583298958849,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/utils.ts",
+      "filename": "utils.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 16,
+          "cyclomaticDensity": 34.043,
+          "halstead": {
+            "bugs": 0.419,
+            "difficulty": 15.316,
+            "effort": 19270.654,
+            "length": 202,
+            "time": 1070.592,
+            "vocabulary": 75,
+            "volume": 1258.221,
+            "operands": { "distinct": 57, "total": 97 },
+            "operators": { "distinct": 18, "total": 105 }
+          },
+          "paramCount": 8,
+          "sloc": { "logical": 47, "physical": 61 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 61,
+        "lineStart": 1,
+        "maintainability": 114.99,
+        "codehawkScore": 55.43471610919461,
+        "coverage": "0"
+      },
+      "timesDependedOn": 10
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/icon.ts",
+      "filename": "icon.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 7,
+          "cyclomaticDensity": 19.444,
+          "halstead": {
+            "bugs": 0.252,
+            "difficulty": 14.703,
+            "effort": 11116.5,
+            "length": 132,
+            "time": 617.583,
+            "vocabulary": 53,
+            "volume": 756.086,
+            "operands": { "distinct": 37, "total": 68 },
+            "operators": { "distinct": 16, "total": 64 }
+          },
+          "paramCount": 5,
+          "sloc": { "logical": 36, "physical": 47 }
+        },
+        "dependencies": [
+          { "line": 2, "path": "./modal", "type": "esm" },
+          { "line": 3, "path": "../markup", "type": "esm" },
+          { "line": 4, "path": "../class-list", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 47,
+        "lineStart": 1,
+        "maintainability": 107.725,
+        "codehawkScore": 56.81690867438252,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/state.ts",
+      "filename": "state.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 7,
+          "cyclomaticDensity": 25,
+          "halstead": {
+            "bugs": 0.205,
+            "difficulty": 19.773,
+            "effort": 12154.602,
+            "length": 118,
+            "time": 675.256,
+            "vocabulary": 37,
+            "volume": 614.715,
+            "operands": { "distinct": 22, "total": 58 },
+            "operators": { "distinct": 15, "total": 60 }
+          },
+          "paramCount": 6,
+          "sloc": { "logical": 28, "physical": 51 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "./options/buttons", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 51,
+        "lineStart": 1,
+        "maintainability": 116.092,
+        "codehawkScore": 57.1359500207509,
+        "coverage": "0"
+      },
+      "timesDependedOn": 5
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/icons.ts",
+      "filename": "icons.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 4,
+          "cyclomaticDensity": 25,
+          "halstead": {
+            "bugs": 0.163,
+            "difficulty": 6.86,
+            "effort": 3361.4,
+            "length": 98,
+            "time": 186.744,
+            "vocabulary": 32,
+            "volume": 490,
+            "operands": { "distinct": 25, "total": 49 },
+            "operators": { "distinct": 7, "total": 49 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 16, "physical": 33 }
+        },
+        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 33,
+        "lineStart": 1,
+        "maintainability": 125.512,
+        "codehawkScore": 58.89252972007756,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/core.ts",
+      "filename": "core.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 5,
+          "cyclomaticDensity": 25,
+          "halstead": {
+            "bugs": 0.114,
+            "difficulty": 11.7,
+            "effort": 4013.32,
+            "length": 68,
+            "time": 222.962,
+            "vocabulary": 33,
+            "volume": 343.019,
+            "operands": { "distinct": 20, "total": 36 },
+            "operators": { "distinct": 13, "total": 32 }
+          },
+          "paramCount": 3,
+          "sloc": { "logical": 20, "physical": 34 }
+        },
+        "dependencies": [
+          { "line": 6, "path": "./modules/init", "type": "esm" },
+          { "line": 7, "path": "./modules/actions", "type": "esm" },
+          { "line": 8, "path": "./modules/state", "type": "esm" },
+          { "line": 9, "path": "./modules/options", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 34,
+        "lineStart": 1,
+        "maintainability": 121.068,
+        "codehawkScore": 59.79558895081384,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/text.ts",
+      "filename": "text.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 9,
+          "cyclomaticDensity": 29.032,
+          "halstead": {
+            "bugs": 0.214,
+            "difficulty": 7.75,
+            "effort": 4979.738,
+            "length": 117,
+            "time": 276.652,
+            "vocabulary": 45,
+            "volume": 642.547,
+            "operands": { "distinct": 36, "total": 62 },
+            "operators": { "distinct": 9, "total": 55 }
+          },
+          "paramCount": 6,
+          "sloc": { "logical": 31, "physical": 38 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../markup", "type": "esm" },
+          { "line": 2, "path": "./modal", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 38,
+        "lineStart": 1,
+        "maintainability": 117.244,
+        "codehawkScore": 60.20995227958394,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/index.ts",
+      "filename": "index.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 4,
+          "cyclomaticDensity": 30.769,
+          "halstead": {
+            "bugs": 0.058,
+            "difficulty": 5.714,
+            "effort": 993.816,
+            "length": 39,
+            "time": 55.212,
+            "vocabulary": 22,
+            "volume": 173.918,
+            "operands": { "distinct": 14, "total": 20 },
+            "operators": { "distinct": 8, "total": 19 }
+          },
+          "paramCount": 1,
+          "sloc": { "logical": 13, "physical": 30 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../utils", "type": "esm" },
+          { "line": 2, "path": "../class-list", "type": "esm" },
+          { "line": 6, "path": "./modal", "type": "esm" },
+          { "line": 7, "path": "./overlay", "type": "esm" },
+          { "line": 8, "path": "../event-listeners", "type": "esm" },
+          { "line": 9, "path": "../utils", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 30,
+        "lineStart": 1,
+        "maintainability": 118.751,
+        "codehawkScore": 60.934886942256135,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/options/content.ts",
+      "filename": "content.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/options",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 5,
+          "cyclomaticDensity": 29.412,
+          "halstead": {
+            "bugs": 0.078,
+            "difficulty": 9.857,
+            "effort": 2316.645,
+            "length": 50,
+            "time": 128.703,
+            "vocabulary": 26,
+            "volume": 235.022,
+            "operands": { "distinct": 14, "total": 23 },
+            "operators": { "distinct": 12, "total": 27 }
+          },
+          "paramCount": 1,
+          "sloc": { "logical": 17, "physical": 27 }
+        },
+        "dependencies": [{ "line": 1, "path": "../utils", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 27,
+        "lineStart": 1,
+        "maintainability": 111.287,
+        "codehawkScore": 62.70448988147212,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/class-list/index.ts",
+      "filename": "index.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/class-list",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 5,
+          "halstead": {
+            "bugs": 0.15,
+            "difficulty": 4.273,
+            "effort": 1919.562,
+            "length": 85,
+            "time": 106.642,
+            "vocabulary": 39,
+            "volume": 449.259,
+            "operands": { "distinct": 33, "total": 47 },
+            "operators": { "distinct": 6, "total": 38 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 20, "physical": 28 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 28,
+        "lineStart": 1,
+        "maintainability": 96.614,
+        "codehawkScore": 88.72484177785137,
+        "coverage": "0"
+      },
+      "timesDependedOn": 13
+    },
+    {
+      "fullPath": "/samples/sweetalert/postcss.config.js",
+      "filename": "postcss.config.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 12.5,
+          "halstead": {
+            "bugs": 0.042,
+            "difficulty": 4.773,
+            "effort": 597.057,
+            "length": 30,
+            "time": 33.17,
+            "vocabulary": 18,
+            "volume": 125.098,
+            "operands": { "distinct": 11, "total": 15 },
+            "operators": { "distinct": 7, "total": 15 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 8, "physical": 10 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 10,
+        "lineStart": 1,
+        "maintainability": 115.452,
+        "codehawkScore": 91.07606249060817,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/sweetalert.js",
+      "filename": "sweetalert.js",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 2,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.033,
+            "difficulty": 4.55,
+            "effort": 446.351,
+            "length": 24,
+            "time": 24.797,
+            "vocabulary": 17,
+            "volume": 98.099,
+            "operands": { "distinct": 10, "total": 13 },
+            "operators": { "distinct": 7, "total": 11 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 6, "physical": 15 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 15,
+        "lineStart": 1,
+        "maintainability": 120.415,
+        "codehawkScore": 91.1153746262618,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/index.ts",
+      "filename": "index.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 11.111,
+          "halstead": {
+            "bugs": 0.06,
+            "difficulty": 5.208,
+            "effort": 936.71,
+            "length": 44,
+            "time": 52.039,
+            "vocabulary": 17,
+            "volume": 179.848,
+            "operands": { "distinct": 12, "total": 25 },
+            "operators": { "distinct": 5, "total": 19 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 9, "physical": 22 }
+        },
+        "dependencies": [{ "line": 6, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 22,
+        "lineStart": 1,
+        "maintainability": 112.004,
+        "codehawkScore": 91.24987755023842,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/buttons.ts",
+      "filename": "buttons.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 20,
+          "halstead": {
+            "bugs": 0.03,
+            "difficulty": 4.167,
+            "effort": 380.735,
+            "length": 24,
+            "time": 21.152,
+            "vocabulary": 14,
+            "volume": 91.377,
+            "operands": { "distinct": 9, "total": 15 },
+            "operators": { "distinct": 5, "total": 9 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 5, "physical": 21 }
+        },
+        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 21,
+        "lineStart": 1,
+        "maintainability": 124.605,
+        "codehawkScore": 91.84029350058518,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/init/overlay.ts",
+      "filename": "overlay.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/init",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 2,
+          "cyclomaticDensity": 40,
+          "halstead": {
+            "bugs": 0.022,
+            "difficulty": 3.214,
+            "effort": 207.416,
+            "length": 18,
+            "time": 11.523,
+            "vocabulary": 12,
+            "volume": 64.529,
+            "operands": { "distinct": 7, "total": 9 },
+            "operators": { "distinct": 5, "total": 9 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 5, "physical": 9 }
+        },
+        "dependencies": [
+          { "line": 1, "path": "../utils", "type": "esm" },
+          { "line": 2, "path": "../markup", "type": "esm" }
+        ],
+        "errors": [],
+        "lineEnd": 9,
+        "lineStart": 1,
+        "maintainability": 140.282,
+        "codehawkScore": 92.17455287783764,
+        "coverage": "0"
+      },
+      "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/modal.ts",
+      "filename": "modal.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.022,
+            "difficulty": 4.5,
+            "effort": 290.382,
+            "length": 18,
+            "time": 16.132,
+            "vocabulary": 12,
+            "volume": 64.529,
+            "operands": { "distinct": 6, "total": 9 },
+            "operators": { "distinct": 6, "total": 9 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 3, "physical": 12 }
+        },
+        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 12,
+        "lineStart": 1,
+        "maintainability": 133.807,
+        "codehawkScore": 92.30905580181427,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/content.ts",
+      "filename": "content.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.016,
+            "difficulty": 3.5,
+            "effort": 162.774,
+            "length": 14,
+            "time": 9.043,
+            "vocabulary": 10,
+            "volume": 46.507,
+            "operands": { "distinct": 5, "total": 7 },
+            "operators": { "distinct": 5, "total": 7 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 3, "physical": 9 }
+        },
+        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 9,
+        "lineStart": 1,
+        "maintainability": 135.787,
+        "codehawkScore": 92.8634839277374,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/markup/overlay.ts",
+      "filename": "overlay.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/markup",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 1,
+          "cyclomaticDensity": 33.333,
+          "halstead": {
+            "bugs": 0.017,
+            "difficulty": 4,
+            "effort": 199.316,
+            "length": 15,
+            "time": 11.073,
+            "vocabulary": 10,
+            "volume": 49.829,
+            "operands": { "distinct": 5, "total": 8 },
+            "operators": { "distinct": 5, "total": 7 }
+          },
+          "paramCount": 0,
+          "sloc": { "logical": 3, "physical": 9 }
+        },
+        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "errors": [],
+        "lineEnd": 9,
+        "lineStart": 1,
+        "maintainability": 135.094,
+        "codehawkScore": 92.8634839277374,
+        "coverage": "0"
+      },
+      "timesDependedOn": 6
+    }
+  ],
+  "fullResultsTree": [
     {
       "fullPath": "/samples/sweetalert/assets",
       "filename": "assets",
@@ -43,377 +1031,28 @@
               "filename": "css",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/app.css",
-                  "filename": "app.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/guide.css",
-                  "filename": "guide.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/header.css",
-                  "filename": "header.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/highlight.css",
-                  "filename": "highlight.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/index.css",
-                  "filename": "index.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/normalize.css",
-                  "filename": "normalize.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/table.css",
-                  "filename": "table.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/css/variables.css",
-                  "filename": "variables.css",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/docs/assets/images",
               "filename": "images",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/github.svg",
-                  "filename": "github.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/heart-icon.svg",
-                  "filename": "heart-icon.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/logo-small.svg",
-                  "filename": "logo-small.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/logo.svg",
-                  "filename": "logo.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples.png",
-                  "filename": "modal-examples.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-examples@2x.png",
-                  "filename": "modal-examples@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/modal-fb-example@2x.png",
-                  "filename": "modal-fb-example@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-happy.png",
-                  "filename": "mood-happy.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-neutral.png",
-                  "filename": "mood-neutral.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/mood-sad.png",
-                  "filename": "mood-sad.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern.png",
-                  "filename": "pattern.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/pattern@2x.png",
-                  "filename": "pattern@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/transition-top.svg",
-                  "filename": "transition-top.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/images/vs.svg",
-                  "filename": "vs.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/docs/assets/js",
               "filename": "js",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/js/add-preview-buttons.js",
-                  "filename": "add-preview-buttons.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 13705,
-                      "cyclomaticDensity": 26.567,
-                      "halstead": {
-                        "bugs": 991.85,
-                        "difficulty": 371.219,
-                        "effort": 1104581424.464,
-                        "length": 222239,
-                        "time": 61365634.692,
-                        "vocabulary": 10727,
-                        "volume": 2975548.867,
-                        "operands": {
-                          "distinct": 10657,
-                          "total": 113031
-                        },
-                        "operators": {
-                          "distinct": 70,
-                          "total": 109208
-                        }
-                      },
-                      "paramCount": 6075,
-                      "sloc": {
-                        "logical": 51587,
-                        "physical": 61774
-                      }
-                    },
-                    "dependencies": [],
-                    "errors": [],
-                    "lineEnd": 61774,
-                    "lineStart": 1,
-                    "maintainability": 85.713,
-                    "codehawkScore": 0,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/js/index.js",
-                  "filename": "index.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 18944,
-                      "cyclomaticDensity": 27.105,
-                      "halstead": {
-                        "bugs": 1386.377,
-                        "difficulty": 391.106,
-                        "effort": 1626660155.833,
-                        "length": 299741,
-                        "time": 90370008.657,
-                        "vocabulary": 15032,
-                        "volume": 4159130.986,
-                        "operands": {
-                          "distinct": 14956,
-                          "total": 153931
-                        },
-                        "operators": {
-                          "distinct": 76,
-                          "total": 145810
-                        }
-                      },
-                      "paramCount": 8999,
-                      "sloc": {
-                        "logical": 69892,
-                        "physical": 85317
-                      }
-                    },
-                    "dependencies": [],
-                    "errors": [],
-                    "lineEnd": 85317,
-                    "lineStart": 1,
-                    "maintainability": 86.406,
-                    "codehawkScore": 0,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/js/landing-text-rotater.js",
-                  "filename": "landing-text-rotater.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 27,
-                      "cyclomaticDensity": 27.273,
-                      "halstead": {
-                        "bugs": 0.963,
-                        "difficulty": 32.056,
-                        "effort": 92596.665,
-                        "length": 432,
-                        "time": 5144.259,
-                        "vocabulary": 103,
-                        "volume": 2888.568,
-                        "operands": {
-                          "distinct": 80,
-                          "total": 223
-                        },
-                        "operators": {
-                          "distinct": 23,
-                          "total": 209
-                        }
-                      },
-                      "paramCount": 16,
-                      "sloc": {
-                        "logical": 99,
-                        "physical": 93
-                      }
-                    },
-                    "dependencies": [],
-                    "errors": [],
-                    "lineEnd": 93,
-                    "lineStart": 1,
-                    "maintainability": 107.041,
-                    "codehawkScore": 50.63297740113278,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/docs/assets/sweetalert",
               "filename": "sweetalert",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/sweetalert/sweetalert.js.map",
-                  "filename": "sweetalert.js.map",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/sweetalert",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs/assets/sweetalert/sweetalert.min.js",
-                  "filename": "sweetalert.min.js",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs/assets/sweetalert",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             }
           ]
         },
@@ -422,52 +1061,14 @@
           "filename": "docs",
           "shouldAnalyze": true,
           "type": "dir",
-          "files": [
-            {
-              "fullPath": "/samples/sweetalert/docs/docs/index.html",
-              "filename": "index.html",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/docs/docs",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            }
-          ]
+          "files": []
         },
         {
           "fullPath": "/samples/sweetalert/docs/guides",
           "filename": "guides",
           "shouldAnalyze": true,
           "type": "dir",
-          "files": [
-            {
-              "fullPath": "/samples/sweetalert/docs/guides/index.html",
-              "filename": "index.html",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/docs/guides",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            }
-          ]
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs/CNAME",
-          "filename": "CNAME",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs/index.html",
-          "filename": "index.html",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
+          "files": []
         }
       ]
     },
@@ -488,396 +1089,21 @@
               "filename": "css",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/app.styl",
-                  "filename": "app.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/guide.styl",
-                  "filename": "guide.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/header.styl",
-                  "filename": "header.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/highlight.styl",
-                  "filename": "highlight.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/index.styl",
-                  "filename": "index.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/normalize.styl",
-                  "filename": "normalize.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/table.styl",
-                  "filename": "table.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/css/variables.styl",
-                  "filename": "variables.styl",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/css",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/docs-src/assets/images",
               "filename": "images",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/github.svg",
-                  "filename": "github.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/heart-icon.svg",
-                  "filename": "heart-icon.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo-small.svg",
-                  "filename": "logo-small.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/logo.svg",
-                  "filename": "logo.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples.png",
-                  "filename": "modal-examples.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-examples@2x.png",
-                  "filename": "modal-examples@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/modal-fb-example@2x.png",
-                  "filename": "modal-fb-example@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-happy.png",
-                  "filename": "mood-happy.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-neutral.png",
-                  "filename": "mood-neutral.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/mood-sad.png",
-                  "filename": "mood-sad.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern.png",
-                  "filename": "pattern.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/pattern@2x.png",
-                  "filename": "pattern@2x.png",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/transition-top.svg",
-                  "filename": "transition-top.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/images/vs.svg",
-                  "filename": "vs.svg",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/docs-src/assets/images",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/docs-src/assets/js",
               "filename": "js",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/add-preview-buttons.js",
-                  "filename": "add-preview-buttons.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 11,
-                      "cyclomaticDensity": 15.493,
-                      "halstead": {
-                        "bugs": 0.564,
-                        "difficulty": 12.812,
-                        "effort": 21665.8,
-                        "length": 266,
-                        "time": 1203.656,
-                        "vocabulary": 82,
-                        "volume": 1691.109,
-                        "operands": {
-                          "distinct": 69,
-                          "total": 136
-                        },
-                        "operators": {
-                          "distinct": 13,
-                          "total": 130
-                        }
-                      },
-                      "paramCount": 6,
-                      "sloc": {
-                        "logical": 71,
-                        "physical": 80
-                      }
-                    },
-                    "dependencies": [],
-                    "errors": [],
-                    "lineEnd": 80,
-                    "lineStart": 1,
-                    "maintainability": 110.71,
-                    "codehawkScore": 51.89158411454548,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 1
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/index.js",
-                  "filename": "index.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 11,
-                      "cyclomaticDensity": 22.917,
-                      "halstead": {
-                        "bugs": 0.339,
-                        "difficulty": 12.9,
-                        "effort": 13129.364,
-                        "length": 169,
-                        "time": 729.409,
-                        "vocabulary": 65,
-                        "volume": 1017.78,
-                        "operands": {
-                          "distinct": 50,
-                          "total": 86
-                        },
-                        "operators": {
-                          "distinct": 15,
-                          "total": 83
-                        }
-                      },
-                      "paramCount": 6,
-                      "sloc": {
-                        "logical": 48,
-                        "physical": 120
-                      }
-                    },
-                    "dependencies": [
-                      {
-                        "line": 2,
-                        "path": "whatwg-fetch",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 5,
-                        "path": "nodelist-foreach-polyfill",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 7,
-                        "path": "./add-preview-buttons",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 9,
-                        "path": "./landing-text-rotater",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 13,
-                        "path": "react",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 14,
-                        "path": "react-dom",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 15,
-                        "path": "@sweetalert/with-react",
-                        "type": "esm"
-                      }
-                    ],
-                    "errors": [],
-                    "lineEnd": 120,
-                    "lineStart": 1,
-                    "maintainability": 122.903,
-                    "codehawkScore": 48.7568423197879,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/docs-src/assets/js/landing-text-rotater.js",
-                  "filename": "landing-text-rotater.js",
-                  "shouldAnalyze": true,
-                  "path": "/samples/sweetalert/docs-src/assets/js",
-                  "type": "file",
-                  "complexityReport": {
-                    "aggregate": {
-                      "cyclomatic": 14,
-                      "cyclomaticDensity": 20.588,
-                      "halstead": {
-                        "bugs": 0.511,
-                        "difficulty": 20.76,
-                        "effort": 31829.465,
-                        "length": 251,
-                        "time": 1768.304,
-                        "vocabulary": 69,
-                        "volume": 1533.24,
-                        "operands": {
-                          "distinct": 52,
-                          "total": 127
-                        },
-                        "operators": {
-                          "distinct": 17,
-                          "total": 124
-                        }
-                      },
-                      "paramCount": 7,
-                      "sloc": {
-                        "logical": 68,
-                        "physical": 91
-                      }
-                    },
-                    "dependencies": [],
-                    "errors": [],
-                    "lineEnd": 91,
-                    "lineStart": 1,
-                    "maintainability": 109.853,
-                    "codehawkScore": 51.70032457731847,
-                    "coverage": "0"
-                  },
-                  "timesDependedOn": 1
-                }
-              ]
-            },
-            {
-              "fullPath": "/samples/sweetalert/docs-src/assets/sweetalert",
-              "filename": "sweetalert",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/docs-src/assets",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
+              "files": []
             }
           ]
         },
@@ -886,70 +1112,14 @@
           "filename": "docs",
           "shouldAnalyze": true,
           "type": "dir",
-          "files": [
-            {
-              "fullPath": "/samples/sweetalert/docs-src/docs/index.md",
-              "filename": "index.md",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/docs-src/docs",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            }
-          ]
+          "files": []
         },
         {
           "fullPath": "/samples/sweetalert/docs-src/guides",
           "filename": "guides",
           "shouldAnalyze": true,
           "type": "dir",
-          "files": [
-            {
-              "fullPath": "/samples/sweetalert/docs-src/guides/index.md",
-              "filename": "index.md",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/docs-src/guides",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            }
-          ]
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/index.hbs",
-          "filename": "index.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout-docs.hbs",
-          "filename": "layout-docs.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout-guides.hbs",
-          "filename": "layout-guides.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout.hbs",
-          "filename": "layout.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
+          "files": []
         }
       ]
     },
@@ -1086,20 +1256,11 @@
                         "time": 106.642,
                         "vocabulary": 39,
                         "volume": 449.259,
-                        "operands": {
-                          "distinct": 33,
-                          "total": 47
-                        },
-                        "operators": {
-                          "distinct": 6,
-                          "total": 38
-                        }
+                        "operands": { "distinct": 33, "total": 47 },
+                        "operators": { "distinct": 6, "total": 38 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 20,
-                        "physical": 28
-                      }
+                      "sloc": { "logical": 20, "physical": 28 }
                     },
                     "dependencies": [],
                     "errors": [],
@@ -1137,57 +1298,24 @@
                         "time": 1151.971,
                         "vocabulary": 66,
                         "volume": 1160.524,
-                        "operands": {
-                          "distinct": 49,
-                          "total": 103
-                        },
-                        "operators": {
-                          "distinct": 17,
-                          "total": 89
-                        }
+                        "operands": { "distinct": 49, "total": 103 },
+                        "operators": { "distinct": 17, "total": 89 }
                       },
                       "paramCount": 10,
-                      "sloc": {
-                        "logical": 46,
-                        "physical": 81
-                      }
+                      "sloc": { "logical": 46, "physical": 81 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "./modal",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 3,
-                        "path": "../class-list",
-                        "type": "esm"
-                      },
+                      { "line": 1, "path": "../utils", "type": "esm" },
+                      { "line": 2, "path": "./modal", "type": "esm" },
+                      { "line": 3, "path": "../class-list", "type": "esm" },
                       {
                         "line": 8,
                         "path": "../options/buttons",
                         "type": "esm"
                       },
-                      {
-                        "line": 9,
-                        "path": "../markup",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 10,
-                        "path": "../actions",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 11,
-                        "path": "../state",
-                        "type": "esm"
-                      }
+                      { "line": 9, "path": "../markup", "type": "esm" },
+                      { "line": 10, "path": "../actions", "type": "esm" },
+                      { "line": 11, "path": "../state", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 81,
@@ -1216,20 +1344,11 @@
                         "time": 939.154,
                         "vocabulary": 56,
                         "volume": 923.369,
-                        "operands": {
-                          "distinct": 39,
-                          "total": 84
-                        },
-                        "operators": {
-                          "distinct": 17,
-                          "total": 75
-                        }
+                        "operands": { "distinct": 39, "total": 84 },
+                        "operators": { "distinct": 17, "total": 75 }
                       },
                       "paramCount": 7,
-                      "sloc": {
-                        "logical": 43,
-                        "physical": 72
-                      }
+                      "sloc": { "logical": 43, "physical": 72 }
                     },
                     "dependencies": [
                       {
@@ -1237,31 +1356,11 @@
                         "path": "../options/buttons",
                         "type": "esm"
                       },
-                      {
-                        "line": 2,
-                        "path": "./modal",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 3,
-                        "path": "../markup",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 4,
-                        "path": "../state",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 5,
-                        "path": "../actions",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 6,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 2, "path": "./modal", "type": "esm" },
+                      { "line": 3, "path": "../markup", "type": "esm" },
+                      { "line": 4, "path": "../state", "type": "esm" },
+                      { "line": 5, "path": "../actions", "type": "esm" },
+                      { "line": 6, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 72,
@@ -1290,37 +1389,16 @@
                         "time": 617.583,
                         "vocabulary": 53,
                         "volume": 756.086,
-                        "operands": {
-                          "distinct": 37,
-                          "total": 68
-                        },
-                        "operators": {
-                          "distinct": 16,
-                          "total": 64
-                        }
+                        "operands": { "distinct": 37, "total": 68 },
+                        "operators": { "distinct": 16, "total": 64 }
                       },
                       "paramCount": 5,
-                      "sloc": {
-                        "logical": 36,
-                        "physical": 47
-                      }
+                      "sloc": { "logical": 36, "physical": 47 }
                     },
                     "dependencies": [
-                      {
-                        "line": 2,
-                        "path": "./modal",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 3,
-                        "path": "../markup",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 4,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 2, "path": "./modal", "type": "esm" },
+                      { "line": 3, "path": "../markup", "type": "esm" },
+                      { "line": 4, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 47,
@@ -1349,52 +1427,23 @@
                         "time": 55.212,
                         "vocabulary": 22,
                         "volume": 173.918,
-                        "operands": {
-                          "distinct": 14,
-                          "total": 20
-                        },
-                        "operators": {
-                          "distinct": 8,
-                          "total": 19
-                        }
+                        "operands": { "distinct": 14, "total": 20 },
+                        "operators": { "distinct": 8, "total": 19 }
                       },
                       "paramCount": 1,
-                      "sloc": {
-                        "logical": 13,
-                        "physical": 30
-                      }
+                      "sloc": { "logical": 13, "physical": 30 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "../class-list",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 6,
-                        "path": "./modal",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 7,
-                        "path": "./overlay",
-                        "type": "esm"
-                      },
+                      { "line": 1, "path": "../utils", "type": "esm" },
+                      { "line": 2, "path": "../class-list", "type": "esm" },
+                      { "line": 6, "path": "./modal", "type": "esm" },
+                      { "line": 7, "path": "./overlay", "type": "esm" },
                       {
                         "line": 8,
                         "path": "../event-listeners",
                         "type": "esm"
                       },
-                      {
-                        "line": 9,
-                        "path": "../utils",
-                        "type": "esm"
-                      }
+                      { "line": 9, "path": "../utils", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 30,
@@ -1423,57 +1472,20 @@
                         "time": 363.087,
                         "vocabulary": 41,
                         "volume": 728.627,
-                        "operands": {
-                          "distinct": 33,
-                          "total": 74
-                        },
-                        "operators": {
-                          "distinct": 8,
-                          "total": 62
-                        }
+                        "operands": { "distinct": 33, "total": 74 },
+                        "operators": { "distinct": 8, "total": 62 }
                       },
                       "paramCount": 5,
-                      "sloc": {
-                        "logical": 39,
-                        "physical": 65
-                      }
+                      "sloc": { "logical": 39, "physical": 65 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "../markup",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 3,
-                        "path": "../class-list",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 8,
-                        "path": "./icon",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 9,
-                        "path": "./text",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 10,
-                        "path": "./buttons",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 11,
-                        "path": "./content",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../utils", "type": "esm" },
+                      { "line": 2, "path": "../markup", "type": "esm" },
+                      { "line": 3, "path": "../class-list", "type": "esm" },
+                      { "line": 8, "path": "./icon", "type": "esm" },
+                      { "line": 9, "path": "./text", "type": "esm" },
+                      { "line": 10, "path": "./buttons", "type": "esm" },
+                      { "line": 11, "path": "./content", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 65,
@@ -1502,32 +1514,15 @@
                         "time": 11.523,
                         "vocabulary": 12,
                         "volume": 64.529,
-                        "operands": {
-                          "distinct": 7,
-                          "total": 9
-                        },
-                        "operators": {
-                          "distinct": 5,
-                          "total": 9
-                        }
+                        "operands": { "distinct": 7, "total": 9 },
+                        "operators": { "distinct": 5, "total": 9 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 5,
-                        "physical": 9
-                      }
+                      "sloc": { "logical": 5, "physical": 9 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "../markup",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../utils", "type": "esm" },
+                      { "line": 2, "path": "../markup", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 9,
@@ -1556,32 +1551,15 @@
                         "time": 276.652,
                         "vocabulary": 45,
                         "volume": 642.547,
-                        "operands": {
-                          "distinct": 36,
-                          "total": 62
-                        },
-                        "operators": {
-                          "distinct": 9,
-                          "total": 55
-                        }
+                        "operands": { "distinct": 36, "total": 62 },
+                        "operators": { "distinct": 9, "total": 55 }
                       },
                       "paramCount": 6,
-                      "sloc": {
-                        "logical": 31,
-                        "physical": 38
-                      }
+                      "sloc": { "logical": 31, "physical": 38 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../markup",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "./modal",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../markup", "type": "esm" },
+                      { "line": 2, "path": "./modal", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 38,
@@ -1618,27 +1596,14 @@
                         "time": 21.152,
                         "vocabulary": 14,
                         "volume": 91.377,
-                        "operands": {
-                          "distinct": 9,
-                          "total": 15
-                        },
-                        "operators": {
-                          "distinct": 5,
-                          "total": 9
-                        }
+                        "operands": { "distinct": 9, "total": 15 },
+                        "operators": { "distinct": 5, "total": 9 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 5,
-                        "physical": 21
-                      }
+                      "sloc": { "logical": 5, "physical": 21 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 21,
@@ -1667,27 +1632,14 @@
                         "time": 9.043,
                         "vocabulary": 10,
                         "volume": 46.507,
-                        "operands": {
-                          "distinct": 5,
-                          "total": 7
-                        },
-                        "operators": {
-                          "distinct": 5,
-                          "total": 7
-                        }
+                        "operands": { "distinct": 5, "total": 7 },
+                        "operators": { "distinct": 5, "total": 7 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 3,
-                        "physical": 9
-                      }
+                      "sloc": { "logical": 3, "physical": 9 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 9,
@@ -1716,27 +1668,14 @@
                         "time": 186.744,
                         "vocabulary": 32,
                         "volume": 490,
-                        "operands": {
-                          "distinct": 25,
-                          "total": 49
-                        },
-                        "operators": {
-                          "distinct": 7,
-                          "total": 49
-                        }
+                        "operands": { "distinct": 25, "total": 49 },
+                        "operators": { "distinct": 7, "total": 49 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 16,
-                        "physical": 33
-                      }
+                      "sloc": { "logical": 16, "physical": 33 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 33,
@@ -1765,27 +1704,14 @@
                         "time": 52.039,
                         "vocabulary": 17,
                         "volume": 179.848,
-                        "operands": {
-                          "distinct": 12,
-                          "total": 25
-                        },
-                        "operators": {
-                          "distinct": 5,
-                          "total": 19
-                        }
+                        "operands": { "distinct": 12, "total": 25 },
+                        "operators": { "distinct": 5, "total": 19 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 9,
-                        "physical": 22
-                      }
+                      "sloc": { "logical": 9, "physical": 22 }
                     },
                     "dependencies": [
-                      {
-                        "line": 6,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 6, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 22,
@@ -1814,27 +1740,14 @@
                         "time": 16.132,
                         "vocabulary": 12,
                         "volume": 64.529,
-                        "operands": {
-                          "distinct": 6,
-                          "total": 9
-                        },
-                        "operators": {
-                          "distinct": 6,
-                          "total": 9
-                        }
+                        "operands": { "distinct": 6, "total": 9 },
+                        "operators": { "distinct": 6, "total": 9 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 3,
-                        "physical": 12
-                      }
+                      "sloc": { "logical": 3, "physical": 12 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 12,
@@ -1863,27 +1776,14 @@
                         "time": 11.073,
                         "vocabulary": 10,
                         "volume": 49.829,
-                        "operands": {
-                          "distinct": 5,
-                          "total": 8
-                        },
-                        "operators": {
-                          "distinct": 5,
-                          "total": 7
-                        }
+                        "operands": { "distinct": 5, "total": 8 },
+                        "operators": { "distinct": 5, "total": 7 }
                       },
                       "paramCount": 0,
-                      "sloc": {
-                        "logical": 3,
-                        "physical": 9
-                      }
+                      "sloc": { "logical": 3, "physical": 9 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../class-list",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../class-list", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 9,
@@ -1920,27 +1820,14 @@
                         "time": 5768.039,
                         "vocabulary": 76,
                         "volume": 2380.46,
-                        "operands": {
-                          "distinct": 52,
-                          "total": 189
-                        },
-                        "operators": {
-                          "distinct": 24,
-                          "total": 192
-                        }
+                        "operands": { "distinct": 52, "total": 189 },
+                        "operators": { "distinct": 24, "total": 192 }
                       },
                       "paramCount": 6,
-                      "sloc": {
-                        "logical": 114,
-                        "physical": 150
-                      }
+                      "sloc": { "logical": 114, "physical": 150 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../utils", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 150,
@@ -1969,27 +1856,14 @@
                         "time": 128.703,
                         "vocabulary": 26,
                         "volume": 235.022,
-                        "operands": {
-                          "distinct": 14,
-                          "total": 23
-                        },
-                        "operators": {
-                          "distinct": 12,
-                          "total": 27
-                        }
+                        "operands": { "distinct": 14, "total": 23 },
+                        "operators": { "distinct": 12, "total": 27 }
                       },
                       "paramCount": 1,
-                      "sloc": {
-                        "logical": 17,
-                        "physical": 27
-                      }
+                      "sloc": { "logical": 17, "physical": 27 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../utils", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 27,
@@ -2018,20 +1892,11 @@
                         "time": 1545.577,
                         "vocabulary": 78,
                         "volume": 1634.205,
-                        "operands": {
-                          "distinct": 63,
-                          "total": 143
-                        },
-                        "operators": {
-                          "distinct": 15,
-                          "total": 117
-                        }
+                        "operands": { "distinct": 63, "total": 143 },
+                        "operators": { "distinct": 15, "total": 117 }
                       },
                       "paramCount": 1,
-                      "sloc": {
-                        "logical": 75,
-                        "physical": 105
-                      }
+                      "sloc": { "logical": 75, "physical": 105 }
                     },
                     "dependencies": [],
                     "errors": [],
@@ -2061,42 +1926,17 @@
                         "time": 4950.345,
                         "vocabulary": 90,
                         "volume": 2544.806,
-                        "operands": {
-                          "distinct": 67,
-                          "total": 204
-                        },
-                        "operators": {
-                          "distinct": 23,
-                          "total": 188
-                        }
+                        "operands": { "distinct": 67, "total": 204 },
+                        "operators": { "distinct": 23, "total": 188 }
                       },
                       "paramCount": 17,
-                      "sloc": {
-                        "logical": 107,
-                        "physical": 150
-                      }
+                      "sloc": { "logical": 107, "physical": 150 }
                     },
                     "dependencies": [
-                      {
-                        "line": 1,
-                        "path": "../utils",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 2,
-                        "path": "./buttons",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 3,
-                        "path": "./content",
-                        "type": "esm"
-                      },
-                      {
-                        "line": 4,
-                        "path": "./deprecations",
-                        "type": "esm"
-                      }
+                      { "line": 1, "path": "../utils", "type": "esm" },
+                      { "line": 2, "path": "./buttons", "type": "esm" },
+                      { "line": 3, "path": "./content", "type": "esm" },
+                      { "line": 4, "path": "./deprecations", "type": "esm" }
                     ],
                     "errors": [],
                     "lineEnd": 150,
@@ -2127,42 +1967,17 @@
                     "time": 1121.218,
                     "vocabulary": 58,
                     "volume": 1019.289,
-                    "operands": {
-                      "distinct": 40,
-                      "total": 88
-                    },
-                    "operators": {
-                      "distinct": 18,
-                      "total": 86
-                    }
+                    "operands": { "distinct": 40, "total": 88 },
+                    "operators": { "distinct": 18, "total": 86 }
                   },
                   "paramCount": 1,
-                  "sloc": {
-                    "logical": 44,
-                    "physical": 67
-                  }
+                  "sloc": { "logical": 44, "physical": 67 }
                 },
                 "dependencies": [
-                  {
-                    "line": 1,
-                    "path": "./utils",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 2,
-                    "path": "./options/buttons",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 3,
-                    "path": "./class-list",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 10,
-                    "path": "./state",
-                    "type": "esm"
-                  }
+                  { "line": 1, "path": "./utils", "type": "esm" },
+                  { "line": 2, "path": "./options/buttons", "type": "esm" },
+                  { "line": 3, "path": "./class-list", "type": "esm" },
+                  { "line": 10, "path": "./state", "type": "esm" }
                 ],
                 "errors": [],
                 "lineEnd": 67,
@@ -2191,47 +2006,18 @@
                     "time": 3464.234,
                     "vocabulary": 79,
                     "volume": 2250.45,
-                    "operands": {
-                      "distinct": 60,
-                      "total": 175
-                    },
-                    "operators": {
-                      "distinct": 19,
-                      "total": 182
-                    }
+                    "operands": { "distinct": 60, "total": 175 },
+                    "operators": { "distinct": 19, "total": 182 }
                   },
                   "paramCount": 11,
-                  "sloc": {
-                    "logical": 109,
-                    "physical": 141
-                  }
+                  "sloc": { "logical": 109, "physical": 141 }
                 },
                 "dependencies": [
-                  {
-                    "line": 1,
-                    "path": "./state",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 2,
-                    "path": "./actions",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 3,
-                    "path": "./utils",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 4,
-                    "path": "./options/buttons",
-                    "type": "esm"
-                  },
-                  {
-                    "line": 5,
-                    "path": "./class-list",
-                    "type": "esm"
-                  }
+                  { "line": 1, "path": "./state", "type": "esm" },
+                  { "line": 2, "path": "./actions", "type": "esm" },
+                  { "line": 3, "path": "./utils", "type": "esm" },
+                  { "line": 4, "path": "./options/buttons", "type": "esm" },
+                  { "line": 5, "path": "./class-list", "type": "esm" }
                 ],
                 "errors": [],
                 "lineEnd": 141,
@@ -2260,27 +2046,14 @@
                     "time": 675.256,
                     "vocabulary": 37,
                     "volume": 614.715,
-                    "operands": {
-                      "distinct": 22,
-                      "total": 58
-                    },
-                    "operators": {
-                      "distinct": 15,
-                      "total": 60
-                    }
+                    "operands": { "distinct": 22, "total": 58 },
+                    "operators": { "distinct": 15, "total": 60 }
                   },
                   "paramCount": 6,
-                  "sloc": {
-                    "logical": 28,
-                    "physical": 51
-                  }
+                  "sloc": { "logical": 28, "physical": 51 }
                 },
                 "dependencies": [
-                  {
-                    "line": 1,
-                    "path": "./options/buttons",
-                    "type": "esm"
-                  }
+                  { "line": 1, "path": "./options/buttons", "type": "esm" }
                 ],
                 "errors": [],
                 "lineEnd": 51,
@@ -2309,20 +2082,11 @@
                     "time": 1070.592,
                     "vocabulary": 75,
                     "volume": 1258.221,
-                    "operands": {
-                      "distinct": 57,
-                      "total": 97
-                    },
-                    "operators": {
-                      "distinct": 18,
-                      "total": 105
-                    }
+                    "operands": { "distinct": 57, "total": 97 },
+                    "operators": { "distinct": 18, "total": 105 }
                   },
                   "paramCount": 8,
-                  "sloc": {
-                    "logical": 47,
-                    "physical": 61
-                  }
+                  "sloc": { "logical": 47, "physical": 61 }
                 },
                 "dependencies": [],
                 "errors": [],
@@ -2354,42 +2118,17 @@
                 "time": 222.962,
                 "vocabulary": 33,
                 "volume": 343.019,
-                "operands": {
-                  "distinct": 20,
-                  "total": 36
-                },
-                "operators": {
-                  "distinct": 13,
-                  "total": 32
-                }
+                "operands": { "distinct": 20, "total": 36 },
+                "operators": { "distinct": 13, "total": 32 }
               },
               "paramCount": 3,
-              "sloc": {
-                "logical": 20,
-                "physical": 34
-              }
+              "sloc": { "logical": 20, "physical": 34 }
             },
             "dependencies": [
-              {
-                "line": 6,
-                "path": "./modules/init",
-                "type": "esm"
-              },
-              {
-                "line": 7,
-                "path": "./modules/actions",
-                "type": "esm"
-              },
-              {
-                "line": 8,
-                "path": "./modules/state",
-                "type": "esm"
-              },
-              {
-                "line": 9,
-                "path": "./modules/options",
-                "type": "esm"
-              }
+              { "line": 6, "path": "./modules/init", "type": "esm" },
+              { "line": 7, "path": "./modules/actions", "type": "esm" },
+              { "line": 8, "path": "./modules/state", "type": "esm" },
+              { "line": 9, "path": "./modules/options", "type": "esm" }
             ],
             "errors": [],
             "lineEnd": 34,
@@ -2418,20 +2157,11 @@
                 "time": 3335.814,
                 "vocabulary": 87,
                 "volume": 1610.736,
-                "operands": {
-                  "distinct": 54,
-                  "total": 122
-                },
-                "operators": {
-                  "distinct": 33,
-                  "total": 128
-                }
+                "operands": { "distinct": 54, "total": 122 },
+                "operators": { "distinct": 33, "total": 128 }
               },
               "paramCount": 8,
-              "sloc": {
-                "logical": 56,
-                "physical": 110
-              }
+              "sloc": { "logical": 56, "physical": 110 }
             },
             "dependencies": [],
             "errors": [],
@@ -2479,20 +2209,11 @@
                 "time": 24.797,
                 "vocabulary": 17,
                 "volume": 98.099,
-                "operands": {
-                  "distinct": 10,
-                  "total": 13
-                },
-                "operators": {
-                  "distinct": 7,
-                  "total": 11
-                }
+                "operands": { "distinct": 10, "total": 13 },
+                "operators": { "distinct": 7, "total": 11 }
               },
               "paramCount": 0,
-              "sloc": {
-                "logical": 6,
-                "physical": 15
-              }
+              "sloc": { "logical": 6, "physical": 15 }
             },
             "dependencies": [],
             "errors": [],
@@ -2523,250 +2244,30 @@
               "filename": "class-list",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/class-list/index.d.ts",
-                  "filename": "index.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/class-list",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/typings/modules/init",
               "filename": "init",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/buttons.d.ts",
-                  "filename": "buttons.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/content.d.ts",
-                  "filename": "content.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/icon.d.ts",
-                  "filename": "icon.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/index.d.ts",
-                  "filename": "index.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/modal.d.ts",
-                  "filename": "modal.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/overlay.d.ts",
-                  "filename": "overlay.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/init/text.d.ts",
-                  "filename": "text.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/init",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/typings/modules/markup",
               "filename": "markup",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/buttons.d.ts",
-                  "filename": "buttons.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/content.d.ts",
-                  "filename": "content.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/icons.d.ts",
-                  "filename": "icons.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/index.d.ts",
-                  "filename": "index.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/modal.d.ts",
-                  "filename": "modal.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/markup/overlay.d.ts",
-                  "filename": "overlay.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/markup",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
+              "files": []
             },
             {
               "fullPath": "/samples/sweetalert/typings/modules/options",
               "filename": "options",
               "shouldAnalyze": true,
               "type": "dir",
-              "files": [
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/options/buttons.d.ts",
-                  "filename": "buttons.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/options",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/options/content.d.ts",
-                  "filename": "content.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/options",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/options/deprecations.d.ts",
-                  "filename": "deprecations.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/options",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                },
-                {
-                  "fullPath": "/samples/sweetalert/typings/modules/options/index.d.ts",
-                  "filename": "index.d.ts",
-                  "shouldAnalyze": false,
-                  "path": "/samples/sweetalert/typings/modules/options",
-                  "type": "file",
-                  "complexityReport": null,
-                  "timesDependedOn": 0
-                }
-              ]
-            },
-            {
-              "fullPath": "/samples/sweetalert/typings/modules/actions.d.ts",
-              "filename": "actions.d.ts",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/typings/modules",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            },
-            {
-              "fullPath": "/samples/sweetalert/typings/modules/event-listeners.d.ts",
-              "filename": "event-listeners.d.ts",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/typings/modules",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            },
-            {
-              "fullPath": "/samples/sweetalert/typings/modules/state.d.ts",
-              "filename": "state.d.ts",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/typings/modules",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
-            },
-            {
-              "fullPath": "/samples/sweetalert/typings/modules/utils.d.ts",
-              "filename": "utils.d.ts",
-              "shouldAnalyze": false,
-              "path": "/samples/sweetalert/typings/modules",
-              "type": "file",
-              "complexityReport": null,
-              "timesDependedOn": 0
+              "files": []
             }
           ]
-        },
-        {
-          "fullPath": "/samples/sweetalert/typings/core.d.ts",
-          "filename": "core.d.ts",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/typings",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/typings/sweetalert.d.ts",
-          "filename": "sweetalert.d.ts",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/typings",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
         }
       ]
     },
@@ -2806,20 +2307,11 @@
             "time": 33.17,
             "vocabulary": 18,
             "volume": 125.098,
-            "operands": {
-              "distinct": 11,
-              "total": 15
-            },
-            "operators": {
-              "distinct": 7,
-              "total": 15
-            }
+            "operands": { "distinct": 11, "total": 15 },
+            "operators": { "distinct": 7, "total": 15 }
           },
           "paramCount": 0,
-          "sloc": {
-            "logical": 8,
-            "physical": 10
-          }
+          "sloc": { "logical": 8, "physical": 10 }
         },
         "dependencies": [],
         "errors": [],
@@ -2876,20 +2368,11 @@
             "time": 831.445,
             "vocabulary": 89,
             "volume": 1482.943,
-            "operands": {
-              "distinct": 76,
-              "total": 118
-            },
-            "operators": {
-              "distinct": 13,
-              "total": 111
-            }
+            "operands": { "distinct": 76, "total": 118 },
+            "operators": { "distinct": 13, "total": 111 }
           },
           "paramCount": 2,
-          "sloc": {
-            "logical": 62,
-            "physical": 104
-          }
+          "sloc": { "logical": 62, "physical": 104 }
         },
         "dependencies": [],
         "errors": [],
