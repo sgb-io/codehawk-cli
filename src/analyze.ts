@@ -1,7 +1,7 @@
 import { transformSync } from '@babel/core'
 import flowRemoveTypes from 'flow-remove-types'
 import escomplexReporter from './reporters/escomplex'
-import {
+import type {
   CoverageMapping,
   FileWithContents,
   CompleteCodehawkComplexityResult,

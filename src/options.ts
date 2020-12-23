@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'fs'
 import { resolve as pathResolve } from 'path'
 
 import { NO_CONFIGURATION_FOUND } from './consts/errors'
-import { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
+import type { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
 
 const baseOptions: CodehawkOptions = {
   enableFlow: {

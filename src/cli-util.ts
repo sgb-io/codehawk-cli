@@ -1,4 +1,4 @@
-import { FullyAnalyzedFile } from './types'
+import type { FullyAnalyzedFile } from './types'
 
 const colLengths = {
   filename: 30,

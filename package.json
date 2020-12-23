@@ -48,12 +48,16 @@
     "eslint-plugin-standard": "4",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.5"
+    "typescript": "^4.1.3"
   },
   "bin": {
     "codehawk": "build/index.js",
     "codehawk-cli": "build/index.js"
   },
   "main": "build/codehawk.js",
-  "types": "build/codehawk.d.ts"
+  "types": "build/codehawk.d.ts",
+  "engines": {
+    "npm": "please-use-yarn",
+    "node": ">=10"
+  }
 }

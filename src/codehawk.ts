@@ -4,7 +4,7 @@ import { getCoverage } from './coverage'
 import { analyzeFile, calculateComplexity } from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
-import {
+import type {
   ParsedEntity,
   ParsedFile,
   AnalyzedFile,
@@ -23,8 +23,6 @@ interface Results {
 }
 
 const cwd = slash(process.cwd())
-
-export * from './types'
 
 export { calculateComplexity }
 
