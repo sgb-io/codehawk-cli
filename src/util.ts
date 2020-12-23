@@ -23,10 +23,7 @@ const isBlocklisted = (
   filename: string,
   options: AssembledOptions
 ): boolean => {
-  const {
-    excludeDirectories,
-    excludeFilenames,
-  } = options
+  const { excludeDirectories, excludeFilenames } = options
 
   // Check for blacklisted directories
   for (let i = 0; i < excludeDirectories.length; i += 1) {
@@ -58,11 +55,13 @@ export const getFsEntity = (fullPath: string): fs.Stats | null => {
   return dirent
 }
 
-export const flattenEntireTree = <T extends AnyAnalyzedFile>(items: AnalyzedEntity[]): T[] => {
-  let flattened: T[] = [];
+export const flattenEntireTree = <T extends AnyAnalyzedFile>(
+  items: AnalyzedEntity[]
+): T[] => {
+  let flattened: T[] = []
   items.forEach((item) => {
     if (item.type === 'dir') {
-      flattened = flattened.concat(flattenEntireTree<T>(item.files)) as T[]
+      flattened = flattened.concat(flattenEntireTree<T>(item.files))
     } else {
       flattened.push(item as T)
     }

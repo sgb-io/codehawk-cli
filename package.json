@@ -8,7 +8,9 @@
     "lint": "eslint src/*.**",
     "lint:fix": "eslint --fix src/*.**",
     "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build:watch": "tsc --watch",
+    "prettier": "prettier --check src",
+    "prettier:fix": "prettier --write src"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
   "repository": {
@@ -37,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "3",
     "@typescript-eslint/parser": "^3.3.0",
     "eslint": "7",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^7.0.0",
     "eslint-config-standard-with-typescript": "^18.0.2",
     "eslint-plugin-import": "2",
     "eslint-plugin-node": "11",

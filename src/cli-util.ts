@@ -1,4 +1,4 @@
-import { FullyAnalyzedFile } from "./types"
+import { FullyAnalyzedFile } from './types'
 
 const colLengths = {
   filename: 30,
@@ -9,17 +9,16 @@ const colLengths = {
 
 const round = (num: number): number => Math.round(num * 100) / 100
 
-const formatCol = (value: string, limit: number) => {
-  return (value.length > limit)
-      ? value.slice(limit + 3).padStart(limit, '.')
-      : value.padEnd(limit, ' ')
+const formatCol = (value: string, limit: number): string => {
+  return value.length > limit
+    ? value.slice(limit + 3).padStart(limit, '.')
+    : value.padEnd(limit, ' ')
 }
 
 const getScoreNote = (score: number): string => {
   if (score > 60) return 'OK'
 
   if (score > 50) return '(Could be better)'
-
   return '(Needs improvement)'
 }
 
@@ -31,31 +30,36 @@ const formatComplexityScore = (score: number): string => {
 }
 
 const generateTableLines = (flatFileResults: FullyAnalyzedFile[]): string => {
-  return flatFileResults.map((result) => {
-    const { complexityReport, filename, timesDependedOn } = result
+  return flatFileResults
+    .map((result) => {
+      const { complexityReport, filename, timesDependedOn } = result
 
-    if (!complexityReport) {
-      return ''
-    }
+      if (!complexityReport) {
+        return ''
+      }
 
-    const { lineEnd, codehawkScore } = complexityReport
-    const score = formatComplexityScore(codehawkScore)
+      const { lineEnd, codehawkScore } = complexityReport
+      const score = formatComplexityScore(codehawkScore)
 
-    // Convert output into stdout-friendly, padded columns
-    const filenameCol = formatCol(filename, colLengths.filename)
-    const linesCol = formatCol(lineEnd.toString(), colLengths.lines)
-    // Add 1 to the times depended on, assuming that all files are used at least once
-    // (Codehawk reports external uses only)
-    const depsCol = formatCol((timesDependedOn + 1).toString(), colLengths.timesUsed)
-    const maintainabilityCol = formatCol(score, colLengths.maintainability)
+      // Convert output into stdout-friendly, padded columns
+      const filenameCol = formatCol(filename, colLengths.filename)
+      const linesCol = formatCol(lineEnd.toString(), colLengths.lines)
+      // Add 1 to the times depended on, assuming that all files are used at least once
+      // (Codehawk reports external uses only)
+      const depsCol = formatCol(
+        (timesDependedOn + 1).toString(),
+        colLengths.timesUsed
+      )
+      const maintainabilityCol = formatCol(score, colLengths.maintainability)
 
-    return (
-      `| ${filenameCol} | ${linesCol} | ${depsCol} | ${maintainabilityCol} |`
-    )
-  }).join('\n    ') // Newline + 4 spaces
+      return `| ${filenameCol} | ${linesCol} | ${depsCol} | ${maintainabilityCol} |`
+    })
+    .join('\n    ') // Newline + 4 spaces
 }
 
-export const formatResultsAsTable = (flatFileResults: FullyAnalyzedFile[]): string => {
+export const formatResultsAsTable = (
+  flatFileResults: FullyAnalyzedFile[]
+): string => {
   return `
     Codehawk Static Analysis Results
     Top ${flatFileResults.length} file${flatFileResults.length > 1 ? 's' : ''}
