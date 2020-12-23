@@ -40010,7 +40010,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.call = call;
 	exports._call = _call;
-	exports.isBlacklisted = isBlacklisted;
+	exports.isBlocklisted = isBlocklisted;
 	exports.visit = visit;
 	exports.skip = skip;
 	exports.skipKey = skipKey;
@@ -40088,7 +40088,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return false;
 	}
 
-	function isBlacklisted() {
+	function isBlocklisted() {
 	  var blacklist = this.opts.blacklist;
 	  return blacklist && blacklist.indexOf(this.node.type) > -1;
 	}
@@ -40098,7 +40098,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return false;
 	  }
 
-	  if (this.isBlacklisted()) {
+	  if (this.isBlocklisted()) {
 	    return false;
 	  }
 

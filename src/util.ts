@@ -18,7 +18,7 @@ const shouldSkip = (
   return false
 }
 
-const isBlacklisted = (
+const isBlocklisted = (
   relativeDir: string,
   filename: string,
   options: AssembledOptions
@@ -156,7 +156,7 @@ export const shouldAnalyzeEntity = (
     return false
   }
 
-  const blacklisted = isBlacklisted(relativeDir, filename, options)
+  const blacklisted = isBlocklisted(relativeDir, filename, options)
   if (blacklisted) {
     return false
   }
