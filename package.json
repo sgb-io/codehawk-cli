@@ -1,6 +1,6 @@
 {
   "name": "codehawk-cli",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
     "test": "jest --testTimeout 15000",
