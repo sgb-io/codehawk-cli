@@ -2,12 +2,14 @@
 
 Codehawk is a static analysis tool for JavaScript projects. It is intended as a warning system, to identify complex areas of code that need special attention by developers.
 
-![Average Maintainability](https://raw.githubusercontent.com/sgb-io/codehawk-cli/feat/self-aware-badges/generated/avg-maintainability.svg)
 ![Average Maintainability](generated/avg-maintainability.svg)
+![Worst Maintainability](generated/worst-maintainability.svg)
 
 ## Scope
 
-JavaScript, TypeScript and Flow projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code). It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
+*JavaScript, TypeScript and Flow* projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code).
+
+It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
 
 The CLI runs as a Node.js process. Node.js >=12 is recommended, but >=10 should also work. <10 is unsupported.
 
@@ -36,14 +38,23 @@ Also see [an example using Next.js](https://github.com/sgb-io/codehawk-cli-examp
 
 ```markdown
 Codehawk Static Analysis Results
-Top 4 files
+Top 14 files
 
-| File                           | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
-| ------------------------------ | ---------- | ---------------------- | ---------------------------------- |
-| complex-utils.js               | 99         | 1                      | 50.76 (Could be better)            |
-| typescript-sample.ts           | 11         | 1                      | 70.73 OK                           |
-| index.js                       | 209        | 1                      | 89.94 OK                           |
-| hello.js                       | 6          | 1                      | 91.93 OK                           |
+| File                                               | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
+| -------------------------------------------------- | ---------- | ---------------------- | ---------------------------------- |
+| /test/codehawk.test.js                             | 149        | 1                      | 45.3 (Needs improvement)           |
+| /src/util.ts                                       | 143        | 4                      | 47.26 (Needs improvement)          |
+| /src/codehawk.ts                                   | 122        | 2                      | 47.94 (Needs improvement)          |
+| /src/options.ts                                    | 72         | 2                      | 52.64 (Could be better)            |
+| /src/analyze.ts                                    | 67         | 3                      | 54.04 (Could be better)            |
+| /src/cli-util.ts                                   | 63         | 2                      | 54.68 (Could be better)            |
+| /src/traverseProject.ts                            | 51         | 2                      | 56.91 (Could be better)            |
+| /src/reporters/escomplex.ts                        | 43         | 2                      | 57.44 (Could be better)            |
+| /src/badge.ts                                      | 45         | 2                      | 58.09 (Could be better)            |
+| /test/options.test.js                              | 47         | 1                      | 58.55 (Could be better)            |
+| /src/dependencies.ts                               | 40         | 2                      | 58.7 (Could be better)             |
+| /src/coverage.ts                                   | 21         | 2                      | 60.75 OK                           |
+| /src/index.ts                                      | 20         | 1                      | 60.97 OK                           |
 ```
 
 ## Advanced usage
