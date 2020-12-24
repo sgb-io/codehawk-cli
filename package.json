@@ -3,17 +3,17 @@
   "version": "7.0.1",
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
-    "test": "jest --testTimeout 15000",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "lint": "eslint src/*.**",
-    "lint:fix": "eslint --fix src/*.**",
-    "build": "tsc",
     "build:badges": "node build/index.js src",
     "build:watch": "tsc --watch",
-    "prettier": "prettier --check src",
+    "build": "tsc",
+    "lint:fix": "eslint --fix src/*.**",
+    "lint": "eslint src/*.**",
+    "prepublishOnly": "yarn build && yarn test",
     "prettier:fix": "prettier --write src",
-    "release": "yarn build && yarn publish"
+    "prettier": "prettier --check src",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test": "jest --testTimeout 15000"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
   "repository": {
