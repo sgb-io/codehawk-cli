@@ -150,13 +150,11 @@ export const shouldAnalyzeEntity = (
     return false
   }
 
-  const isWhitelisted = options.extensions.includes(extension)
-  if (!isWhitelisted) {
+  if (!options.extensions.includes(extension)) {
     return false
   }
 
-  const blacklisted = isBlocklisted(relativeDir, filename, options)
-  if (blacklisted) {
+  if (isBlocklisted(relativeDir, filename, options)) {
     return false
   }
 
