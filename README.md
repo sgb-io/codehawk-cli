@@ -1,6 +1,11 @@
-# codehawk-cli
+# Codehawk CLI
 
 Codehawk is a static analysis tool for JavaScript projects. It is intended as a warning system, to identify complex areas of code that need special attention by developers.
+
+![Average Maintainability](https://raw.githubusercontent.com/sgb-io/codehawk-cli/feat/self-aware-badges/generated/avg-maintainability.svg)
+![Average Maintainability](generated/avg-maintainability.svg)
+
+## Scope
 
 JavaScript, TypeScript and Flow projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code). It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
 
