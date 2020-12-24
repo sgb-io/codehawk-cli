@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { analyzeProject, getResultsAsList, generateBadge } from './codehawk'
+import { analyzeProject, generateBadge } from './codehawk'
 import { formatResultsAsTable } from './cli-util'
 
 // Sample CLI usage: `codehawk src`
@@ -8,8 +8,7 @@ const scanDir = process.argv.slice(2)[0]
 
 if (scanDir && scanDir !== '') {
   const output = analyzeProject(`${process.cwd()}/${scanDir}`, true)
-  const resultsAsList = getResultsAsList(output.fullResultsTree)
-  const formattedAsTable = resultsAsList.slice(0, 25)
+  const formattedAsTable = output.resultsList.slice(0, 25)
   console.log(formatResultsAsTable(formattedAsTable))
 
   try {

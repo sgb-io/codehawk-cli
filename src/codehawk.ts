@@ -116,7 +116,7 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   }
 }
 
-export const getResultsAsList = (
+const getResultsAsList = (
   analyzedEntities: FullyAnalyzedEntity[],
   limit?: number
 ): FullyAnalyzedFile[] => {

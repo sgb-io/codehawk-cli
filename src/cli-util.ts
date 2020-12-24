@@ -1,7 +1,7 @@
 import type { FullyAnalyzedFile } from './types'
 
 const colLengths = {
-  filename: 30,
+  filename: 50,
   lines: 10,
   timesUsed: 22,
   maintainability: 34,
@@ -11,7 +11,7 @@ const round = (num: number): number => Math.round(num * 100) / 100
 
 const formatCol = (value: string, limit: number): string => {
   return value.length > limit
-    ? value.slice(limit + 3).padStart(limit, '.')
+    ? value.slice(value.length - (limit - 3)).padStart(limit, '.')
     : value.padEnd(limit, ' ')
 }
 
@@ -32,7 +32,7 @@ const formatComplexityScore = (score: number): string => {
 const generateTableLines = (flatFileResults: FullyAnalyzedFile[]): string => {
   return flatFileResults
     .map((result) => {
-      const { complexityReport, filename, timesDependedOn } = result
+      const { complexityReport, timesDependedOn, fullPath } = result
 
       if (!complexityReport) {
         return ''
@@ -42,7 +42,7 @@ const generateTableLines = (flatFileResults: FullyAnalyzedFile[]): string => {
       const score = formatComplexityScore(codehawkScore)
 
       // Convert output into stdout-friendly, padded columns
-      const filenameCol = formatCol(filename, colLengths.filename)
+      const filenameCol = formatCol(fullPath, colLengths.filename)
       const linesCol = formatCol(lineEnd.toString(), colLengths.lines)
       // Add 1 to the times depended on, assuming that all files are used at least once
       // (Codehawk reports external uses only)
@@ -64,8 +64,8 @@ export const formatResultsAsTable = (
     Codehawk Static Analysis Results
     Top ${flatFileResults.length} file${flatFileResults.length > 1 ? 's' : ''}
 
-    | File                           | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
-    | ------------------------------ | ---------- | ---------------------- | ---------------------------------- |
+    | File                                               | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
+    | -------------------------------------------------- | ---------- | ---------------------- | ---------------------------------- |
     ${generateTableLines(flatFileResults)}
   `
 }
