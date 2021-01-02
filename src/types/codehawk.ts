@@ -1,12 +1,16 @@
-export type SupportedStringArrayKeys =
+// All option keys
+type SupportedStringArrayKeys =
     | 'extensions'
     | 'excludeDirectories'
     | 'excludeFilenames'
     | 'skipDirectories'
+type SupportedBooleanOptions = 'enableFlow'
+type SupportedNumberOptions = 'minimumThreshold'
 
-export type SupportedBooleanOptions = 'enableFlow'
-
-export type AllOptionKeys = SupportedStringArrayKeys | SupportedBooleanOptions
+export type AllOptionKeys =
+  | SupportedStringArrayKeys
+  | SupportedBooleanOptions
+  | SupportedNumberOptions
 
 interface StringArrayOption {
   type: 'stringArray'
@@ -20,16 +24,26 @@ interface BooleanOption {
   replaceDefault: boolean
 }
 
+interface NumberOption {
+  type: 'number'
+  default: number
+  replaceDefault: boolean
+}
+
 export type CodehawkOptions = {
-  [key in SupportedStringArrayKeys]?: StringArrayOption;
+  [key in SupportedStringArrayKeys]?: StringArrayOption
 } & {
-  [key in SupportedBooleanOptions]?: BooleanOption;
+  [key in SupportedBooleanOptions]?: BooleanOption
+} & {
+  [key in SupportedNumberOptions]?: NumberOption
 }
 
 export type AssembledOptions = {
   [key in SupportedStringArrayKeys]?: string[]
 } & {
   [key in SupportedBooleanOptions]?: boolean
+} & {
+  [key in SupportedNumberOptions]?: number
 }
 
 interface CoverageMeasurement {

@@ -106,11 +106,17 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // Second run: generate timesDependedOn (can only be calculated after first run)
   const projectDeps = getProjectDeps(firstRunResults)
   const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
-
   const resultsAsList = getResultsAsList(secondRunResults)
+  const summary = getResultsSummary(resultsAsList)
+
+  // When in a CLI context, exit if the worst case fails to meet the minimum threshold
+  if (isCliContext && summary.worst < options.minimumThreshold) {
+    console.error('[codehawk-cli] Badge was not generated')
+    process.exit(1);
+  }
 
   return {
-    summary: getResultsSummary(resultsAsList),
+    summary,
     resultsList: resultsAsList,
     fullResultsTree: secondRunResults,
   }

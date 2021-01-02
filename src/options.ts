@@ -30,6 +30,11 @@ const baseOptions: CodehawkOptions = {
     default: ['/node_modules', '/flow-typed', '/coverage'],
     replaceDefault: false,
   },
+  minimumThreshold: {
+    type: 'number',
+    default: 10,
+    replaceDefault: true,
+  }
 }
 
 export const buildOptions = (
@@ -57,7 +62,7 @@ export const buildOptions = (
 
     // TODO unsure how to remove this `any` atm
     // It may require a rethink of the type defs
-    assembledOptions[optionKey] = val as any
+    assembledOptions[optionKey] = val
   })
 
   return assembledOptions
