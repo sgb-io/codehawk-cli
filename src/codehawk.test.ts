@@ -1,18 +1,16 @@
-const fs = require('fs')
-const {
-  analyzeProject,
-  calculateComplexity,
-  generateBadge,
-} = require('../build/codehawk')
-const { formatResultsAsTable } = require('../build/cli-util')
-const { JsxEmit } = require('typescript')
+import * as fs from 'fs'
+import { analyzeProject, calculateComplexity, generateBadge } from './codehawk'
+import { formatResultsAsTable } from './cli-util'
 
 const cwd = process.cwd()
-const outputMatchesResult = (projectPath) => {
+const outputMatchesResult = (projectPath: string): void => {
   const output = analyzeProject(`${cwd}/${projectPath}`)
   expect(output).toBeTruthy()
 
-  const expectedRaw = fs.readFileSync(`${cwd}/${projectPath}/expected.json`)
+  const expectedRaw = fs.readFileSync(
+    `${cwd}/${projectPath}/expected.json`,
+    'utf-8'
+  )
   const expected = JSON.parse(expectedRaw)
 
   expect(output.fullResultsTree).toEqual(expected.fullResultsTree)
@@ -35,7 +33,7 @@ describe('codehawk-cli', () => {
   describe('calculateComplexity', () => {
     it('generates metrics from a static typescript sample', () => {
       const metrics = calculateComplexity(STATIC_SAMPLE, '.ts', true, false)
-      const expectedMetrics = {
+      const expectedMetrics: any = {
         aggregate: {
           cyclomatic: 2,
           cyclomaticDensity: 50,
@@ -55,7 +53,6 @@ describe('codehawk-cli', () => {
               distinct: 6,
               total: 6,
             },
-            time: 10.494,
           },
           paramCount: 1,
           sloc: {
@@ -105,8 +102,7 @@ describe('codehawk-cli', () => {
     const logSpy = jest.spyOn(console, 'log')
 
     // Note: whitespace is important for this test to pass
-    const expectedOutputText =
-`
+    const expectedOutputText = `
     Codehawk Static Analysis Results
     Top 25 files
 
