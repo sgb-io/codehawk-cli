@@ -34,7 +34,7 @@ const baseOptions: CodehawkOptions = {
     type: 'number',
     default: 10,
     replaceDefault: true,
-  }
+  },
 }
 
 export const buildOptions = (

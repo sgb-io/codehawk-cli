@@ -112,7 +112,7 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // When in a CLI context, exit if the worst case fails to meet the minimum threshold
   if (isCliContext && summary.worst < options.minimumThreshold) {
     console.error('[codehawk-cli] Badge was not generated')
-    process.exit(1);
+    process.exit(1)
   }
 
   return {
