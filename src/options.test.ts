@@ -1,6 +1,11 @@
-const { getConfiguration } = require('../build/options')
+import * as fs from 'fs'
+import { mocked } from 'ts-jest'
 
-jest.mock('fs');
+import { getConfiguration } from './options'
+
+jest.mock('fs')
+
+const mockedFs = mocked(fs, true)
 
 describe('when attempting to get the configuration for codehawk', () => {
   afterEach(() => {
@@ -14,11 +19,12 @@ describe('when attempting to get the configuration for codehawk', () => {
         good: 'yes',
       }
 
-      require('fs').__codehawkConfigFound(true, mockCodehawkJson)
+      mockedFs.existsSync.mockReturnValue(true)
+      mockedFs.readFileSync.mockReturnValue(JSON.stringify(mockCodehawkJson))
 
       const config = getConfiguration('/home/')
 
-      expect(config).toEqual(mockCodehawkJson);
+      expect(config).toEqual(mockCodehawkJson)
     })
   })
 
@@ -29,19 +35,22 @@ describe('when attempting to get the configuration for codehawk', () => {
         happiness: 5,
       }
 
-      require('fs').__codehawkConfigFound(false, {
-        codehawk: mockCodehawkJson,
-      })
+      mockedFs.existsSync.mockReturnValueOnce(false)
+      mockedFs.readFileSync.mockReturnValue(
+        JSON.stringify({
+          codehawk: mockCodehawkJson,
+        })
+      )
 
       const config = getConfiguration('/home/')
 
       expect(config).toEqual(mockCodehawkJson)
     })
 
-    it('should throw an error when package.json contains no codehawk config' , () => {
-      require('fs').__codehawkConfigFound(false, {})
-
+    it('should throw an error when package.json contains no codehawk config', () => {
+      mockedFs.existsSync.mockReturnValue(false)
+      mockedFs.readFileSync.mockReturnValue(JSON.stringify({}))
       expect(() => getConfiguration('/home/')).toThrow()
     })
   })
-});
+})
