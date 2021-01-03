@@ -120,6 +120,15 @@ To customise your analysis, use the following options, placed in a `codehawk.jso
 | `excludeDirectories` | Directory matches that should be excluded from analysis. Relative to the root. E.g. `['/fixtures', '/test']`                                                                                                                             | `['/dist', '/bin', '/build']`                   |
 | `skipDirectories`    | Directories that should be excluded completely. The defaults will always be skipped.                                                                                                                                                     | `['/node_modules', '/flow-typed', '/coverage']` |
 
+## Badges
+
+By default, codehawk-cli generates 2 badges (in `generated/*.svg`) when called via the main CLI interface:
+
+- Average: the average maintainbility score of all targeted source code
+- Worst: the worst case score in the targeted source code
+
+A higher score is better (simpler, more maintainable code).
+
 ## Complexity Metrics
 
 Codehawk gathers various complexity metrics, including:
