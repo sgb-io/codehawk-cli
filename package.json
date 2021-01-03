@@ -3,7 +3,6 @@
   "version": "7.0.1",
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
-    "build:badges": "node build/index.js src",
     "build:watch": "tsc --watch",
     "build": "tsc",
     "lint:fix": "eslint --fix src/*.**",
@@ -11,6 +10,8 @@
     "prepublishOnly": "yarn build && yarn test",
     "prettier:fix": "prettier --write src",
     "prettier": "prettier --check src",
+    "postinstall": "yarn reflect",
+    "reflect": "node build/index.js src",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "test": "jest --testTimeout 15000"
