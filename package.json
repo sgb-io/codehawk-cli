@@ -1,6 +1,6 @@
 {
   "name": "codehawk-cli",
-  "version": "7.1.0",
+  "version": "7.1.2",
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
     "build:watch": "tsc --watch",
@@ -8,7 +8,6 @@
     "isclean": "git diff --exit-code",
     "lint:fix": "eslint --fix src/*.**",
     "lint": "eslint src/*.**",
-    "prepublishOnly": "yarn build && yarn test",
     "prettier:fix": "prettier --write src",
     "prettier": "prettier --check src",
     "reflect": "node build/index.js src",
