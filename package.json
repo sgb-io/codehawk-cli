@@ -5,6 +5,7 @@
   "scripts": {
     "build:watch": "tsc --watch",
     "build": "tsc",
+    "isclean": "git diff --exit-code",
     "lint:fix": "eslint --fix src/*.**",
     "lint": "eslint src/*.**",
     "prepublishOnly": "yarn build && yarn test",
