@@ -13,6 +13,7 @@ import type {
   FullyAnalyzedEntity,
   FullyAnalyzedFile,
   FullyAnalyzedDirectory,
+  AssembledOptions,
 } from './types'
 import { buildOptions, getConfiguration } from './options'
 import { flattenEntireTree } from './util'
@@ -36,7 +37,22 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // When using CLI, execute from the cwd rather than a relative path
   const actualRoot = isCliContext ? cwd : rawPath
   const projectOptions = getConfiguration(actualRoot)
-  const options = buildOptions(projectOptions)
+  let options: AssembledOptions = {}
+  try {
+    options = buildOptions(projectOptions)
+  } catch (e) {
+    if (isCliContext) {
+      console.error(
+        '[codehawk-cli] Unable to parse codehawk options - please ensure you have provided correct values'
+      )
+      process.exit(1)
+    } else {
+      throw new Error(
+        '[codehawk-cli] Unable to parse codehawk options - please ensure you have provided correct values'
+      )
+    }
+  }
+
   const dirPath = path.resolve(`${actualRoot}/`)
   const projectCoverage = getCoverage(dirPath)
 
@@ -106,11 +122,19 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   // Second run: generate timesDependedOn (can only be calculated after first run)
   const projectDeps = getProjectDeps(firstRunResults)
   const secondRunResults = addDependencyCounts(projectDeps, firstRunResults)
-
   const resultsAsList = getResultsAsList(secondRunResults)
+  const summary = getResultsSummary(resultsAsList)
+
+  // When in a CLI context, exit if the worst case fails to meet the minimum threshold
+  if (isCliContext && summary.worst < options.minimumThreshold) {
+    console.error(
+      `[codehawk-cli] Worst case (${summary.worst}) was below the minimum threshold (${options.minimumThreshold})`
+    )
+    process.exit(1)
+  }
 
   return {
-    summary: getResultsSummary(resultsAsList),
+    summary,
     resultsList: resultsAsList,
     fullResultsTree: secondRunResults,
   }

@@ -30,12 +30,49 @@ const baseOptions: CodehawkOptions = {
     default: ['/node_modules', '/flow-typed', '/coverage'],
     replaceDefault: false,
   },
+  minimumThreshold: {
+    type: 'number',
+    default: 10,
+    replaceDefault: true,
+  },
+}
+
+const injectOptionValues = ({
+  existingOptions,
+  optionKey,
+  val,
+}: {
+  existingOptions: AssembledOptions
+  optionKey: AllOptionKeys
+  val: any
+}): AssembledOptions => {
+  const newOptions = { ...existingOptions }
+  switch (optionKey) {
+    case 'enableFlow':
+      newOptions[optionKey] = val as boolean
+      break
+    case 'excludeDirectories':
+    case 'excludeFilenames':
+    case 'skipDirectories':
+    case 'extensions':
+      newOptions[optionKey] = val as string[]
+      break
+    case 'minimumThreshold':
+      newOptions[optionKey] = parseInt(val, 10)
+      break
+    default:
+      throw new Error(
+        `Unknown option "${optionKey as string}" is not supported`
+      )
+  }
+
+  return newOptions
 }
 
 export const buildOptions = (
   projectOptions: AssembledOptions
 ): AssembledOptions => {
-  const assembledOptions: AssembledOptions = {}
+  let assembledOptions: AssembledOptions = {}
 
   Object.keys(baseOptions).forEach((optionKey: AllOptionKeys) => {
     const option = baseOptions[optionKey]
@@ -51,13 +88,15 @@ export const buildOptions = (
         val =
           option.type === 'stringArray' && Array.isArray(val)
             ? val.concat(projectOptions[optionKey] as string[])
-            : (val = projectOptions[optionKey] as boolean)
+            : (val = projectOptions[optionKey])
       }
     }
 
-    // TODO unsure how to remove this `any` atm
-    // It may require a rethink of the type defs
-    assembledOptions[optionKey] = val as any
+    assembledOptions = injectOptionValues({
+      existingOptions: assembledOptions,
+      optionKey,
+      val,
+    })
   })
 
   return assembledOptions
