@@ -15,7 +15,7 @@ export const getCoverage = (dirPath: string): CoverageMapping[] => {
       coverage: coveredFiles[file],
     }))
   } catch (e) {
-    console.error(`
+    console.warn(`
             Coverage not found, please generate it using instanbul/nyc.
             We expect the json-summary format (coverage/coverage-summary.json).
             If you don't have any tests, you can still continue.

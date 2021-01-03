@@ -1,3 +1,4 @@
 {
-	"skipDirectories": ["/generated", "/samples", "/test/__mocks__"]
+	"skipDirectories": ["/generated", "/samples", "/test/__mocks__"],
+	"minimumThreshold": 40
 }
