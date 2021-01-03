@@ -6,3 +6,4 @@ bin
 
 # Types
 src/types/*
+*.svg
