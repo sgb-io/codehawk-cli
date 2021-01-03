@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import { mocked } from 'ts-jest'
+import { mocked } from 'ts-jest/utils'
 
 import { getConfiguration } from './options'
 

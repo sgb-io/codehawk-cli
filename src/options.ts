@@ -58,7 +58,7 @@ const injectOptionValues = ({
       newOptions[optionKey] = val as string[]
       break
     case 'minimumThreshold':
-      newOptions[optionKey] = val as number
+      newOptions[optionKey] = parseInt(val, 10)
       break
     default:
       throw new Error(
@@ -88,7 +88,7 @@ export const buildOptions = (
         val =
           option.type === 'stringArray' && Array.isArray(val)
             ? val.concat(projectOptions[optionKey] as string[])
-            : (val = projectOptions[optionKey] as boolean)
+            : (val = projectOptions[optionKey])
       }
     }
 
