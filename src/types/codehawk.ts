@@ -30,11 +30,6 @@ interface NumberOption {
   replaceDefault: boolean
 }
 
-export type AnyCodehawkOption =
-  | StringArrayOption
-  | BooleanOption
-  | NumberOption
-
 export type CodehawkOptions = {
   [key in SupportedStringArrayKeys]?: StringArrayOption
 } & {
