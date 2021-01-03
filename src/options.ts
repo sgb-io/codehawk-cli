@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'fs'
 import { resolve as pathResolve } from 'path'
 
 import { NO_CONFIGURATION_FOUND } from './consts/errors'
-import type { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
+import type { CodehawkOptions, AllOptionKeys, AssembledOptions, AnyCodehawkOption } from './types'
 
 const baseOptions: CodehawkOptions = {
   enableFlow: {
@@ -35,6 +35,33 @@ const baseOptions: CodehawkOptions = {
     default: 10,
     replaceDefault: true,
   },
+}
+
+const parseOptionValue = (option: AnyCodehawkOption) => {
+  let val = option.default
+
+  if (projectOptions[optionKey]) {
+    // Project options can either be added to the defaults, or replace them.
+    if (option.replaceDefault) {
+      // Mutate options by replacing (we assume project config is valid!)
+      val = projectOptions[optionKey]
+    } else {
+      // Mutate options by mixing in project options to defaults
+      val =
+        option.type === 'stringArray' && Array.isArray(val)
+          ? val.concat(projectOptions[optionKey] as string[])
+          : (val = projectOptions[optionKey] as boolean)
+    }
+  }
+}
+
+// TODO grab the value and specify the type so that we gain full type accuracy
+// Also, let's have a try/catch to prevent bad options
+const getOptionValue: any = (optionKey: AllOptionKeys, option: AnyCodehawkOption) => {
+  switch (optionKey) {
+    case "enableFlow":
+      return parseOptionValue(option)<boolean>
+  }
 }
 
 export const buildOptions = (
