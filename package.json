@@ -11,7 +11,6 @@
     "prepublishOnly": "yarn build && yarn test",
     "prettier:fix": "prettier --write src",
     "prettier": "prettier --check src",
-    "postinstall": "yarn reflect",
     "reflect": "node build/index.js src",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
