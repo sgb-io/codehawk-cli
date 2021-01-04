@@ -63,7 +63,6 @@
   "main": "build/codehawk.js",
   "types": "build/codehawk.d.ts",
   "engines": {
-    "npm": "please-use-yarn",
     "node": ">=10"
   },
   "jest": {
