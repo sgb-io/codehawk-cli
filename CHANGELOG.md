@@ -2,6 +2,50 @@
 
 This changelog is currently manually maintained. Please see commits, PRs and Issue discussions on GitHub for the latest and most correction information.
 
+### 8.0.0
+
+- Added new tooling for automating publishing and releasing
+- Added contributing docs
+- Removed sources from the published build
+
+### 7.1.5
+
+- Removed the npm engine restriction
+
+### 7.1.0
+
+- Adds badges (#53)
+- Strengthen build process 
+- Convert tests to TypeScript (#55)
+- Adds the minimum threshold feature (#59)
+
+### 7.0.1
+
+- Add new results API (#49)
+- Fix lint and style errors, update CI to ensure lint and style errors can't be merged
+- Update CLI output to include longer filepaths and fix the formatting
+
+### 6.1.1
+
+- Allow config to exist in `package.json` instead of `codehawk.json`
+
+### 6.0.3
+
+- Update docs
+- Correct some logic around where the CLI is being executed
+
+### 6.0.1
+
+- Fix CLI bash context
+
+### 6.0.0
+
+- Added new CLI top level interface
+
+### 5.0.1
+
+- Correctly exposed types
+
 ### 5.0.0
 
 - Updated `calculateComplexity` signature, file extension and typescript/flow flags added

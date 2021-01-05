@@ -8,6 +8,9 @@
     "isclean": "git diff --exit-code",
     "lint:fix": "eslint --fix src/*.**",
     "lint": "eslint src/*.**",
+    "tag:patch": "np patch --no-publish",
+    "tag:minor": "np minor --no-publish",
+    "tag:major": "np major --no-publish",
     "prettier:fix": "prettier --write src",
     "prettier": "prettier --check src",
     "reflect": "node build/index.js src",
@@ -52,10 +55,14 @@
     "eslint-plugin-promise": "4",
     "eslint-plugin-standard": "4",
     "jest": "^26.6.3",
+    "np": "^7.2.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.3"
   },
+  "files": [
+    "build"
+  ],
   "bin": {
     "codehawk": "build/index.js",
     "codehawk-cli": "build/index.js"
@@ -67,8 +74,12 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "roots": ["<rootDir>/src"],
-    "testMatch": ["**/*.(spec|test).ts"],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/*.(spec|test).ts"
+    ],
     "testEnvironment": "node"
   }
 }
