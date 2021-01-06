@@ -1,6 +1,6 @@
 {
   "name": "codehawk-cli",
-  "version": "8.0.2",
+  "version": "8.0.3",
   "description": "Static analysis tool for JavaScript projects",
   "scripts": {
     "build:watch": "tsc --watch",
