@@ -69,6 +69,7 @@ Note: currently, only the project owner (sgb-io) has access to publish new versi
 The instructions to publish a release are:
 
 - Use macOS, as `np` runs into output + auth problems on windows
+- Important: the git remote must be the ssh url in order for `np` to work correctly. By default, GitHub Desktop uses the https URL as far as I can tell. It can be easily changed via `git remote set-url origin git@github.com:sgb-io/codehawk-cli.git`. If you have failed to do this, the "pushing tags" part will hang. If this happens, ctrl+c out, manually run `git push --follow-tags`.
 - Update the changelog and get that merged in (do not bump any versions)
 - On an up-to-date master, run Run `yarn run tag:{patch|minor|major}`. This creates a git tag **and pushes it up**.
 - The GitHub action should publish to npm
