@@ -3,7 +3,7 @@ name: Npm Publish
 on:
   push:
     tags:
-     - 'v:*'
+     - 'v*'
 
 jobs:
   publish:
