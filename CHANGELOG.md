@@ -2,6 +2,11 @@
 
 This changelog is currently manually maintained. Please see commits, PRs and Issue discussions on GitHub for the latest and most correction information.
 
+### 8.0.3
+
+- Enable publishing from Github Actions for real
+- Updated release instructions
+
 ### 8.0.1
 
 - Fix release automation
