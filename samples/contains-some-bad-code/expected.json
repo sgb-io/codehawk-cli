@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "average": 58.93321508519464,
+    "median": 58.93321508519464,
+    "worst": 58.93321508519464
+  },
+  "resultsList": [
+    {
+      "fullPath": "/samples/contains-some-bad-code/good-code.ts",
+      "filename": "good-code.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/contains-some-bad-code",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 11,
+          "cyclomaticDensity": 37.931,
+          "halstead": {
+            "bugs": 0.217,
+            "difficulty": 35.889,
+            "effort": 23378.702,
+            "length": 127,
+            "time": 1298.817,
+            "vocabulary": 35,
+            "volume": 651.419,
+            "operands": { "distinct": 18, "total": 76 },
+            "operators": { "distinct": 17, "total": 51 }
+          },
+          "paramCount": 9,
+          "sloc": { "logical": 29, "physical": 50 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 50,
+        "lineStart": 1,
+        "maintainability": 108.234,
+        "codehawkScore": 58.93321508519464,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ],
+  "fullResultsTree": [
+    {
+      "fullPath": "/samples/contains-some-bad-code/bad-code.ts",
+      "filename": "bad-code.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/contains-some-bad-code",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/contains-some-bad-code/expected.json",
+      "filename": "expected.json",
+      "shouldAnalyze": false,
+      "path": "/samples/contains-some-bad-code",
+      "type": "file",
+      "complexityReport": null,
+      "timesDependedOn": 0
+    },
+    {
+      "fullPath": "/samples/contains-some-bad-code/good-code.ts",
+      "filename": "good-code.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/contains-some-bad-code",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 11,
+          "cyclomaticDensity": 37.931,
+          "halstead": {
+            "bugs": 0.217,
+            "difficulty": 35.889,
+            "effort": 23378.702,
+            "length": 127,
+            "time": 1298.817,
+            "vocabulary": 35,
+            "volume": 651.419,
+            "operands": { "distinct": 18, "total": 76 },
+            "operators": { "distinct": 17, "total": 51 }
+          },
+          "paramCount": 9,
+          "sloc": { "logical": 29, "physical": 50 }
+        },
+        "dependencies": [],
+        "errors": [],
+        "lineEnd": 50,
+        "lineStart": 1,
+        "maintainability": 108.234,
+        "codehawkScore": 58.93321508519464,
+        "coverage": "0"
+      },
+      "timesDependedOn": 0
+    }
+  ]
+}

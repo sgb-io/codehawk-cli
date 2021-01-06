@@ -93,6 +93,10 @@ describe('codehawk-cli', () => {
       outputMatchesResult('samples/react-component-typescript')
     })
 
+    it('contains-some-bad-code', () => {
+      outputMatchesResult('samples/contains-some-bad-code')
+    })
+
     it('sweetalert', () => {
       outputMatchesResult('samples/sweetalert')
     })
