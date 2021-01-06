@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/sgb-io/codehawk-cli/issues"
   },
-  "license": "MPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-transform-typescript": "^7.7.2",
