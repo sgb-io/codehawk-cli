@@ -2,6 +2,10 @@
 
 This changelog is currently manually maintained. Please see commits, PRs and Issue discussions on GitHub for the latest and most correction information.
 
+### 8.0.1
+
+- Fix release automation
+
 ### 8.0.0
 
 - Added new tooling for automating publishing and releasing
@@ -15,7 +19,7 @@ This changelog is currently manually maintained. Please see commits, PRs and Iss
 ### 7.1.0
 
 - Adds badges (#53)
-- Strengthen build process 
+- Strengthen build process
 - Convert tests to TypeScript (#55)
 - Adds the minimum threshold feature (#59)
 
