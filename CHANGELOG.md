@@ -1,21 +1,10 @@
 # Changelog
 
-This changelog is currently manually maintained. Please see commits, PRs and Issue discussions on GitHub for the latest and most correction information.
+As of v8.0.0, changelogs are now automatically generated in the [GitHub Releases page](https://github.com/sgb-io/codehawk-cli/releases).
 
-### 8.0.3
+The legacy (manual) changelog is preserved below.
 
-- Enable publishing from Github Actions for real
-- Updated release instructions
-
-### 8.0.1
-
-- Fix release automation
-
-### 8.0.0
-
-- Added new tooling for automating publishing and releasing
-- Added contributing docs
-- Removed sources from the published build
+## Legacy changelog
 
 ### 7.1.5
 
