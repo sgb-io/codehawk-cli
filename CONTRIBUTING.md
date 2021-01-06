@@ -68,10 +68,9 @@ Note: currently, only the project owner (sgb-io) has access to publish new versi
 
 The instructions to publish a release are:
 
-- Create a release branch
-- Update the changelog (this is done manually)
-- Run `yarn run tag:{patch|minor|major}`. This creates a git tag **and pushes it up**.
-- Push up the branch and merge it, _without squashing_, as we want to keep the tag in the history of `master`
+- Use macOS, as `np` runs into output + auth problems on windows
+- Update the changelog and get that merged in (do not bump any versions)
+- On an up-to-date master, run Run `yarn run tag:{patch|minor|major}`. This creates a git tag **and pushes it up**.
 - The GitHub action should publish to npm
 
 ## Support
