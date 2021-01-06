@@ -55,6 +55,11 @@ export const analyzeFile = (
   file: FileWithContents,
   projectCoverage: CoverageMapping[]
 ): CompleteCodehawkComplexityResult => {
+  // Handle cases where a file was intended to be analyzed, but the source could not be parsed
+  if (!file.rawSource) {
+    return null
+  }
+
   let report = null
   const relativeFilePath = `${file.path}/${file.filename}`.replace(dirPath, '')
   const coverageData = projectCoverage.find((c) => c.path === relativeFilePath)
@@ -95,7 +100,9 @@ export const analyzeFile = (
       }
     }
   } catch (e) {
-    console.error(`Unable to parse "${file.path}/${file.filename}", skipping`)
+    console.error(
+      `[codehawk-cli] Unable to analyze file "${file.path}/${file.filename}", skipping`
+    )
     // if (NODE_ENV !== 'production') {
     //     // Print out  what is attempting to be evaluated
     //     // Exposes bugs such as flow-remove-types not working correctly

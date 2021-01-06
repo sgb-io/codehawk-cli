@@ -18,23 +18,23 @@ const shouldSkip = (
   return false
 }
 
-const isBlocklisted = (
+export const isBlocklisted = (
   relativeDir: string,
   filename: string,
   options: AssembledOptions
 ): boolean => {
   const { excludeDirectories, excludeFilenames } = options
 
-  // Check for blacklisted directories
+  // Check for blocklisted directories
   for (let i = 0; i < excludeDirectories.length; i += 1) {
     if (relativeDir.startsWith(excludeDirectories[i])) {
       return true
     }
   }
 
-  // Check for blacklisted filename matches
+  // Check for blocklisted filename matches
   for (let i = 0; i < excludeFilenames.length; i += 1) {
-    if (filename.match(excludeFilenames[i])) {
+    if (filename.includes(excludeFilenames[i])) {
       return true
     }
   }

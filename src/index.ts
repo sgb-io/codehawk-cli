@@ -19,6 +19,6 @@ if (scanDir && scanDir !== '') {
   }
 } else {
   console.error(
-    '[codehawk-cli] Unable to parse, please ensure you provide a directory e.g. "codehawk src"'
+    '[codehawk-cli] Unable to analyze project, please ensure you provide a directory e.g. "codehawk src"'
   )
 }

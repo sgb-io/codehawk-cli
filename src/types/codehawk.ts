@@ -82,7 +82,7 @@ interface BaseEntity {
 export interface FileWithContents {
   path: string
   filename: string
-  rawSource: string
+  rawSource: string | undefined // Undefined if parsing fails
 }
 
 // Parsed entities 

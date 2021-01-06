@@ -57,6 +57,17 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   const projectCoverage = getCoverage(dirPath)
 
   const addComplexityToFile = (file: ParsedFile): AnalyzedFile => {
+    let fileContents
+    try {
+      if (file.shouldAnalyze) {
+        fileContents = getFileContents(file.fullPath, options.enableFlow)
+      }
+    } catch (error) {
+      console.error(
+        `[codehawk-cli] Unable to parse "${file.path}/${file.filename}", skipping`
+      )
+    }
+
     const complexityReport = !file.shouldAnalyze
       ? null
       : analyzeFile(
@@ -64,7 +75,7 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
           {
             path: file.path,
             filename: file.filename,
-            rawSource: getFileContents(file.fullPath, options.enableFlow),
+            rawSource: fileContents,
           },
           projectCoverage
         )
