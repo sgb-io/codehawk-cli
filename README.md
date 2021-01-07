@@ -129,6 +129,8 @@ By default, codehawk-cli generates 2 badges (in `generated/*.svg`) when called v
 
 A higher score is better (simpler, more maintainable code).
 
+To avoid generating badges, use the `--no-badge` option.
+
 ## Complexity Metrics
 
 Codehawk gathers various complexity metrics, including:
