@@ -13,9 +13,9 @@ const run = (scanDir: string, createBadge: boolean): void => {
     const output = analyzeProject(`${process.cwd()}/${scanDir}`, true)
     const formattedAsTable = output.resultsList.slice(0, 25)
     console.log(formatResultsAsTable(formattedAsTable))
-    
+
     if (!createBadge) {
-      return;
+      return
     }
 
     try {
