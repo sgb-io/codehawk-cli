@@ -5,6 +5,11 @@ import { NO_CONFIGURATION_FOUND } from './consts/errors'
 import type { CodehawkOptions, AllOptionKeys, AssembledOptions } from './types'
 
 const baseOptions: CodehawkOptions = {
+  badgesDirectory: {
+    type: 'stringArray',
+    default: ['/generated'],
+    replaceDefault: true,
+  },
   enableFlow: {
     type: 'boolean',
     default: false,
@@ -46,11 +51,14 @@ const injectOptionValues = ({
   optionKey: AllOptionKeys
   val: any
 }): AssembledOptions => {
+  let err
   const newOptions = { ...existingOptions }
+
   switch (optionKey) {
     case 'enableFlow':
       newOptions[optionKey] = val as boolean
       break
+    case 'badgesDirectory':
     case 'excludeDirectories':
     case 'excludeFilenames':
     case 'skipDirectories':
@@ -61,9 +69,12 @@ const injectOptionValues = ({
       newOptions[optionKey] = parseInt(val, 10)
       break
     default:
-      throw new Error(
-        `Unknown option "${optionKey as string}" is not supported`
-      )
+      // Print a friendly error but also allow the upstream generic handling to kick in
+      err = `[codehawk-cli] Unknown option "${
+        optionKey as string
+      }" is not supported`
+      console.warn(err)
+      throw new Error(err)
   }
 
   return newOptions

@@ -20,7 +20,7 @@ const run = (scanDir: string, createBadge: boolean): void => {
 
     try {
       console.log('[codehawk-cli] Generating maintainability badge...')
-      generateBadge(output.summary)
+      generateBadge(output)
       console.log('[codehawk-cli] Badge was generated')
     } catch (e) {
       console.warn('[codehawk-cli] Badge was not generated')
