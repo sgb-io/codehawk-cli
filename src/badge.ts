@@ -1,6 +1,7 @@
 import { badgen } from 'badgen'
 import fs from 'fs'
-import type { ResultsSummary } from './codehawk'
+import slash from 'slash'
+import type { Results } from './codehawk'
 
 const getBadgeColor = (percent: number): string => {
   let color = 'e05d44' // 'red';
@@ -14,11 +15,22 @@ const getBadgeColor = (percent: number): string => {
   return color
 }
 
-export const generateBadge = (resultsSummary: ResultsSummary): void => {
-  const { average, worst } = resultsSummary
+export const generateBadge = (results: Results): void => {
+  const { average, worst } = results.summary
+  const { badgesDirectory } = results.options
+  const badgesPath = badgesDirectory[0] || '' // Fall back to root
+  const actualPath = slash(process.cwd()) + badgesPath
+
+  if (badgesPath !== '' && !fs.existsSync(actualPath)) {
+    // Fire a specific error message, but also let the upstream generic handling kick in
+    const err = `[codehawk-cli] The directory "${badgesPath}" does not exist, please create it in order to generate badges.`
+    console.error(err)
+    throw new Error(err)
+  }
+
   try {
     fs.writeFileSync(
-      'generated/avg-maintainability.svg',
+      `${actualPath}/avg-maintainability.svg`,
       badgen({
         label: 'maintainability (avg)',
         status: `${average.toFixed(2)}`,
@@ -32,7 +44,7 @@ export const generateBadge = (resultsSummary: ResultsSummary): void => {
 
   try {
     fs.writeFileSync(
-      'generated/worst-maintainability.svg',
+      `${actualPath}/worst-maintainability.svg`,
       badgen({
         label: 'maintainability (worst)',
         status: `${worst.toFixed(2)}`,

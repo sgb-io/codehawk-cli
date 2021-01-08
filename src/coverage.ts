@@ -15,11 +15,12 @@ export const getCoverage = (dirPath: string): CoverageMapping[] => {
       coverage: coveredFiles[file],
     }))
   } catch (e) {
-    console.warn(`
-            Coverage not found, please generate it using instanbul/nyc.
-            We expect the json-summary format (coverage/coverage-summary.json).
-            If you don't have any tests, you can still continue.
-        `)
+    // For now, we choose to do nothing. See https://github.com/sgb-io/codehawk-cli/issues/58
+    // console.warn(`
+    //         Coverage not found, please generate it using instanbul/nyc.
+    //         We expect the json-summary format (coverage/coverage-summary.json).
+    //         If you don't have any tests, you can still continue.
+    //     `)
   }
 
   return coverage

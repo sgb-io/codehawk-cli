@@ -16,7 +16,8 @@
     "reflect": "node build/index.js src",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "test": "jest --testTimeout 15000"
+    "test": "jest --testTimeout 15000",
+    "verify": "yarn build && yarn test && yarn lint && yarn prettier && yarn reflect && yarn isclean"
   },
   "author": "Sam Brown (https://github.com/sgb-io)",
   "repository": {

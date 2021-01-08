@@ -15,7 +15,7 @@ const outputMatchesResult = (projectPath: string): void => {
 
   expect(output.fullResultsTree).toEqual(expected.fullResultsTree)
 
-  generateBadge(output.summary)
+  generateBadge(output)
   expect('generateBadge did not throw').toBeTruthy()
 }
 

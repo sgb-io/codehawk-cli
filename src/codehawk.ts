@@ -26,6 +26,7 @@ export interface ResultsSummary {
 }
 
 export interface Results {
+  options: AssembledOptions
   resultsList: FullyAnalyzedFile[]
   fullResultsTree: FullyAnalyzedEntity[]
   summary: ResultsSummary
@@ -145,6 +146,7 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   }
 
   return {
+    options,
     summary,
     resultsList: resultsAsList,
     fullResultsTree: secondRunResults,

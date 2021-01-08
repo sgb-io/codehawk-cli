@@ -4,6 +4,7 @@ type SupportedStringArrayKeys =
     | 'excludeDirectories'
     | 'excludeFilenames'
     | 'skipDirectories'
+    | 'badgesDirectory'
 type SupportedBooleanOptions = 'enableFlow'
 type SupportedNumberOptions = 'minimumThreshold'
 
