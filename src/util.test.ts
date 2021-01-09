@@ -1,4 +1,4 @@
-import { isBlocklisted } from './util'
+import { isBlocklisted } from './utils'
 import { buildOptions } from './options'
 
 const options = buildOptions({

@@ -16,7 +16,7 @@ import type {
   AssembledOptions,
 } from './types'
 import { buildOptions, getConfiguration } from './options'
-import { flattenEntireTree } from './util'
+import { flattenEntireTree } from './utils'
 import { generateBadge } from './badge'
 
 export interface ResultsSummary {
