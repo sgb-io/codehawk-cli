@@ -25,6 +25,11 @@ const baseOptions: CodehawkOptions = {
     default: ['/dist', '/bin', '/build'],
     replaceDefault: true,
   },
+  excludeExact: {
+    type: 'stringArray',
+    default: [],
+    replaceDefault: true,
+  },
   excludeFilenames: {
     type: 'stringArray',
     default: ['.d.ts', '.min.js', '.bundle.js'],
@@ -60,9 +65,10 @@ const injectOptionValues = ({
       break
     case 'badgesDirectory':
     case 'excludeDirectories':
+    case 'excludeExact':
     case 'excludeFilenames':
-    case 'skipDirectories':
     case 'extensions':
+    case 'skipDirectories':
       newOptions[optionKey] = val as string[]
       break
     case 'minimumThreshold':

@@ -1,7 +1,9 @@
 import { isBlocklisted } from './util'
 import { buildOptions } from './options'
 
-const options = buildOptions({})
+const options = buildOptions({
+  excludeExact: ['/src/foo/excluded.ts'],
+})
 
 describe('util', () => {
   describe('isBlocklisted', () => {
@@ -53,6 +55,13 @@ describe('util', () => {
           false
         )
         expect(isBlocklisted('/build/foo', 'index.ts', options)).toEqual(true)
+      })
+    })
+
+    describe('excludeExact', () => {
+      it('excludes an exact match', () => {
+        expect(isBlocklisted('/src/foo', 'bar.ts', options)).toEqual(false)
+        expect(isBlocklisted('/src/foo', 'excluded.ts', options)).toEqual(true)
       })
     })
   })
