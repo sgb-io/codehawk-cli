@@ -1,7 +1,4 @@
-import type {
-  FullyAnalyzedFile,
-  ResultsSummary,
-} from '../types'
+import type { FullyAnalyzedFile, ResultsSummary } from '../types'
 
 const getMedian = (numbers: number[]): number => {
   const sorted = numbers.slice().sort((a, b) => a - b)

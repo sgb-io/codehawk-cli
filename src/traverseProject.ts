@@ -21,16 +21,18 @@ export const walkSync = (
     filename,
     fullPath: path.join(dir, filename),
     entity: getFsEntity(path.join(dir, filename)),
-    relativeDir: slash(dir).replace(slash(process.cwd()), '')
+    relativeDir: slash(dir).replace(slash(process.cwd()), ''),
   }))
-  const visibleEntities = parsedEntities.filter((item) => shouldSeeEntity({
-    filename: item.filename,
-    dir,
-    fullPath: item.fullPath,
-    entity: item.entity,
-    options,
-    relativeDir: item.relativeDir
-  }))
+  const visibleEntities = parsedEntities.filter((item) =>
+    shouldSeeEntity({
+      filename: item.filename,
+      dir,
+      fullPath: item.fullPath,
+      entity: item.entity,
+      options,
+      relativeDir: item.relativeDir,
+    })
+  )
 
   visibleEntities.forEach((item) => {
     const { fullPath, filename, entity, relativeDir } = item
