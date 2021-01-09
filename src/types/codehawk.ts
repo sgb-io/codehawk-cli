@@ -1,10 +1,11 @@
 // All option keys
 type SupportedStringArrayKeys =
-    | 'extensions'
-    | 'excludeDirectories'
-    | 'excludeFilenames'
-    | 'skipDirectories'
     | 'badgesDirectory'
+    | 'excludeDirectories'
+    | 'excludeExact'
+    | 'excludeFilenames'
+    | 'extensions'
+    | 'skipDirectories'
 type SupportedBooleanOptions = 'enableFlow'
 type SupportedNumberOptions = 'minimumThreshold'
 
