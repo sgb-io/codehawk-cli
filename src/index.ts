@@ -11,7 +11,10 @@ import { hideBin } from 'yargs/helpers'
 const run = (scanDir: string, createBadge: boolean): void => {
   if (scanDir && scanDir !== '') {
     const output = analyzeProject(`${process.cwd()}/${scanDir}`, true)
-    const formattedAsTable = output.resultsList.slice(0, 25)
+    const formattedAsTable = output.resultsList.slice(
+      0,
+      output.options.cliOutputLimit
+    )
     console.log(formatResultsAsTable(formattedAsTable))
 
     if (!createBadge) {

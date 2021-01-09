@@ -7,7 +7,7 @@ type SupportedStringArrayKeys =
     | 'extensions'
     | 'skipDirectories'
 type SupportedBooleanOptions = 'enableFlow'
-type SupportedNumberOptions = 'minimumThreshold'
+type SupportedNumberOptions = 'minimumThreshold' | 'cliOutputLimit'
 
 export type AllOptionKeys =
   | SupportedStringArrayKeys

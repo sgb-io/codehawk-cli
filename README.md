@@ -57,6 +57,23 @@ Top 14 files
 | /src/index.ts                                      | 20         | 1                      | 60.97 OK                           |
 ```
 
+## Options
+
+To customise your analysis, use the following options, placed in a `codehawk.json` file in the root directory.
+
+| Option               | Description                                                                                                                                                                                                                                                                  | Default                                         |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| `badgesDirectory`    | Directory where the two maintainbility badges will be created (when enabled)                                                                                                                                                                                                 | `['/generated']`                                |
+| `enableFlow`         | Enable Flow support                                                                                                                                                                                                                                                          | `false`                                         |
+| `extensions`         | File extensions that should be analyzed. The default is always used, but you can add more extensions. You can use the `exclude[...]` options to exclude specific files.                                                                                                      | `['.js', '.jsx', '.ts', '.tsx']`                |
+| `excludeFilenames`   | Filename matches that should be excluded from static analysis (but still show in the data). The default is always used, but you can add more matches to be excluded. Note that the matching is exact. The exclude list is taken into consideration after the extension list. | `['.d.ts', '.min.js', '.bundle.js']`            |
+| `excludeDirectories` | Directory matches that should be excluded from static analysis (but still show in the data). Relative to the root. E.g. `['/fixtures', '/test']`                                                                                                                             | `['/dist', '/bin', '/build']`                   |
+| `excludeExact`       | Exact file matches that should be excluded from static analysis (but still show in the data). Relative to the root. E.g. `['/src/foo/bar.ts']`                                                                                                                               | `[]`                                            |
+| `skipDirectories`    | Directories that should be excluded completely, i.e. not visible in the resulting data at all. The defaults will always be skipped.                                                                                                                                          | `['/node_modules', '/flow-typed', '/coverage']` |
+| `minimumThreshold`   | Minimum acceptable maintainability score. If a file violates this score, the CLI will exit with code 1 (used to ensure a minimum level of maintainability in CI). It is recommended to set this to at least 30.                                                              | `10`                                            |
+| `cliOutputLimit`     | Number of files to list in the CLI output (from worst scoring to best scoring).                                                                                                                                                                                              | `25`                                            |
+
+
 ## Advanced usage
 
 Analyze an entire directory:
@@ -107,21 +124,6 @@ Each analyzed file in your project ends up with:
 - `dependencies` - a map of this file's dependecies
 - `timesDependedOn` - number of times this file is imported by other files
 - `complexityReport` - various detailed complexity metrics such as halstead metrics and cyclomatic complexity
-
-## Options
-
-To customise your analysis, use the following options, placed in a `codehawk.json` file in the root directory.
-
-| Option               | Description                                                                                                                                                                                                                                                                  | Default                                         |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| `badgesDirectory`    | Directory where the two maintainbility badges will be created (when enabled)                                                                                                                                                                                                 | `['/generated']`                                |
-| `enableFlow`         | Enable Flow support                                                                                                                                                                                                                                                          | `false`                                         |
-| `extensions`         | File extensions that should be analyzed. The default is always used, but you can add more extensions. You can use the `exclude[...]` options to exclude specific files.                                                                                                      | `['.js', '.jsx', '.ts', '.tsx']`                |
-| `excludeFilenames`   | Filename matches that should be excluded from static analysis (but still show in the data). The default is always used, but you can add more matches to be excluded. Note that the matching is exact. The exclude list is taken into consideration after the extension list. | `['.d.ts', '.min.js', '.bundle.js']`            |
-| `excludeDirectories` | Directory matches that should be excluded from static analysis (but still show in the data). Relative to the root. E.g. `['/fixtures', '/test']`                                                                                                                             | `['/dist', '/bin', '/build']`                   |
-| `excludeExact`       | Exact file matches that should be excluded from static analysis (but still show in the data). Relative to the root. E.g. `['/src/foo/bar.ts']`                                                                                                                               | `[]`                                            |
-| `skipDirectories`    | Directories that should be excluded completely, i.e. not visible in the resulting data at all. The defaults will always be skipped.                                                                                                                                          | `['/node_modules', '/flow-typed', '/coverage']` |
-
 ## Badges
 
 By default, codehawk-cli generates 2 badges (in `generated/*.svg`) when called via the main CLI interface:

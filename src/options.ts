@@ -45,6 +45,11 @@ const baseOptions: CodehawkOptions = {
     default: 10,
     replaceDefault: true,
   },
+  cliOutputLimit: {
+    type: 'number',
+    default: 25,
+    replaceDefault: true,
+  },
 }
 
 const injectOptionValues = ({
@@ -72,6 +77,7 @@ const injectOptionValues = ({
       newOptions[optionKey] = val as string[]
       break
     case 'minimumThreshold':
+    case 'cliOutputLimit':
       newOptions[optionKey] = parseInt(val, 10)
       break
     default:
