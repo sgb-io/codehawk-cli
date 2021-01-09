@@ -140,3 +140,9 @@ export interface CodehawkComplexityResult extends ComplexityResult {
 export interface CompleteCodehawkComplexityResult extends CodehawkComplexityResult {
   coverage: string
 }
+
+export interface ResultsSummary {
+  average: number
+  median: number
+  worst: number
+}

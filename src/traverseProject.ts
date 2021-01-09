@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import slash from 'slash'
-import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from './util'
+import { getFsEntity, shouldSeeEntity, shouldAnalyzeEntity } from './utils'
 import type {
   AssembledOptions,
   ParsedEntity,
@@ -17,15 +17,35 @@ export const walkSync = (
 ): ParsedEntity[] => {
   const fileList: ParsedEntity[] = []
   const items = fs.readdirSync(dir)
-  const visibleEntities = items.filter((i) => shouldSeeEntity(dir, i, options))
+  const parsedEntities = items.map((filename) => ({
+    filename,
+    fullPath: path.join(dir, filename),
+    entity: getFsEntity(path.join(dir, filename)),
+    relativeDir: slash(dir).replace(slash(process.cwd()), ''),
+  }))
+  const visibleEntities = parsedEntities.filter((item) =>
+    shouldSeeEntity({
+      filename: item.filename,
+      dir,
+      fullPath: item.fullPath,
+      entity: item.entity,
+      options,
+      relativeDir: item.relativeDir,
+    })
+  )
 
   visibleEntities.forEach((item) => {
-    const fullPath = path.join(dir, item)
-    const entity = getFsEntity(fullPath)
+    const { fullPath, filename, entity, relativeDir } = item
     const baseParsedEntity = {
-      fullPath: slash(fullPath),
-      filename: item,
-      shouldAnalyze: shouldAnalyzeEntity(dir, item, options),
+      fullPath: slash(item.fullPath),
+      filename,
+      shouldAnalyze: shouldAnalyzeEntity({
+        entity,
+        filename,
+        fullPath,
+        options,
+        relativeDir,
+      }),
     }
 
     if (entity.isDirectory()) {

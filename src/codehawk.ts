@@ -5,25 +5,20 @@ import { analyzeFile, calculateComplexity } from './analyze'
 import { getFileContents, walkSync } from './traverseProject'
 import { getTimesDependedOn, getProjectDeps } from './dependencies'
 import type {
-  ParsedEntity,
-  ParsedFile,
-  AnalyzedFile,
   AnalyzedDirectory,
   AnalyzedEntity,
+  AnalyzedFile,
+  AssembledOptions,
+  FullyAnalyzedDirectory,
   FullyAnalyzedEntity,
   FullyAnalyzedFile,
-  FullyAnalyzedDirectory,
-  AssembledOptions,
+  ParsedEntity,
+  ParsedFile,
+  ResultsSummary,
 } from './types'
 import { buildOptions, getConfiguration } from './options'
-import { flattenEntireTree } from './util'
 import { generateBadge } from './badge'
-
-export interface ResultsSummary {
-  average: number
-  median: number
-  worst: number
-}
+import { getResultsAsList, getResultsSummary } from './utils'
 
 export interface Results {
   options: AssembledOptions
@@ -150,67 +145,6 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
     summary,
     resultsList: resultsAsList,
     fullResultsTree: secondRunResults,
-  }
-}
-
-const getResultsAsList = (
-  analyzedEntities: FullyAnalyzedEntity[],
-  limit?: number
-): FullyAnalyzedFile[] => {
-  const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<
-    FullyAnalyzedFile
-  >(analyzedEntities)
-    .filter((entity) => {
-      return entity.type === 'file' && !!entity.complexityReport
-    })
-    // Sort by codehawk score, ascending (most complex files are first in the list)
-    .sort((entityA, entityB) => {
-      return (
-        entityA.complexityReport.codehawkScore -
-        entityB.complexityReport.codehawkScore
-      )
-    })
-
-  return limit ? flatFileResults.slice(0, limit) : flatFileResults
-}
-
-const getMedian = (numbers: number[]): number => {
-  const sorted = numbers.slice().sort((a, b) => a - b)
-  const middle = Math.floor(sorted.length / 2)
-
-  if (sorted.length % 2 === 0) {
-    return (sorted[middle - 1] + sorted[middle]) / 2
-  }
-
-  return sorted[middle]
-}
-
-const getResultsSummary = (
-  resultsAsList: FullyAnalyzedFile[]
-): ResultsSummary => {
-  const allScores: number[] = resultsAsList.reduce((arr: number[], current) => {
-    if (current.complexityReport) {
-      arr.push(current.complexityReport.codehawkScore)
-    }
-    return arr
-  }, [])
-  const total = allScores.reduce((total: number, score) => {
-    return total + score
-  }, 0)
-  const worst = allScores.reduce((worst: number, score) => {
-    if (score < worst) {
-      return score
-    }
-    return worst
-  }, 100) // Start with max maintainability, work downwards
-
-  const average = total / allScores.length
-  const median = getMedian(allScores)
-
-  return {
-    average,
-    median,
-    worst,
   }
 }
 

@@ -1,6 +1,6 @@
 import path from 'path'
 import slash from 'slash'
-import { flattenEntireTree } from './util'
+import { flattenEntireTree } from './utils'
 import type { AnalyzedEntity, AnalyzedFile } from './types'
 
 // Gathers all the dependencies as a flat array of strings across all analyzed files
