@@ -24,19 +24,18 @@ export const getResultsAsList = (
   analyzedEntities: FullyAnalyzedEntity[],
   limit?: number
 ): FullyAnalyzedFile[] => {
-  const flatFileResults: FullyAnalyzedFile[] = flattenEntireTree<
-    FullyAnalyzedFile
-  >(analyzedEntities)
-    .filter((entity) => {
-      return entity.type === 'file' && !!entity.complexityReport
-    })
-    // Sort by codehawk score, ascending (most complex files are first in the list)
-    .sort((entityA, entityB) => {
-      return (
-        entityA.complexityReport.codehawkScore -
-        entityB.complexityReport.codehawkScore
-      )
-    })
+  const flatFileResults: FullyAnalyzedFile[] =
+    flattenEntireTree<FullyAnalyzedFile>(analyzedEntities)
+      .filter((entity) => {
+        return entity.type === 'file' && !!entity.complexityReport
+      })
+      // Sort by codehawk score, ascending (most complex files are first in the list)
+      .sort((entityA, entityB) => {
+        return (
+          entityA.complexityReport.codehawkScore -
+          entityB.complexityReport.codehawkScore
+        )
+      })
 
   return limit ? flatFileResults.slice(0, limit) : flatFileResults
 }
