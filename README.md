@@ -7,7 +7,7 @@ Codehawk is a static analysis tool for JavaScript projects. It is intended as a 
 
 ## Scope
 
-*JavaScript, TypeScript and Flow* projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code).
+JavaScript (including TypeScript and Flow) projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code).
 
 It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
 
@@ -152,7 +152,7 @@ Codehawk gathers various complexity metrics, including:
     - Will not run quickly on large projects, so use caution and common sense when applying it to a workflow or pipeline.
     - Recursively traverses directory trees, so if one activates the process inside a node_modules or C drive directory (unintended usage), you are likely to experience problems.
 - Opinionated: the formula for calculating overall file "scores" is arbitrary and based on original, unpublished research. Users are free to interpret the numbers differently and generate their own scorings.
-- Internal quality needs improvement: I envision moving the source to TypeScript if there is user interest. The tests are also rudimentary and difficult to maintain.
+- Internal quality needs improvement: at present, the tests are rudimentary and it can be awkward to compare before/after states when changes are made to codehawk itself
 - `codehawk.json` configuration files are currently required. However, they can be empty.
 
 ## Testing and Samples
@@ -161,7 +161,7 @@ Codehawk gathers various complexity metrics, including:
 
 Sweetalert in this directory is a static export (carried out in 2019) of that library.
 
-Each sample conatins an empty `codehawk.json` configuration file (at present, this config)
+Each sample contains an empty `codehawk.json` configuration file (at present, this config)
 
 ## Known Issues
 
