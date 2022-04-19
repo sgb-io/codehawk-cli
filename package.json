@@ -73,7 +73,7 @@
   "main": "build/codehawk.js",
   "types": "build/codehawk.d.ts",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "jest": {
     "preset": "ts-jest",
