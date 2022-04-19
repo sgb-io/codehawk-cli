@@ -8,7 +8,7 @@ As the project grows, these guidelines may evolve.
 
 Codehawk-cli is a pure Node.JS program. All you need to develop the project is
 
-- Node.js v10+ (v14 recommended)
+- Node.js v12+ (v14+ or latest LTS is recommended)
 - Git (no specific version required but v2+ is recommended)
 - Yarn (v1 recommended, v2 currently untested)
 
