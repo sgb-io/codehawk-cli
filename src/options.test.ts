@@ -1,11 +1,10 @@
 import * as fs from 'fs'
-import { mocked } from 'ts-jest/utils'
 
 import { getConfiguration } from './options'
 
 jest.mock('fs')
 
-const mockedFs = mocked(fs, true)
+const mockedFs = jest.mocked(fs, true)
 
 describe('when attempting to get the configuration for codehawk', () => {
   afterEach(() => {
