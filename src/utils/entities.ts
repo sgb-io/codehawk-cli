@@ -66,16 +66,11 @@ export const shouldSeeEntity = ({
 
   // Is a directory?
   if (entity.isDirectory()) {
-    return true
+    return !shouldSkipDir(relativeDir, options.skipDirectories)
   }
 
   // Is codehawk config?
   if (filename === 'codehawk.json') {
-    return false
-  }
-
-  // Should the directory be completely skipped according to user options?
-  if (shouldSkipDir(relativeDir, options.skipDirectories)) {
     return false
   }
 
