@@ -11,7 +11,10 @@ const shouldSkipDir = (
   skipDirectories: string[]
 ): boolean => {
   for (let i = 0; i < skipDirectories.length; i += 1) {
-    if (relativeDir.startsWith(skipDirectories[i])) {
+    if (
+      relativeDir.startsWith(skipDirectories[i]) ||
+      `${relativeDir}/`.startsWith(skipDirectories[i])
+    ) {
       return true
     }
   }
@@ -71,6 +74,11 @@ export const shouldSeeEntity = ({
 
   // Is codehawk config?
   if (filename === 'codehawk.json') {
+    return false
+  }
+
+  // Is it a file in a directory that should be skipped?
+  if (shouldSkipDir(relativeDir, options.skipDirectories)) {
     return false
   }
 

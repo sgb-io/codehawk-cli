@@ -1037,70 +1037,14 @@
       "filename": "docs",
       "shouldAnalyze": true,
       "type": "dir",
-      "files": [
-        {
-          "fullPath": "/samples/sweetalert/docs/CNAME",
-          "filename": "CNAME",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs/index.html",
-          "filename": "index.html",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        }
-      ]
+      "files": []
     },
     {
       "fullPath": "/samples/sweetalert/docs-src",
       "filename": "docs-src",
       "shouldAnalyze": true,
       "type": "dir",
-      "files": [
-        {
-          "fullPath": "/samples/sweetalert/docs-src/index.hbs",
-          "filename": "index.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout-docs.hbs",
-          "filename": "layout-docs.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout-guides.hbs",
-          "filename": "layout-guides.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/docs-src/layout.hbs",
-          "filename": "layout.hbs",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/docs-src",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        }
-      ]
+      "files": []
     },
     {
       "fullPath": "/samples/sweetalert/src",
@@ -2211,26 +2155,7 @@
       "filename": "typings",
       "shouldAnalyze": true,
       "type": "dir",
-      "files": [
-        {
-          "fullPath": "/samples/sweetalert/typings/core.d.ts",
-          "filename": "core.d.ts",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/typings",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        },
-        {
-          "fullPath": "/samples/sweetalert/typings/sweetalert.d.ts",
-          "filename": "sweetalert.d.ts",
-          "shouldAnalyze": false,
-          "path": "/samples/sweetalert/typings",
-          "type": "file",
-          "complexityReport": null,
-          "timesDependedOn": 0
-        }
-      ]
+      "files": []
     },
     {
       "fullPath": "/samples/sweetalert/expected.json",
