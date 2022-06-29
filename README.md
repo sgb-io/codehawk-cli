@@ -11,7 +11,7 @@ JavaScript (including TypeScript and Flow) projects are supported for analysis. 
 
 It works by traversing a directory and discovering all supported filetypes, runs a static analysis routine on each file, then performs project-wide analysis such as inter-dependency counting and test coverage mapping.
 
-The CLI runs as a Node.js process. Node.js >=12 is required, but >=14 is recommended. Node v10 and under is not supported.
+The CLI runs as a Node.js process. Node.js >=14 is required, but >=16 is recommended. Node v12 and under is not supported.
 
 ## Usage
 
