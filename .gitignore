@@ -9,6 +9,7 @@
 # production
 /build
 bin
+generated
 
 # misc
 .DS_Store

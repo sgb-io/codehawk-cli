@@ -16,7 +16,7 @@ const getBadgeColor = (percent: number): string => {
 }
 
 export const generateBadge = (results: Results): void => {
-  const { average, worst } = results.summary
+  const { average, median, worst } = results.summary
   const { badgesDirectory } = results.options
   const badgesPath = badgesDirectory[0] || '' // Fall back to root
   const actualPath = slash(process.cwd()) + badgesPath
@@ -41,17 +41,57 @@ export const generateBadge = (results: Results): void => {
   } catch (error) {
     console.error(error)
   }
+  try {
+    fs.writeFileSync(
+        `${actualPath}/med-maintainability.svg`,
+        badgen({
+          label: 'maintainability (median)',
+          status: `${median.toFixed(2)}`,
+          color: getBadgeColor(median),
+        }),
+        'utf8'
+    )
+  } catch (error) {
+    console.error(error)
+  }
+
+  try {
+    const global = Math.min(average,median);
+    fs.writeFileSync(
+        `${actualPath}/global-maintainability.svg`,
+        badgen({
+          label: 'maintainability',
+          status: `${global.toPrecision(2)}`,
+          color: getBadgeColor(global),
+        }),
+        'utf8'
+    )
+  } catch (error) {
+    console.error(error)
+  }
 
   try {
     fs.writeFileSync(
-      `${actualPath}/worst-maintainability.svg`,
-      badgen({
-        label: 'maintainability (worst)',
-        status: `${worst.toFixed(2)}`,
-        color: getBadgeColor(worst),
-      }),
-      'utf8'
+        `${actualPath}/worst-maintainability.svg`,
+        badgen({
+          label: 'maintainability (worst)',
+          status: `${worst.toFixed(2)}`,
+          color: getBadgeColor(worst),
+        }),
+        'utf8'
     )
+  } catch (error) {
+    console.error(error)
+  }
+
+  try {
+    const global = Math.min(average,median);
+    fs.writeFileSync(`${actualPath}/summary.json`, JSON.stringify({global,average,median,worst}),'utf8')
+  } catch (error) {
+    console.error(error)
+  }
+  try {
+    fs.writeFileSync(`${actualPath}/maintainability-report.json`, JSON.stringify(results),'utf8')
   } catch (error) {
     console.error(error)
   }
