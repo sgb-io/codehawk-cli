@@ -107,6 +107,11 @@ export interface AnalyzedFile extends ParsedFile {
   complexityReport?: CompleteCodehawkComplexityResult
 }
 
+// For when we have a guarantee of a complexity report
+export interface AnalyzedFileWithReport extends ParsedFile {
+  complexityReport: CompleteCodehawkComplexityResult
+}
+
 export interface AnalyzedDirectory extends BaseEntity {
   type: 'dir'
   files: AnalyzedFile[]

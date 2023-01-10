@@ -99,27 +99,30 @@ export const buildOptions = (
 
   Object.keys(baseOptions).forEach((optionKey: AllOptionKeys) => {
     const option = baseOptions[optionKey]
-    let val = option.default
+    const projectOption = projectOptions[optionKey]
+    let val = option?.default
 
-    if (projectOptions[optionKey]) {
+    if (option && projectOption) {
       // Project options can either be added to the defaults, or replace them.
       if (option.replaceDefault) {
         // Mutate options by replacing (we assume project config is valid!)
-        val = projectOptions[optionKey]
+        val = projectOption
       } else {
         // Mutate options by mixing in project options to defaults
         val =
           option.type === 'stringArray' && Array.isArray(val)
-            ? val.concat(projectOptions[optionKey] as string[])
-            : (val = projectOptions[optionKey])
+            ? val.concat(projectOption as string[])
+            : (val = projectOption)
       }
     }
 
-    assembledOptions = injectOptionValues({
-      existingOptions: assembledOptions,
-      optionKey,
-      val,
-    })
+    if (val) {
+      assembledOptions = injectOptionValues({
+        existingOptions: assembledOptions,
+        optionKey,
+        val,
+      })
+    }
   })
 
   return assembledOptions

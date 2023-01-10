@@ -1,6 +1,7 @@
 import path from 'path'
 import slash from 'slash'
 import { flattenEntireTree } from './utils'
+
 import type { AnalyzedEntity, AnalyzedFile } from './types'
 
 // Gathers all the dependencies as a flat array of strings across all analyzed files
@@ -12,9 +13,12 @@ export const getProjectDeps = (firstRunResults: AnalyzedEntity[]): string[] => {
     const item = flatItems[i]
     if (item.complexityReport) {
       for (let n = 0; n < item.complexityReport.dependencies.length; n += 1) {
-        const dep = flatItems[i].complexityReport.dependencies[n]
-        const depPath = path.resolve(item.path, dep.path)
-        allAbsoluteDeps.push(depPath)
+        const report = flatItems[i].complexityReport
+        if (report) {
+          const dep = report.dependencies[n]
+          const depPath = path.resolve(item.path, dep.path)
+          allAbsoluteDeps.push(depPath)
+        }
       }
     }
   }
@@ -47,7 +51,7 @@ export const getTimesDependedOn = (
     )
     const namedImportMatch = new RegExp(`${cleanD}/`, 'i')
     const indexMatch =
-      filePath.match(defaultImportMatch) || filePath.match(namedImportMatch)
+      filePath.match(defaultImportMatch) ?? filePath.match(namedImportMatch)
 
     return fullMatch || indexMatch
   })

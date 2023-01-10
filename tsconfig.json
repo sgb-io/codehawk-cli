@@ -5,11 +5,9 @@
     "noImplicitAny": true,
     "outDir": "build",
     "esModuleInterop": true,
-    "declaration": true
+    "declaration": true,
+    "strictNullChecks": true
   },
   "include": ["src/**/*"],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }

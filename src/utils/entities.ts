@@ -51,7 +51,7 @@ export const shouldSeeEntity = ({
   relativeDir,
 }: {
   dir: string
-  entity: fs.Stats
+  entity: fs.Stats | null
   filename: string
   fullPath: string
   options: AssembledOptions
@@ -68,7 +68,7 @@ export const shouldSeeEntity = ({
   }
 
   // Is a directory?
-  if (entity.isDirectory()) {
+  if (entity.isDirectory() && options.skipDirectories) {
     return !shouldSkipDir(relativeDir, options.skipDirectories)
   }
 
@@ -78,7 +78,10 @@ export const shouldSeeEntity = ({
   }
 
   // Is it a file in a directory that should be skipped?
-  if (shouldSkipDir(relativeDir, options.skipDirectories)) {
+  if (
+    options.skipDirectories &&
+    shouldSkipDir(relativeDir, options.skipDirectories)
+  ) {
     return false
   }
 
@@ -93,7 +96,7 @@ export const shouldAnalyzeEntity = ({
   options,
   relativeDir,
 }: {
-  entity: fs.Stats
+  entity: fs.Stats | null
   filename: string
   fullPath: string
   options: AssembledOptions
@@ -117,7 +120,7 @@ export const shouldAnalyzeEntity = ({
   }
 
   // Is the extension included in the options?
-  if (!options.extensions.includes(extension)) {
+  if (options.extensions && !options.extensions.includes(extension)) {
     return false
   }
 
