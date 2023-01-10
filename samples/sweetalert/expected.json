@@ -1,11 +1,25 @@
 {
   "options": {
-    "badgesDirectory": ["/generated"],
-    "enableFlow": false,
-    "extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "excludeDirectories": ["/dist", "/bin", "/build"],
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
     "excludeExact": [],
-    "excludeFilenames": [".d.ts", ".min.js", ".bundle.js"],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
     "skipDirectories": [
       "/node_modules",
       "/flow-typed",
@@ -18,7 +32,7 @@
     "cliOutputLimit": 25
   },
   "summary": {
-    "average": 66.43759137724325,
+    "average": 66.87672729626027,
     "median": 58.89252972007756,
     "worst": 44.90727094909405
   },
@@ -41,11 +55,20 @@
             "time": 831.445,
             "vocabulary": 89,
             "volume": 1482.943,
-            "operands": { "distinct": 76, "total": 118 },
-            "operators": { "distinct": 13, "total": 111 }
+            "operands": {
+              "distinct": 76,
+              "total": 118
+            },
+            "operators": {
+              "distinct": 13,
+              "total": 111
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 62, "physical": 104 }
+          "sloc": {
+            "logical": 62,
+            "physical": 104
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -75,97 +98,48 @@
             "time": 4950.345,
             "vocabulary": 90,
             "volume": 2544.806,
-            "operands": { "distinct": 67, "total": 204 },
-            "operators": { "distinct": 23, "total": 188 }
+            "operands": {
+              "distinct": 67,
+              "total": 204
+            },
+            "operators": {
+              "distinct": 23,
+              "total": 188
+            }
           },
           "paramCount": 17,
-          "sloc": { "logical": 107, "physical": 150 }
+          "sloc": {
+            "logical": 107,
+            "physical": 143
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../utils", "type": "esm" },
-          { "line": 2, "path": "./buttons", "type": "esm" },
-          { "line": 3, "path": "./content", "type": "esm" },
-          { "line": 4, "path": "./deprecations", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./buttons",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "./content",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "./deprecations",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 150,
+        "lineEnd": 143,
         "lineStart": 1,
         "maintainability": 102.469,
-        "codehawkScore": 46.51449814838432,
-        "coverage": "0"
-      },
-      "timesDependedOn": 1
-    },
-    {
-      "fullPath": "/samples/sweetalert/src/modules/options/buttons.ts",
-      "filename": "buttons.ts",
-      "shouldAnalyze": true,
-      "path": "/samples/sweetalert/src/modules/options",
-      "type": "file",
-      "complexityReport": {
-        "aggregate": {
-          "cyclomatic": 20,
-          "cyclomaticDensity": 17.544,
-          "halstead": {
-            "bugs": 0.793,
-            "difficulty": 43.615,
-            "effort": 103824.695,
-            "length": 381,
-            "time": 5768.039,
-            "vocabulary": 76,
-            "volume": 2380.46,
-            "operands": { "distinct": 52, "total": 189 },
-            "operators": { "distinct": 24, "total": 192 }
-          },
-          "paramCount": 6,
-          "sloc": { "logical": 114, "physical": 150 }
-        },
-        "dependencies": [{ "line": 1, "path": "../utils", "type": "esm" }],
-        "errors": [],
-        "lineEnd": 150,
-        "lineStart": 1,
-        "maintainability": 88.721,
-        "codehawkScore": 47.06570281407246,
-        "coverage": "0"
-      },
-      "timesDependedOn": 7
-    },
-    {
-      "fullPath": "/samples/sweetalert/src/modules/event-listeners.ts",
-      "filename": "event-listeners.ts",
-      "shouldAnalyze": true,
-      "path": "/samples/sweetalert/src/modules",
-      "type": "file",
-      "complexityReport": {
-        "aggregate": {
-          "cyclomatic": 32,
-          "cyclomaticDensity": 29.358,
-          "halstead": {
-            "bugs": 0.75,
-            "difficulty": 27.708,
-            "effort": 62356.211,
-            "length": 357,
-            "time": 3464.234,
-            "vocabulary": 79,
-            "volume": 2250.45,
-            "operands": { "distinct": 60, "total": 175 },
-            "operators": { "distinct": 19, "total": 182 }
-          },
-          "paramCount": 11,
-          "sloc": { "logical": 109, "physical": 141 }
-        },
-        "dependencies": [
-          { "line": 1, "path": "./state", "type": "esm" },
-          { "line": 2, "path": "./actions", "type": "esm" },
-          { "line": 3, "path": "./utils", "type": "esm" },
-          { "line": 4, "path": "./options/buttons", "type": "esm" },
-          { "line": 5, "path": "./class-list", "type": "esm" }
-        ],
-        "errors": [],
-        "lineEnd": 141,
-        "lineStart": 1,
-        "maintainability": 110.946,
-        "codehawkScore": 47.300787024008535,
+        "codehawkScore": 46.9672518057813,
         "coverage": "0"
       },
       "timesDependedOn": 1
@@ -188,21 +162,148 @@
             "time": 1545.577,
             "vocabulary": 78,
             "volume": 1634.205,
-            "operands": { "distinct": 63, "total": 143 },
-            "operators": { "distinct": 15, "total": 117 }
+            "operands": {
+              "distinct": 63,
+              "total": 143
+            },
+            "operators": {
+              "distinct": 15,
+              "total": 117
+            }
           },
           "paramCount": 1,
-          "sloc": { "logical": 75, "physical": 105 }
+          "sloc": {
+            "logical": 75,
+            "physical": 102
+          }
         },
         "dependencies": [],
         "errors": [],
-        "lineEnd": 105,
+        "lineEnd": 102,
         "lineStart": 1,
         "maintainability": 78.559,
-        "codehawkScore": 47.379394934117734,
+        "codehawkScore": 47.65401370449591,
         "coverage": "0"
       },
       "timesDependedOn": 2
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/options/buttons.ts",
+      "filename": "buttons.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules/options",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 20,
+          "cyclomaticDensity": 17.544,
+          "halstead": {
+            "bugs": 0.793,
+            "difficulty": 43.615,
+            "effort": 103824.695,
+            "length": 381,
+            "time": 5768.039,
+            "vocabulary": 76,
+            "volume": 2380.46,
+            "operands": {
+              "distinct": 52,
+              "total": 189
+            },
+            "operators": {
+              "distinct": 24,
+              "total": 192
+            }
+          },
+          "paramCount": 6,
+          "sloc": {
+            "logical": 114,
+            "physical": 131
+          }
+        },
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          }
+        ],
+        "errors": [],
+        "lineEnd": 131,
+        "lineStart": 1,
+        "maintainability": 88.721,
+        "codehawkScore": 48.34879938044713,
+        "coverage": "0"
+      },
+      "timesDependedOn": 7
+    },
+    {
+      "fullPath": "/samples/sweetalert/src/modules/event-listeners.ts",
+      "filename": "event-listeners.ts",
+      "shouldAnalyze": true,
+      "path": "/samples/sweetalert/src/modules",
+      "type": "file",
+      "complexityReport": {
+        "aggregate": {
+          "cyclomatic": 32,
+          "cyclomaticDensity": 29.358,
+          "halstead": {
+            "bugs": 0.75,
+            "difficulty": 27.708,
+            "effort": 62356.211,
+            "length": 357,
+            "time": 3464.234,
+            "vocabulary": 79,
+            "volume": 2250.45,
+            "operands": {
+              "distinct": 60,
+              "total": 175
+            },
+            "operators": {
+              "distinct": 19,
+              "total": 182
+            }
+          },
+          "paramCount": 11,
+          "sloc": {
+            "logical": 109,
+            "physical": 118
+          }
+        },
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "./state",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./actions",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "./utils",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "./options/buttons",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "./class-list",
+            "type": "esm"
+          }
+        ],
+        "errors": [],
+        "lineEnd": 118,
+        "lineStart": 1,
+        "maintainability": 110.946,
+        "codehawkScore": 48.98781585896909,
+        "coverage": "0"
+      },
+      "timesDependedOn": 1
     },
     {
       "fullPath": "/samples/sweetalert/src/polyfills.js",
@@ -222,11 +323,20 @@
             "time": 3335.814,
             "vocabulary": 87,
             "volume": 1610.736,
-            "operands": { "distinct": 54, "total": 122 },
-            "operators": { "distinct": 33, "total": 128 }
+            "operands": {
+              "distinct": 54,
+              "total": 122
+            },
+            "operators": {
+              "distinct": 33,
+              "total": 128
+            }
           },
           "paramCount": 8,
-          "sloc": { "logical": 56, "physical": 110 }
+          "sloc": {
+            "logical": 56,
+            "physical": 110
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -256,26 +366,63 @@
             "time": 1151.971,
             "vocabulary": 66,
             "volume": 1160.524,
-            "operands": { "distinct": 49, "total": 103 },
-            "operators": { "distinct": 17, "total": 89 }
+            "operands": {
+              "distinct": 49,
+              "total": 103
+            },
+            "operators": {
+              "distinct": 17,
+              "total": 89
+            }
           },
           "paramCount": 10,
-          "sloc": { "logical": 46, "physical": 81 }
+          "sloc": {
+            "logical": 46,
+            "physical": 73
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../utils", "type": "esm" },
-          { "line": 2, "path": "./modal", "type": "esm" },
-          { "line": 3, "path": "../class-list", "type": "esm" },
-          { "line": 8, "path": "../options/buttons", "type": "esm" },
-          { "line": 9, "path": "../markup", "type": "esm" },
-          { "line": 10, "path": "../actions", "type": "esm" },
-          { "line": 11, "path": "../state", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./modal",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "../class-list",
+            "type": "esm"
+          },
+          {
+            "line": 8,
+            "path": "../options/buttons",
+            "type": "esm"
+          },
+          {
+            "line": 9,
+            "path": "../markup",
+            "type": "esm"
+          },
+          {
+            "line": 10,
+            "path": "../actions",
+            "type": "esm"
+          },
+          {
+            "line": 11,
+            "path": "../state",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 81,
+        "lineEnd": 73,
         "lineStart": 1,
         "maintainability": 109.444,
-        "codehawkScore": 52.63715061303356,
+        "codehawkScore": 53.62231632010348,
         "coverage": "0"
       },
       "timesDependedOn": 2
@@ -298,23 +445,48 @@
             "time": 1121.218,
             "vocabulary": 58,
             "volume": 1019.289,
-            "operands": { "distinct": 40, "total": 88 },
-            "operators": { "distinct": 18, "total": 86 }
+            "operands": {
+              "distinct": 40,
+              "total": 88
+            },
+            "operators": {
+              "distinct": 18,
+              "total": 86
+            }
           },
           "paramCount": 1,
-          "sloc": { "logical": 44, "physical": 67 }
+          "sloc": {
+            "logical": 44,
+            "physical": 62
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./utils", "type": "esm" },
-          { "line": 2, "path": "./options/buttons", "type": "esm" },
-          { "line": 3, "path": "./class-list", "type": "esm" },
-          { "line": 10, "path": "./state", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./options/buttons",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "./class-list",
+            "type": "esm"
+          },
+          {
+            "line": 10,
+            "path": "./state",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 67,
+        "lineEnd": 62,
         "lineStart": 1,
         "maintainability": 110.662,
-        "codehawkScore": 53.67817875674,
+        "codehawkScore": 54.41294097685882,
         "coverage": "0"
       },
       "timesDependedOn": 4
@@ -337,25 +509,58 @@
             "time": 939.154,
             "vocabulary": 56,
             "volume": 923.369,
-            "operands": { "distinct": 39, "total": 84 },
-            "operators": { "distinct": 17, "total": 75 }
+            "operands": {
+              "distinct": 39,
+              "total": 84
+            },
+            "operators": {
+              "distinct": 17,
+              "total": 75
+            }
           },
           "paramCount": 7,
-          "sloc": { "logical": 43, "physical": 72 }
+          "sloc": {
+            "logical": 43,
+            "physical": 67
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../options/buttons", "type": "esm" },
-          { "line": 2, "path": "./modal", "type": "esm" },
-          { "line": 3, "path": "../markup", "type": "esm" },
-          { "line": 4, "path": "../state", "type": "esm" },
-          { "line": 5, "path": "../actions", "type": "esm" },
-          { "line": 6, "path": "../class-list", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../options/buttons",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./modal",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "../markup",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "../state",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "../actions",
+            "type": "esm"
+          },
+          {
+            "line": 6,
+            "path": "../class-list",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 72,
+        "lineEnd": 67,
         "lineStart": 1,
         "maintainability": 114.5,
-        "codehawkScore": 54.049450575135026,
+        "codehawkScore": 54.731304782109554,
         "coverage": "0"
       },
       "timesDependedOn": 2
@@ -378,26 +583,63 @@
             "time": 363.087,
             "vocabulary": 41,
             "volume": 728.627,
-            "operands": { "distinct": 33, "total": 74 },
-            "operators": { "distinct": 8, "total": 62 }
+            "operands": {
+              "distinct": 33,
+              "total": 74
+            },
+            "operators": {
+              "distinct": 8,
+              "total": 62
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 39, "physical": 65 }
+          "sloc": {
+            "logical": 39,
+            "physical": 60
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../utils", "type": "esm" },
-          { "line": 2, "path": "../markup", "type": "esm" },
-          { "line": 3, "path": "../class-list", "type": "esm" },
-          { "line": 8, "path": "./icon", "type": "esm" },
-          { "line": 9, "path": "./text", "type": "esm" },
-          { "line": 10, "path": "./buttons", "type": "esm" },
-          { "line": 11, "path": "./content", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "../markup",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "../class-list",
+            "type": "esm"
+          },
+          {
+            "line": 8,
+            "path": "./icon",
+            "type": "esm"
+          },
+          {
+            "line": 9,
+            "path": "./text",
+            "type": "esm"
+          },
+          {
+            "line": 10,
+            "path": "./buttons",
+            "type": "esm"
+          },
+          {
+            "line": 11,
+            "path": "./content",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 65,
+        "lineEnd": 60,
         "lineStart": 1,
         "maintainability": 116.606,
-        "codehawkScore": 54.52583298958849,
+        "codehawkScore": 55.28413232544305,
         "coverage": "0"
       },
       "timesDependedOn": 6
@@ -420,18 +662,27 @@
             "time": 1070.592,
             "vocabulary": 75,
             "volume": 1258.221,
-            "operands": { "distinct": 57, "total": 97 },
-            "operators": { "distinct": 18, "total": 105 }
+            "operands": {
+              "distinct": 57,
+              "total": 97
+            },
+            "operators": {
+              "distinct": 18,
+              "total": 105
+            }
           },
           "paramCount": 8,
-          "sloc": { "logical": 47, "physical": 61 }
+          "sloc": {
+            "logical": 47,
+            "physical": 57
+          }
         },
         "dependencies": [],
         "errors": [],
-        "lineEnd": 61,
+        "lineEnd": 57,
         "lineStart": 1,
         "maintainability": 114.99,
-        "codehawkScore": 55.43471610919461,
+        "codehawkScore": 56.077245969246036,
         "coverage": "0"
       },
       "timesDependedOn": 10
@@ -454,22 +705,43 @@
             "time": 617.583,
             "vocabulary": 53,
             "volume": 756.086,
-            "operands": { "distinct": 37, "total": 68 },
-            "operators": { "distinct": 16, "total": 64 }
+            "operands": {
+              "distinct": 37,
+              "total": 68
+            },
+            "operators": {
+              "distinct": 16,
+              "total": 64
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 36, "physical": 47 }
+          "sloc": {
+            "logical": 36,
+            "physical": 42
+          }
         },
         "dependencies": [
-          { "line": 2, "path": "./modal", "type": "esm" },
-          { "line": 3, "path": "../markup", "type": "esm" },
-          { "line": 4, "path": "../class-list", "type": "esm" }
+          {
+            "line": 2,
+            "path": "./modal",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "../markup",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "../class-list",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 47,
+        "lineEnd": 42,
         "lineStart": 1,
         "maintainability": 107.725,
-        "codehawkScore": 56.81690867438252,
+        "codehawkScore": 57.88248957000378,
         "coverage": "0"
       },
       "timesDependedOn": 2
@@ -492,20 +764,33 @@
             "time": 675.256,
             "vocabulary": 37,
             "volume": 614.715,
-            "operands": { "distinct": 22, "total": 58 },
-            "operators": { "distinct": 15, "total": 60 }
+            "operands": {
+              "distinct": 22,
+              "total": 58
+            },
+            "operators": {
+              "distinct": 15,
+              "total": 60
+            }
           },
           "paramCount": 6,
-          "sloc": { "logical": 28, "physical": 51 }
+          "sloc": {
+            "logical": 28,
+            "physical": 47
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./options/buttons", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./options/buttons",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 51,
+        "lineEnd": 47,
         "lineStart": 1,
         "maintainability": 116.092,
-        "codehawkScore": 57.1359500207509,
+        "codehawkScore": 57.90974189351764,
         "coverage": "0"
       },
       "timesDependedOn": 5
@@ -528,13 +813,28 @@
             "time": 186.744,
             "vocabulary": 32,
             "volume": 490,
-            "operands": { "distinct": 25, "total": 49 },
-            "operators": { "distinct": 7, "total": 49 }
+            "operands": {
+              "distinct": 25,
+              "total": 49
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 49
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 16, "physical": 33 }
+          "sloc": {
+            "logical": 16,
+            "physical": 33
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
         "lineEnd": 33,
         "lineStart": 1,
@@ -562,17 +862,42 @@
             "time": 222.962,
             "vocabulary": 33,
             "volume": 343.019,
-            "operands": { "distinct": 20, "total": 36 },
-            "operators": { "distinct": 13, "total": 32 }
+            "operands": {
+              "distinct": 20,
+              "total": 36
+            },
+            "operators": {
+              "distinct": 13,
+              "total": 32
+            }
           },
           "paramCount": 3,
-          "sloc": { "logical": 20, "physical": 34 }
+          "sloc": {
+            "logical": 20,
+            "physical": 34
+          }
         },
         "dependencies": [
-          { "line": 6, "path": "./modules/init", "type": "esm" },
-          { "line": 7, "path": "./modules/actions", "type": "esm" },
-          { "line": 8, "path": "./modules/state", "type": "esm" },
-          { "line": 9, "path": "./modules/options", "type": "esm" }
+          {
+            "line": 7,
+            "path": "./modules/init",
+            "type": "esm"
+          },
+          {
+            "line": 8,
+            "path": "./modules/actions",
+            "type": "esm"
+          },
+          {
+            "line": 9,
+            "path": "./modules/state",
+            "type": "esm"
+          },
+          {
+            "line": 10,
+            "path": "./modules/options",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 34,
@@ -601,15 +926,32 @@
             "time": 276.652,
             "vocabulary": 45,
             "volume": 642.547,
-            "operands": { "distinct": 36, "total": 62 },
-            "operators": { "distinct": 9, "total": 55 }
+            "operands": {
+              "distinct": 36,
+              "total": 62
+            },
+            "operators": {
+              "distinct": 9,
+              "total": 55
+            }
           },
           "paramCount": 6,
-          "sloc": { "logical": 31, "physical": 38 }
+          "sloc": {
+            "logical": 31,
+            "physical": 38
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../markup", "type": "esm" },
-          { "line": 2, "path": "./modal", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../markup",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./modal",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 38,
@@ -638,25 +980,58 @@
             "time": 55.212,
             "vocabulary": 22,
             "volume": 173.918,
-            "operands": { "distinct": 14, "total": 20 },
-            "operators": { "distinct": 8, "total": 19 }
+            "operands": {
+              "distinct": 14,
+              "total": 20
+            },
+            "operators": {
+              "distinct": 8,
+              "total": 19
+            }
           },
           "paramCount": 1,
-          "sloc": { "logical": 13, "physical": 30 }
+          "sloc": {
+            "logical": 13,
+            "physical": 27
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../utils", "type": "esm" },
-          { "line": 2, "path": "../class-list", "type": "esm" },
-          { "line": 6, "path": "./modal", "type": "esm" },
-          { "line": 7, "path": "./overlay", "type": "esm" },
-          { "line": 8, "path": "../event-listeners", "type": "esm" },
-          { "line": 9, "path": "../utils", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "../class-list",
+            "type": "esm"
+          },
+          {
+            "line": 6,
+            "path": "./modal",
+            "type": "esm"
+          },
+          {
+            "line": 7,
+            "path": "./overlay",
+            "type": "esm"
+          },
+          {
+            "line": 8,
+            "path": "../event-listeners",
+            "type": "esm"
+          },
+          {
+            "line": 9,
+            "path": "../utils",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 30,
+        "lineEnd": 27,
         "lineStart": 1,
         "maintainability": 118.751,
-        "codehawkScore": 60.934886942256135,
+        "codehawkScore": 61.9330391958566,
         "coverage": "0"
       },
       "timesDependedOn": 1
@@ -679,18 +1054,33 @@
             "time": 128.703,
             "vocabulary": 26,
             "volume": 235.022,
-            "operands": { "distinct": 14, "total": 23 },
-            "operators": { "distinct": 12, "total": 27 }
+            "operands": {
+              "distinct": 14,
+              "total": 23
+            },
+            "operators": {
+              "distinct": 12,
+              "total": 27
+            }
           },
           "paramCount": 1,
-          "sloc": { "logical": 17, "physical": 27 }
+          "sloc": {
+            "logical": 17,
+            "physical": 23
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../utils", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          }
+        ],
         "errors": [],
-        "lineEnd": 27,
+        "lineEnd": 23,
         "lineStart": 1,
         "maintainability": 111.287,
-        "codehawkScore": 62.70448988147212,
+        "codehawkScore": 64.2235255137633,
         "coverage": "0"
       },
       "timesDependedOn": 2
@@ -713,15 +1103,24 @@
             "time": 106.642,
             "vocabulary": 39,
             "volume": 449.259,
-            "operands": { "distinct": 33, "total": 47 },
-            "operators": { "distinct": 6, "total": 38 }
+            "operands": {
+              "distinct": 33,
+              "total": 47
+            },
+            "operators": {
+              "distinct": 6,
+              "total": 38
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 20, "physical": 28 }
+          "sloc": {
+            "logical": 20,
+            "physical": 29
+          }
         },
         "dependencies": [],
         "errors": [],
-        "lineEnd": 28,
+        "lineEnd": 29,
         "lineStart": 1,
         "maintainability": 96.614,
         "codehawkScore": 88.72484177785137,
@@ -747,11 +1146,20 @@
             "time": 33.17,
             "vocabulary": 18,
             "volume": 125.098,
-            "operands": { "distinct": 11, "total": 15 },
-            "operators": { "distinct": 7, "total": 15 }
+            "operands": {
+              "distinct": 11,
+              "total": 15
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 15
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 8, "physical": 10 }
+          "sloc": {
+            "logical": 8,
+            "physical": 10
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -781,11 +1189,20 @@
             "time": 24.797,
             "vocabulary": 17,
             "volume": 98.099,
-            "operands": { "distinct": 10, "total": 13 },
-            "operators": { "distinct": 7, "total": 11 }
+            "operands": {
+              "distinct": 10,
+              "total": 13
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 11
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 6, "physical": 15 }
+          "sloc": {
+            "logical": 6,
+            "physical": 15
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -815,13 +1232,28 @@
             "time": 52.039,
             "vocabulary": 17,
             "volume": 179.848,
-            "operands": { "distinct": 12, "total": 25 },
-            "operators": { "distinct": 5, "total": 19 }
+            "operands": {
+              "distinct": 12,
+              "total": 25
+            },
+            "operators": {
+              "distinct": 5,
+              "total": 19
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 9, "physical": 22 }
+          "sloc": {
+            "logical": 9,
+            "physical": 22
+          }
         },
-        "dependencies": [{ "line": 6, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 6,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
         "lineEnd": 22,
         "lineStart": 1,
@@ -849,13 +1281,28 @@
             "time": 21.152,
             "vocabulary": 14,
             "volume": 91.377,
-            "operands": { "distinct": 9, "total": 15 },
-            "operators": { "distinct": 5, "total": 9 }
+            "operands": {
+              "distinct": 9,
+              "total": 15
+            },
+            "operators": {
+              "distinct": 5,
+              "total": 9
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 5, "physical": 21 }
+          "sloc": {
+            "logical": 5,
+            "physical": 21
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
         "lineEnd": 21,
         "lineStart": 1,
@@ -883,18 +1330,35 @@
             "time": 11.523,
             "vocabulary": 12,
             "volume": 64.529,
-            "operands": { "distinct": 7, "total": 9 },
-            "operators": { "distinct": 5, "total": 9 }
+            "operands": {
+              "distinct": 7,
+              "total": 9
+            },
+            "operators": {
+              "distinct": 5,
+              "total": 9
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 5, "physical": 9 }
+          "sloc": {
+            "logical": 5,
+            "physical": 7
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "../utils", "type": "esm" },
-          { "line": 2, "path": "../markup", "type": "esm" }
+          {
+            "line": 1,
+            "path": "../utils",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "../markup",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 9,
+        "lineEnd": 7,
         "lineStart": 1,
         "maintainability": 140.282,
         "codehawkScore": 92.17455287783764,
@@ -920,15 +1384,30 @@
             "time": 16.132,
             "vocabulary": 12,
             "volume": 64.529,
-            "operands": { "distinct": 6, "total": 9 },
-            "operators": { "distinct": 6, "total": 9 }
+            "operands": {
+              "distinct": 6,
+              "total": 9
+            },
+            "operators": {
+              "distinct": 6,
+              "total": 9
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 3, "physical": 12 }
+          "sloc": {
+            "logical": 3,
+            "physical": 18
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
-        "lineEnd": 12,
+        "lineEnd": 18,
         "lineStart": 1,
         "maintainability": 133.807,
         "codehawkScore": 92.30905580181427,
@@ -954,13 +1433,28 @@
             "time": 9.043,
             "vocabulary": 10,
             "volume": 46.507,
-            "operands": { "distinct": 5, "total": 7 },
-            "operators": { "distinct": 5, "total": 7 }
+            "operands": {
+              "distinct": 5,
+              "total": 7
+            },
+            "operators": {
+              "distinct": 5,
+              "total": 7
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 3, "physical": 9 }
+          "sloc": {
+            "logical": 3,
+            "physical": 9
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
         "lineEnd": 9,
         "lineStart": 1,
@@ -988,13 +1482,28 @@
             "time": 11.073,
             "vocabulary": 10,
             "volume": 49.829,
-            "operands": { "distinct": 5, "total": 8 },
-            "operators": { "distinct": 5, "total": 7 }
+            "operands": {
+              "distinct": 5,
+              "total": 8
+            },
+            "operators": {
+              "distinct": 5,
+              "total": 7
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 3, "physical": 9 }
+          "sloc": {
+            "logical": 3,
+            "physical": 9
+          }
         },
-        "dependencies": [{ "line": 1, "path": "../class-list", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "../class-list",
+            "type": "esm"
+          }
+        ],
         "errors": [],
         "lineEnd": 9,
         "lineStart": 1,
@@ -1018,7 +1527,6 @@
           "shouldAnalyze": false,
           "path": "/samples/sweetalert/assets",
           "type": "file",
-          "complexityReport": null,
           "timesDependedOn": 0
         },
         {
@@ -1027,7 +1535,6 @@
           "shouldAnalyze": false,
           "path": "/samples/sweetalert/assets",
           "type": "file",
-          "complexityReport": null,
           "timesDependedOn": 0
         }
       ]
@@ -1070,7 +1577,6 @@
                   "shouldAnalyze": false,
                   "path": "/samples/sweetalert/src/css/icons",
                   "type": "file",
-                  "complexityReport": null,
                   "timesDependedOn": 0
                 },
                 {
@@ -1079,7 +1585,6 @@
                   "shouldAnalyze": false,
                   "path": "/samples/sweetalert/src/css/icons",
                   "type": "file",
-                  "complexityReport": null,
                   "timesDependedOn": 0
                 },
                 {
@@ -1088,7 +1593,6 @@
                   "shouldAnalyze": false,
                   "path": "/samples/sweetalert/src/css/icons",
                   "type": "file",
-                  "complexityReport": null,
                   "timesDependedOn": 0
                 },
                 {
@@ -1097,7 +1601,6 @@
                   "shouldAnalyze": false,
                   "path": "/samples/sweetalert/src/css/icons",
                   "type": "file",
-                  "complexityReport": null,
                   "timesDependedOn": 0
                 }
               ]
@@ -1108,7 +1611,6 @@
               "shouldAnalyze": false,
               "path": "/samples/sweetalert/src/css",
               "type": "file",
-              "complexityReport": null,
               "timesDependedOn": 0
             },
             {
@@ -1117,7 +1619,6 @@
               "shouldAnalyze": false,
               "path": "/samples/sweetalert/src/css",
               "type": "file",
-              "complexityReport": null,
               "timesDependedOn": 0
             },
             {
@@ -1126,7 +1627,6 @@
               "shouldAnalyze": false,
               "path": "/samples/sweetalert/src/css",
               "type": "file",
-              "complexityReport": null,
               "timesDependedOn": 0
             },
             {
@@ -1135,7 +1635,6 @@
               "shouldAnalyze": false,
               "path": "/samples/sweetalert/src/css",
               "type": "file",
-              "complexityReport": null,
               "timesDependedOn": 0
             },
             {
@@ -1144,7 +1643,6 @@
               "shouldAnalyze": false,
               "path": "/samples/sweetalert/src/css",
               "type": "file",
-              "complexityReport": null,
               "timesDependedOn": 0
             }
           ]
@@ -1179,15 +1677,24 @@
                         "time": 106.642,
                         "vocabulary": 39,
                         "volume": 449.259,
-                        "operands": { "distinct": 33, "total": 47 },
-                        "operators": { "distinct": 6, "total": 38 }
+                        "operands": {
+                          "distinct": 33,
+                          "total": 47
+                        },
+                        "operators": {
+                          "distinct": 6,
+                          "total": 38
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 20, "physical": 28 }
+                      "sloc": {
+                        "logical": 20,
+                        "physical": 29
+                      }
                     },
                     "dependencies": [],
                     "errors": [],
-                    "lineEnd": 28,
+                    "lineEnd": 29,
                     "lineStart": 1,
                     "maintainability": 96.614,
                     "codehawkScore": 88.72484177785137,
@@ -1221,30 +1728,63 @@
                         "time": 1151.971,
                         "vocabulary": 66,
                         "volume": 1160.524,
-                        "operands": { "distinct": 49, "total": 103 },
-                        "operators": { "distinct": 17, "total": 89 }
+                        "operands": {
+                          "distinct": 49,
+                          "total": 103
+                        },
+                        "operators": {
+                          "distinct": 17,
+                          "total": 89
+                        }
                       },
                       "paramCount": 10,
-                      "sloc": { "logical": 46, "physical": 81 }
+                      "sloc": {
+                        "logical": 46,
+                        "physical": 73
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" },
-                      { "line": 2, "path": "./modal", "type": "esm" },
-                      { "line": 3, "path": "../class-list", "type": "esm" },
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "./modal",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 3,
+                        "path": "../class-list",
+                        "type": "esm"
+                      },
                       {
                         "line": 8,
                         "path": "../options/buttons",
                         "type": "esm"
                       },
-                      { "line": 9, "path": "../markup", "type": "esm" },
-                      { "line": 10, "path": "../actions", "type": "esm" },
-                      { "line": 11, "path": "../state", "type": "esm" }
+                      {
+                        "line": 9,
+                        "path": "../markup",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 10,
+                        "path": "../actions",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 11,
+                        "path": "../state",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 81,
+                    "lineEnd": 73,
                     "lineStart": 1,
                     "maintainability": 109.444,
-                    "codehawkScore": 52.63715061303356,
+                    "codehawkScore": 53.62231632010348,
                     "coverage": "0"
                   },
                   "timesDependedOn": 2
@@ -1267,11 +1807,20 @@
                         "time": 939.154,
                         "vocabulary": 56,
                         "volume": 923.369,
-                        "operands": { "distinct": 39, "total": 84 },
-                        "operators": { "distinct": 17, "total": 75 }
+                        "operands": {
+                          "distinct": 39,
+                          "total": 84
+                        },
+                        "operators": {
+                          "distinct": 17,
+                          "total": 75
+                        }
                       },
                       "paramCount": 7,
-                      "sloc": { "logical": 43, "physical": 72 }
+                      "sloc": {
+                        "logical": 43,
+                        "physical": 67
+                      }
                     },
                     "dependencies": [
                       {
@@ -1279,17 +1828,37 @@
                         "path": "../options/buttons",
                         "type": "esm"
                       },
-                      { "line": 2, "path": "./modal", "type": "esm" },
-                      { "line": 3, "path": "../markup", "type": "esm" },
-                      { "line": 4, "path": "../state", "type": "esm" },
-                      { "line": 5, "path": "../actions", "type": "esm" },
-                      { "line": 6, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 2,
+                        "path": "./modal",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 3,
+                        "path": "../markup",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 4,
+                        "path": "../state",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 5,
+                        "path": "../actions",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 6,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 72,
+                    "lineEnd": 67,
                     "lineStart": 1,
                     "maintainability": 114.5,
-                    "codehawkScore": 54.049450575135026,
+                    "codehawkScore": 54.731304782109554,
                     "coverage": "0"
                   },
                   "timesDependedOn": 2
@@ -1312,22 +1881,43 @@
                         "time": 617.583,
                         "vocabulary": 53,
                         "volume": 756.086,
-                        "operands": { "distinct": 37, "total": 68 },
-                        "operators": { "distinct": 16, "total": 64 }
+                        "operands": {
+                          "distinct": 37,
+                          "total": 68
+                        },
+                        "operators": {
+                          "distinct": 16,
+                          "total": 64
+                        }
                       },
                       "paramCount": 5,
-                      "sloc": { "logical": 36, "physical": 47 }
+                      "sloc": {
+                        "logical": 36,
+                        "physical": 42
+                      }
                     },
                     "dependencies": [
-                      { "line": 2, "path": "./modal", "type": "esm" },
-                      { "line": 3, "path": "../markup", "type": "esm" },
-                      { "line": 4, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 2,
+                        "path": "./modal",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 3,
+                        "path": "../markup",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 4,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 47,
+                    "lineEnd": 42,
                     "lineStart": 1,
                     "maintainability": 107.725,
-                    "codehawkScore": 56.81690867438252,
+                    "codehawkScore": 57.88248957000378,
                     "coverage": "0"
                   },
                   "timesDependedOn": 2
@@ -1350,29 +1940,58 @@
                         "time": 55.212,
                         "vocabulary": 22,
                         "volume": 173.918,
-                        "operands": { "distinct": 14, "total": 20 },
-                        "operators": { "distinct": 8, "total": 19 }
+                        "operands": {
+                          "distinct": 14,
+                          "total": 20
+                        },
+                        "operators": {
+                          "distinct": 8,
+                          "total": 19
+                        }
                       },
                       "paramCount": 1,
-                      "sloc": { "logical": 13, "physical": 30 }
+                      "sloc": {
+                        "logical": 13,
+                        "physical": 27
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" },
-                      { "line": 2, "path": "../class-list", "type": "esm" },
-                      { "line": 6, "path": "./modal", "type": "esm" },
-                      { "line": 7, "path": "./overlay", "type": "esm" },
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "../class-list",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 6,
+                        "path": "./modal",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 7,
+                        "path": "./overlay",
+                        "type": "esm"
+                      },
                       {
                         "line": 8,
                         "path": "../event-listeners",
                         "type": "esm"
                       },
-                      { "line": 9, "path": "../utils", "type": "esm" }
+                      {
+                        "line": 9,
+                        "path": "../utils",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 30,
+                    "lineEnd": 27,
                     "lineStart": 1,
                     "maintainability": 118.751,
-                    "codehawkScore": 60.934886942256135,
+                    "codehawkScore": 61.9330391958566,
                     "coverage": "0"
                   },
                   "timesDependedOn": 1
@@ -1395,26 +2014,63 @@
                         "time": 363.087,
                         "vocabulary": 41,
                         "volume": 728.627,
-                        "operands": { "distinct": 33, "total": 74 },
-                        "operators": { "distinct": 8, "total": 62 }
+                        "operands": {
+                          "distinct": 33,
+                          "total": 74
+                        },
+                        "operators": {
+                          "distinct": 8,
+                          "total": 62
+                        }
                       },
                       "paramCount": 5,
-                      "sloc": { "logical": 39, "physical": 65 }
+                      "sloc": {
+                        "logical": 39,
+                        "physical": 60
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" },
-                      { "line": 2, "path": "../markup", "type": "esm" },
-                      { "line": 3, "path": "../class-list", "type": "esm" },
-                      { "line": 8, "path": "./icon", "type": "esm" },
-                      { "line": 9, "path": "./text", "type": "esm" },
-                      { "line": 10, "path": "./buttons", "type": "esm" },
-                      { "line": 11, "path": "./content", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "../markup",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 3,
+                        "path": "../class-list",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 8,
+                        "path": "./icon",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 9,
+                        "path": "./text",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 10,
+                        "path": "./buttons",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 11,
+                        "path": "./content",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 65,
+                    "lineEnd": 60,
                     "lineStart": 1,
                     "maintainability": 116.606,
-                    "codehawkScore": 54.52583298958849,
+                    "codehawkScore": 55.28413232544305,
                     "coverage": "0"
                   },
                   "timesDependedOn": 6
@@ -1437,18 +2093,35 @@
                         "time": 11.523,
                         "vocabulary": 12,
                         "volume": 64.529,
-                        "operands": { "distinct": 7, "total": 9 },
-                        "operators": { "distinct": 5, "total": 9 }
+                        "operands": {
+                          "distinct": 7,
+                          "total": 9
+                        },
+                        "operators": {
+                          "distinct": 5,
+                          "total": 9
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 5, "physical": 9 }
+                      "sloc": {
+                        "logical": 5,
+                        "physical": 7
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" },
-                      { "line": 2, "path": "../markup", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "../markup",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 9,
+                    "lineEnd": 7,
                     "lineStart": 1,
                     "maintainability": 140.282,
                     "codehawkScore": 92.17455287783764,
@@ -1474,15 +2147,32 @@
                         "time": 276.652,
                         "vocabulary": 45,
                         "volume": 642.547,
-                        "operands": { "distinct": 36, "total": 62 },
-                        "operators": { "distinct": 9, "total": 55 }
+                        "operands": {
+                          "distinct": 36,
+                          "total": 62
+                        },
+                        "operators": {
+                          "distinct": 9,
+                          "total": 55
+                        }
                       },
                       "paramCount": 6,
-                      "sloc": { "logical": 31, "physical": 38 }
+                      "sloc": {
+                        "logical": 31,
+                        "physical": 38
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../markup", "type": "esm" },
-                      { "line": 2, "path": "./modal", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../markup",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "./modal",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 38,
@@ -1519,14 +2209,27 @@
                         "time": 21.152,
                         "vocabulary": 14,
                         "volume": 91.377,
-                        "operands": { "distinct": 9, "total": 15 },
-                        "operators": { "distinct": 5, "total": 9 }
+                        "operands": {
+                          "distinct": 9,
+                          "total": 15
+                        },
+                        "operators": {
+                          "distinct": 5,
+                          "total": 9
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 5, "physical": 21 }
+                      "sloc": {
+                        "logical": 5,
+                        "physical": 21
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 21,
@@ -1555,14 +2258,27 @@
                         "time": 9.043,
                         "vocabulary": 10,
                         "volume": 46.507,
-                        "operands": { "distinct": 5, "total": 7 },
-                        "operators": { "distinct": 5, "total": 7 }
+                        "operands": {
+                          "distinct": 5,
+                          "total": 7
+                        },
+                        "operators": {
+                          "distinct": 5,
+                          "total": 7
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 3, "physical": 9 }
+                      "sloc": {
+                        "logical": 3,
+                        "physical": 9
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 9,
@@ -1591,14 +2307,27 @@
                         "time": 186.744,
                         "vocabulary": 32,
                         "volume": 490,
-                        "operands": { "distinct": 25, "total": 49 },
-                        "operators": { "distinct": 7, "total": 49 }
+                        "operands": {
+                          "distinct": 25,
+                          "total": 49
+                        },
+                        "operators": {
+                          "distinct": 7,
+                          "total": 49
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 16, "physical": 33 }
+                      "sloc": {
+                        "logical": 16,
+                        "physical": 33
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 33,
@@ -1627,14 +2356,27 @@
                         "time": 52.039,
                         "vocabulary": 17,
                         "volume": 179.848,
-                        "operands": { "distinct": 12, "total": 25 },
-                        "operators": { "distinct": 5, "total": 19 }
+                        "operands": {
+                          "distinct": 12,
+                          "total": 25
+                        },
+                        "operators": {
+                          "distinct": 5,
+                          "total": 19
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 9, "physical": 22 }
+                      "sloc": {
+                        "logical": 9,
+                        "physical": 22
+                      }
                     },
                     "dependencies": [
-                      { "line": 6, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 6,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 22,
@@ -1663,17 +2405,30 @@
                         "time": 16.132,
                         "vocabulary": 12,
                         "volume": 64.529,
-                        "operands": { "distinct": 6, "total": 9 },
-                        "operators": { "distinct": 6, "total": 9 }
+                        "operands": {
+                          "distinct": 6,
+                          "total": 9
+                        },
+                        "operators": {
+                          "distinct": 6,
+                          "total": 9
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 3, "physical": 12 }
+                      "sloc": {
+                        "logical": 3,
+                        "physical": 18
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 12,
+                    "lineEnd": 18,
                     "lineStart": 1,
                     "maintainability": 133.807,
                     "codehawkScore": 92.30905580181427,
@@ -1699,14 +2454,27 @@
                         "time": 11.073,
                         "vocabulary": 10,
                         "volume": 49.829,
-                        "operands": { "distinct": 5, "total": 8 },
-                        "operators": { "distinct": 5, "total": 7 }
+                        "operands": {
+                          "distinct": 5,
+                          "total": 8
+                        },
+                        "operators": {
+                          "distinct": 5,
+                          "total": 7
+                        }
                       },
                       "paramCount": 0,
-                      "sloc": { "logical": 3, "physical": 9 }
+                      "sloc": {
+                        "logical": 3,
+                        "physical": 9
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../class-list", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../class-list",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
                     "lineEnd": 9,
@@ -1743,20 +2511,33 @@
                         "time": 5768.039,
                         "vocabulary": 76,
                         "volume": 2380.46,
-                        "operands": { "distinct": 52, "total": 189 },
-                        "operators": { "distinct": 24, "total": 192 }
+                        "operands": {
+                          "distinct": 52,
+                          "total": 189
+                        },
+                        "operators": {
+                          "distinct": 24,
+                          "total": 192
+                        }
                       },
                       "paramCount": 6,
-                      "sloc": { "logical": 114, "physical": 150 }
+                      "sloc": {
+                        "logical": 114,
+                        "physical": 131
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 150,
+                    "lineEnd": 131,
                     "lineStart": 1,
                     "maintainability": 88.721,
-                    "codehawkScore": 47.06570281407246,
+                    "codehawkScore": 48.34879938044713,
                     "coverage": "0"
                   },
                   "timesDependedOn": 7
@@ -1779,20 +2560,33 @@
                         "time": 128.703,
                         "vocabulary": 26,
                         "volume": 235.022,
-                        "operands": { "distinct": 14, "total": 23 },
-                        "operators": { "distinct": 12, "total": 27 }
+                        "operands": {
+                          "distinct": 14,
+                          "total": 23
+                        },
+                        "operators": {
+                          "distinct": 12,
+                          "total": 27
+                        }
                       },
                       "paramCount": 1,
-                      "sloc": { "logical": 17, "physical": 27 }
+                      "sloc": {
+                        "logical": 17,
+                        "physical": 23
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 27,
+                    "lineEnd": 23,
                     "lineStart": 1,
                     "maintainability": 111.287,
-                    "codehawkScore": 62.70448988147212,
+                    "codehawkScore": 64.2235255137633,
                     "coverage": "0"
                   },
                   "timesDependedOn": 2
@@ -1815,18 +2609,27 @@
                         "time": 1545.577,
                         "vocabulary": 78,
                         "volume": 1634.205,
-                        "operands": { "distinct": 63, "total": 143 },
-                        "operators": { "distinct": 15, "total": 117 }
+                        "operands": {
+                          "distinct": 63,
+                          "total": 143
+                        },
+                        "operators": {
+                          "distinct": 15,
+                          "total": 117
+                        }
                       },
                       "paramCount": 1,
-                      "sloc": { "logical": 75, "physical": 105 }
+                      "sloc": {
+                        "logical": 75,
+                        "physical": 102
+                      }
                     },
                     "dependencies": [],
                     "errors": [],
-                    "lineEnd": 105,
+                    "lineEnd": 102,
                     "lineStart": 1,
                     "maintainability": 78.559,
-                    "codehawkScore": 47.379394934117734,
+                    "codehawkScore": 47.65401370449591,
                     "coverage": "0"
                   },
                   "timesDependedOn": 2
@@ -1849,23 +2652,48 @@
                         "time": 4950.345,
                         "vocabulary": 90,
                         "volume": 2544.806,
-                        "operands": { "distinct": 67, "total": 204 },
-                        "operators": { "distinct": 23, "total": 188 }
+                        "operands": {
+                          "distinct": 67,
+                          "total": 204
+                        },
+                        "operators": {
+                          "distinct": 23,
+                          "total": 188
+                        }
                       },
                       "paramCount": 17,
-                      "sloc": { "logical": 107, "physical": 150 }
+                      "sloc": {
+                        "logical": 107,
+                        "physical": 143
+                      }
                     },
                     "dependencies": [
-                      { "line": 1, "path": "../utils", "type": "esm" },
-                      { "line": 2, "path": "./buttons", "type": "esm" },
-                      { "line": 3, "path": "./content", "type": "esm" },
-                      { "line": 4, "path": "./deprecations", "type": "esm" }
+                      {
+                        "line": 1,
+                        "path": "../utils",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 2,
+                        "path": "./buttons",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 3,
+                        "path": "./content",
+                        "type": "esm"
+                      },
+                      {
+                        "line": 4,
+                        "path": "./deprecations",
+                        "type": "esm"
+                      }
                     ],
                     "errors": [],
-                    "lineEnd": 150,
+                    "lineEnd": 143,
                     "lineStart": 1,
                     "maintainability": 102.469,
-                    "codehawkScore": 46.51449814838432,
+                    "codehawkScore": 46.9672518057813,
                     "coverage": "0"
                   },
                   "timesDependedOn": 1
@@ -1890,23 +2718,48 @@
                     "time": 1121.218,
                     "vocabulary": 58,
                     "volume": 1019.289,
-                    "operands": { "distinct": 40, "total": 88 },
-                    "operators": { "distinct": 18, "total": 86 }
+                    "operands": {
+                      "distinct": 40,
+                      "total": 88
+                    },
+                    "operators": {
+                      "distinct": 18,
+                      "total": 86
+                    }
                   },
                   "paramCount": 1,
-                  "sloc": { "logical": 44, "physical": 67 }
+                  "sloc": {
+                    "logical": 44,
+                    "physical": 62
+                  }
                 },
                 "dependencies": [
-                  { "line": 1, "path": "./utils", "type": "esm" },
-                  { "line": 2, "path": "./options/buttons", "type": "esm" },
-                  { "line": 3, "path": "./class-list", "type": "esm" },
-                  { "line": 10, "path": "./state", "type": "esm" }
+                  {
+                    "line": 1,
+                    "path": "./utils",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 2,
+                    "path": "./options/buttons",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 3,
+                    "path": "./class-list",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 10,
+                    "path": "./state",
+                    "type": "esm"
+                  }
                 ],
                 "errors": [],
-                "lineEnd": 67,
+                "lineEnd": 62,
                 "lineStart": 1,
                 "maintainability": 110.662,
-                "codehawkScore": 53.67817875674,
+                "codehawkScore": 54.41294097685882,
                 "coverage": "0"
               },
               "timesDependedOn": 4
@@ -1929,24 +2782,53 @@
                     "time": 3464.234,
                     "vocabulary": 79,
                     "volume": 2250.45,
-                    "operands": { "distinct": 60, "total": 175 },
-                    "operators": { "distinct": 19, "total": 182 }
+                    "operands": {
+                      "distinct": 60,
+                      "total": 175
+                    },
+                    "operators": {
+                      "distinct": 19,
+                      "total": 182
+                    }
                   },
                   "paramCount": 11,
-                  "sloc": { "logical": 109, "physical": 141 }
+                  "sloc": {
+                    "logical": 109,
+                    "physical": 118
+                  }
                 },
                 "dependencies": [
-                  { "line": 1, "path": "./state", "type": "esm" },
-                  { "line": 2, "path": "./actions", "type": "esm" },
-                  { "line": 3, "path": "./utils", "type": "esm" },
-                  { "line": 4, "path": "./options/buttons", "type": "esm" },
-                  { "line": 5, "path": "./class-list", "type": "esm" }
+                  {
+                    "line": 1,
+                    "path": "./state",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 2,
+                    "path": "./actions",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 3,
+                    "path": "./utils",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 4,
+                    "path": "./options/buttons",
+                    "type": "esm"
+                  },
+                  {
+                    "line": 5,
+                    "path": "./class-list",
+                    "type": "esm"
+                  }
                 ],
                 "errors": [],
-                "lineEnd": 141,
+                "lineEnd": 118,
                 "lineStart": 1,
                 "maintainability": 110.946,
-                "codehawkScore": 47.300787024008535,
+                "codehawkScore": 48.98781585896909,
                 "coverage": "0"
               },
               "timesDependedOn": 1
@@ -1969,20 +2851,33 @@
                     "time": 675.256,
                     "vocabulary": 37,
                     "volume": 614.715,
-                    "operands": { "distinct": 22, "total": 58 },
-                    "operators": { "distinct": 15, "total": 60 }
+                    "operands": {
+                      "distinct": 22,
+                      "total": 58
+                    },
+                    "operators": {
+                      "distinct": 15,
+                      "total": 60
+                    }
                   },
                   "paramCount": 6,
-                  "sloc": { "logical": 28, "physical": 51 }
+                  "sloc": {
+                    "logical": 28,
+                    "physical": 47
+                  }
                 },
                 "dependencies": [
-                  { "line": 1, "path": "./options/buttons", "type": "esm" }
+                  {
+                    "line": 1,
+                    "path": "./options/buttons",
+                    "type": "esm"
+                  }
                 ],
                 "errors": [],
-                "lineEnd": 51,
+                "lineEnd": 47,
                 "lineStart": 1,
                 "maintainability": 116.092,
-                "codehawkScore": 57.1359500207509,
+                "codehawkScore": 57.90974189351764,
                 "coverage": "0"
               },
               "timesDependedOn": 5
@@ -2005,18 +2900,27 @@
                     "time": 1070.592,
                     "vocabulary": 75,
                     "volume": 1258.221,
-                    "operands": { "distinct": 57, "total": 97 },
-                    "operators": { "distinct": 18, "total": 105 }
+                    "operands": {
+                      "distinct": 57,
+                      "total": 97
+                    },
+                    "operators": {
+                      "distinct": 18,
+                      "total": 105
+                    }
                   },
                   "paramCount": 8,
-                  "sloc": { "logical": 47, "physical": 61 }
+                  "sloc": {
+                    "logical": 47,
+                    "physical": 57
+                  }
                 },
                 "dependencies": [],
                 "errors": [],
-                "lineEnd": 61,
+                "lineEnd": 57,
                 "lineStart": 1,
                 "maintainability": 114.99,
-                "codehawkScore": 55.43471610919461,
+                "codehawkScore": 56.077245969246036,
                 "coverage": "0"
               },
               "timesDependedOn": 10
@@ -2041,17 +2945,42 @@
                 "time": 222.962,
                 "vocabulary": 33,
                 "volume": 343.019,
-                "operands": { "distinct": 20, "total": 36 },
-                "operators": { "distinct": 13, "total": 32 }
+                "operands": {
+                  "distinct": 20,
+                  "total": 36
+                },
+                "operators": {
+                  "distinct": 13,
+                  "total": 32
+                }
               },
               "paramCount": 3,
-              "sloc": { "logical": 20, "physical": 34 }
+              "sloc": {
+                "logical": 20,
+                "physical": 34
+              }
             },
             "dependencies": [
-              { "line": 6, "path": "./modules/init", "type": "esm" },
-              { "line": 7, "path": "./modules/actions", "type": "esm" },
-              { "line": 8, "path": "./modules/state", "type": "esm" },
-              { "line": 9, "path": "./modules/options", "type": "esm" }
+              {
+                "line": 7,
+                "path": "./modules/init",
+                "type": "esm"
+              },
+              {
+                "line": 8,
+                "path": "./modules/actions",
+                "type": "esm"
+              },
+              {
+                "line": 9,
+                "path": "./modules/state",
+                "type": "esm"
+              },
+              {
+                "line": 10,
+                "path": "./modules/options",
+                "type": "esm"
+              }
             ],
             "errors": [],
             "lineEnd": 34,
@@ -2080,11 +3009,20 @@
                 "time": 3335.814,
                 "vocabulary": 87,
                 "volume": 1610.736,
-                "operands": { "distinct": 54, "total": 122 },
-                "operators": { "distinct": 33, "total": 128 }
+                "operands": {
+                  "distinct": 54,
+                  "total": 122
+                },
+                "operators": {
+                  "distinct": 33,
+                  "total": 128
+                }
               },
               "paramCount": 8,
-              "sloc": { "logical": 56, "physical": 110 }
+              "sloc": {
+                "logical": 56,
+                "physical": 110
+              }
             },
             "dependencies": [],
             "errors": [],
@@ -2102,7 +3040,6 @@
           "shouldAnalyze": false,
           "path": "/samples/sweetalert/src",
           "type": "file",
-          "complexityReport": null,
           "timesDependedOn": 0
         },
         {
@@ -2111,7 +3048,6 @@
           "shouldAnalyze": false,
           "path": "/samples/sweetalert/src",
           "type": "file",
-          "complexityReport": null,
           "timesDependedOn": 0
         },
         {
@@ -2132,11 +3068,20 @@
                 "time": 24.797,
                 "vocabulary": 17,
                 "volume": 98.099,
-                "operands": { "distinct": 10, "total": 13 },
-                "operators": { "distinct": 7, "total": 11 }
+                "operands": {
+                  "distinct": 10,
+                  "total": 13
+                },
+                "operators": {
+                  "distinct": 7,
+                  "total": 11
+                }
               },
               "paramCount": 0,
-              "sloc": { "logical": 6, "physical": 15 }
+              "sloc": {
+                "logical": 6,
+                "physical": 15
+              }
             },
             "dependencies": [],
             "errors": [],
@@ -2163,7 +3108,6 @@
       "shouldAnalyze": false,
       "path": "/samples/sweetalert",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -2172,7 +3116,6 @@
       "shouldAnalyze": false,
       "path": "/samples/sweetalert",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -2193,11 +3136,20 @@
             "time": 33.17,
             "vocabulary": 18,
             "volume": 125.098,
-            "operands": { "distinct": 11, "total": 15 },
-            "operators": { "distinct": 7, "total": 15 }
+            "operands": {
+              "distinct": 11,
+              "total": 15
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 15
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 8, "physical": 10 }
+          "sloc": {
+            "logical": 8,
+            "physical": 10
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -2215,7 +3167,6 @@
       "shouldAnalyze": false,
       "path": "/samples/sweetalert",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -2224,7 +3175,6 @@
       "shouldAnalyze": false,
       "path": "/samples/sweetalert",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -2233,7 +3183,6 @@
       "shouldAnalyze": false,
       "path": "/samples/sweetalert",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -2254,11 +3203,20 @@
             "time": 831.445,
             "vocabulary": 89,
             "volume": 1482.943,
-            "operands": { "distinct": 76, "total": 118 },
-            "operators": { "distinct": 13, "total": 111 }
+            "operands": {
+              "distinct": 76,
+              "total": 118
+            },
+            "operators": {
+              "distinct": 13,
+              "total": 111
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 62, "physical": 104 }
+          "sloc": {
+            "logical": 62,
+            "physical": 104
+          }
         },
         "dependencies": [],
         "errors": [],

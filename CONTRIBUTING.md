@@ -62,6 +62,12 @@ Note: the badges for codehawk-cli are tracked in git because
 - There is currently no 3rd party API that can fetch codehawk results remotely
 - There are no plans to expose codehawk results outside of a project
 
+# Updating tests when changes result in materially different outputs
+
+There is now a script to update all the static `expected.json` files: `yarn run test:updateexpectations`.
+
+Note that this script runs "blind", i.e. assumes that the output is correct, and writes it to file, discarding whatever was there before. It's up to you to ensure that the changes are correct / valid.
+
 ## Releasing new versions
 
 Note: currently, only the project owner (sgb-io) has access to publish new versions to npm.

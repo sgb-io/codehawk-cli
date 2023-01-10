@@ -1,4 +1,34 @@
 {
+  "options": {
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "enableFlow": true,
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
+    "excludeExact": [],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
+    "skipDirectories": [
+      "/node_modules",
+      "/flow-typed",
+      "/coverage"
+    ],
+    "minimumThreshold": 10,
+    "cliOutputLimit": 25
+  },
   "summary": {
     "average": 53.68354105285161,
     "median": 53.68354105285161,
@@ -23,17 +53,42 @@
             "time": 826.224,
             "vocabulary": 62,
             "volume": 994.351,
-            "operands": { "distinct": 46, "total": 86 },
-            "operators": { "distinct": 16, "total": 81 }
+            "operands": {
+              "distinct": 46,
+              "total": 86
+            },
+            "operators": {
+              "distinct": 16,
+              "total": 81
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 41, "physical": 74 }
+          "sloc": {
+            "logical": 41,
+            "physical": 74
+          }
         },
         "dependencies": [
-          { "line": 3, "path": "react", "type": "esm" },
-          { "line": 4, "path": "lodash/pick", "type": "esm" },
-          { "line": 5, "path": "../../../utils/classcaded", "type": "esm" },
-          { "line": 6, "path": "./Button.css", "type": "esm" }
+          {
+            "line": 3,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "lodash/pick",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "../../../utils/classcaded",
+            "type": "esm"
+          },
+          {
+            "line": 6,
+            "path": "./Button.css",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 74,
@@ -52,7 +107,6 @@
       "shouldAnalyze": false,
       "path": "/samples/react-component-flow",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -73,17 +127,42 @@
             "time": 826.224,
             "vocabulary": 62,
             "volume": 994.351,
-            "operands": { "distinct": 46, "total": 86 },
-            "operators": { "distinct": 16, "total": 81 }
+            "operands": {
+              "distinct": 46,
+              "total": 86
+            },
+            "operators": {
+              "distinct": 16,
+              "total": 81
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 41, "physical": 74 }
+          "sloc": {
+            "logical": 41,
+            "physical": 74
+          }
         },
         "dependencies": [
-          { "line": 3, "path": "react", "type": "esm" },
-          { "line": 4, "path": "lodash/pick", "type": "esm" },
-          { "line": 5, "path": "../../../utils/classcaded", "type": "esm" },
-          { "line": 6, "path": "./Button.css", "type": "esm" }
+          {
+            "line": 3,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "lodash/pick",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "../../../utils/classcaded",
+            "type": "esm"
+          },
+          {
+            "line": 6,
+            "path": "./Button.css",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 74,
@@ -100,7 +179,6 @@
       "shouldAnalyze": false,
       "path": "/samples/react-component-flow",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     }
   ]

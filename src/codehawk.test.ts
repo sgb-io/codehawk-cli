@@ -13,7 +13,7 @@ const outputMatchesResult = (projectPath: string): void => {
   )
   const expected = JSON.parse(expectedRaw)
 
-  expect(output.fullResultsTree).toEqual(expected.fullResultsTree)
+  expect(expected.fullResultsTree).toEqual(output.fullResultsTree)
 
   generateBadge(output)
   expect('generateBadge did not throw').toBeTruthy()
@@ -57,12 +57,12 @@ describe('codehawk-cli', () => {
           paramCount: 1,
           sloc: {
             logical: 4,
-            physical: 5,
+            physical: 4,
           },
         },
         dependencies: [], // TS removes the lodash dep because it's fake i.e. it resolves to undefined
         errors: [],
-        lineEnd: 5,
+        lineEnd: 4,
         lineStart: 1,
         maintainability: 144.217,
         codehawkScore: 92.43914887804003,
@@ -113,30 +113,30 @@ describe('codehawk-cli', () => {
     | File                                               | # of Lines | Times Used/Depended On | Maintainability (higher is better) |
     | -------------------------------------------------- | ---------- | ---------------------- | ---------------------------------- |
     | /samples/sweetalert/webpack.config.js              | 104        | 1                      | 44.91 (Needs improvement)          |
-    | /samples/sweetalert/src/modules/options/index.ts   | 150        | 2                      | 46.51 (Needs improvement)          |
-    | /samples/sweetalert/src/modules/options/buttons.ts | 150        | 8                      | 47.07 (Needs improvement)          |
-    | /samples/sweetalert/src/modules/event-listeners.ts | 141        | 2                      | 47.3 (Needs improvement)           |
-    | .../sweetalert/src/modules/options/deprecations.ts | 105        | 3                      | 47.38 (Needs improvement)          |
+    | /samples/sweetalert/src/modules/options/index.ts   | 143        | 2                      | 46.97 (Needs improvement)          |
+    | .../sweetalert/src/modules/options/deprecations.ts | 102        | 3                      | 47.65 (Needs improvement)          |
+    | /samples/sweetalert/src/modules/options/buttons.ts | 131        | 8                      | 48.35 (Needs improvement)          |
+    | /samples/sweetalert/src/modules/event-listeners.ts | 118        | 2                      | 48.99 (Needs improvement)          |
     | /samples/sweetalert/src/polyfills.js               | 110        | 1                      | 49.61 (Needs improvement)          |
-    | /samples/sweetalert/src/modules/init/buttons.ts    | 81         | 3                      | 52.64 (Could be better)            |
-    | /samples/sweetalert/src/modules/actions.ts         | 67         | 5                      | 53.68 (Could be better)            |
-    | /samples/sweetalert/src/modules/init/content.ts    | 72         | 3                      | 54.05 (Could be better)            |
-    | /samples/sweetalert/src/modules/init/modal.ts      | 65         | 7                      | 54.53 (Could be better)            |
-    | /samples/sweetalert/src/modules/utils.ts           | 61         | 11                     | 55.43 (Could be better)            |
-    | /samples/sweetalert/src/modules/init/icon.ts       | 47         | 3                      | 56.82 (Could be better)            |
-    | /samples/sweetalert/src/modules/state.ts           | 51         | 6                      | 57.14 (Could be better)            |
+    | /samples/sweetalert/src/modules/init/buttons.ts    | 73         | 3                      | 53.62 (Could be better)            |
+    | /samples/sweetalert/src/modules/actions.ts         | 62         | 5                      | 54.41 (Could be better)            |
+    | /samples/sweetalert/src/modules/init/content.ts    | 67         | 3                      | 54.73 (Could be better)            |
+    | /samples/sweetalert/src/modules/init/modal.ts      | 60         | 7                      | 55.28 (Could be better)            |
+    | /samples/sweetalert/src/modules/utils.ts           | 57         | 11                     | 56.08 (Could be better)            |
+    | /samples/sweetalert/src/modules/init/icon.ts       | 42         | 3                      | 57.88 (Could be better)            |
+    | /samples/sweetalert/src/modules/state.ts           | 47         | 6                      | 57.91 (Could be better)            |
     | /samples/sweetalert/src/modules/markup/icons.ts    | 33         | 7                      | 58.89 (Could be better)            |
     | /samples/sweetalert/src/core.ts                    | 34         | 1                      | 59.8 (Could be better)             |
     | /samples/sweetalert/src/modules/init/text.ts       | 38         | 3                      | 60.21 OK                           |
-    | /samples/sweetalert/src/modules/init/index.ts      | 30         | 2                      | 60.93 OK                           |
-    | /samples/sweetalert/src/modules/options/content.ts | 27         | 3                      | 62.7 OK                            |
-    | ...ples/sweetalert/src/modules/class-list/index.ts | 28         | 14                     | 88.72 OK                           |
+    | /samples/sweetalert/src/modules/init/index.ts      | 27         | 2                      | 61.93 OK                           |
+    | /samples/sweetalert/src/modules/options/content.ts | 23         | 3                      | 64.22 OK                           |
+    | ...ples/sweetalert/src/modules/class-list/index.ts | 29         | 14                     | 88.72 OK                           |
     | /samples/sweetalert/postcss.config.js              | 10         | 1                      | 91.08 OK                           |
     | /samples/sweetalert/src/sweetalert.js              | 15         | 1                      | 91.12 OK                           |
     | /samples/sweetalert/src/modules/markup/index.ts    | 22         | 7                      | 91.25 OK                           |
     | /samples/sweetalert/src/modules/markup/buttons.ts  | 21         | 7                      | 91.84 OK                           |
-    | /samples/sweetalert/src/modules/init/overlay.ts    | 9          | 3                      | 92.17 OK                           |
-    | /samples/sweetalert/src/modules/markup/modal.ts    | 12         | 7                      | 92.31 OK                           |
+    | /samples/sweetalert/src/modules/init/overlay.ts    | 7          | 3                      | 92.17 OK                           |
+    | /samples/sweetalert/src/modules/markup/modal.ts    | 18         | 7                      | 92.31 OK                           |
   `
 
     it('generates the expected table output', () => {
