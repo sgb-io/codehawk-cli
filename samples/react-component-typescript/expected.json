@@ -1,8 +1,37 @@
 {
+  "options": {
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
+    "excludeExact": [],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
+    "skipDirectories": [
+      "/node_modules",
+      "/flow-typed",
+      "/coverage"
+    ],
+    "minimumThreshold": 10,
+    "cliOutputLimit": 25
+  },
   "summary": {
-    "average": 77.48005258780282,
-    "median": 77.48005258780282,
-    "worst": 60.67773631010033
+    "average": 77.91761042000238,
+    "median": 77.91761042000238,
+    "worst": 61.55285197449942
   },
   "resultsList": [
     {
@@ -23,18 +52,33 @@
             "time": 238.908,
             "vocabulary": 33,
             "volume": 332.93,
-            "operands": { "distinct": 18, "total": 31 },
-            "operators": { "distinct": 15, "total": 35 }
+            "operands": {
+              "distinct": 18,
+              "total": 31
+            },
+            "operators": {
+              "distinct": 15,
+              "total": 35
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 20, "physical": 34 }
+          "sloc": {
+            "logical": 20,
+            "physical": 31
+          }
         },
-        "dependencies": [{ "line": 1, "path": "react", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "react",
+            "type": "esm"
+          }
+        ],
         "errors": [],
-        "lineEnd": 34,
+        "lineEnd": 31,
         "lineStart": 1,
         "maintainability": 125.251,
-        "codehawkScore": 60.67773631010033,
+        "codehawkScore": 61.55285197449942,
         "coverage": "0"
       },
       "timesDependedOn": 1
@@ -57,18 +101,35 @@
             "time": 3.016,
             "vocabulary": 6,
             "volume": 18.095,
-            "operands": { "distinct": 2, "total": 3 },
-            "operators": { "distinct": 4, "total": 4 }
+            "operands": {
+              "distinct": 2,
+              "total": 3
+            },
+            "operators": {
+              "distinct": 4,
+              "total": 4
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 3, "physical": 11 }
+          "sloc": {
+            "logical": 3,
+            "physical": 9
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "react", "type": "esm" },
-          { "line": 2, "path": "./Modal", "type": "esm" }
+          {
+            "line": 1,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./Modal",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 11,
+        "lineEnd": 9,
         "lineStart": 1,
         "maintainability": 153.142,
         "codehawkScore": 94.28236886550532,
@@ -96,18 +157,35 @@
             "time": 3.016,
             "vocabulary": 6,
             "volume": 18.095,
-            "operands": { "distinct": 2, "total": 3 },
-            "operators": { "distinct": 4, "total": 4 }
+            "operands": {
+              "distinct": 2,
+              "total": 3
+            },
+            "operators": {
+              "distinct": 4,
+              "total": 4
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 3, "physical": 11 }
+          "sloc": {
+            "logical": 3,
+            "physical": 9
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "react", "type": "esm" },
-          { "line": 2, "path": "./Modal", "type": "esm" }
+          {
+            "line": 1,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./Modal",
+            "type": "esm"
+          }
         ],
         "errors": [],
-        "lineEnd": 11,
+        "lineEnd": 9,
         "lineStart": 1,
         "maintainability": 153.142,
         "codehawkScore": 94.28236886550532,
@@ -121,7 +199,6 @@
       "shouldAnalyze": false,
       "path": "/samples/react-component-typescript",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -142,18 +219,33 @@
             "time": 238.908,
             "vocabulary": 33,
             "volume": 332.93,
-            "operands": { "distinct": 18, "total": 31 },
-            "operators": { "distinct": 15, "total": 35 }
+            "operands": {
+              "distinct": 18,
+              "total": 31
+            },
+            "operators": {
+              "distinct": 15,
+              "total": 35
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 20, "physical": 34 }
+          "sloc": {
+            "logical": 20,
+            "physical": 31
+          }
         },
-        "dependencies": [{ "line": 1, "path": "react", "type": "esm" }],
+        "dependencies": [
+          {
+            "line": 1,
+            "path": "react",
+            "type": "esm"
+          }
+        ],
         "errors": [],
-        "lineEnd": 34,
+        "lineEnd": 31,
         "lineStart": 1,
         "maintainability": 125.251,
-        "codehawkScore": 60.67773631010033,
+        "codehawkScore": 61.55285197449942,
         "coverage": "0"
       },
       "timesDependedOn": 1

@@ -18,7 +18,7 @@ const getBadgeColor = (percent: number): string => {
 export const generateBadge = (results: Results): void => {
   const { average, worst } = results.summary
   const { badgesDirectory } = results.options
-  const badgesPath = badgesDirectory[0] || '' // Fall back to root
+  const badgesPath = badgesDirectory?.length ? badgesDirectory[0] : '' // Fall back to root
   const actualPath = slash(process.cwd()) + badgesPath
 
   if (badgesPath !== '' && !fs.existsSync(actualPath)) {

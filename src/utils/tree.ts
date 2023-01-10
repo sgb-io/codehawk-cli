@@ -1,5 +1,6 @@
 import type {
   AnalyzedEntity,
+  AnalyzedFileWithReport,
   AnyAnalyzedFile,
   FullyAnalyzedEntity,
   FullyAnalyzedFile,
@@ -32,8 +33,8 @@ export const getResultsAsList = (
       // Sort by codehawk score, ascending (most complex files are first in the list)
       .sort((entityA, entityB) => {
         return (
-          entityA.complexityReport.codehawkScore -
-          entityB.complexityReport.codehawkScore
+          (entityA as AnalyzedFileWithReport).complexityReport.codehawkScore -
+          (entityB as AnalyzedFileWithReport).complexityReport.codehawkScore
         )
       })
 

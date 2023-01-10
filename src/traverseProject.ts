@@ -48,7 +48,7 @@ export const walkSync = (
       }),
     }
 
-    if (entity.isDirectory()) {
+    if (entity?.isDirectory()) {
       fileList.push({
         ...baseParsedEntity,
         type: 'dir',

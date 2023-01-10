@@ -1,4 +1,33 @@
 {
+  "options": {
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
+    "excludeExact": [],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
+    "skipDirectories": [
+      "/node_modules",
+      "/flow-typed",
+      "/coverage"
+    ],
+    "minimumThreshold": 10,
+    "cliOutputLimit": 25
+  },
   "summary": {
     "average": 43.79279497729058,
     "median": 43.79279497729058,
@@ -23,18 +52,47 @@
             "time": 8455.359,
             "vocabulary": 130,
             "volume": 3988.705,
-            "operands": { "distinct": 102, "total": 278 },
-            "operators": { "distinct": 28, "total": 290 }
+            "operands": {
+              "distinct": 102,
+              "total": 278
+            },
+            "operators": {
+              "distinct": 28,
+              "total": 290
+            }
           },
           "paramCount": 12,
-          "sloc": { "logical": 136, "physical": 170 }
+          "sloc": {
+            "logical": 136,
+            "physical": 170
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./PopoutMenu.css", "type": "esm" },
-          { "line": 2, "path": "react", "type": "esm" },
-          { "line": 3, "path": "prop-types", "type": "esm" },
-          { "line": 4, "path": "../../../utils/classcaded", "type": "esm" },
-          { "line": 5, "path": "../Icon/Icon", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./PopoutMenu.css",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "prop-types",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "../../../utils/classcaded",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "../Icon/Icon",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 170,
@@ -53,7 +111,6 @@
       "shouldAnalyze": false,
       "path": "/samples/react-component",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -62,7 +119,6 @@
       "shouldAnalyze": false,
       "path": "/samples/react-component",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -83,18 +139,47 @@
             "time": 8455.359,
             "vocabulary": 130,
             "volume": 3988.705,
-            "operands": { "distinct": 102, "total": 278 },
-            "operators": { "distinct": 28, "total": 290 }
+            "operands": {
+              "distinct": 102,
+              "total": 278
+            },
+            "operators": {
+              "distinct": 28,
+              "total": 290
+            }
           },
           "paramCount": 12,
-          "sloc": { "logical": 136, "physical": 170 }
+          "sloc": {
+            "logical": 136,
+            "physical": 170
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./PopoutMenu.css", "type": "esm" },
-          { "line": 2, "path": "react", "type": "esm" },
-          { "line": 3, "path": "prop-types", "type": "esm" },
-          { "line": 4, "path": "../../../utils/classcaded", "type": "esm" },
-          { "line": 5, "path": "../Icon/Icon", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./PopoutMenu.css",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "react",
+            "type": "esm"
+          },
+          {
+            "line": 3,
+            "path": "prop-types",
+            "type": "esm"
+          },
+          {
+            "line": 4,
+            "path": "../../../utils/classcaded",
+            "type": "esm"
+          },
+          {
+            "line": 5,
+            "path": "../Icon/Icon",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 170,

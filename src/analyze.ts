@@ -27,7 +27,7 @@ export const transpileFileSource = (
         ],
       ],
     })
-    contents = transformed.code || ''
+    contents = transformed?.code ?? ''
   } else {
     // Assume no other static type systems exist
     // Stripping flow types should be safe, even if it's not strictly flow
@@ -44,7 +44,7 @@ export const calculateComplexity = (
   fileExtension: string,
   isTypescript: boolean,
   enableFlow: boolean
-): CodehawkComplexityResult => {
+): CodehawkComplexityResult | null => {
   return escomplexReporter(
     transpileFileSource(sourceCode, fileExtension, isTypescript, enableFlow)
   )
@@ -54,7 +54,7 @@ export const analyzeFile = (
   dirPath: string,
   file: FileWithContents,
   projectCoverage: CoverageMapping[]
-): CompleteCodehawkComplexityResult => {
+): CompleteCodehawkComplexityResult | null => {
   // Handle cases where a file was intended to be analyzed, but the source could not be parsed
   if (!file.rawSource) {
     return null

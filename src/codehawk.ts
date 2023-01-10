@@ -56,7 +56,10 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
     let fileContents
     try {
       if (file.shouldAnalyze) {
-        fileContents = getFileContents(file.fullPath, options.enableFlow)
+        fileContents = getFileContents(
+          file.fullPath,
+          options.enableFlow ?? false
+        )
       }
     } catch (error) {
       console.error(
@@ -78,7 +81,7 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
 
     return {
       ...file,
-      complexityReport,
+      complexityReport: complexityReport ?? undefined,
       fullPath: file.fullPath.replace(cwd, ''),
       path: file.path.replace(cwd, ''),
     }
@@ -133,7 +136,11 @@ const analyzeProject = (rawPath: string, isCliContext?: boolean): Results => {
   const summary = getResultsSummary(resultsAsList)
 
   // When in a CLI context, exit if the worst case fails to meet the minimum threshold
-  if (isCliContext && summary.worst < options.minimumThreshold) {
+  if (
+    options.minimumThreshold &&
+    isCliContext &&
+    summary.worst < options.minimumThreshold
+  ) {
     console.error(
       `[codehawk-cli] Worst case (${summary.worst}) was below the minimum threshold (${options.minimumThreshold})`
     )

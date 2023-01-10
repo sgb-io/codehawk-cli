@@ -1,4 +1,33 @@
 {
+  "options": {
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
+    "excludeExact": [],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
+    "skipDirectories": [
+      "/node_modules",
+      "/flow-typed",
+      "/coverage"
+    ],
+    "minimumThreshold": 10,
+    "cliOutputLimit": 25
+  },
   "summary": {
     "average": 74.98316839015082,
     "median": 66.5583293243497,
@@ -23,11 +52,20 @@
             "time": 184.709,
             "vocabulary": 28,
             "volume": 274.019,
-            "operands": { "distinct": 15, "total": 28 },
-            "operators": { "distinct": 13, "total": 29 }
+            "operands": {
+              "distinct": 15,
+              "total": 28
+            },
+            "operators": {
+              "distinct": 13,
+              "total": 29
+            }
           },
           "paramCount": 3,
-          "sloc": { "logical": 19, "physical": 23 }
+          "sloc": {
+            "logical": 19,
+            "physical": 23
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -57,15 +95,32 @@
             "time": 60.086,
             "vocabulary": 17,
             "volume": 147.149,
-            "operands": { "distinct": 10, "total": 21 },
-            "operators": { "distinct": 7, "total": 15 }
+            "operands": {
+              "distinct": 10,
+              "total": 21
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 15
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 12, "physical": 18 }
+          "sloc": {
+            "logical": 12,
+            "physical": 18
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./sample-es6-constants", "type": "esm" },
-          { "line": 2, "path": "./utils", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./sample-es6-constants",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./utils",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 18,
@@ -94,11 +149,20 @@
             "time": 2.953,
             "vocabulary": 10,
             "volume": 53.151,
-            "operands": { "distinct": 8, "total": 8 },
-            "operators": { "distinct": 2, "total": 8 }
+            "operands": {
+              "distinct": 8,
+              "total": 8
+            },
+            "operators": {
+              "distinct": 2,
+              "total": 8
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 4, "physical": 5 }
+          "sloc": {
+            "logical": 4,
+            "physical": 5
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -136,11 +200,20 @@
                 "time": 184.709,
                 "vocabulary": 28,
                 "volume": 274.019,
-                "operands": { "distinct": 15, "total": 28 },
-                "operators": { "distinct": 13, "total": 29 }
+                "operands": {
+                  "distinct": 15,
+                  "total": 28
+                },
+                "operators": {
+                  "distinct": 13,
+                  "total": 29
+                }
               },
               "paramCount": 3,
-              "sloc": { "logical": 19, "physical": 23 }
+              "sloc": {
+                "logical": 19,
+                "physical": 23
+              }
             },
             "dependencies": [],
             "errors": [],
@@ -160,7 +233,6 @@
       "shouldAnalyze": false,
       "path": "/samples/simple-es6-imports",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -181,11 +253,20 @@
             "time": 2.953,
             "vocabulary": 10,
             "volume": 53.151,
-            "operands": { "distinct": 8, "total": 8 },
-            "operators": { "distinct": 2, "total": 8 }
+            "operands": {
+              "distinct": 8,
+              "total": 8
+            },
+            "operators": {
+              "distinct": 2,
+              "total": 8
+            }
           },
           "paramCount": 0,
-          "sloc": { "logical": 4, "physical": 5 }
+          "sloc": {
+            "logical": 4,
+            "physical": 5
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -215,15 +296,32 @@
             "time": 60.086,
             "vocabulary": 17,
             "volume": 147.149,
-            "operands": { "distinct": 10, "total": 21 },
-            "operators": { "distinct": 7, "total": 15 }
+            "operands": {
+              "distinct": 10,
+              "total": 21
+            },
+            "operators": {
+              "distinct": 7,
+              "total": 15
+            }
           },
           "paramCount": 2,
-          "sloc": { "logical": 12, "physical": 18 }
+          "sloc": {
+            "logical": 12,
+            "physical": 18
+          }
         },
         "dependencies": [
-          { "line": 1, "path": "./sample-es6-constants", "type": "esm" },
-          { "line": 2, "path": "./utils", "type": "esm" }
+          {
+            "line": 1,
+            "path": "./sample-es6-constants",
+            "type": "esm"
+          },
+          {
+            "line": 2,
+            "path": "./utils",
+            "type": "esm"
+          }
         ],
         "errors": [],
         "lineEnd": 18,

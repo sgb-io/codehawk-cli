@@ -1,4 +1,33 @@
 {
+  "options": {
+    "badgesDirectory": [
+      "/generated"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "excludeDirectories": [
+      "/dist",
+      "/bin",
+      "/build"
+    ],
+    "excludeExact": [],
+    "excludeFilenames": [
+      ".d.ts",
+      ".min.js",
+      ".bundle.js"
+    ],
+    "skipDirectories": [
+      "/node_modules",
+      "/flow-typed",
+      "/coverage"
+    ],
+    "minimumThreshold": 10,
+    "cliOutputLimit": 25
+  },
   "summary": {
     "average": 55.998178735563855,
     "median": 55.998178735563855,
@@ -23,11 +52,20 @@
             "time": 1127.798,
             "vocabulary": 54,
             "volume": 955.311,
-            "operands": { "distinct": 36, "total": 85 },
-            "operators": { "distinct": 18, "total": 81 }
+            "operands": {
+              "distinct": 36,
+              "total": 85
+            },
+            "operators": {
+              "distinct": 18,
+              "total": 81
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 42, "physical": 65 }
+          "sloc": {
+            "logical": 42,
+            "physical": 65
+          }
         },
         "dependencies": [],
         "errors": [],
@@ -47,7 +85,6 @@
       "shouldAnalyze": false,
       "path": "/samples/simple-class",
       "type": "file",
-      "complexityReport": null,
       "timesDependedOn": 0
     },
     {
@@ -68,11 +105,20 @@
             "time": 1127.798,
             "vocabulary": 54,
             "volume": 955.311,
-            "operands": { "distinct": 36, "total": 85 },
-            "operators": { "distinct": 18, "total": 81 }
+            "operands": {
+              "distinct": 36,
+              "total": 85
+            },
+            "operators": {
+              "distinct": 18,
+              "total": 81
+            }
           },
           "paramCount": 5,
-          "sloc": { "logical": 42, "physical": 65 }
+          "sloc": {
+            "logical": 42,
+            "physical": 65
+          }
         },
         "dependencies": [],
         "errors": [],
