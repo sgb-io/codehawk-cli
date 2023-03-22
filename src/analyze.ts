@@ -92,7 +92,11 @@ export const analyzeFile = (
   const trimmed = file.rawSource.trim()
 
   try {
-    const complexityReport = escomplexReporter(trimmed)
+    const isFileWeCareAboutDeleteMe = file.filename === 'analyze.ts'
+    const complexityReport = escomplexReporter(
+      trimmed,
+      isFileWeCareAboutDeleteMe
+    )
     if (complexityReport) {
       report = {
         ...complexityReport,

@@ -4,8 +4,15 @@ import type { CodehawkComplexityResult } from '../types'
 // The following hack is taken from Plato
 // ref. https://github.com/es-analysis/plato/blob/master/lib/reporters/complexity/index.js @ ad8a294
 
-const escomplexReporter = (source: string): CodehawkComplexityResult | null => {
+const escomplexReporter = (
+  source: string,
+  debug?: boolean
+): CodehawkComplexityResult | null => {
   const report = escomplex.analyzeModule(source)
+
+  if (debug) {
+    console.log(report.aggregate.halstead)
+  }
 
   // For cases where parsing the javascript has failed
   if (!report) {
