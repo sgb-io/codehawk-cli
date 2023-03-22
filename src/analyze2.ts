@@ -17,6 +17,7 @@ function calculateHalsteadMetrics(sourceFile: ts.SourceFile): HalsteadMetrics {
 
   // Distinct is now very close! But totals are off (e.g. isTSX duplicated 32 times)
   console.log('operands', operands, Object.keys(operands).length)
+  // Operators is way off at the moment, presumably various cases are missing in visit.ts
   console.log('operators', operators, Object.keys(operators).length)
 
   // There should be:
