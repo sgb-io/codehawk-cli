@@ -5,6 +5,14 @@ Codehawk is a static analysis tool for JavaScript projects. It is intended as a 
 ![Average Maintainability](generated/avg-maintainability.svg)
 ![Worst Maintainability](generated/worst-maintainability.svg)
 
+## Update Q2 2023: FTA (Fast TypeScript Analyzer) is now available!
+
+[FTA](https://github.com/sgb-io/fta) is a direct replacement for the Codehawk CLI project. It's much more robust and dramatically faster, with low level static analysis carried out in Rust.
+
+It's recommended to use FTA over Codehawk CLI. FTA is in active development whereas Codehawk CLI is in maintenance mode.
+
+[Upgrade to FTA here](https://github.com/sgb-io/fta).
+
 ## Scope
 
 JavaScript (including TypeScript and Flow) projects are supported for analysis. The CLI tool supports unix and windows filesystems (there is a reasonable amount of Windows compatibility code).
